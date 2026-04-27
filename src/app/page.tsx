@@ -25,8 +25,8 @@ export default function Home() {
           title="Frontera — vista del cruce"
           tone="navy"
           aspect="21/9"
-          src="/editorial/home-frontera-banner.png"
-          alt="Vista aérea del cruce de carga — grabado linocut"
+          src="/editorial/home-banner-1-expediente.png"
+          alt="Mesa de trabajo con expedientes — fotografía editorial"
         />
         <Areas />
         <PullQuote cite="Principio de la práctica">
@@ -41,8 +41,8 @@ export default function Home() {
           title="Balanza"
           tone="olive"
           aspect="21/9"
-          src="/editorial/home-resultados-balanza.png"
-          alt="Balanza de la justicia — grabado linocut"
+          src="/editorial/home-banner-3-pasillo.png"
+          alt="Pasillo institucional con luz lateral — fotografía editorial"
         />
         <Metodo />
         <LeadMagnet />
@@ -52,8 +52,8 @@ export default function Home() {
           title="Edificio institucional"
           tone="navy"
           aspect="21/9"
-          src="/editorial/home-cta-edificio.png"
-          alt="Fachada modernista de edificio institucional — grabado linocut"
+          src="/editorial/home-banner-4-edificio.png"
+          alt="Fachada de edificio institucional al atardecer — fotografía editorial"
         />
         <CTAFinal />
       </main>
