@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative bg-background pt-20 pb-32 overflow-hidden">
+    <section className="relative bg-background pt-16 pb-24 overflow-hidden">
       {/* folio marker top-right */}
       <div className="absolute top-7 right-12 hidden md:flex items-center gap-2 text-muted">
         <span className="font-serif italic text-[12px]">Edición 2026</span>
@@ -13,7 +13,7 @@ export function Hero() {
 
       <div className="max-w-[1280px] mx-auto px-12">
         {/* Chapter intro */}
-        <div className="flex items-baseline gap-4 mb-16">
+        <div className="flex items-baseline gap-4 mb-12">
           <span className="font-serif italic text-[14px] text-olive">§ I</span>
           <span className="w-[80px] h-[1px] bg-rule" />
           <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
@@ -21,33 +21,28 @@ export function Hero() {
           </span>
         </div>
 
-        <div className="grid grid-cols-12 gap-x-12 gap-y-20 items-start">
+        <div className="grid grid-cols-12 gap-x-12 gap-y-16 items-start">
           <div className="col-span-12 lg:col-span-7 relative">
             {/* marginalia */}
             <span className="hidden xl:block absolute -left-12 top-3 font-serif italic text-[12px] text-olive">
               I.i
             </span>
 
-            <h1 className="font-serif text-[68px] leading-[1.04] font-semibold text-navy tracking-[-0.018em]">
-              Defensa fiscal,
-              <br />
-              aduanera y administrativa
-              <br />
-              <span className="italic text-burgundy font-medium">
-                con criterio técnico.
-              </span>
+            <h1 className="font-serif text-[60px] leading-[1.04] font-semibold text-navy tracking-[-0.018em]">
+              Defensa fiscal, aduanera y administrativa en la frontera norte de
+              México.
             </h1>
 
-            <div className="mt-9 max-w-[540px] flex gap-5">
+            <div className="mt-7 max-w-[560px] flex gap-5">
               <span className="block w-[2px] h-auto bg-olive shrink-0" />
-              <p className="text-[18px] leading-[1.6] text-foreground/85 font-serif italic">
-                Veinticinco años representando a empresarios, importadores y
-                transportistas ante SAT, Aduana, IMSS, COEPRIS, SCT y tribunales
-                federales en la frontera norte.
+              <p className="text-[18px] leading-[1.6] text-foreground/85">
+                Despacho jurídico en Tijuana con veinticinco años representando
+                a empresarios, importadores y transportistas ante SAT, ANAM,
+                IMSS, COFEPRIS, COEPRIS, SICT y los tribunales federales.
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-5 mt-12">
+            <div className="flex flex-wrap items-center gap-5 mt-10">
               <Link
                 href="/contacto"
                 className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
@@ -74,9 +69,8 @@ export function Hero() {
           </div>
 
           {/* Right: editorial gazette block */}
-          <aside className="col-span-12 lg:col-span-5 lg:pl-10 lg:pt-3 relative">
-            <div className="border-y border-rule py-10 relative">
-              {/* corner ornaments */}
+          <aside className="col-span-12 lg:col-span-5 lg:pl-10 lg:pt-2 relative">
+            <div className="border-y border-rule py-9 relative">
               <span className="absolute -top-[3px] -left-[3px] w-[6px] h-[6px] bg-olive" />
               <span className="absolute -top-[3px] -right-[3px] w-[6px] h-[6px] bg-olive" />
               <span className="absolute -bottom-[3px] -left-[3px] w-[6px] h-[6px] bg-olive" />
@@ -86,35 +80,32 @@ export function Hero() {
                 Establecido en MMI · Tijuana
               </p>
 
-              <div className="font-serif text-[160px] leading-[0.86] font-semibold text-navy tracking-[-0.03em] text-center mt-5">
+              <div className="font-serif text-[148px] leading-[0.86] font-semibold text-navy tracking-[-0.03em] text-center mt-4">
                 25
               </div>
 
-              <p className="font-serif italic text-[15px] text-muted text-center mt-4">
+              <p className="font-serif italic text-[15px] text-muted text-center mt-3">
                 años de práctica continua en la
                 <br />
                 frontera norte de México
               </p>
             </div>
 
-            <dl className="mt-10 divide-y divide-rule">
+            <dl className="mt-8 divide-y divide-rule">
               {[
-                {
-                  k: "Cobertura",
-                  v: "Baja California y federal",
-                },
+                { k: "Cobertura", v: "Baja California y federal" },
                 {
                   k: "Atención",
                   v: "Por abogado responsable, de inicio a fin",
                 },
                 {
-                  k: "Especialización",
-                  v: "Fiscal · Aduanera · Administrativa",
+                  k: "Materias",
+                  v: "Fiscal · Aduanera · Administrativa · Penal-fiscal",
                 },
               ].map((row) => (
                 <div
                   key={row.k}
-                  className="grid grid-cols-3 gap-4 py-4 items-baseline"
+                  className="grid grid-cols-3 gap-4 py-3.5 items-baseline"
                 >
                   <dt className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted col-span-1">
                     {row.k}

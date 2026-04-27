@@ -3,35 +3,30 @@ import Link from "next/link";
 export function CTAFinal() {
   return (
     <section className="bg-navy text-background relative overflow-hidden">
-      {/* corner ornaments */}
       <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-olive/60" />
       <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
       <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
       <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
 
-      <div className="max-w-[1280px] mx-auto px-12 py-32">
-        <div className="flex items-baseline gap-4 mb-12 justify-center">
+      <div className="max-w-[1280px] mx-auto px-12 py-24">
+        <div className="flex items-baseline gap-4 mb-10 justify-center">
           <span className="font-serif italic text-[14px] text-olive">§ VIII</span>
           <span className="w-[80px] h-[1px] bg-background/30" />
           <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
-            Atención inmediata
+            Contacto
           </span>
         </div>
 
         <div className="max-w-[820px] mx-auto text-center">
-          <h2 className="font-serif text-[48px] leading-[1.1] font-semibold tracking-[-0.012em]">
-            ¿Tienes un asunto que requiere
-            <br />
-            <span className="italic text-olive font-medium">
-              atención inmediata?
-            </span>
+          <h2 className="font-serif text-[40px] leading-[1.12] font-semibold tracking-[-0.012em]">
+            Cuéntanos brevemente tu caso.
           </h2>
-          <p className="font-serif italic text-[19px] text-background/75 mt-7 leading-[1.5] max-w-[640px] mx-auto">
-            Cuéntanos brevemente tu caso. Te respondemos en horario hábil con
-            una valoración inicial sin costo.
+          <p className="text-[17px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
+            Te respondemos en horario hábil con una valoración inicial sin
+            costo y los plazos legales que están corriendo en tu asunto.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 mt-12">
+          <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
             <a
               href="https://wa.me/526646475018"
               className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
@@ -52,7 +47,7 @@ export function CTAFinal() {
             </Link>
           </div>
 
-          <p className="font-serif italic text-[13px] text-background/55 mt-12">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-background/55 mt-10">
             Lunes a viernes · 09:00 — 17:00 · Tijuana, BC
           </p>
         </div>

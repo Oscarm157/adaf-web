@@ -4,6 +4,7 @@ const areas = [
   { href: "/servicios/defensa-aduanera", label: "Defensa aduanera" },
   { href: "/servicios/defensa-fiscal-sat", label: "Defensa fiscal SAT" },
   { href: "/servicios/defensa-imss-infonavit", label: "IMSS / INFONAVIT" },
+  { href: "/servicios/defensa-sanitaria", label: "Sanitaria · COFEPRIS / COEPRIS" },
   { href: "/servicios/amparos-fiscales", label: "Amparos fiscales" },
   { href: "/servicios/defensa-penal-fiscal", label: "Penal-fiscal" },
 ];
