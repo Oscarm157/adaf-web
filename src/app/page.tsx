@@ -22,9 +22,11 @@ export default function Home() {
         <Hero />
         <EditorialBand
           numeral="I·b"
-          title="Frontera Tijuana — garita y vista cenital"
+          title="Frontera — vista del cruce"
           tone="navy"
           aspect="21/9"
+          src="/editorial/home-frontera-banner.png"
+          alt="Vista aérea del cruce de carga — grabado linocut"
         />
         <Areas />
         <PullQuote cite="Principio de la práctica">
@@ -36,18 +38,22 @@ export default function Home() {
         <Resultados />
         <EditorialBand
           numeral="IV·b"
-          title="Baja California — silueta y frontera norte"
+          title="Balanza"
           tone="olive"
           aspect="21/9"
+          src="/editorial/home-resultados-balanza.png"
+          alt="Balanza de la justicia — grabado linocut"
         />
         <Metodo />
         <LeadMagnet />
         <Notas />
         <EditorialBand
           numeral="VII·b"
-          title="Edificio institucional — fachada moderna frontal"
+          title="Edificio institucional"
           tone="navy"
           aspect="21/9"
+          src="/editorial/home-cta-edificio.png"
+          alt="Fachada modernista de edificio institucional — grabado linocut"
         />
         <CTAFinal />
       </main>

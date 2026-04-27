@@ -35,10 +35,12 @@ export function Pillars() {
           <Reveal delay={0.15} className="col-span-12 lg:col-span-4">
             <EditorialBand
               numeral="III·b"
-              title="Expedientes — pila atada"
+              title="Expedientes"
               tone="burgundy"
               aspect="3/4"
               fullBleed={false}
+              src="/editorial/home-pillars-folders.png"
+              alt="Pila de expedientes atada con cinta — grabado linocut"
             />
           </Reveal>
         </div>

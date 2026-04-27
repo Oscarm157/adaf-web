@@ -11,7 +11,7 @@ const notas: Array<{
   titulo: string;
   resumen: string;
   slug: string;
-  cover: { title: string; tone: Tone };
+  cover: { title: string; tone: Tone; src: string; alt: string };
 }> = [
   {
     cat: "Reformas",
@@ -21,7 +21,12 @@ const notas: Array<{
     resumen:
       "Modificaciones principales en sellos digitales, restricciones, RFC y comprobantes, con su impacto práctico antes del cierre del ejercicio.",
     slug: "reforma-cff-2026",
-    cover: { title: "Libro abierto — codex", tone: "navy" },
+    cover: {
+      title: "Libro abierto",
+      tone: "navy",
+      src: "/editorial/home-nota-cff-book.png",
+      alt: "Libro abierto — grabado linocut",
+    },
   },
   {
     cat: "Procedimientos",
@@ -31,7 +36,12 @@ const notas: Array<{
     resumen:
       "Qué hacer al inicio de la diligencia, documentación que pueden requerir, plazos para aportar pruebas y errores comunes que escalan el procedimiento.",
     slug: "visita-domiciliaria-sat",
-    cover: { title: "Puerta entreabierta", tone: "burgundy" },
+    cover: {
+      title: "Puerta",
+      tone: "burgundy",
+      src: "/editorial/home-nota-sat-door.png",
+      alt: "Puerta panelada — grabado linocut",
+    },
   },
   {
     cat: "Aduanero",
@@ -41,7 +51,12 @@ const notas: Array<{
     resumen:
       "Plazo de 10 días para pruebas y alegatos, vías de defensa procedentes y procedimiento para recuperar la mercancía con garantía mientras se resuelve el fondo.",
     slug: "embargo-aduana-pama",
-    cover: { title: "Contenedor bajo lámpara", tone: "olive" },
+    cover: {
+      title: "Contenedor",
+      tone: "olive",
+      src: "/editorial/home-nota-pama-container.png",
+      alt: "Contenedor bajo lámpara de inspección — grabado linocut",
+    },
   },
 ];
 
@@ -84,6 +99,8 @@ export function Notas() {
                   tone={n.cover.tone}
                   aspect="4/3"
                   fullBleed={false}
+                  src={n.cover.src}
+                  alt={n.cover.alt}
                 />
               </div>
               <div className="flex items-baseline justify-between mb-6">

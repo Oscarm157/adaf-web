@@ -10,8 +10,10 @@
       "tone": "navy",
       "aspect": "21:9",
       "filename": "test-frontera-A-etching.png",
-      "status": "pending",
-      "prompt": "Refined editorial illustration in single deep navy ink (#0F2A47) on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of a border cargo crossing — a row of large freight trucks queuing toward inspection booths, simplified concrete roadway, distant low hills suggested. Modern engraving technique reminiscent of a Wall Street Journal hedcut or The Economist magazine spot illustration: fine controlled stippling and short cross-hatch strokes used sparingly to model form, NOT decorative Victorian flourishes, NOT ornate frames. Clean contemporary composition with generous negative space at top, low horizon. Subtle paper grain. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography. Composed for the cover of a contemporary corporate whitepaper."
+      "status": "done",
+      "prompt": "Refined editorial illustration in single deep navy ink (#0F2A47) on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of a border cargo crossing — a row of large freight trucks queuing toward inspection booths, simplified concrete roadway, distant low hills suggested. Modern engraving technique reminiscent of a Wall Street Journal hedcut or The Economist magazine spot illustration: fine controlled stippling and short cross-hatch strokes used sparingly to model form, NOT decorative Victorian flourishes, NOT ornate frames. Clean contemporary composition with generous negative space at top, low horizon. Subtle paper grain. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography. Composed for the cover of a contemporary corporate whitepaper.",
+      "lastGeneratedAt": "2026-04-27T08:13:22.583Z",
+      "lastPredictionId": "9wwp707dkxrmy0cxsqzvnngjd8"
     },
     {
       "id": "test-frontera-B-plano",
@@ -20,8 +22,10 @@
       "tone": "navy",
       "aspect": "21:9",
       "filename": "test-frontera-B-plano.png",
-      "status": "pending",
-      "prompt": "Single-line technical illustration in deep navy ink (#0F2A47) on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: schematic plan view of a border inspection facility — simplified rectangular shapes for inspection booths, a row of cargo trucks rendered as plain rectangles queued in a single lane, one bold line indicating the international border, faint dotted lines suggesting traffic flow, small calibration tick marks along one edge. Drafting aesthetic: thin uniform line weight, one or two slightly heavier accent lines for emphasis, absolutely no shading, no fill, no hatching, no stipple. Clean, precise, almost cartographic. Centered composition with generous margin. Style references: contemporary architectural site plan, Le Corbusier sketch, Pentagram annual-report diagram, IBM design diagram. No text or numbers or lettering anywhere in the image, no people, no logos, no color, no gradients, no 3D, no photography."
+      "status": "done",
+      "prompt": "Architectural drafting style, contemporary site plan diagram, drawn in single thin navy ink lines on a warm cream paper background, 21:9 ultra-wide aspect ratio. The drawing shows a top-down schematic of a border crossing facility: a row of small rectangles representing inspection booths, a longer rectangle for the queuing lane with simple rectangles inside it suggesting trucks, one strong horizontal line crossing the page representing the international border, and faint dotted lines indicating traffic flow. Pure line drawing. No fill colors, no shading, no hatching, no patterns inside the shapes. Aesthetic of a Pentagram annual-report diagram or a Le Corbusier site sketch — calm, geometric, refined. Generous white margin around the drawing. No words, no numbers, no labels of any kind.",
+      "lastGeneratedAt": "2026-04-27T08:13:53.985Z",
+      "lastPredictionId": "7zjhpnv7hnrmt0cxsr0bb8g080"
     },
     {
       "id": "test-frontera-C-duotono",
@@ -30,8 +34,10 @@
       "tone": "navy",
       "aspect": "21:9",
       "filename": "test-frontera-C-duotono.png",
-      "status": "pending",
-      "prompt": "Documentary photograph treated as duotone (deep navy #0F2A47 ink and warm cream #FAFAF7 paper, no other colors at all), 21:9 ultra-wide aerial view of a US-Mexico border cargo crossing at dawn: long row of empty parked cargo trucks waiting at inspection lanes, concrete infrastructure, distant low hills. High contrast, fine film grain, slightly faded highlights, somber tonal range. Compositionally clean, no human figures visible anywhere in frame, no readable signage, no text, no English or Spanish lettering, no flags, no logos, no colored elements at all. Style: serious editorial photography in the spirit of FT Weekend Magazine, Walker Evans documentary, or contemporary annual-report covers. Slight printed-paper feel. This must be photographic — not a drawing, not an illustration, not an engraving, not hatching."
+      "status": "done",
+      "prompt": "Documentary photograph treated as duotone (deep navy #0F2A47 ink and warm cream #FAFAF7 paper, no other colors at all), 21:9 ultra-wide aerial view of a US-Mexico border cargo crossing at dawn: long row of empty parked cargo trucks waiting at inspection lanes, concrete infrastructure, distant low hills. High contrast, fine film grain, slightly faded highlights, somber tonal range. Compositionally clean, no human figures visible anywhere in frame, no readable signage, no text, no English or Spanish lettering, no flags, no logos, no colored elements at all. Style: serious editorial photography in the spirit of FT Weekend Magazine, Walker Evans documentary, or contemporary annual-report covers. Slight printed-paper feel. This must be photographic — not a drawing, not an illustration, not an engraving, not hatching.",
+      "lastGeneratedAt": "2026-04-27T08:13:22.616Z",
+      "lastPredictionId": "j49dnz7dj5rmw0cxsqzv8dfn78"
     },
     {
       "id": "test-frontera-D-linocut",
@@ -40,8 +46,166 @@
       "tone": "navy",
       "aspect": "21:9",
       "filename": "test-frontera-D-linocut.png",
-      "status": "pending",
-      "prompt": "Modern linocut print, single deep navy ink (#0F2A47) printed on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of a border cargo crossing — a row of freight trucks queued toward inspection booths, low concrete infrastructure, distant hills suggested. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary — generous negative space at top, low horizon, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood), and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography."
+      "status": "done",
+      "prompt": "Modern linocut print, single deep navy ink (#0F2A47) printed on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of a border cargo crossing — a row of freight trucks queued toward inspection booths, low concrete infrastructure, distant hills suggested. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary — generous negative space at top, low horizon, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood), and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:13:22.204Z",
+      "lastPredictionId": "npnqqa7dh9rmr0cxsqzrkhta60"
+    },
+    {
+      "id": "test-frontera-F-tijuana-duotono",
+      "title": "Test F · Duotono — Tijuana real (Otay Mesa)",
+      "subject": "Cruce de carga Otay Mesa, Tijuana — vista aérea urbana",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "test-frontera-F-tijuana-duotono.png",
+      "status": "done",
+      "prompt": "Documentary photograph treated as duotone (deep navy #0F2A47 ink and warm cream #FAFAF7 paper, no other colors at all), 21:9 ultra-wide aerial view of the Otay Mesa cargo border crossing between Tijuana, Mexico and San Diego, USA. The scene is dense and industrial, NOT desert: rows of cargo semi-trucks with containers queuing under large overhead steel inspection canopies, multiple parallel inspection lanes in concrete, a tall steel slat border fence cutting horizontally across the upper third of the frame. Beyond the fence on the Mexican side: dense urban Tijuana sprawling into the distance — low-rise concrete and brick buildings packed together, residential colonias climbing up brown hillsides with visible small houses stacked on slopes, light industrial warehouses, a few mid-rise buildings, the city extending to a hazy horizon. Industrial infrastructure throughout: light poles, concrete barriers, asphalt. High contrast, fine film grain, slightly faded highlights, somber tonal range. Compositionally clean. No human figures visible, no readable signage, no text in any language, no logos, no brand names, no flags, no colored elements at all. Style: serious editorial photography in the spirit of FT Weekend Magazine or contemporary annual-report covers. Slight printed-paper feel with subtle paper margins. This must be photographic — not a drawing, not an illustration.",
+      "lastGeneratedAt": "2026-04-27T08:16:12.396Z",
+      "lastPredictionId": "ghpy6cc58srmr0cxsr19cgnfam"
+    },
+    {
+      "id": "test-frontera-G-tijuana-linocut",
+      "title": "Test G · Linocut — Tijuana real (Otay Mesa)",
+      "subject": "Cruce de carga Otay Mesa, Tijuana — vista aérea urbana",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "test-frontera-G-tijuana-linocut.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single deep navy ink (#0F2A47) printed on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of the Otay Mesa cargo border crossing between Tijuana, Mexico and San Diego, USA. The scene is dense and urban, NOT empty desert: rows of cargo semi-trucks with containers carved as solid bold shapes queuing under large overhead inspection canopies, multiple parallel inspection lanes, a tall steel slat border fence rendered as a continuous row of vertical lines crossing horizontally through the upper third of the frame. Beyond the fence: dense urban Tijuana — small carved house shapes packed together as residential colonias climbing up rolling hillsides, low industrial buildings, a hazy city extending to the horizon. The hills carved with bold linocut hatching marks. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed. Composition is contemporary — generous negative space at top, low horizon, urban density in the foreground. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:16:11.643Z",
+      "lastPredictionId": "aypv4s44x5rmw0cxsr181ceq44"
+    },
+    {
+      "id": "test-frontera-H-macro-corporativo",
+      "title": "Test H · Macro corporativo (objeto aislado · studio)",
+      "subject": "Contenedor / pila de documentos como monolito, fondo cream",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "test-frontera-H-macro-corporativo.png",
+      "status": "done",
+      "prompt": "Refined editorial product photograph treated as duotone (deep navy #0F2A47 and warm cream #FAFAF7, no other colors at all), 21:9 ultra-wide. Subject: a single closed standard 40-foot shipping container, photographed in a clean studio environment, isolated against a seamless cream paper backdrop, slight low-angle three-quarter view that emphasizes its geometric volume as a monolith. Soft directional studio lighting from upper left, casting a long subtle shadow on the seamless paper to the right. Smooth concrete floor below, no horizon, no environment, no buildings, no people, no text or codes anywhere on the container, no logos, no numbers, no graffiti, completely blank navy surface. Composition: container occupies the lower right third, generous negative cream space above and to the left. Style references: Stripe Press cover photography, Hermès annual report photography, Apple product macro, McKinsey/BCG corporate report covers — refined, premium, abstract. High contrast duotone, very fine grain, no gradients beyond natural studio falloff. This must be photographic — not a drawing, not an illustration, not painted.",
+      "lastGeneratedAt": "2026-04-27T08:18:06.195Z",
+      "lastPredictionId": "kxb5xmt5rxrmt0cxsr28wz42y8"
+    },
+    {
+      "id": "test-frontera-I-abstracto-topografico",
+      "title": "Test I · Abstracción topográfica (línea costa Baja California)",
+      "subject": "Costa de Baja California abstraída como línea topográfica",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "test-frontera-I-abstracto-topografico.png",
+      "status": "done",
+      "prompt": "Minimalist editorial graphic, single deep navy ink (#0F2A47) on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: pure topographic abstraction of the northwest coast of Baja California — only a single sinuous navy line representing the coastline running across the lower half of the frame, accompanied by 4 to 6 thinner concentric topographic contour lines flowing parallel to it suggesting elevation, all on the cream paper. One single very thin straight horizontal navy line crossing the upper portion of the frame indicates the international border. No landmasses filled in, no shading, no labels, no compass, no place names, no city dots, no decorative elements. Generous negative space dominates the frame. Style references: Pentagram annual-report graphics, Stripe Press book endpapers, Massimo Vignelli's NYC subway map abstraction, Bauhaus minimalist cartography, contemporary corporate report frontispiece. Pure line work, no textures, no fills. Refined, premium, restrained. No words, no numbers, no labels of any kind anywhere in the image.",
+      "lastGeneratedAt": "2026-04-27T08:18:06.077Z",
+      "lastPredictionId": "c1dvqea5t9rmt0cxsr28br12fg"
+    },
+    {
+      "id": "test-frontera-J-burtynsky",
+      "title": "Test J · Industrial aéreo abstracto (Burtynsky)",
+      "subject": "Patio de contenedores aéreo — geometría pura",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "test-frontera-J-burtynsky.png",
+      "status": "done",
+      "prompt": "A vast cargo container terminal photographed from very high overhead drone altitude, the rectangular containers reading as pure geometric pattern across the entire frame, in the style of Edward Burtynsky industrial landscape photography. Treated as duotone in deep navy and warm cream tones only. 21:9 ultra-wide composition with subtle diagonal flow. Fine film grain. Premium institutional editorial photography for an annual report cover. No people, no vehicles, no buildings beyond the container grid, no horizon, no text, no readable codes on the containers, no logos.",
+      "lastGeneratedAt": "2026-04-27T08:27:25.988Z",
+      "lastPredictionId": "fwpejnefvdrmy0cxsr6ac0tbgc"
+    },
+    {
+      "id": "test-frontera-K-arquitectura-macro",
+      "title": "Test K · Macro arquitectónico (concreto / luz dirigida)",
+      "subject": "Detalle arquitectónico modernista — luz y sombra",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "test-frontera-K-arquitectura-macro.png",
+      "status": "done",
+      "prompt": "A close architectural photograph of a modernist concrete building edge where strong directional sunlight cuts a sharp diagonal shadow across the raw cast concrete surface, revealing its texture. Treated as duotone in deep navy and warm cream tones only. 21:9 ultra-wide composition. Premium institutional editorial photography in the spirit of Kinfolk architectural features, Hermès annual report imagery, and Tadao Ando documentation. Fine film grain. The image reads as abstract texture and geometry more than as a building. No people, no windows visible, no signage, no text, no logos.",
+      "lastGeneratedAt": "2026-04-27T08:21:16.113Z",
+      "lastPredictionId": "5k1vhm3ghnrmr0cxsr380ajn78"
+    },
+    {
+      "id": "home-pillars-folders",
+      "title": "Home · Pillars (vertical) — pila de carpetas linocut",
+      "subject": "Stack de expedientes atados con cinta — linocut",
+      "tone": "burgundy",
+      "aspect": "3:4",
+      "filename": "home-pillars-folders.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single dark burgundy ink (#7A1F38) printed on warm cream paper (#FAFAF7), 3:4 vertical composition. Subject: a tall stack of legal case folders bound horizontally with a single cotton ribbon, viewed at a slight three-quarter angle, resting on a barely indicated wooden surface; the stack centered with generous negative space above and below. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary, generous negative space, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:27:27.249Z",
+      "lastPredictionId": "esch3j6ftsrmw0cxsr69d0hher"
+    },
+    {
+      "id": "home-resultados-balanza",
+      "title": "Home · Banda Resultados→Metodo — balanza linocut",
+      "subject": "Balanza de la justicia — linocut",
+      "tone": "olive",
+      "aspect": "21:9",
+      "filename": "home-resultados-balanza.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single olive green ink (#9B8F2E) printed on warm cream paper (#FAFAF7), 21:9 ultra-wide. Subject: a single classic two-pan balance scale (scales of justice), centered, viewed straight on. The scale has a thin vertical post on a low base, a horizontal beam balanced on top, two thin chains hanging from each end of the beam suspending two shallow round pans, both pans empty and at perfectly level horizontal balance. Linocut aesthetic: bold solid carved shapes for the post, base, beam and pans, expressive carved-line marks for surface texture, thin carved lines for the chains, slight ink texture and edge bleed. Generous negative cream space on either side of the scale. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking modernized — NOT folkloric, NOT calavera imagery, NOT a blindfolded Lady Justice figure, just the scales alone. No people, no figures, no readable text, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:29:38.331Z",
+      "lastPredictionId": "6gjnbkyhk5rmw0cxsr7amc8er4"
+    },
+    {
+      "id": "home-nota-cff-book",
+      "title": "Home · Card Nota CFF — libro abierto linocut",
+      "subject": "Libro abierto cenital — linocut",
+      "tone": "navy",
+      "aspect": "4:3",
+      "filename": "home-nota-cff-book.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single deep navy ink (#0F2A47) printed on warm cream paper (#FAFAF7), 4:3 horizontal composition. Subject: an open hardcover book lying flat viewed from straight overhead, both pages indicated as solid cream shapes with the spine and binding carved as bold strokes, a single ribbon bookmark draped across the gutter as a thin carved line; the pages are completely blank — no printed text, no real letters, no scribbled marks pretending to be text. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary, generous negative space, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:26:56.837Z",
+      "lastPredictionId": "yrp0gvjsnhrmt0cxsr68djng00"
+    },
+    {
+      "id": "home-nota-sat-door",
+      "title": "Home · Card Nota SAT — puerta entreabierta linocut",
+      "subject": "Puerta de oficina entreabierta vista frontal — linocut",
+      "tone": "burgundy",
+      "aspect": "4:3",
+      "filename": "home-nota-sat-door.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single dark burgundy ink (#7A1F38) printed on warm cream paper (#FAFAF7), 4:3 horizontal composition. Subject: a panelled wooden office door viewed straight on at human eye level, partially ajar, with a sliver of darker carved space showing where the door has opened slightly, a small circular doorknob and a small keyhole; strict frontal composition with the door centered and generous negative space on either side, no signage, no nameplate. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary, generous negative space, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:26:56.487Z",
+      "lastPredictionId": "9weer5jspsrmy0cxsr69kmyfeg"
+    },
+    {
+      "id": "home-nota-pama-container",
+      "title": "Home · Card Nota PAMA — contenedor linocut",
+      "subject": "Contenedor marítimo bajo lámpara de inspección — linocut",
+      "tone": "olive",
+      "aspect": "4:3",
+      "filename": "home-nota-pama-container.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single olive green ink (#9B8F2E) printed on warm cream paper (#FAFAF7), 4:3 horizontal composition. Subject: a single shipping container viewed at a slight three-quarter angle on a port concrete floor, doors closed, an inspection lamp hanging above suggested by a thin vertical line and a half-circle, casting a faint hatched cone of light onto the container roof; container surface completely blank — no codes, no numbers, no readable text. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary, generous negative space, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:26:58.149Z",
+      "lastPredictionId": "pwkze6tsp1rmy0cxsr6brf323m"
+    },
+    {
+      "id": "home-frontera-banner",
+      "title": "Home · Banda Hero→Areas — frontera linocut",
+      "subject": "Vista aérea de cruce de carga — linocut",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "home-frontera-banner.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single deep navy ink (#0F2A47) printed on warm cream paper (#FAFAF7), 21:9 ultra-wide composition. Subject: aerial view of a border cargo crossing — a row of freight trucks queued toward inspection booths, low concrete infrastructure, distant hills suggested; generous negative space at top, low horizon. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary, generous negative space, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:26:57.855Z",
+      "lastPredictionId": "7c62xw2sq5rmt0cxsr681ew9k8"
+    },
+    {
+      "id": "home-cta-edificio",
+      "title": "Home · Banda Notas→CTA Final — edificio institucional linocut",
+      "subject": "Fachada modernista de edificio institucional — linocut",
+      "tone": "navy",
+      "aspect": "21:9",
+      "filename": "home-cta-edificio.png",
+      "status": "done",
+      "prompt": "Modern linocut print, single deep navy ink (#0F2A47) printed on warm cream paper (#FAFAF7), 21:9 ultra-wide composition. Subject: frontal architectural elevation of a modernist mid-century institutional building — a long horizontal flat-roofed concrete volume with a regular grid of square windows, set on a low base, accessed by a wide low staircase running across the lower edge; strict frontal symmetry, generous negative cream space above suggesting sky, no Corinthian columns, no Greek pediment, no flags. Linocut aesthetic: bold solid carved shapes, expressive carved-line marks where the blade has lifted small chips of linoleum, slight ink texture and edge bleed, no fine cross-hatching, no Victorian engraving, no decorative flourishes. Composition is clean and contemporary, generous negative space, balanced asymmetry. Subtle uneven ink coverage like a hand-pulled print. Reference style: contemporary linocut artists (Tugboat Printshop, Stanley Donwood) and the lineage of Mexican printmaking (Taller de Gráfica Popular) but modernized — NOT folkloric, NOT calavera imagery. No people, no faces, no readable text or signage of any kind, no logos, no numbers, no color, no gradients, no 3D, no photography.",
+      "lastGeneratedAt": "2026-04-27T08:26:57.336Z",
+      "lastPredictionId": "zveh5htspnrmt0cxsr6bge284r"
     },
     {
       "id": "test-frontera-E-cyanotype",
@@ -50,8 +214,10 @@
       "tone": "navy",
       "aspect": "21:9",
       "filename": "test-frontera-E-cyanotype.png",
-      "status": "pending",
-      "prompt": "Cyanotype-process print in deep navy ink tone (#0F2A47) on warm cream-prepared paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of a US-Mexico border cargo crossing — a row of freight trucks queued at inspection booths, concrete infrastructure, distant hills. Cyanotype aesthetic: subject rendered as a single dense navy tone against the cream paper, with the soft mid-tones characteristic of contact-printed cyanotypes, slight uneven chemistry at the paper edges (small lighter mottles, a faint border irregularity where the emulsion was brushed). The image reads as if it were a contact print exposed onto prepared paper — NOT a digital photograph, NOT a drawing, NOT an engraving, NOT line work. Style references: Anna Atkins botanical cyanotypes, contemporary architectural archive cyanotypes, museum-archival single-tone print. Composition: generous negative space at top, low horizon, calm. No people, no faces, no readable signage or text, no logos, no numbers, no color other than the single navy tone, no gradients beyond the natural cyanotype mid-tones, no 3D render."
+      "status": "done",
+      "prompt": "Cyanotype-process print in deep navy ink tone (#0F2A47) on warm cream-prepared paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of a US-Mexico border cargo crossing — a row of freight trucks queued at inspection booths, concrete infrastructure, distant hills. Cyanotype aesthetic: subject rendered as a single dense navy tone against the cream paper, with the soft mid-tones characteristic of contact-printed cyanotypes, slight uneven chemistry at the paper edges (small lighter mottles, a faint border irregularity where the emulsion was brushed). The image reads as if it were a contact print exposed onto prepared paper — NOT a digital photograph, NOT a drawing, NOT an engraving, NOT line work. Style references: Anna Atkins botanical cyanotypes, contemporary architectural archive cyanotypes, museum-archival single-tone print. Composition: generous negative space at top, low horizon, calm. No people, no faces, no readable signage or text, no logos, no numbers, no color other than the single navy tone, no gradients beyond the natural cyanotype mid-tones, no 3D render.",
+      "lastGeneratedAt": "2026-04-27T08:13:22.277Z",
+      "lastPredictionId": "51gmy0zdhxrmt0cxsqzsc0xc54"
     }
   ]
 }
