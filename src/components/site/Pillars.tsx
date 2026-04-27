@@ -1,5 +1,6 @@
 import { ChapterMark } from "./ChapterMark";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { EditorialBand } from "@/components/visual/EditorialBand";
 
 const pillars = [
   {
@@ -25,15 +26,22 @@ export function Pillars() {
       <div className="max-w-[1280px] mx-auto px-12">
         <ChapterMark numeral="III" label="Principios" />
 
-        <Reveal>
-          <div className="grid grid-cols-12 gap-12 mt-10 mb-16">
-            <div className="col-span-12 lg:col-span-8">
-              <h2 className="font-serif text-[42px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
-                Tres principios sostienen cada caso.
-              </h2>
-            </div>
-          </div>
-        </Reveal>
+        <div className="grid grid-cols-12 gap-12 mt-10 mb-16 items-end">
+          <Reveal className="col-span-12 lg:col-span-8">
+            <h2 className="font-serif text-[42px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+              Tres principios sostienen cada caso.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.15} className="col-span-12 lg:col-span-4">
+            <EditorialBand
+              numeral="III·b"
+              title="Expedientes — pila atada"
+              tone="burgundy"
+              aspect="3/4"
+              fullBleed={false}
+            />
+          </Reveal>
+        </div>
 
         <Stagger className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-14 border-t border-foreground/15 pt-12">
           {pillars.map((p) => (

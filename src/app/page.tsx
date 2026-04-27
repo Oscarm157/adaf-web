@@ -11,6 +11,7 @@ import { CTAFinal } from "@/components/site/CTAFinal";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PullQuote } from "@/components/visual/PullQuote";
+import { EditorialBand } from "@/components/visual/EditorialBand";
 
 export default function Home() {
   return (
@@ -19,6 +20,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <EditorialBand
+          numeral="I·b"
+          title="Frontera Tijuana — garita y vista cenital"
+          tone="navy"
+          aspect="21/9"
+        />
         <Areas />
         <PullQuote cite="Principio de la práctica">
           La defensa empieza con la lectura del expediente. Los plazos legales
@@ -27,9 +34,21 @@ export default function Home() {
         </PullQuote>
         <Pillars />
         <Resultados />
+        <EditorialBand
+          numeral="IV·b"
+          title="Baja California — silueta y frontera norte"
+          tone="olive"
+          aspect="21/9"
+        />
         <Metodo />
         <LeadMagnet />
         <Notas />
+        <EditorialBand
+          numeral="VII·b"
+          title="Edificio institucional — fachada moderna frontal"
+          tone="navy"
+          aspect="21/9"
+        />
         <CTAFinal />
       </main>
       <Footer />

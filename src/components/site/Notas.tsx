@@ -1,7 +1,18 @@
 import Link from "next/link";
 import { ChapterMark } from "./ChapterMark";
+import { EditorialBand } from "@/components/visual/EditorialBand";
 
-const notas = [
+type Tone = "navy" | "burgundy" | "olive";
+
+const notas: Array<{
+  cat: string;
+  fecha: string;
+  folio: string;
+  titulo: string;
+  resumen: string;
+  slug: string;
+  cover: { title: string; tone: Tone };
+}> = [
   {
     cat: "Reformas",
     fecha: "27 abr 2026",
@@ -10,6 +21,7 @@ const notas = [
     resumen:
       "Modificaciones principales en sellos digitales, restricciones, RFC y comprobantes, con su impacto práctico antes del cierre del ejercicio.",
     slug: "reforma-cff-2026",
+    cover: { title: "Libro abierto — codex", tone: "navy" },
   },
   {
     cat: "Procedimientos",
@@ -19,6 +31,7 @@ const notas = [
     resumen:
       "Qué hacer al inicio de la diligencia, documentación que pueden requerir, plazos para aportar pruebas y errores comunes que escalan el procedimiento.",
     slug: "visita-domiciliaria-sat",
+    cover: { title: "Puerta entreabierta", tone: "burgundy" },
   },
   {
     cat: "Aduanero",
@@ -28,6 +41,7 @@ const notas = [
     resumen:
       "Plazo de 10 días para pruebas y alegatos, vías de defensa procedentes y procedimiento para recuperar la mercancía con garantía mientras se resuelve el fondo.",
     slug: "embargo-aduana-pama",
+    cover: { title: "Contenedor bajo lámpara", tone: "olive" },
   },
 ];
 
@@ -63,6 +77,15 @@ export function Notas() {
                 i < notas.length - 1 ? "md:border-r border-rule" : ""
               } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
             >
+              <div className="mb-7">
+                <EditorialBand
+                  numeral={`VII·${i + 1}`}
+                  title={n.cover.title}
+                  tone={n.cover.tone}
+                  aspect="4/3"
+                  fullBleed={false}
+                />
+              </div>
               <div className="flex items-baseline justify-between mb-6">
                 <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium">
                   {n.cat}
