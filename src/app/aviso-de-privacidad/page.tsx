@@ -49,7 +49,7 @@ export default function AvisoPrivacidadPage() {
 
               <H2>I. Identidad y domicilio del responsable</H2>
               <P>
-                ADAF — Asesoría y Defensa Aduanera Fiscal (en adelante,
+                ADAF · Asesoría y Defensa Aduanera Fiscal (en adelante,
                 &ldquo;el responsable&rdquo;), con domicilio en Blvd. de las
                 Bellas Artes 19213, Local 15, Nueva Tijuana, 22435 Tijuana,
                 Baja California, México, y correo electrónico

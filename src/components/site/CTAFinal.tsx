@@ -47,7 +47,7 @@ export function CTAFinal() {
           </div>
 
           <p className="text-[11px] uppercase tracking-[0.18em] text-background/55 mt-10">
-            Lunes a viernes · 09:00 — 17:00 · Tijuana, BC
+            Lunes a viernes · 09:00 a 17:00 · Tijuana, BC
           </p>
         </div>
       </div>

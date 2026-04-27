@@ -183,7 +183,7 @@ export function Header() {
                     664 647 5018
                   </a>
                   <p className="text-[12px] text-muted">
-                    Lun a vie · 09:00 — 17:00
+                    Lun a vie · 09:00 a 17:00
                   </p>
                 </div>
               </nav>

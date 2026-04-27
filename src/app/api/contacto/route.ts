@@ -64,7 +64,7 @@ export async function POST(request: Request) {
               ADAF · Sitio web · Nuevo mensaje
             </p>
             <h1 style="font-family:'Source Serif 4',Georgia,serif;font-size:24px;color:#0F2A47;margin:0 0 20px">
-              ${escape(nombre)} — ${escape(tipoLabel[tipo])}
+              ${escape(nombre)} · ${escape(tipoLabel[tipo])}
             </h1>
             <table style="width:100%;font-size:14px;line-height:1.5">
               <tr><td style="color:#5A5853;text-transform:uppercase;font-size:10px;letter-spacing:.18em;padding:6px 0">Teléfono</td><td>${escape(telefono)}</td></tr>

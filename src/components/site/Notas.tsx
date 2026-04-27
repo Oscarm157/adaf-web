@@ -25,7 +25,7 @@ const notas: Array<{
       title: "Libro abierto",
       tone: "navy",
       src: "/editorial/home-nota-cff-book.png",
-      alt: "Libro abierto — grabado linocut",
+      alt: "Libro abierto,  grabado linocut",
     },
   },
   {
@@ -40,7 +40,7 @@ const notas: Array<{
       title: "Puerta",
       tone: "burgundy",
       src: "/editorial/home-nota-sat-door.png",
-      alt: "Puerta panelada — grabado linocut",
+      alt: "Puerta panelada , grabado linocut",
     },
   },
   {
@@ -55,7 +55,7 @@ const notas: Array<{
       title: "Contenedor",
       tone: "olive",
       src: "/editorial/home-nota-pama-container.png",
-      alt: "Contenedor bajo lámpara de inspección — grabado linocut",
+      alt: "Contenedor bajo lámpara de inspección, grabado linocut",
     },
   },
 ];

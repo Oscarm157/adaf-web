@@ -43,7 +43,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Esta nota organiza los bloques de cambios que estamos viendo en la práctica del despacho —sellos digitales, registro federal de contribuyentes, comprobantes fiscales y procedimientos en torno al artículo 69-B del CFF— y aterriza acciones concretas que conviene revisar antes del próximo cierre de ejercicio. Cuando un cambio puntual depende de una redacción específica que aún no consideramos cerrada, lo dejamos señalado para validación interna del despacho.",
+        text: "Esta nota organiza los bloques de cambios que estamos viendo en la práctica del despacho (sellos digitales, registro federal de contribuyentes, comprobantes fiscales y procedimientos en torno al artículo 69-B del CFF) y aterriza acciones concretas que conviene revisar antes del próximo cierre de ejercicio. Cuando un cambio puntual depende de una redacción específica que aún no consideramos cerrada, lo dejamos señalado para validación interna del despacho.",
       },
       {
         type: "h2",
@@ -89,7 +89,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "El criterio que conviene tener presente es que un CFDI emitido con datos inconsistentes —clave equivocada, complemento incompleto, RFC del receptor inválido— se vuelve un punto de entrada para la autoridad en revisiones posteriores. La regularización oportuna, mediante cancelación y reemisión dentro de los plazos, evita que esos comprobantes se conviertan en argumento del SAT para presumir simulación o, en casos extremos, para incluir al emisor en los listados del 69-B.",
+        text: "El criterio que conviene tener presente es que un CFDI emitido con datos inconsistentes (clave equivocada, complemento incompleto, RFC del receptor inválido) se vuelve un punto de entrada para la autoridad en revisiones posteriores. La regularización oportuna, mediante cancelación y reemisión dentro de los plazos, evita que esos comprobantes se conviertan en argumento del SAT para presumir simulación o, en casos extremos, para incluir al emisor en los listados del 69-B.",
       },
       {
         type: "h2",
@@ -97,7 +97,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "El artículo 69-B del CFF se mantiene como uno de los procedimientos más sensibles para empresas que operan con redes amplias de proveedores. La reforma 2026 ajusta plazos y formas de notificación de los listados presuntivos y definitivos, sin cambiar la estructura del procedimiento: la autoridad publica una presunción de inexistencia de operaciones, el contribuyente afectado tiene un plazo para desvirtuar mediante pruebas, y de no hacerlo —o de hacerlo insuficientemente— se publica el listado definitivo con consecuencias sobre los efectos fiscales de los comprobantes emitidos.",
+        text: "El artículo 69-B del CFF se mantiene como uno de los procedimientos más sensibles para empresas que operan con redes amplias de proveedores. La reforma 2026 ajusta plazos y formas de notificación de los listados presuntivos y definitivos, sin cambiar la estructura del procedimiento: la autoridad publica una presunción de inexistencia de operaciones, el contribuyente afectado tiene un plazo para desvirtuar mediante pruebas, y de no hacerlo, o de hacerlo insuficientemente, se publica el listado definitivo con consecuencias sobre los efectos fiscales de los comprobantes emitidos.",
       },
       {
         type: "p",
@@ -127,7 +127,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Para una empresa que importa de manera continua, el patrón es claro: los cambios al CFF se sienten primero en la operación —en el sello digital, en el catálogo del RFC, en los CFDI con complemento de comercio exterior— y se manifiestan en una revisión meses después. Lo que en enero parece un dato menor, al cierre del ejercicio puede ser el detonador de un crédito fiscal con multas y actualizaciones.",
+        text: "Para una empresa que importa de manera continua, el patrón es claro: los cambios al CFF se sienten primero en la operación (en el sello digital, en el catálogo del RFC, en los CFDI con complemento de comercio exterior) y se manifiestan en una revisión meses después. Lo que en enero parece un dato menor, al cierre del ejercicio puede ser el detonador de un crédito fiscal con multas y actualizaciones.",
       },
       {
         type: "p",
@@ -223,7 +223,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Cuando alguno de estos elementos falta —orden sin firma autógrafa o digital válida, identificación incompleta, designación irregular de testigos— se construye un argumento de nulidad por vicios formales. Esos argumentos no se inventan después; se ganan o se pierden en la diligencia misma, según lo que se asiente en el acta.",
+        text: "Cuando alguno de estos elementos falta (orden sin firma autógrafa o digital válida, identificación incompleta, designación irregular de testigos) se construye un argumento de nulidad por vicios formales. Esos argumentos no se inventan después; se ganan o se pierden en la diligencia misma, según lo que se asiente en el acta.",
       },
       {
         type: "h2",
@@ -329,7 +329,7 @@ export const posts: BlogPost[] = [
     body: [
       {
         type: "p",
-        text: "Cuando una mercancía queda retenida en una aduana o en un recinto fiscalizado, lo primero que recibe el importador es un acta de inicio del Procedimiento Administrativo en Materia Aduanera, mejor conocido como PAMA. Ese acta marca el arranque de un procedimiento con plazos cortos en el que el contribuyente tiene una sola oportunidad amplia para aportar pruebas y alegatos antes de que la autoridad emita la resolución determinativa. La diferencia entre responder bien y responder mal —o no responder— se traduce en la pérdida de la mercancía, en multas que pueden alcanzar el 130% del valor en aduana y, en casos graves, en el escalamiento a procedimientos penales por contrabando.",
+        text: "Cuando una mercancía queda retenida en una aduana o en un recinto fiscalizado, lo primero que recibe el importador es un acta de inicio del Procedimiento Administrativo en Materia Aduanera, mejor conocido como PAMA. Ese acta marca el arranque de un procedimiento con plazos cortos en el que el contribuyente tiene una sola oportunidad amplia para aportar pruebas y alegatos antes de que la autoridad emita la resolución determinativa. La diferencia entre responder bien y responder mal, o no responder, se traduce en la pérdida de la mercancía, en multas que pueden alcanzar el 130% del valor en aduana y, en casos graves, en el escalamiento a procedimientos penales por contrabando.",
       },
       {
         type: "p",
@@ -345,7 +345,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Iniciado el PAMA, la autoridad levanta acta circunstanciada con los hechos y la fundamentación. Esa acta es la base de todo: lo que ahí se asiente —y lo que ahí se deje de asentar— pesa en el resto del procedimiento. Conviene revisarla con detalle desde la primera lectura: qué mercancía se describe, qué pedimento ampara la operación, qué fundamento legal cita la autoridad y qué prueba ofreció el visitador para sostener la presunción.",
+        text: "Iniciado el PAMA, la autoridad levanta acta circunstanciada con los hechos y la fundamentación. Esa acta es la base de todo: lo que ahí se asiente, y lo que ahí se deje de asentar, pesa en el resto del procedimiento. Conviene revisarla con detalle desde la primera lectura: qué mercancía se describe, qué pedimento ampara la operación, qué fundamento legal cita la autoridad y qué prueba ofreció el visitador para sostener la presunción.",
       },
       {
         type: "h2",
@@ -357,7 +357,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Las pruebas habituales en un PAMA incluyen documentos que acreditan la legalidad de la importación —pedimento, factura comercial, lista de empaque, certificado de origen— y documentos técnicos del producto cuando la observación es de cumplimiento normativo (NOMs, etiquetado, fichas técnicas). Cuando la observación es de clasificación o valor, las pruebas se construyen con análisis comparativos, dictámenes técnicos y referencias a las Reglas Generales de Interpretación de la Tarifa.",
+        text: "Las pruebas habituales en un PAMA incluyen documentos que acreditan la legalidad de la importación (pedimento, factura comercial, lista de empaque, certificado de origen) y documentos técnicos del producto cuando la observación es de cumplimiento normativo (NOMs, etiquetado, fichas técnicas). Cuando la observación es de clasificación o valor, las pruebas se construyen con análisis comparativos, dictámenes técnicos y referencias a las Reglas Generales de Interpretación de la Tarifa.",
       },
       {
         type: "note",
@@ -432,7 +432,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "No todos los PAMA conviene litigarlos hasta el final. Cuando la observación tiene sustento documental sólido del lado de la autoridad y la diferencia económica es manejable, una corrección espontánea o un pago con regularización puede ser preferible al costo de un litigio que probablemente se pierda. Cuando, en cambio, la presunción de la autoridad se sostiene en interpretaciones discutibles —clasificación, valor, alcance de una NOM— el litigio tiene fundamento y los antecedentes del TFJA suelen ser favorables al contribuyente bien preparado.",
+        text: "No todos los PAMA conviene litigarlos hasta el final. Cuando la observación tiene sustento documental sólido del lado de la autoridad y la diferencia económica es manejable, una corrección espontánea o un pago con regularización puede ser preferible al costo de un litigio que probablemente se pierda. Cuando, en cambio, la presunción de la autoridad se sostiene en interpretaciones discutibles (clasificación, valor, alcance de una NOM) el litigio tiene fundamento y los antecedentes del TFJA suelen ser favorables al contribuyente bien preparado.",
       },
       {
         type: "p",

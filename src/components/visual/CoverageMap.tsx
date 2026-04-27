@@ -61,7 +61,7 @@ export function CoverageMap() {
           fontFamily="Inter, system-ui"
           fontWeight="500"
         >
-          FRONTERA MÉXICO — ESTADOS UNIDOS
+          FRONTERA MÉXICO · ESTADOS UNIDOS
         </text>
 
         {/* Baja California silhouette (simplified) */}

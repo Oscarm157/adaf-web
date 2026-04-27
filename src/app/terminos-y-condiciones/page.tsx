@@ -49,7 +49,7 @@ export default function TerminosPage() {
 
               <H2>I. Aceptación de los términos</H2>
               <P>
-                El acceso y uso del sitio web del despacho ADAF — Asesoría
+                El acceso y uso del sitio web del despacho ADAF · Asesoría
                 y Defensa Aduanera Fiscal implica la aceptación plena de
                 estos términos y condiciones. Si no estás de acuerdo con
                 alguno de los términos aquí descritos, abstente de utilizar
@@ -58,9 +58,9 @@ export default function TerminosPage() {
 
               <H2>II. Naturaleza informativa del sitio</H2>
               <P>
-                Los contenidos del sitio —notas técnicas, descripciones de
+                Los contenidos del sitio (notas técnicas, descripciones de
                 servicios, recursos descargables y respuestas a preguntas
-                frecuentes— tienen carácter exclusivamente informativo. No
+                frecuentes) tienen carácter exclusivamente informativo. No
                 constituyen asesoría jurídica sobre un caso particular ni
                 generan, por sí mismos, una relación abogado-cliente entre
                 el visitante y el despacho.

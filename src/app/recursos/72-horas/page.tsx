@@ -59,7 +59,7 @@ export default function Recurso72HorasPage() {
                 <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
                   <Image
                     src="/portada-72-horas.png"
-                    alt="Portada — Las primeras 72 horas, guía del contribuyente ADAF"
+                    alt="Portada de Las primeras 72 horas, guía del contribuyente ADAF"
                     fill
                     sizes="(min-width: 1024px) 40vw, 100vw"
                     className="object-cover"

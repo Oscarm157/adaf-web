@@ -66,11 +66,11 @@ const grupoProcedimientos: FAQ[] = [
   },
   {
     q: "¿Puedo pagar una multa o un crédito fiscal a plazos?",
-    a: "Sí. Tanto el Código Fiscal de la Federación como la Ley del Seguro Social prevén pagos a plazos —hasta 36 mensualidades en el SAT y hasta 48 mensualidades en el IMSS, según el caso— pero solicitar el pago a plazos no suspende el plazo para impugnar. Conviene evaluar ambas vías en paralelo.",
+    a: "Sí. Tanto el Código Fiscal de la Federación como la Ley del Seguro Social prevén pagos a plazos, hasta 36 mensualidades en el SAT y hasta 48 mensualidades en el IMSS, según el caso, pero solicitar el pago a plazos no suspende el plazo para impugnar. Conviene evaluar ambas vías en paralelo.",
   },
   {
     q: "¿En qué se diferencia un recurso de revocación de un juicio de nulidad?",
-    a: "El recurso de revocación se interpone ante la propia autoridad que emitió el acto y suele ser más rápido y menos costoso. El juicio de nulidad se promueve ante un tribunal independiente —el TFJA o el Tribunal de Justicia Administrativa local— y permite un análisis más profundo y una suspensión más amplia. Sólo se puede elegir una vía, no ambas simultáneamente.",
+    a: "El recurso de revocación se interpone ante la propia autoridad que emitió el acto y suele ser más rápido y menos costoso. El juicio de nulidad se promueve ante un tribunal independiente, el TFJA o el Tribunal de Justicia Administrativa local, y permite un análisis más profundo y una suspensión más amplia. Sólo se puede elegir una vía, no ambas simultáneamente.",
   },
   {
     q: "¿Pueden embargarme las cuentas bancarias por adeudos fiscales?",
@@ -89,7 +89,7 @@ const grupoHonorarios: FAQ[] = [
   },
   {
     q: "¿Cuánto cuesta el diagnóstico inicial?",
-    a: "El diagnóstico inicial de la notificación o resolución que recibiste no tiene costo. Si el caso requiere una revisión documental más amplia —por ejemplo, una auditoría preventiva o un compliance— te lo proponemos por separado con honorarios definidos antes de empezar.",
+    a: "El diagnóstico inicial de la notificación o resolución que recibiste no tiene costo. Si el caso requiere una revisión documental más amplia, por ejemplo, una auditoría preventiva o un compliance, te lo proponemos por separado con honorarios definidos antes de empezar.",
   },
 ];
 

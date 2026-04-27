@@ -32,14 +32,14 @@ const stats: {
 ];
 
 const autoridades = [
-  "SAT — Servicio de Administración Tributaria",
-  "ANAM — Agencia Nacional de Aduanas de México",
-  "IMSS — Instituto Mexicano del Seguro Social",
+  "SAT · Servicio de Administración Tributaria",
+  "ANAM · Agencia Nacional de Aduanas de México",
+  "IMSS · Instituto Mexicano del Seguro Social",
   "INFONAVIT",
-  "COFEPRIS — Comisión Federal de Riesgos Sanitarios",
+  "COFEPRIS · Comisión Federal de Riesgos Sanitarios",
   "COEPRIS Baja California",
-  "SICT — Secretaría de Infraestructura, Comunicaciones y Transportes",
-  "TFJA — Tribunal Federal de Justicia Administrativa",
+  "SICT · Secretaría de Infraestructura, Comunicaciones y Transportes",
+  "TFJA · Tribunal Federal de Justicia Administrativa",
   "Tribunal de Justicia Administrativa del Estado de BC",
   "Juzgados de Distrito",
   "Tribunales Colegiados de Circuito",

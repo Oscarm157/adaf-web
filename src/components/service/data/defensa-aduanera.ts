@@ -12,7 +12,7 @@ const data: ServiceData = {
       "Para ofrecer pruebas y alegatos en el PAMA, contados desde el levantamiento del acta.",
   },
   queEs: [
-    "Cuando ingresas mercancía a territorio nacional, la autoridad aduanera puede iniciar un procedimiento si detecta —o presume— una irregularidad: clasificación arancelaria incorrecta, valor en aduana inexacto, falta de regulaciones no arancelarias, omisión de impuestos al comercio exterior o documentación inconsistente. El PAMA es el procedimiento mediante el cual la autoridad embarga la mercancía de manera precautoria mientras determina si hubo infracción.",
+    "Cuando ingresas mercancía a territorio nacional, la autoridad aduanera puede iniciar un procedimiento si detecta, o presume, una irregularidad: clasificación arancelaria incorrecta, valor en aduana inexacto, falta de regulaciones no arancelarias, omisión de impuestos al comercio exterior o documentación inconsistente. El PAMA es el procedimiento mediante el cual la autoridad embarga la mercancía de manera precautoria mientras determina si hubo infracción.",
     "Necesitas defensa aduanera si te embargaron mercancía en frontera o en recinto fiscalizado, recibiste una resolución que determina créditos fiscales por contribuciones al comercio exterior, te impusieron una multa por una norma oficial mexicana o por incumplimiento de regulaciones no arancelarias, o tu importación temporal IMMEX está siendo cuestionada.",
   ],
   comoAyudamos: [

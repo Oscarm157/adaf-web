@@ -12,7 +12,7 @@ const data: ServiceData = {
       "Las audiencias del Código Nacional de Procedimientos Penales corren en plazos muy cortos desde la imputación.",
   },
   queEs: [
-    "El Código Fiscal de la Federación tipifica varios delitos: defraudación fiscal y equiparada, contrabando y equiparado, simulación de operaciones (artículo 113 Bis), uso de comprobantes apócrifos. Cuando hay denuncia, la causa puede llegar a juzgado penal federal, con consecuencias graves —incluida prisión preventiva oficiosa en ciertos supuestos del artículo 167 del Código Nacional de Procedimientos Penales.",
+    "El Código Fiscal de la Federación tipifica varios delitos: defraudación fiscal y equiparada, contrabando y equiparado, simulación de operaciones (artículo 113 Bis), uso de comprobantes apócrifos. Cuando hay denuncia, la causa puede llegar a juzgado penal federal, con consecuencias graves, incluida prisión preventiva oficiosa en ciertos supuestos del artículo 167 del Código Nacional de Procedimientos Penales.",
     "Necesitas esta defensa si te citaron como imputado en una carpeta de investigación, te llegó orden de aprehensión, estás listado en el 69-B definitivo o hay denuncia del SAT por defraudación.",
   ],
   comoAyudamos: [

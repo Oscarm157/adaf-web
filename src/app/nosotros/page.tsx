@@ -15,7 +15,7 @@ import { siteUrl } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Nosotros · Despacho jurídico en Tijuana",
   description:
-    "ADAF — Asesoría y Defensa Aduanera Fiscal. Veinticinco años representando casos en materia fiscal, aduanera y administrativa en Tijuana, Tecate, Rosarito y la frontera norte.",
+    "ADAF · Asesoría y Defensa Aduanera Fiscal. Veinticinco años representando casos en materia fiscal, aduanera y administrativa en Tijuana, Tecate, Rosarito y la frontera norte.",
   alternates: { canonical: "/nosotros" },
   openGraph: {
     type: "website",
@@ -57,7 +57,7 @@ export default function NosotrosPage() {
           crumbs={[{ label: "Inicio", href: "/" }, { label: "Nosotros" }]}
           numeral="I"
           label="Sobre el despacho"
-          h1="ADAF — Asesoría y Defensa Aduanera Fiscal."
+          h1="ADAF · Asesoría y Defensa Aduanera Fiscal."
           lede="Veinticinco años de práctica continua en Tijuana representando casos en materia fiscal, aduanera y administrativa ante autoridades estatales y federales."
         />
 
@@ -90,8 +90,8 @@ export default function NosotrosPage() {
                     transportistas y profesionistas con actividad empresarial
                     en Tijuana, Tecate, Rosarito y la zona fronteriza. La
                     mayoría de los casos que atendemos llegan en momentos de
-                    presión —una visita domiciliaria, un embargo precautorio
-                    en frontera, una notificación de crédito fiscal— y la
+                    presión (una visita domiciliaria, un embargo precautorio
+                    en frontera, una notificación de crédito fiscal), y la
                     primera tarea es siempre la misma: ordenar la información,
                     identificar los plazos y proponer un curso de acción
                     realista.
@@ -108,7 +108,7 @@ export default function NosotrosPage() {
           apurado.
         </PullQuote>
 
-        {/* II — Principios */}
+        {/* II,  Principios */}
         <section className="bg-background-warm pt-20 pb-20">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="II" label="Principios" />
@@ -152,7 +152,7 @@ export default function NosotrosPage() {
           </div>
         </section>
 
-        {/* III — Áreas de especialización */}
+        {/* III , Áreas de especialización */}
         <section className="bg-background pt-20 pb-20">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="III" label="Áreas de práctica" />
@@ -208,11 +208,11 @@ export default function NosotrosPage() {
           </div>
         </section>
 
-        {/* TODO: Sección IV "Equipo" — restaurar con bios de texto cuando
+        {/* TODO: Sección IV "Equipo",  restaurar con bios de texto cuando
             el despacho entregue: nombre · especialidad · años · formación.
             Por ahora se omite para no mostrar placeholders. */}
 
-        {/* IV — CTA final navy */}
+        {/* IV , CTA final navy */}
         <section className="bg-navy text-background relative overflow-hidden">
           <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-olive/60" />
           <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />

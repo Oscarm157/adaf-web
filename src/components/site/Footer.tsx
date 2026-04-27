@@ -56,7 +56,7 @@ export function Footer() {
                 <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
                   Horario
                 </p>
-                <p>Lunes a viernes · 09:00 — 17:00</p>
+                <p>Lunes a viernes · 09:00 a 17:00</p>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ export function Footer() {
               Términos y condiciones
             </Link>
             <span className="font-serif italic normal-case tracking-normal text-[12px]">
-              Tijuana — frontera norte
+              Tijuana · frontera norte
             </span>
           </div>
         </div>

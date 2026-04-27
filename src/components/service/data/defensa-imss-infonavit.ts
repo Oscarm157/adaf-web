@@ -12,7 +12,7 @@ const data: ServiceData = {
       "Para presentar el recurso de inconformidad ante el Consejo Consultivo Delegacional del IMSS.",
   },
   queEs: [
-    "El IMSS y el INFONAVIT actúan como autoridades fiscales en lo que toca a las cuotas obrero-patronales y aportaciones de vivienda. Pueden determinar diferencias por dictamen, por revisión, por aviso patronal omitido o por accidente de trabajo no reportado. Los capitales constitutivos —que se aplican cuando un trabajador se accidenta o enferma sin estar inscrito— son particularmente costosos para el patrón.",
+    "El IMSS y el INFONAVIT actúan como autoridades fiscales en lo que toca a las cuotas obrero-patronales y aportaciones de vivienda. Pueden determinar diferencias por dictamen, por revisión, por aviso patronal omitido o por accidente de trabajo no reportado. Los capitales constitutivos, que se aplican cuando un trabajador se accidenta o enferma sin estar inscrito, son particularmente costosos para el patrón.",
     "Necesitas esta defensa si recibiste una cédula de liquidación de cuotas, un capital constitutivo, una multa por SUA, un requerimiento de dictamen o una resolución de inconformidad desfavorable.",
   ],
   comoAyudamos: [

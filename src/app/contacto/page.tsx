@@ -195,7 +195,7 @@ export default function ContactoPage() {
                       Horario
                     </dt>
                     <dd className="text-[16px] leading-[1.55] text-foreground/85">
-                      Lunes a viernes · 09:00 — 17:00
+                      Lunes a viernes · 09:00 a 17:00
                     </dd>
                   </div>
                 </dl>

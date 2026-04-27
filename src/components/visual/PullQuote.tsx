@@ -54,7 +54,7 @@ export function PullQuote({
             transition={{ duration: 0.5, delay: 0.5 }}
             className="text-[11px] uppercase tracking-[0.22em] text-muted font-medium mt-9"
           >
-            — {cite}
+            · {cite}
           </motion.figcaption>
         )}
       </div>

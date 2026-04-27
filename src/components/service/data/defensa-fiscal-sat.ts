@@ -5,7 +5,7 @@ const data: ServiceData = {
   numeral: "II",
   label: "Defensa fiscal SAT",
   h1: "Defensa fiscal frente a créditos, auditorías y visitas domiciliarias del SAT.",
-  lede: "Si recibiste una notificación del SAT —invitación, requerimiento, orden de visita o resolución de crédito fiscal— hay vías legales para responder y evitar que el monto quede firme.",
+  lede: "Si recibiste una notificación del SAT (invitación, requerimiento, orden de visita o resolución de crédito fiscal), hay vías legales para responder y evitar que el monto quede firme.",
   plazoCritico: {
     numero: "20 días hábiles",
     descripcion:

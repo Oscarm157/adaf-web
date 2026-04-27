@@ -22,11 +22,11 @@ export default function Home() {
         <Hero />
         <EditorialBand
           numeral="I·b"
-          title="Frontera — vista del cruce"
+          title="Frontera · vista del cruce"
           tone="navy"
           aspect="21/9"
           src="/editorial/home-banner-1-expediente.png"
-          alt="Mesa de trabajo con expedientes — fotografía editorial"
+          alt="Mesa de trabajo con expedientes, fotografía editorial"
         />
         <Areas />
         <PullQuote cite="Principio de la práctica">
@@ -42,7 +42,7 @@ export default function Home() {
           tone="olive"
           aspect="21/9"
           src="/editorial/home-banner-3-pasillo.png"
-          alt="Pasillo institucional con luz lateral — fotografía editorial"
+          alt="Pasillo institucional con luz lateral, fotografía editorial"
         />
         <Metodo />
         <LeadMagnet />
@@ -53,7 +53,7 @@ export default function Home() {
           tone="navy"
           aspect="21/9"
           src="/editorial/home-banner-4-edificio.png"
-          alt="Fachada de edificio institucional al atardecer — fotografía editorial"
+          alt="Fachada de edificio institucional al atardecer, fotografía editorial"
         />
         <CTAFinal />
       </main>
