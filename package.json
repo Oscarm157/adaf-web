@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "img:gen": "node scripts/gen-images.mjs",
+    "img:sheet": "node scripts/build-contact-sheet.mjs",
+    "img:flow": "node scripts/gen-images.mjs && node scripts/build-contact-sheet.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.11.0",
