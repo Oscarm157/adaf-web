@@ -87,8 +87,7 @@ export default function ContactoPage() {
                   corriendo y necesitas orientación inmediata.
                 </p>
 
-                <a
-                  href="https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto."
+                <a href="https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200 mb-8"
                 >
                   Abrir WhatsApp
@@ -100,8 +99,7 @@ export default function ContactoPage() {
                       Teléfono
                     </dt>
                     <dd>
-                      <a
-                        href="tel:+526646475018"
+                      <a href="tel:+526646475018" target="_blank" rel="noopener noreferrer"
                         className="font-serif text-[18px] text-navy hover:text-burgundy transition-colors"
                       >
                         664 647 5018
@@ -113,8 +111,7 @@ export default function ContactoPage() {
                       Email
                     </dt>
                     <dd>
-                      <a
-                        href="mailto:juridicoadaf@gmail.com"
+                      <a href="mailto:juridicoadaf@gmail.com" target="_blank" rel="noopener noreferrer"
                         className="text-[14.5px] text-foreground hover:text-burgundy transition-colors break-all"
                       >
                         juridicoadaf@gmail.com
@@ -169,8 +166,7 @@ export default function ContactoPage() {
                       Teléfono
                     </dt>
                     <dd>
-                      <a
-                        href="tel:+526646475018"
+                      <a href="tel:+526646475018" target="_blank" rel="noopener noreferrer"
                         className="font-serif text-[20px] text-navy hover:text-burgundy transition-colors"
                       >
                         664 647 5018
@@ -182,8 +178,7 @@ export default function ContactoPage() {
                       Email
                     </dt>
                     <dd>
-                      <a
-                        href="mailto:juridicoadaf@gmail.com"
+                      <a href="mailto:juridicoadaf@gmail.com" target="_blank" rel="noopener noreferrer"
                         className="text-[16px] text-foreground hover:text-burgundy transition-colors"
                       >
                         juridicoadaf@gmail.com
@@ -202,18 +197,26 @@ export default function ContactoPage() {
               </div>
 
               <div className="col-span-12 lg:col-span-7">
-                <div className="border border-rule overflow-hidden">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3373.5!2d-117.04!3d32.51!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2zQmx2ZC4gZGUgbGFzIEJlbGxhcyBBcnRlcyAxOTIxMywgVGlqdWFuYQ!5e0!3m2!1ses!2smx!4v1700000000000"
-                    width="100%"
-                    height="460"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Ubicación oficina ADAF en Nueva Tijuana"
-                  />
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/mYuH7rHaBWbDGXnQ9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block border border-rule bg-background-warm hover:bg-background transition-colors duration-200 px-8 py-12 group h-full"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-burgundy mb-4">
+                    Ubicación
+                  </p>
+                  <h3 className="font-serif text-[22px] md:text-[26px] leading-[1.2] font-semibold text-navy tracking-[-0.008em]">
+                    Blvd. de las Bellas Artes 19213, Local 15
+                  </h3>
+                  <p className="text-[15px] text-foreground/80 mt-2 leading-[1.55]">
+                    Nueva Tijuana, 22435 Tijuana, Baja California, México.
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-[12px] uppercase tracking-[0.16em] font-medium text-burgundy mt-8 group-hover:gap-3 transition-all duration-200">
+                    Abrir en Google Maps
+                    <span aria-hidden="true">→</span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>

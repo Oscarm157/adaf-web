@@ -165,8 +165,7 @@ export function Header() {
                   >
                     Agenda tu valoración
                   </Link>
-                  <a
-                    href="https://wa.me/526646475018"
+                  <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                     className="mt-3 inline-flex w-full items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/40 hover:bg-navy hover:text-background transition-colors duration-200"
                   >
                     Hablar por WhatsApp
@@ -177,8 +176,7 @@ export function Header() {
                   <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
                     Contacto directo
                   </p>
-                  <a
-                    href="tel:+526646475018"
+                  <a href="tel:+526646475018" target="_blank" rel="noopener noreferrer"
                     className="block font-serif text-[18px] text-navy mt-2 hover:text-burgundy transition-colors"
                   >
                     664 647 5018

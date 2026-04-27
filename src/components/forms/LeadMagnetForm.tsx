@@ -47,7 +47,7 @@ export function LeadMagnetForm({ withConsent = false }: { withConsent?: boolean 
           Solicitud recibida
         </p>
         <h3 className="font-serif text-[20px] leading-[1.25] font-semibold text-navy tracking-[-0.008em]">
-          Recibirás la guía en tu correo.
+          Te enviaremos la guía en horario hábil.
         </h3>
         <p className="text-[14.5px] leading-[1.6] text-foreground/80 mt-3">
           Si tu asunto es urgente, escríbenos por WhatsApp al 664 647 5018.
@@ -109,7 +109,7 @@ export function LeadMagnetForm({ withConsent = false }: { withConsent?: boolean 
         {state === "submitting" ? "Enviando..." : "Descargar la guía"}
       </button>
       <p className="text-[13px] leading-[1.55] text-muted mt-5 max-w-[420px]">
-        Recibirás la guía en tu correo en los próximos minutos.
+        Te enviaremos la guía en horario hábil al correo que registres.
       </p>
       <p className="text-[11px] uppercase tracking-[0.16em] text-muted mt-3">
         Sujeto al aviso de privacidad

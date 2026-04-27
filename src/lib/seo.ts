@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "Despacho jurídico en Tijuana especializado en defensa fiscal, aduanera, administrativa y penal-fiscal. 25 años representando a empresarios, importadores y transportistas ante SAT, ANAM, IMSS, COFEPRIS, COEPRIS, SICT y los tribunales federales.",
   url: siteUrl,
-  ogImage: `${siteUrl}/og-default.png`,
+  ogImage: `${siteUrl}/opengraph-image`,
   locale: "es_MX",
   phone: "+52-664-647-5018",
   phoneDisplay: "664 647 5018",
@@ -37,8 +37,8 @@ export const legalServiceJsonLd = {
   url: siteUrl,
   telephone: siteConfig.phone,
   email: `mailto:${siteConfig.email}`,
-  image: `${siteUrl}/og-default.png`,
-  logo: `${siteUrl}/logo-adaf-source.jpg`,
+  image: `${siteUrl}/opengraph-image`,
+  logo: `${siteUrl}/logo-adaf.jpg`,
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -74,7 +74,6 @@ export const legalServiceJsonLd = {
     "Defensa ante SAT, ANAM, IMSS, COFEPRIS, COEPRIS, SICT",
   ],
   sameAs: [
-    "https://www.facebook.com/ADAFSC",
     "https://www.facebook.com/ADAFdespachojuridico",
   ],
 };

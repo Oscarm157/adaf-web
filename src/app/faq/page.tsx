@@ -279,8 +279,7 @@ export default function FaqPage() {
                 horario hábil con una valoración inicial sin costo.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 mt-9">
-                <a
-                  href="https://wa.me/526646475018"
+                <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
                 >
                   Hablar por WhatsApp
@@ -291,11 +290,6 @@ export default function FaqPage() {
                 >
                   Enviar mensaje
                 </Link>
-                <a href="https://wa.me/526646475018"
-                  className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
-                >
-                  Agendar 20 min
-                </a>
               </div>
             </div>
           </div>

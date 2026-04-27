@@ -4,13 +4,13 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
-import { Prose, P, H2, UL, LI, Note } from "@/components/page/Prose";
+import { Prose, P, H2, UL, LI } from "@/components/page/Prose";
 import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Aviso de privacidad",
   description:
-    "Aviso de privacidad integral del despacho ADAF en cumplimiento de la LFPDPPP. Plantilla pendiente de validación legal del despacho.",
+    "Aviso de privacidad integral del despacho ADAF en cumplimiento de la LFPDPPP.",
   alternates: { canonical: "/aviso-de-privacidad" },
   openGraph: {
     title: "Aviso de privacidad · ADAF",
@@ -31,7 +31,7 @@ export default function AvisoPrivacidadPage() {
           numeral="I"
           label="Aviso de privacidad"
           h1="Aviso de privacidad integral."
-          lede="Documento elaborado en cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento. Pendiente de validación legal del despacho."
+          lede="Documento elaborado en cumplimiento de la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP) y su Reglamento."
           crumbs={[
             { label: "Inicio", href: "/" },
             { label: "Aviso de privacidad" },
@@ -41,12 +41,6 @@ export default function AvisoPrivacidadPage() {
         <section className="bg-background pt-16 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <Prose>
-              <Note title="Plantilla pendiente de validación">
-                Esta es una plantilla orientativa. La versión final debe ser
-                revisada y firmada por el despacho antes de su publicación
-                pública.
-              </Note>
-
               <H2>I. Identidad y domicilio del responsable</H2>
               <P>
                 ADAF · Asesoría y Defensa Aduanera Fiscal (en adelante,
@@ -189,9 +183,6 @@ export default function AvisoPrivacidadPage() {
 
               <H2>VIII. Fecha de última actualización</H2>
               <P>Última actualización: 27 de abril de 2026.</P>
-              <P>
-                <em>[Pendiente de validación legal por ADAF]</em>
-              </P>
             </Prose>
           </div>
         </section>

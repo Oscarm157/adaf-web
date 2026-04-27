@@ -93,8 +93,7 @@ const data: ServiceData = {
     },
   ],
   metaTitle: "Asesoría preventiva y compliance fiscal-aduanero · Tijuana",
-  metaDescription:
-    "Diagnóstico de riesgos, regularización espontánea y programas de cumplimiento fiscal, aduanero, laboral y sanitario. Iguala mensual o por proyecto. Despacho ADAF en Tijuana.",
+  metaDescription: "Diagnóstico de riesgos, regularización espontánea y compliance fiscal, aduanero, laboral y sanitario. Iguala mensual o por proyecto. ADAF Tijuana.",
 };
 
 export default data;

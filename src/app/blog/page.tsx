@@ -67,9 +67,9 @@ export default function BlogIndexPage() {
                     {n.fecha}
                   </p>
 
-                  <h3 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-medium text-navy tracking-[-0.008em] mt-4 group-hover:text-burgundy transition-colors duration-300">
+                  <h2 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-medium text-navy tracking-[-0.008em] mt-4 group-hover:text-burgundy transition-colors duration-300">
                     {n.titulo}
-                  </h3>
+                  </h2>
 
                   <p className="text-[14.5px] leading-[1.6] text-muted mt-4">
                     {n.resumen}
@@ -104,33 +104,30 @@ export default function BlogIndexPage() {
 
             <div className="max-w-[680px] mx-auto text-center">
               <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
-                Recibe nuestras notas.
+                ¿Tu caso se parece a alguna nota?
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.6] max-w-[540px] mx-auto">
-                Comentarios técnicos sobre reformas, criterios y
-                procedimientos en materia fiscal, aduanera y administrativa.
-                Sin frecuencia fija; cuando hay algo relevante para empresas
-                de la frontera norte.
+                Comentamos casos concretos a partir del expediente. Si una
+                de estas notas refleja la situación que enfrentas,
+                escríbenos para una valoración inicial.
               </p>
 
-              <form className="mt-10 flex flex-col sm:flex-row gap-3 max-w-[460px] mx-auto">
-                <input
-                  type="email"
-                  required
-                  placeholder="Tu correo electrónico"
-                  className="flex-1 h-12 px-4 bg-transparent border border-background/30 text-background text-[14px] placeholder:text-background/50 focus:outline-none focus:border-olive transition-colors"
-                />
-                <button
-                  type="submit"
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                <a
+                  href="https://wa.me/526646475018"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
                 >
-                  Suscribirme
-                </button>
-              </form>
-
-              <p className="text-[11px] uppercase tracking-[0.18em] text-background/55 mt-6">
-                Sujeto al aviso de privacidad
-              </p>
+                  Hablar por WhatsApp
+                </a>
+                <Link
+                  href="/contacto"
+                  className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
+                >
+                  Enviar mensaje
+                </Link>
+              </div>
             </div>
           </div>
         </section>

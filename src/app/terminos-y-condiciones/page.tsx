@@ -4,13 +4,13 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
-import { Prose, P, H2, Note } from "@/components/page/Prose";
+import { Prose, P, H2 } from "@/components/page/Prose";
 import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Términos y condiciones",
   description:
-    "Términos y condiciones de uso del sitio web del despacho ADAF. Plantilla pendiente de validación legal del despacho.",
+    "Términos y condiciones de uso del sitio web del despacho ADAF.",
   alternates: { canonical: "/terminos-y-condiciones" },
   openGraph: {
     title: "Términos y condiciones · ADAF",
@@ -31,7 +31,7 @@ export default function TerminosPage() {
           numeral="II"
           label="Términos y condiciones"
           h1="Términos y condiciones de uso del sitio."
-          lede="Documento que rige el acceso y uso del sitio web del despacho. Pendiente de validación legal del despacho."
+          lede="Documento que rige el acceso y uso del sitio web del despacho."
           crumbs={[
             { label: "Inicio", href: "/" },
             { label: "Términos y condiciones" },
@@ -41,12 +41,6 @@ export default function TerminosPage() {
         <section className="bg-background pt-16 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <Prose>
-              <Note title="Plantilla pendiente de validación">
-                Esta es una plantilla orientativa. La versión final debe ser
-                revisada y firmada por el despacho antes de su publicación
-                pública.
-              </Note>
-
               <H2>I. Aceptación de los términos</H2>
               <P>
                 El acceso y uso del sitio web del despacho ADAF · Asesoría
@@ -129,9 +123,6 @@ export default function TerminosPage() {
 
               <P>
                 <em>Última actualización: 27 de abril de 2026.</em>
-              </P>
-              <P>
-                <em>[Pendiente de validación legal por ADAF]</em>
               </P>
             </Prose>
           </div>

@@ -208,8 +208,7 @@ export default async function BlogPostPage({
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mt-9">
-                <a
-                  href="https://wa.me/526646475018"
+                <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
                 >
                   Hablar por WhatsApp
@@ -220,11 +219,6 @@ export default async function BlogPostPage({
                 >
                   Enviar mensaje
                 </Link>
-                <a href="https://wa.me/526646475018"
-                  className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/30 hover:bg-navy hover:text-background transition-colors duration-200"
-                >
-                  Agendar 20 min
-                </a>
               </div>
             </div>
           </div>

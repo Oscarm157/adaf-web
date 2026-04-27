@@ -273,12 +273,6 @@ export function ServicePage({ data }: { data: ServiceData }) {
               >
                 Enviar mensaje
               </Link>
-              <Link
-                href={waLink}
-                className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
-              >
-                Agendar 20 min
-              </Link>
             </div>
           </div>
         </div>

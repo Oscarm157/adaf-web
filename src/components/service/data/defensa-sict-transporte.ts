@@ -84,8 +84,7 @@ const data: ServiceData = {
     },
   ],
   metaTitle: "Defensa SICT en Tijuana · Multas en autotransporte federal",
-  metaDescription:
-    "Defensa contra multas de la SICT (antes SCT) en autotransporte federal: boletas, retención de unidades, suspensión de operación y cancelación de placas. Despacho ADAF en Tijuana.",
+  metaDescription: "Defensa contra multas de la SICT en autotransporte federal: boletas, retención de unidades, suspensión y cancelación de placas. ADAF Tijuana.",
 };
 
 export default data;

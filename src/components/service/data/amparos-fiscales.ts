@@ -86,8 +86,7 @@ const data: ServiceData = {
     },
   ],
   metaTitle: "Amparos fiscales en Tijuana · Indirecto y directo",
-  metaDescription:
-    "Amparo en materia fiscal y administrativa contra leyes y resoluciones inconstitucionales. Trámite ante juzgados de distrito y tribunales colegiados. Despacho ADAF en Tijuana.",
+  metaDescription: "Amparo en materia fiscal y administrativa contra leyes y resoluciones inconstitucionales. Juzgados de distrito y tribunales colegiados. ADAF Tijuana.",
 };
 
 export default data;

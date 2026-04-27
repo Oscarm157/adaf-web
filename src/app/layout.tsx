@@ -56,20 +56,11 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     title: `${siteConfig.shortName} · Asesoría y Defensa Aduanera Fiscal · Tijuana`,
     description: siteConfig.description,
-    images: [
-      {
-        url: "/og-default.png",
-        width: 1200,
-        height: 630,
-        alt: siteConfig.name,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.shortName} · ${siteConfig.name}`,
     description: siteConfig.description,
-    images: ["/og-default.png"],
   },
   robots: {
     index: true,

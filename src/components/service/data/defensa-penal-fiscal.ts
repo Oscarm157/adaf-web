@@ -93,8 +93,7 @@ const data: ServiceData = {
     },
   ],
   metaTitle: "Defensa penal-fiscal en Tijuana · Defraudación y contrabando",
-  metaDescription:
-    "Defensa en investigaciones y procesos penales por defraudación fiscal, contrabando equiparado, simulación de operaciones (69-B) y delitos fiscales federales. Despacho ADAF en Tijuana.",
+  metaDescription: "Defensa en investigaciones y procesos penales por defraudación fiscal, contrabando, simulación de operaciones (69-B) y delitos fiscales federales.",
 };
 
 export default data;

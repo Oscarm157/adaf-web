@@ -97,8 +97,7 @@ const data: ServiceData = {
     },
   ],
   metaTitle: "Defensa aduanera en Tijuana · PAMA, embargo y multas",
-  metaDescription:
-    "Representación legal ante ANAM y tribunales federales en Procedimiento Administrativo en Materia Aduanera, embargo precautorio, devolución de mercancía y multas de comercio exterior. Despacho ADAF en Tijuana.",
+  metaDescription: "Representación ante ANAM y tribunales federales en PAMA, embargo precautorio, devolución de mercancía y multas de comercio exterior. ADAF Tijuana.",
 };
 
 export default data;

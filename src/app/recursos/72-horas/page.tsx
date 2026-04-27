@@ -58,7 +58,7 @@ export default function Recurso72HorasPage() {
               <div className="col-span-12 lg:col-span-5">
                 <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
                   <Image
-                    src="/portada-72-horas.png"
+                    src="/portada-72-horas.jpg"
                     alt="Portada de Las primeras 72 horas, guía del contribuyente ADAF"
                     fill
                     sizes="(min-width: 1024px) 40vw, 100vw"
@@ -160,8 +160,7 @@ export default function Recurso72HorasPage() {
               </p>
 
               <div className="flex flex-wrap items-center justify-center gap-4 mt-10">
-                <a
-                  href="https://wa.me/526646475018"
+                <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
                 >
                   Hablar por WhatsApp

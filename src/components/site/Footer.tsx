@@ -99,28 +99,21 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Boletín */}
+          {/* Notas técnicas */}
           <div className="col-span-12 md:col-span-3">
             <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-6">
-              Boletín
+              Notas técnicas
             </p>
             <p className="font-serif italic text-[14px] text-foreground/85 leading-[1.5] mb-5">
-              Análisis técnico mensual sobre reformas, criterios y casos
-              relevantes.
+              Publicamos análisis sobre reformas, criterios y casos relevantes
+              en la sección de notas.
             </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder="Correo electrónico"
-                className="w-full h-11 px-3 bg-background-warm border-b border-foreground/30 text-[13.5px] focus:outline-none focus:border-burgundy transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full h-11 bg-navy text-background text-[12px] uppercase tracking-[0.12em] font-medium rounded-[2px] hover:bg-burgundy transition-colors duration-200"
-              >
-                Suscribirme
-              </button>
-            </form>
+            <Link
+              href="/blog"
+              className="inline-flex items-center justify-center w-full h-11 bg-navy text-background text-[12px] uppercase tracking-[0.12em] font-medium rounded-[2px] hover:bg-burgundy transition-colors duration-200"
+            >
+              Leer las notas
+            </Link>
           </div>
         </div>
 

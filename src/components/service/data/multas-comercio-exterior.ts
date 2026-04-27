@@ -85,8 +85,7 @@ const data: ServiceData = {
     },
   ],
   metaTitle: "Multas de comercio exterior en Tijuana · Clasificación y valor",
-  metaDescription:
-    "Defensa contra multas de comercio exterior por clasificación arancelaria, valor en aduana y regulaciones no arancelarias. Recurso de revocación y juicio de nulidad. Despacho ADAF en Tijuana.",
+  metaDescription: "Defensa contra multas de comercio exterior por clasificación arancelaria, valor en aduana y RNAs. Recurso de revocación y juicio de nulidad.",
 };
 
 export default data;

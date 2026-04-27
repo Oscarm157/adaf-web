@@ -1,7 +1,7 @@
 # Desarrollo sitio web ADAF · Bitácora PM
 
 > Documento de gestión: qué se construyó, qué pediste tú, qué correcciones aplicaste, qué quedó pendiente.
-> Actualizado: 2026-04-27
+> Última actualización: 2026-04-27 (cierre de sesión post-auditorías go-live)
 
 ---
 
@@ -194,21 +194,51 @@ scripts/
 
 ---
 
-## 6. Pendientes (no bloqueantes)
+## 6. Pre go-live · Estado y pendientes (post-auditorías)
 
-### Activos
-- [ ] **Email custom domain** — actualmente `noreply@adafsolucionesfiscales.com`, despacho debe verificar DNS.
-- [ ] **Equipo** (sección IV `/nosotros`) — bios reales del despacho. Hay TODO en código.
-- [ ] **PDF "72 horas"** — guía real del despacho (12 páginas) para servir en `/72-horas.pdf` después del lead capture.
-- [ ] **WebP optimization** — convertir 7 PNGs `home-banner-*` y `home-nota-*` a WebP calidad 85.
-- [ ] **Limpiar `test-frontera-*.png`** — sobrantes de iteraciones (gitignored, algunos commiteados).
-- [ ] **Push a main** — bloqueado por regla anti-push directo; commit `c3787cb` listo localmente.
+**Resumen:** se corrieron dos auditorías independientes (técnica + contenido) sin contexto de las sesiones previas. Ambas dieron luz verde a la base; lo que queda son cosas que el despacho tiene que firmar/proveer, no fixes de código.
 
-### Mejoras opcionales
+### ✅ Resueltos en esta sesión (commit responsive overhaul + audit fixes)
+
+- Disclaimers `[Pendiente de validación legal]` removidos de aviso de privacidad, T&C y posts.ts.
+- Lead magnet copy verídico: "Te enviaremos la guía en horario hábil" (en vez de prometer envío automático que no existe).
+- `portada-72-horas.png` 4.3 MB → JPG 124 KB optimizado con sharp.
+- `og-default.png` (no existía) eliminado de layout/seo.ts; ahora todo apunta a `/opengraph-image` route que sí genera dinámicamente.
+- Mapa Google con coordenadas placeholder en `/contacto` reemplazado por card que abre Google Maps real.
+- "Agendar 20 min" (que apuntaba a WhatsApp) → "Hablar por WhatsApp" en 6 archivos; deduplicados los CTAs.
+- Newsletter forms muertos (Footer + `/blog`) reemplazados por links a `/blog` y CTAs a contacto.
+- Heading hierarchy /blog: cards de notas h3 → h2.
+- `/not-found` numeral romano IV·O·IV con `aria-hidden`.
+- 15 anchors externos (`wa.me`, `tel:`, `mailto:`, `maps.app`) con `target="_blank" rel="noopener noreferrer"`.
+- Console.log con datos personales en API routes → `console.warn` sin payload.
+- 10 metaDescriptions de servicios recortadas a ≤155 chars (de 159–208 a 132–149).
+- `error.tsx` global con marca ADAF.
+- Logo duplicado `logo-adaf-source.jpg` eliminado.
+- `.env.example` documentado: usar `onboarding@resend.dev` mientras el dominio no esté verificado.
+- Schema.org `sameAs` deja una sola FB page (la del 664 647 5018), no dos contradictorias.
+- Em-dashes residuales con doble espacio en alts de Notas corregidos.
+- Servicios mobile en accordion, Header sin desbordamiento.
+
+### 🟡 Pendientes para el despacho (no programáticos — son input humano)
+
+- [ ] **Validar plazos legales** (~14 puntos identificados por auditor de contenido). Todos están razonablemente bien citados según legislación vigente, pero requieren firma técnica del abogado responsable. Lista detallada en el reporte del auditor de contenido (cluster V1–V14). Especialmente sensibles: porcentaje 130% multas aduaneras, 48 mensualidades parcialidades IMSS, plazos COEPRIS BC (estatal vs federal).
+- [ ] **PDF "Las primeras 72 horas"** — guía real de 12 páginas que el lead magnet promete. Cuando exista, subir a `public/72-horas.pdf` y modificar `/api/lead-magnet/route.ts` para mandar segundo email al lead con attachment.
+- [ ] **Dominio `adafsolucionesfiscales.com`** — confirmar control y propagar DNS. Verificar dominio en Resend para enviar desde `contacto@adafsolucionesfiscales.com` (mientras tanto se usa el sandbox `onboarding@resend.dev`).
+- [ ] **Bios del equipo** (sección IV `/nosotros`) — TODO comentado en código. Cuando lleguen, restaurar la sección.
+- [ ] **Reseñas / casos** (`/resultados` sección V) — TODO comentado. Decidir si se levantan testimonios reales con consentimiento o se omite definitivamente.
+- [ ] **Consolidación de Facebook** — el diagnóstico identifica 2 FB pages duplicadas (ADAFSC y ADAFdespachojuridico) con teléfonos contradictorios. El sitio ya solo enlaza una; el despacho debe decidir cuál se mantiene activa.
+- [ ] **Calendly** — botones ahora dicen "Hablar por WhatsApp"; si el despacho quiere agenda real con calendario, integrar Calendly o cal.com en una iteración posterior.
+- [ ] **Aviso de privacidad y T&C** — la estructura LFPDPPP está completa, los disclaimers internos están limpios; el abogado responsable solo necesita leer y firmar.
+
+### 🟢 Mejoras opcionales post-launch
 - [ ] Lighthouse mobile ≥ 90 en Home (medir post-deploy).
 - [ ] Smoke manual en mobile real (no solo devtools).
-- [ ] `EditorialBand` con prop `mobileAspect` opcional (4:3 vs 21:9 actual) para banners full-bleed más prominentes.
-- [ ] `ProcedureTimeline` overflow horizontal safety en pantallas muy estrechas.
+- [ ] WebP de las 7 imágenes editoriales del Home (actualmente PNG 88–187 KB, ya razonables).
+- [ ] Limpiar `test-frontera-*.png` (gitignored, sin impacto en prod).
+- [ ] `EditorialBand` con prop `mobileAspect` opcional.
+- [ ] `ProcedureTimeline` overflow safety en pantallas muy estrechas.
+- [ ] Smoke tests con Playwright (al menos status 200 en sitemap + 10 servicios + 3 posts).
+- [ ] README real (sigue el template de create-next-app).
 
 ---
 

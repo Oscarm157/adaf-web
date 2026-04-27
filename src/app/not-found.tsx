@@ -22,7 +22,10 @@ export default function NotFound() {
           </div>
 
           <div className="text-center max-w-[720px] mx-auto">
-            <p className="font-serif text-navy font-semibold text-[96px] md:text-[144px] leading-[0.95] tracking-[-0.02em]">
+            <p
+              aria-hidden="true"
+              className="font-serif text-navy font-semibold text-[96px] md:text-[144px] leading-[0.95] tracking-[-0.02em]"
+            >
               IV<span className="text-olive">·</span>O
               <span className="text-olive">·</span>IV
             </p>

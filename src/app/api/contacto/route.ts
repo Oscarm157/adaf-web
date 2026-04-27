@@ -43,12 +43,11 @@ export async function POST(request: Request) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
-    const fromEmail = process.env.RESEND_FROM ?? "ADAF <noreply@adafsolucionesfiscales.com>";
+    const fromEmail = process.env.RESEND_FROM ?? "ADAF <onboarding@resend.dev>";
     const toEmail = process.env.RESEND_TO ?? siteConfig.email;
 
     if (!apiKey) {
-      // Dev mode: log y devolver éxito para no romper formulario
-      console.log("[contacto] RESEND_API_KEY no configurado. Payload:", parsed.data);
+      console.warn("[contacto] RESEND_API_KEY no configurado");
       return NextResponse.json({ ok: true, dev: true });
     }
 

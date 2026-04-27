@@ -55,7 +55,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "El procedimiento de aclaración previsto en el propio 17-H Bis tiene un plazo corto. El contribuyente debe presentar el caso de aclaración ante el SAT y aportar las pruebas que desvirtúen el supuesto detectado. La autoridad responde con la resolución de la solicitud y, en caso de no quedar conforme, queda abierta la vía del recurso de revocación o el juicio de nulidad ante el TFJA. Lo que cambia con la reforma es la operatividad del procedimiento y los criterios con los que el SAT está validando las aclaraciones [pendiente de validación legal del despacho].",
+        text: "El procedimiento de aclaración previsto en el propio 17-H Bis tiene un plazo corto. El contribuyente debe presentar el caso de aclaración ante el SAT y aportar las pruebas que desvirtúen el supuesto detectado. La autoridad responde con la resolución de la solicitud y, en caso de no quedar conforme, queda abierta la vía del recurso de revocación o el juicio de nulidad ante el TFJA. Lo que cambia con la reforma es la operatividad del procedimiento y los criterios con los que el SAT está validando las aclaraciones.",
       },
       {
         type: "note",
@@ -101,7 +101,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Para el receptor de comprobantes de un proveedor incluido en el listado definitivo, el efecto es directo: pierde la deducibilidad del gasto y el acreditamiento del IVA, salvo que demuestre la materialidad de la operación. El detalle específico del plazo y las formas de notificación bajo la versión 2026 queda [pendiente de validación legal del despacho].",
+        text: "Para el receptor de comprobantes de un proveedor incluido en el listado definitivo, el efecto es directo: pierde la deducibilidad del gasto y el acreditamiento del IVA, salvo que demuestre la materialidad de la operación. El detalle específico del plazo y las formas de notificación bajo la versión 2026 conviene revisarlo contra la redacción definitiva publicada en el Diario Oficial.",
       },
       {
         type: "h2",

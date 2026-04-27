@@ -55,8 +55,7 @@ export default function ServiciosHub() {
               Identificamos la vía procedente y los plazos que están corriendo.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 mt-9">
-              <a
-                href="https://wa.me/526646475018"
+              <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
               >
                 Hablar por WhatsApp

@@ -47,8 +47,7 @@ export function Hero() {
                 >
                   Agenda tu valoración
                 </Link>
-                <a
-                  href="https://wa.me/526646475018"
+                <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
                 >
                   Hablar por WhatsApp

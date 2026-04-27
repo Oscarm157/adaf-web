@@ -100,8 +100,7 @@ const data: ServiceData = {
     },
   ],
   metaTitle: "Defensa fiscal SAT en Tijuana · Créditos, auditorías, visitas",
-  metaDescription:
-    "Defensa ante el SAT en visitas domiciliarias, revisiones de gabinete, créditos fiscales, restricción de sellos digitales, recurso de revocación y juicio de nulidad. Despacho ADAF en Tijuana.",
+  metaDescription: "Defensa ante el SAT: visitas domiciliarias, revisiones, créditos fiscales, restricción de sellos, recurso de revocación y juicio de nulidad.",
 };
 
 export default data;
