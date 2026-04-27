@@ -44,14 +44,14 @@ export function Header() {
             <span className="font-serif text-[24px] md:text-[28px] font-bold text-navy tracking-[-0.012em]">
               ADAF
             </span>
-            <span className="hidden lg:inline-block w-[1px] h-[14px] bg-rule" />
-            <span className="hidden lg:inline-block font-serif italic text-[13px] text-muted leading-none">
+            <span className="hidden xl:inline-block w-[1px] h-[14px] bg-rule" />
+            <span className="hidden xl:inline-block font-serif italic text-[13px] text-muted leading-none">
               Asesoría y Defensa Aduanera Fiscal
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-9">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-9">
             {navLinks.map((link, i) => (
               <Link
                 key={link.href}
@@ -72,9 +72,10 @@ export function Header() {
           <div className="flex items-center gap-3">
             <Link
               href="/contacto"
-              className="hidden md:inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.04em] uppercase px-5 h-10 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+              className="hidden md:inline-flex items-center justify-center bg-burgundy text-white text-[12px] xl:text-[13px] font-medium tracking-[0.04em] uppercase px-4 xl:px-5 h-10 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200 whitespace-nowrap"
             >
-              Agenda tu valoración
+              <span className="lg:hidden xl:inline">Agenda tu valoración</span>
+              <span className="hidden lg:inline xl:hidden">Agenda valoración</span>
             </Link>
             {/* Mobile menu trigger */}
             <button
