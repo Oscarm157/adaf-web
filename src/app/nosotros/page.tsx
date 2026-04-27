@@ -8,6 +8,8 @@ import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
 import { allServices } from "@/components/service/data";
+import { SealMark } from "@/components/visual/SealMark";
+import { PullQuote } from "@/components/visual/PullQuote";
 import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -63,21 +65,22 @@ export default function NosotrosPage() {
         <section className="bg-background pt-20 pb-20">
           <div className="max-w-[1280px] mx-auto px-12">
             <ChapterMark numeral="I" label="La firma" />
-            <div className="grid grid-cols-12 gap-12 mt-10">
-              <div className="col-span-12 lg:col-span-4">
-                <h2 className="font-serif text-[36px] leading-[1.1] font-semibold text-navy tracking-[-0.012em] sticky top-32">
-                  Un despacho construido caso por caso.
-                </h2>
+            <div className="grid grid-cols-12 gap-12 mt-12 items-start">
+              <div className="col-span-12 lg:col-span-4 flex justify-start lg:justify-center">
+                <SealMark size={260} />
               </div>
               <div className="col-span-12 lg:col-span-7 lg:col-start-6">
-                <div className="space-y-6 max-w-[640px]">
+                <h2 className="font-serif text-[36px] leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
+                  Un despacho construido caso por caso.
+                </h2>
+                <div className="space-y-6 max-w-[640px] mt-7">
                   <p className="text-[17px] leading-[1.7] text-foreground/85">
-                    Llevamos 25 años representando casos ante la Secretaría de
-                    Hacienda, la Administración Nacional de Aduanas, el IMSS,
-                    COEPRIS, la SCT, el Tribunal Federal de Justicia
-                    Administrativa y los juzgados de distrito. En ese tiempo
-                    hemos visto cómo las reglas, los criterios y la presión
-                    recaudatoria cambian; lo que no cambia es lo que el
+                    Llevamos 25 años representando casos ante el SAT, la
+                    Agencia Nacional de Aduanas de México, el IMSS, COFEPRIS,
+                    COEPRIS Baja California, la SICT, el Tribunal Federal de
+                    Justicia Administrativa y los juzgados de distrito. En ese
+                    tiempo hemos visto cómo las reglas, los criterios y la
+                    presión recaudatoria cambian; lo que no cambia es lo que el
                     contribuyente necesita: claridad sobre lo que está pasando,
                     una estrategia honesta y representación rigurosa en cada
                     etapa del procedimiento.
@@ -87,9 +90,9 @@ export default function NosotrosPage() {
                     transportistas y profesionistas con actividad empresarial
                     en Tijuana, Tecate, Rosarito y la zona fronteriza. La
                     mayoría de los casos que atendemos llegan en momentos de
-                    presión —una visita domiciliaria, un embargo precautorio en
-                    frontera, una notificación de crédito fiscal— y la primera
-                    tarea es siempre la misma: ordenar la información,
+                    presión —una visita domiciliaria, un embargo precautorio
+                    en frontera, una notificación de crédito fiscal— y la
+                    primera tarea es siempre la misma: ordenar la información,
                     identificar los plazos y proponer un curso de acción
                     realista.
                   </p>
@@ -98,6 +101,12 @@ export default function NosotrosPage() {
             </div>
           </div>
         </section>
+
+        <PullQuote cite="Cómo entendemos nuestra labor">
+          Los plazos del procedimiento corren desde la notificación. La defensa
+          empieza con la lectura cuidadosa del expediente, no con un escrito
+          apurado.
+        </PullQuote>
 
         {/* II — Principios */}
         <section className="bg-background-warm pt-20 pb-20">
@@ -246,7 +255,7 @@ export default function NosotrosPage() {
             </div>
             <div className="max-w-[760px] mx-auto text-center">
               <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
-                Cuéntanos lo esencial sobre tu asunto.
+                Escríbenos los detalles de tu asunto.
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
                 Te respondemos en horario hábil con una valoración inicial sin

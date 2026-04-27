@@ -7,6 +7,8 @@ import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
 import { Note } from "@/components/page/Prose";
+import { CountUp } from "@/components/motion/CountUp";
+import { CoverageMap } from "@/components/visual/CoverageMap";
 import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -23,14 +25,21 @@ export const metadata: Metadata = {
   },
 };
 
-const stats = [
+const stats: {
+  numero: string;
+  countTo?: number;
+  label: string;
+  note: string;
+}[] = [
   {
     numero: "25",
+    countTo: 25,
     label: "Años de práctica continua",
-    note: "MMI — MMXXVI",
+    note: "Frontera norte de México",
   },
   {
     numero: "10",
+    countTo: 10,
     label: "Áreas de defensa especializada",
     note: "Fiscal · Aduanera · Administrativa · Penal-fiscal",
   },
@@ -149,8 +158,12 @@ export default function ResultadosPage() {
                     i < stats.length - 1 ? "md:border-r border-rule" : ""
                   } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
                 >
-                  <div className="font-serif text-[60px] leading-none font-semibold text-navy tracking-[-0.018em]">
-                    {s.numero}
+                  <div className="font-serif text-[60px] leading-none font-semibold text-navy tracking-[-0.018em] tabular-nums">
+                    {s.countTo !== undefined ? (
+                      <CountUp to={s.countTo} duration={1.4} />
+                    ) : (
+                      s.numero
+                    )}
                   </div>
                   <p className="text-[12px] uppercase tracking-[0.16em] text-muted font-medium mt-5">
                     {s.label}
@@ -175,32 +188,34 @@ export default function ResultadosPage() {
                 </h2>
               </div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 border-t border-foreground/15">
-              {cobertura.map((c, i) => (
-                <div
-                  key={c.titulo}
-                  className={`px-1 md:px-7 py-9 ${
-                    i < cobertura.length - 1
-                      ? "md:border-r border-rule"
-                      : ""
-                  } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
-                >
-                  <div className="flex items-baseline gap-4 mb-5">
-                    <span className="font-serif italic text-[14px] text-olive">
-                      {c.numeral}
-                    </span>
-                    <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                      Cobertura
-                    </span>
-                  </div>
-                  <h3 className="font-serif text-[22px] leading-[1.2] font-medium text-navy tracking-[-0.005em]">
-                    {c.titulo}
-                  </h3>
-                  <p className="text-[15px] leading-[1.65] text-foreground/85 mt-4 max-w-[360px]">
-                    {c.cuerpo}
-                  </p>
-                </div>
-              ))}
+
+            <div className="grid grid-cols-12 gap-12 items-start border-t border-foreground/15 pt-12">
+              <div className="col-span-12 lg:col-span-7 lg:pr-6">
+                <CoverageMap />
+              </div>
+              <div className="col-span-12 lg:col-span-5 space-y-8">
+                {cobertura.map((c) => (
+                  <article
+                    key={c.titulo}
+                    className="border-b border-rule pb-7 last:border-0"
+                  >
+                    <div className="flex items-baseline gap-4 mb-3">
+                      <span className="font-serif italic text-[14px] text-olive">
+                        {c.numeral}
+                      </span>
+                      <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
+                        Cobertura
+                      </span>
+                    </div>
+                    <h3 className="font-serif text-[22px] leading-[1.2] font-medium text-navy tracking-[-0.005em]">
+                      {c.titulo}
+                    </h3>
+                    <p className="text-[14.5px] leading-[1.65] text-foreground/85 mt-3 max-w-[420px]">
+                      {c.cuerpo}
+                    </p>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -317,7 +332,7 @@ export default function ResultadosPage() {
             </div>
             <div className="max-w-[760px] mx-auto text-center">
               <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
-                Cuéntanos lo esencial sobre tu asunto.
+                Escríbenos los detalles de tu asunto.
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
                 Te respondemos en horario hábil con una valoración inicial sin

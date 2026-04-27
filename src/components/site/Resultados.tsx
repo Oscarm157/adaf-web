@@ -1,13 +1,21 @@
 import { ChapterMark } from "./ChapterMark";
+import { CountUp } from "@/components/motion/CountUp";
 
-const stats = [
+const stats: {
+  numero: string;
+  countTo?: number;
+  label: string;
+  note: string;
+}[] = [
   {
     numero: "25",
+    countTo: 25,
     label: "Años de práctica continua",
-    note: "MMI — MMXXVI",
+    note: "Frontera norte de México",
   },
   {
     numero: "10",
+    countTo: 10,
     label: "Áreas de defensa especializada",
     note: "Fiscal · Aduanera · Administrativa · Penal-fiscal",
   },
@@ -67,8 +75,12 @@ export function Resultados() {
                 i < stats.length - 1 ? "md:border-r border-rule" : ""
               } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
             >
-              <div className="font-serif text-[60px] leading-none font-semibold text-navy tracking-[-0.018em]">
-                {s.numero}
+              <div className="font-serif text-[60px] leading-none font-semibold text-navy tracking-[-0.018em] tabular-nums">
+                {s.countTo !== undefined ? (
+                  <CountUp to={s.countTo} duration={1.4} />
+                ) : (
+                  s.numero
+                )}
               </div>
               <p className="text-[12px] uppercase tracking-[0.16em] text-muted font-medium mt-5">
                 {s.label}

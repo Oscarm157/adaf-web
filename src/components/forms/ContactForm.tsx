@@ -171,7 +171,7 @@ export function ContactForm() {
           minLength={10}
           maxLength={4000}
           className="w-full bg-background-warm border-b border-foreground/30 px-4 py-3 text-[15px] text-foreground placeholder:text-muted focus:outline-none focus:border-burgundy transition-colors resize-none"
-          placeholder="Cuéntanos brevemente qué notificación recibiste y de qué autoridad."
+          placeholder="Cuéntanos qué notificación recibiste y de qué autoridad."
         />
       </div>
 

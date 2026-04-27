@@ -31,7 +31,7 @@ export default async function Image() {
           }}
         >
           <span>ADAF · Tijuana · Frontera norte</span>
-          <span>Edición 2026</span>
+          <span>25 años</span>
         </div>
 
         <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>

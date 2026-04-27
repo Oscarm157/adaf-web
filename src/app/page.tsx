@@ -10,6 +10,7 @@ import { Notas } from "@/components/site/Notas";
 import { CTAFinal } from "@/components/site/CTAFinal";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { PullQuote } from "@/components/visual/PullQuote";
 
 export default function Home() {
   return (
@@ -19,6 +20,11 @@ export default function Home() {
       <main>
         <Hero />
         <Areas />
+        <PullQuote cite="Principio de la práctica">
+          La defensa empieza con la lectura del expediente. Los plazos legales
+          corren desde la notificación, no desde el momento en que decides
+          actuar.
+        </PullQuote>
         <Pillars />
         <Resultados />
         <Metodo />

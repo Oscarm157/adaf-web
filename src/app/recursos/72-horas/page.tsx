@@ -63,7 +63,7 @@ export default function Recurso72HorasPage() {
                   <div className="flex-1 flex flex-col justify-between px-12 py-14">
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                        ADAF · Edición 2026
+                        ADAF · Tijuana
                       </p>
                       <span className="block w-[40px] h-[1px] bg-olive mt-3" />
                     </div>
@@ -83,10 +83,10 @@ export default function Recurso72HorasPage() {
 
                     <div className="flex items-end justify-between">
                       <p className="text-[10px] uppercase tracking-[0.22em] text-muted">
-                        12 páginas · Tijuana
+                        12 páginas
                       </p>
                       <span className="font-serif italic text-[12px] text-olive">
-                        Folio 1
+                        Guía gratuita
                       </span>
                     </div>
                   </div>

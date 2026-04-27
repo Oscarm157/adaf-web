@@ -19,7 +19,7 @@ export function CTAFinal() {
 
         <div className="max-w-[820px] mx-auto text-center">
           <h2 className="font-serif text-[40px] leading-[1.12] font-semibold tracking-[-0.012em]">
-            Cuéntanos brevemente tu caso.
+            Cuéntanos tu caso.
           </h2>
           <p className="text-[17px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
             Te respondemos en horario hábil con una valoración inicial sin

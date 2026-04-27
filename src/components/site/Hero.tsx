@@ -1,17 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { CountUp } from "@/components/motion/CountUp";
 
 export function Hero() {
   return (
     <section className="relative bg-background pt-16 pb-24 overflow-hidden">
-      {/* folio marker top-right */}
-      <div className="absolute top-7 right-12 hidden md:flex items-center gap-2 text-muted">
-        <span className="font-serif italic text-[12px]">Edición 2026</span>
-        <span className="w-[1px] h-3 bg-rule" />
-        <span className="text-[10px] uppercase tracking-[0.22em]">Folio 001</span>
-      </div>
-
       <div className="max-w-[1280px] mx-auto px-12">
         {/* Chapter intro */}
         <Reveal>
@@ -26,11 +20,6 @@ export function Hero() {
 
         <div className="grid grid-cols-12 gap-x-12 gap-y-16 items-start">
           <Stagger className="col-span-12 lg:col-span-7 relative">
-            {/* marginalia */}
-            <span className="hidden xl:block absolute -left-12 top-3 font-serif italic text-[12px] text-olive">
-              I.i
-            </span>
-
             <StaggerItem>
               <h1 className="font-serif text-[60px] leading-[1.04] font-semibold text-navy tracking-[-0.018em]">
                 Defensa fiscal, aduanera y administrativa en la frontera norte
@@ -88,11 +77,11 @@ export function Hero() {
               <span className="absolute -bottom-[3px] -right-[3px] w-[6px] h-[6px] bg-olive" />
 
               <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium text-center">
-                Establecido en MMI · Tijuana
+                ADAF · Tijuana
               </p>
 
-              <div className="font-serif text-[148px] leading-[0.86] font-semibold text-navy tracking-[-0.03em] text-center mt-4">
-                25
+              <div className="font-serif text-[148px] leading-[0.86] font-semibold text-navy tracking-[-0.03em] text-center mt-4 tabular-nums">
+                <CountUp to={25} duration={1.4} />
               </div>
 
               <p className="font-serif italic text-[15px] text-muted text-center mt-3">

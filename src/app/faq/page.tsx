@@ -272,7 +272,7 @@ export default function FaqPage() {
                 ¿Tu pregunta no está aquí?
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
-                Cuéntanos lo esencial sobre tu asunto. Te respondemos en
+                Escríbenos los detalles de tu asunto. Te respondemos en
                 horario hábil con una valoración inicial sin costo.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 mt-9">

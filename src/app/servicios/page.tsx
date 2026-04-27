@@ -83,7 +83,7 @@ export default function ServiciosHub() {
               ¿No estás seguro de qué materia aplica a tu caso?
             </h2>
             <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
-              Cuéntanos brevemente la notificación o resolución que recibiste.
+              Cuéntanos la notificación o resolución que recibiste.
               Identificamos la vía procedente y los plazos que están corriendo.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 mt-9">

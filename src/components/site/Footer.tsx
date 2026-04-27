@@ -29,9 +29,6 @@ export function Footer() {
               <span className="font-serif text-[28px] font-bold text-navy tracking-[-0.012em]">
                 ADAF
               </span>
-              <span className="font-serif italic text-[13px] text-muted">
-                est. MMI
-              </span>
             </Link>
             <p className="font-serif italic text-[14px] text-muted mt-3">
               Asesoría y Defensa Aduanera Fiscal
@@ -128,7 +125,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-rule mt-16 pt-8 flex flex-wrap items-center justify-between gap-4 text-[11.5px] uppercase tracking-[0.14em] text-muted">
-          <span>© MMI — MMXXVI · ADAF</span>
+          <span>© {year} · ADAF</span>
           <div className="flex flex-wrap items-center gap-6">
             <Link href="/aviso-de-privacidad" className="hover:text-burgundy transition-colors">
               Aviso de privacidad

@@ -2,6 +2,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
+import { ProcedureTimeline } from "@/components/visual/ProcedureTimeline";
+import { PullQuote } from "@/components/visual/PullQuote";
 import type { ServiceData } from "./types";
 
 export function ServicePage({ data }: { data: ServiceData }) {
@@ -125,28 +127,8 @@ export function ServicePage({ data }: { data: ServiceData }) {
             </div>
           </div>
 
-          <div className="border-y border-foreground/15">
-            <div className="grid grid-cols-12 gap-4 py-3 px-1 text-[10px] uppercase tracking-[0.22em] text-muted font-medium border-b border-rule">
-              <span className="col-span-1">N°</span>
-              <span className="col-span-7 md:col-span-8">Etapa procesal</span>
-              <span className="col-span-4 md:col-span-3 text-right">Plazo</span>
-            </div>
-            {data.plazos.map((row, i) => (
-              <div
-                key={i}
-                className="grid grid-cols-12 gap-4 py-5 px-1 items-baseline border-b border-rule"
-              >
-                <span className="col-span-1 font-serif italic text-[13px] text-olive">
-                  {romanize(i + 1)}
-                </span>
-                <span className="col-span-7 md:col-span-8 text-[15.5px] text-foreground leading-[1.45]">
-                  {row.etapa}
-                </span>
-                <span className="col-span-4 md:col-span-3 text-right font-serif text-[16px] font-medium text-navy">
-                  {row.plazo}
-                </span>
-              </div>
-            ))}
+          <div className="border-y border-foreground/15 py-6 mb-2">
+            <ProcedureTimeline steps={data.plazos} />
           </div>
 
           <aside className="mt-10 bg-background-warm border-l-[3px] border-burgundy px-7 py-6 max-w-[820px]">
@@ -264,7 +246,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
           </div>
           <div className="max-w-[760px] mx-auto text-center">
             <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
-              Cuéntanos lo esencial sobre tu asunto.
+              Escríbenos los detalles de tu asunto.
             </h2>
             <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
               Te respondemos en horario hábil con una valoración inicial sin

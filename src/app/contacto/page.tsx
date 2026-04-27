@@ -12,7 +12,7 @@ import { siteUrl } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Contacto · Valoración inicial sin costo",
   description:
-    "Cuéntanos lo esencial sobre tu asunto. Formulario, WhatsApp y agenda de valoración inicial sin costo. Oficina en Nueva Tijuana.",
+    "Escríbenos los detalles de tu asunto. Formulario, WhatsApp y agenda de valoración inicial sin costo. Oficina en Nueva Tijuana.",
   alternates: { canonical: "/contacto" },
   openGraph: {
     type: "website",
@@ -36,7 +36,7 @@ export default function ContactoPage() {
           crumbs={[{ label: "Inicio", href: "/" }, { label: "Contacto" }]}
           numeral="IV"
           label="Contacto"
-          h1="Cuéntanos lo esencial sobre tu asunto."
+          h1="Escríbenos los detalles de tu asunto."
           lede="Te respondemos en horario hábil con una valoración inicial sin costo. Te decimos qué tipo de procedimiento es, cuántos días hay para actuar y qué información necesitamos para empezar."
         />
 
