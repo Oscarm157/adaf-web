@@ -10,7 +10,7 @@ export function CTAFinal() {
 
       <div className="max-w-[1280px] mx-auto px-12 py-24">
         <div className="flex items-baseline gap-4 mb-10 justify-center">
-          <span className="font-serif italic text-[14px] text-olive">§ VIII</span>
+          <span className="font-serif italic text-[14px] text-olive">VIII</span>
           <span className="w-[80px] h-[1px] bg-background/30" />
           <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
             Contacto

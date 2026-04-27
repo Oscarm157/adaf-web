@@ -72,9 +72,7 @@ export function LeadMagnet() {
                   key={item}
                   className="flex items-baseline gap-3 text-[14.5px] text-foreground/80 leading-[1.55]"
                 >
-                  <span className="font-serif italic text-[12px] text-olive shrink-0 w-4">
-                    §
-                  </span>
+                  <span className="bg-olive shrink-0 w-[6px] h-[6px] mt-[8px]" />
                   {item}
                 </li>
               ))}

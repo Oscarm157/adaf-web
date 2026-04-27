@@ -14,7 +14,7 @@ export function Hero() {
       <div className="max-w-[1280px] mx-auto px-12">
         {/* Chapter intro */}
         <div className="flex items-baseline gap-4 mb-12">
-          <span className="font-serif italic text-[14px] text-olive">§ I</span>
+          <span className="font-serif italic text-[14px] text-olive">I</span>
           <span className="w-[80px] h-[1px] bg-rule" />
           <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
             Despacho jurídico · Frontera norte

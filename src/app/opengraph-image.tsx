@@ -46,7 +46,7 @@ export default async function Image() {
               marginBottom: 28,
             }}
           >
-            <span>§ I</span>
+            <span>I</span>
             <span style={{ width: 80, height: 1, background: "#E2DED5" }} />
             <span style={{ color: "#5A5853", fontStyle: "normal", fontSize: 14, letterSpacing: "0.18em", textTransform: "uppercase" }}>
               Despacho jurídico

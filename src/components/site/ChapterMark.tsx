@@ -14,7 +14,7 @@ export function ChapterMark({
       }`}
     >
       <span className="font-serif italic text-[14px] text-olive tracking-wide">
-        § {numeral}
+        {numeral}
       </span>
       <span className="flex-1 max-w-[120px] h-[1px] bg-rule" />
       <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
