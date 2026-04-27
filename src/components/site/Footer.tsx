@@ -21,8 +21,8 @@ export function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="bg-background border-t border-foreground/15 pt-20 pb-12">
-      <div className="max-w-[1280px] mx-auto px-12">
-        <div className="grid grid-cols-12 gap-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12">
           {/* Brand */}
           <div className="col-span-12 md:col-span-4">
             <Link href="/" className="flex items-baseline gap-3">

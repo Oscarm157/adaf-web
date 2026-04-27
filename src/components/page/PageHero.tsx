@@ -18,7 +18,7 @@ export function PageHero({
 }) {
   return (
     <section className="bg-background pt-14 pb-16 border-b border-rule">
-      <div className="max-w-[1280px] mx-auto px-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         {crumbs && crumbs.length > 0 && (
           <nav
             aria-label="breadcrumb"
@@ -63,7 +63,7 @@ export function PageHero({
           </div>
         )}
 
-        <h1 className="font-serif text-[48px] md:text-[56px] leading-[1.06] font-semibold text-navy tracking-[-0.016em] max-w-[920px]">
+        <h1 className="font-serif text-[34px] md:text-[44px] lg:text-[56px] leading-[1.12] md:leading-[1.06] font-semibold text-navy tracking-[-0.016em] max-w-[920px]">
           {h1}
         </h1>
 

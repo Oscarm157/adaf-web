@@ -48,12 +48,12 @@ const autoridades = [
 export function Resultados() {
   return (
     <section aria-label="Trayectoria" className="bg-background pt-24 pb-24">
-      <div className="max-w-[1280px] mx-auto px-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         <ChapterMark numeral="IV" label="Práctica profesional" />
 
-        <div className="grid grid-cols-12 gap-12 mt-10 mb-14">
+        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-14">
           <div className="col-span-12 lg:col-span-8">
-            <h2 className="font-serif text-[42px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+            <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[42px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
               Dimensión general de la práctica.
             </h2>
           </div>
@@ -75,7 +75,7 @@ export function Resultados() {
                 i < stats.length - 1 ? "md:border-r border-rule" : ""
               } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
             >
-              <div className="font-serif text-[60px] leading-none font-semibold text-navy tracking-[-0.018em] tabular-nums">
+              <div className="font-serif text-[44px] md:text-[60px] leading-none font-semibold text-navy tracking-[-0.018em] tabular-nums">
                 {s.countTo !== undefined ? (
                   <CountUp to={s.countTo} duration={1.4} />
                 ) : (
@@ -93,7 +93,7 @@ export function Resultados() {
         </div>
 
         {/* Authorities ledger */}
-        <div className="grid grid-cols-12 gap-12 mt-20">
+        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-20">
           <div className="col-span-12 lg:col-span-4">
             <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
               Autoridades y tribunales

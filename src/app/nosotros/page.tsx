@@ -63,14 +63,14 @@ export default function NosotrosPage() {
 
         {/* I — La firma */}
         <section className="bg-background pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="I" label="La firma" />
-            <div className="grid grid-cols-12 gap-12 mt-12 items-start">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-12 items-start">
               <div className="col-span-12 lg:col-span-4 flex justify-start lg:justify-center">
                 <SealMark size={260} />
               </div>
               <div className="col-span-12 lg:col-span-7 lg:col-start-6">
-                <h2 className="font-serif text-[36px] leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
+                <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
                   Un despacho construido caso por caso.
                 </h2>
                 <div className="space-y-6 max-w-[640px] mt-7">
@@ -110,11 +110,11 @@ export default function NosotrosPage() {
 
         {/* II — Principios */}
         <section className="bg-background-warm pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="II" label="Principios" />
-            <div className="grid grid-cols-12 gap-12 mt-10 mb-12">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
               <div className="col-span-12 lg:col-span-8">
-                <h2 className="font-serif text-[40px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+                <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Cómo entendemos nuestra labor.
                 </h2>
               </div>
@@ -140,7 +140,7 @@ export default function NosotrosPage() {
                       Principio
                     </span>
                   </div>
-                  <h3 className="font-serif text-[24px] leading-[1.2] font-medium text-navy tracking-[-0.006em]">
+                  <h3 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-medium text-navy tracking-[-0.006em]">
                     {p.titulo}
                   </h3>
                   <p className="text-[15px] leading-[1.65] text-foreground/85 mt-4 max-w-[360px]">
@@ -154,11 +154,11 @@ export default function NosotrosPage() {
 
         {/* III — Áreas de especialización */}
         <section className="bg-background pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="III" label="Áreas de práctica" />
-            <div className="grid grid-cols-12 gap-12 mt-10 mb-12 items-end">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12 items-end">
               <div className="col-span-12 lg:col-span-8">
-                <h2 className="font-serif text-[40px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+                <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Diez áreas de defensa especializada.
                 </h2>
                 <p className="text-[16px] leading-[1.65] text-foreground/85 mt-6 max-w-[640px]">
@@ -219,7 +219,7 @@ export default function NosotrosPage() {
           <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
           <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
 
-          <div className="max-w-[1280px] mx-auto px-12 py-20">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-20">
             <div className="flex items-baseline gap-4 mb-8 justify-center">
               <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">IV</span>
               <span className="w-[80px] h-[1px] bg-background/30" />
@@ -228,7 +228,7 @@ export default function NosotrosPage() {
               </span>
             </div>
             <div className="max-w-[760px] mx-auto text-center">
-              <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
+              <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
                 Escríbenos los detalles de tu asunto.
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
@@ -248,12 +248,11 @@ export default function NosotrosPage() {
                 >
                   Enviar mensaje
                 </Link>
-                <Link
-                  href="https://wa.me/526646475018"
+                <a href="https://wa.me/526646475018"
                   className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
                 >
                   Agendar 20 min
-                </Link>
+                </a>
               </div>
             </div>
           </div>

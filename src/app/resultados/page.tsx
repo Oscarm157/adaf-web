@@ -132,11 +132,11 @@ export default function ResultadosPage() {
 
         {/* I — Stats tabulares */}
         <section className="bg-background pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="I" label="Cifras de la práctica" />
-            <div className="grid grid-cols-12 gap-12 mt-10 mb-12">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
               <div className="col-span-12 lg:col-span-8">
-                <h2 className="font-serif text-[40px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+                <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Veinticinco años en cuatro materias.
                 </h2>
               </div>
@@ -157,7 +157,7 @@ export default function ResultadosPage() {
                     i < stats.length - 1 ? "md:border-r border-rule" : ""
                   } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
                 >
-                  <div className="font-serif text-[60px] leading-none font-semibold text-navy tracking-[-0.018em] tabular-nums">
+                  <div className="font-serif text-[44px] md:text-[60px] leading-none font-semibold text-navy tracking-[-0.018em] tabular-nums">
                     {s.countTo !== undefined ? (
                       <CountUp to={s.countTo} duration={1.4} />
                     ) : (
@@ -178,17 +178,17 @@ export default function ResultadosPage() {
 
         {/* II — Cobertura geográfica */}
         <section className="bg-background-warm pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="II" label="Cobertura geográfica" />
-            <div className="grid grid-cols-12 gap-12 mt-10 mb-12">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
               <div className="col-span-12 lg:col-span-7">
-                <h2 className="font-serif text-[40px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+                <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Frontera norte como base, alcance estatal y federal.
                 </h2>
               </div>
             </div>
 
-            <div className="grid grid-cols-12 gap-12 items-start border-t border-foreground/15 pt-12">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start border-t border-foreground/15 pt-12">
               <div className="col-span-12 lg:col-span-7 lg:pr-6">
                 <CoverageMap />
               </div>
@@ -224,11 +224,11 @@ export default function ResultadosPage() {
 
         {/* III — Tipos de cliente */}
         <section className="bg-background pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="III" label="Perfil de los clientes" />
-            <div className="grid grid-cols-12 gap-12 mt-10">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
               <div className="col-span-12 lg:col-span-4">
-                <h2 className="font-serif text-[34px] leading-[1.12] font-semibold text-navy tracking-[-0.012em] sticky top-32">
+                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] sticky top-32">
                   Tipos de cliente atendidos.
                 </h2>
                 <p className="text-[14px] leading-[1.65] text-muted mt-5 max-w-[340px]">
@@ -259,11 +259,11 @@ export default function ResultadosPage() {
 
         {/* IV — Autoridades */}
         <section className="bg-background-warm pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="IV" label="Autoridades y tribunales" />
-            <div className="grid grid-cols-12 gap-12 mt-10">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
               <div className="col-span-12 lg:col-span-4">
-                <h2 className="font-serif text-[34px] leading-[1.12] font-semibold text-navy tracking-[-0.012em] sticky top-32">
+                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] sticky top-32">
                   Donde representamos a nuestros clientes.
                 </h2>
                 <p className="text-[14px] leading-[1.65] text-muted mt-5 max-w-[340px]">
@@ -304,7 +304,7 @@ export default function ResultadosPage() {
           <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
           <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
 
-          <div className="max-w-[1280px] mx-auto px-12 py-20">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-20">
             <div className="flex items-baseline gap-4 mb-8 justify-center">
               <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">V</span>
               <span className="w-[80px] h-[1px] bg-background/30" />
@@ -313,7 +313,7 @@ export default function ResultadosPage() {
               </span>
             </div>
             <div className="max-w-[760px] mx-auto text-center">
-              <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
+              <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
                 Escríbenos los detalles de tu asunto.
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
@@ -333,12 +333,11 @@ export default function ResultadosPage() {
                 >
                   Enviar mensaje
                 </Link>
-                <Link
-                  href="https://wa.me/526646475018"
+                <a href="https://wa.me/526646475018"
                   className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
                 >
                   Agendar 20 min
-                </Link>
+                </a>
               </div>
             </div>
           </div>

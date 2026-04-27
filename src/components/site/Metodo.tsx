@@ -27,12 +27,12 @@ const steps = [
 export function Metodo() {
   return (
     <section aria-label="Método de trabajo" className="bg-background-warm pt-24 pb-28">
-      <div className="max-w-[1280px] mx-auto px-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         <ChapterMark numeral="V" label="Método de trabajo" />
 
-        <div className="grid grid-cols-12 gap-12 mt-10 mb-20 items-end">
+        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-20 items-end">
           <div className="col-span-12 lg:col-span-8">
-            <h2 className="font-serif text-[42px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+            <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[42px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
               Cuatro etapas antes y durante la representación.
             </h2>
           </div>

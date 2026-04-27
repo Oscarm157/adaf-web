@@ -10,7 +10,7 @@ export default function NotFound() {
       <Masthead />
       <Header />
       <main className="bg-background">
-        <section className="max-w-[1280px] mx-auto px-12 py-32 md:py-40">
+        <section className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-32 md:py-40">
           <div className="flex items-baseline gap-4 mb-12 justify-center">
             <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
               IV

@@ -23,12 +23,12 @@ const pillars = [
 export function Pillars() {
   return (
     <section aria-label="Principios" className="bg-background-warm pt-24 pb-24">
-      <div className="max-w-[1280px] mx-auto px-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         <ChapterMark numeral="III" label="Principios" />
 
-        <div className="grid grid-cols-12 gap-12 mt-10 mb-16 items-end">
+        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-16 items-end">
           <Reveal className="col-span-12 lg:col-span-8">
-            <h2 className="font-serif text-[42px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+            <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[42px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
               Tres principios sostienen cada caso.
             </h2>
           </Reveal>
@@ -59,7 +59,7 @@ export function Pillars() {
                   <span className="flex-1 h-[1px] bg-rule" />
                 </div>
 
-                <h3 className="font-serif text-[24px] leading-[1.2] font-semibold text-navy tracking-[-0.008em]">
+                <h3 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-semibold text-navy tracking-[-0.008em]">
                   {p.title}
                 </h3>
 

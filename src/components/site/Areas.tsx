@@ -78,12 +78,12 @@ const areas = [
 export function Areas() {
   return (
     <section aria-label="Áreas de práctica" id="areas" className="bg-background pt-24 pb-24">
-      <div className="max-w-[1280px] mx-auto px-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         <ChapterMark numeral="II" label="Áreas de práctica" />
 
-        <div className="grid grid-cols-12 gap-12 mt-10 mb-14">
+        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-14">
           <div className="col-span-12 lg:col-span-7">
-            <h2 className="font-serif text-[42px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+            <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[42px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
               Diez áreas de defensa especializada.
             </h2>
           </div>
@@ -119,7 +119,7 @@ export function Areas() {
                   </span>
                 </div>
 
-                <h3 className="font-serif text-[22px] md:text-[23px] leading-[1.25] font-medium text-foreground tracking-[-0.005em] group-hover:text-burgundy transition-colors duration-300 ml-11">
+                <h3 className="font-serif text-[19px] md:text-[22px] lg:text-[23px] leading-[1.3] md:leading-[1.25] font-medium text-foreground tracking-[-0.005em] group-hover:text-burgundy transition-colors duration-300 ml-11">
                   {area.pregunta}
                 </h3>
 

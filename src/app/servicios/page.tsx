@@ -37,7 +37,7 @@ export default function ServiciosHub() {
         />
 
         <section className="bg-background pt-20 pb-24">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 border-t border-foreground/15">
               {allServices.map((s, i) => (
                 <Link
@@ -59,7 +59,7 @@ export default function ServiciosHub() {
                         {s.label}
                       </span>
                     </div>
-                    <h3 className="font-serif text-[24px] md:text-[26px] leading-[1.22] font-medium text-foreground tracking-[-0.005em] group-hover:text-burgundy transition-colors duration-300 ml-11">
+                    <h3 className="font-serif text-[19px] md:text-[24px] lg:text-[26px] leading-[1.3] md:leading-[1.22] font-medium text-foreground tracking-[-0.005em] group-hover:text-burgundy transition-colors duration-300 ml-11">
                       {s.h1.replace(/\.$/, "")}
                     </h3>
                     <p className="text-[14.5px] leading-[1.55] text-muted mt-3 ml-11 max-w-[480px]">
@@ -81,8 +81,8 @@ export default function ServiciosHub() {
           <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
           <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
           <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
-          <div className="max-w-[1280px] mx-auto px-12 py-20 text-center">
-            <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-20 text-center">
+            <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
               ¿No estás seguro de qué materia aplica a tu caso?
             </h2>
             <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">

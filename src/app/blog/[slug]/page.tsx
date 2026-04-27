@@ -131,7 +131,7 @@ export default async function BlogPostPage({
       <main>
         {/* Header del artículo */}
         <section className="bg-background pt-14 pb-16 border-b border-rule">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <nav
               aria-label="breadcrumb"
               className="flex items-center gap-2 text-[12px] text-muted mb-12"
@@ -169,7 +169,7 @@ export default async function BlogPostPage({
                 </span>
               </div>
 
-              <h1 className="font-serif text-[44px] md:text-[50px] leading-[1.06] font-semibold text-navy tracking-[-0.016em]">
+              <h1 className="font-serif text-[32px] md:text-[44px] lg:text-[50px] leading-[1.15] md:leading-[1.06] font-semibold text-navy tracking-[-0.016em]">
                 {post.titulo}
               </h1>
 
@@ -189,7 +189,7 @@ export default async function BlogPostPage({
 
         {/* Cuerpo */}
         <section className="bg-background pt-16 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <Prose>
               <TableOfContents body={post.body} />
               {post.body.map((b, i) => renderBlock(b, i))}
@@ -199,7 +199,7 @@ export default async function BlogPostPage({
 
         {/* Pie del artículo */}
         <section className="bg-background-warm border-y border-rule">
-          <div className="max-w-[1280px] mx-auto px-12 py-16">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-16">
             <div className="max-w-[820px]">
               <p className="font-serif italic text-[18px] leading-[1.55] text-foreground/85 border-l-2 border-olive pl-5">
                 Este texto es comentario técnico, no asesoría sobre un caso
@@ -220,12 +220,11 @@ export default async function BlogPostPage({
                 >
                   Enviar mensaje
                 </Link>
-                <Link
-                  href="https://wa.me/526646475018"
+                <a href="https://wa.me/526646475018"
                   className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/30 hover:bg-navy hover:text-background transition-colors duration-200"
                 >
                   Agendar 20 min
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -233,7 +232,7 @@ export default async function BlogPostPage({
 
         {/* Otras notas */}
         <section className="bg-background pt-20 pb-24">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <div className="flex items-baseline gap-4 mb-10">
               <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                 IX
@@ -264,7 +263,7 @@ export default async function BlogPostPage({
                   <p className="text-[12px] uppercase tracking-[0.14em] text-muted">
                     {n.fecha}
                   </p>
-                  <h3 className="font-serif text-[24px] leading-[1.2] font-medium text-navy tracking-[-0.008em] mt-4 group-hover:text-burgundy transition-colors duration-300">
+                  <h3 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-medium text-navy tracking-[-0.008em] mt-4 group-hover:text-burgundy transition-colors duration-300">
                     {n.titulo}
                   </h3>
                   <p className="text-[14.5px] leading-[1.6] text-muted mt-4">

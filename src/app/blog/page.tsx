@@ -44,7 +44,7 @@ export default function BlogIndexPage() {
         />
 
         <section className="bg-background pt-20 pb-24">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 border-t border-foreground/15">
               {ordered.map((n, i) => (
                 <Link
@@ -67,7 +67,7 @@ export default function BlogIndexPage() {
                     {n.fecha}
                   </p>
 
-                  <h3 className="font-serif text-[24px] leading-[1.2] font-medium text-navy tracking-[-0.008em] mt-4 group-hover:text-burgundy transition-colors duration-300">
+                  <h3 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-medium text-navy tracking-[-0.008em] mt-4 group-hover:text-burgundy transition-colors duration-300">
                     {n.titulo}
                   </h3>
 
@@ -91,7 +91,7 @@ export default function BlogIndexPage() {
           <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
           <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
 
-          <div className="max-w-[1280px] mx-auto px-12 py-24">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-24">
             <div className="flex items-baseline gap-4 mb-10 justify-center">
               <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                 II
@@ -103,7 +103,7 @@ export default function BlogIndexPage() {
             </div>
 
             <div className="max-w-[680px] mx-auto text-center">
-              <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
+              <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
                 Recibe nuestras notas.
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.6] max-w-[540px] mx-auto">

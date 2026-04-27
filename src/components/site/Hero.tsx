@@ -6,7 +6,7 @@ import { CountUp } from "@/components/motion/CountUp";
 export function Hero() {
   return (
     <section aria-label="Apertura" className="relative bg-background pt-16 pb-24 overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-12">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         {/* Chapter intro */}
         <Reveal>
           <div className="flex items-baseline gap-4 mb-12">
@@ -18,10 +18,10 @@ export function Hero() {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-12 gap-x-12 gap-y-16 items-start">
+        <div className="grid grid-cols-12 gap-x-6 md:gap-x-12 gap-y-12 md:gap-y-16 items-start">
           <Stagger className="col-span-12 lg:col-span-7 relative">
             <StaggerItem>
-              <h1 className="font-serif text-[60px] leading-[1.04] font-semibold text-navy tracking-[-0.018em]">
+              <h1 className="font-serif text-[36px] md:text-[48px] lg:text-[60px] leading-[1.1] md:leading-[1.04] font-semibold text-navy tracking-[-0.018em]">
                 Defensa fiscal, aduanera y administrativa en la frontera norte
                 de México.
               </h1>
@@ -70,7 +70,7 @@ export function Hero() {
           {/* Right: editorial gazette block */}
           <Reveal delay={0.2} y={20} className="col-span-12 lg:col-span-5">
           <aside className="lg:pl-10 lg:pt-2 relative">
-            <div className="border-y border-rule py-9 relative">
+            <div className="border-y border-rule py-7 md:py-9 relative">
               <span className="absolute -top-[3px] -left-[3px] w-[6px] h-[6px] bg-olive" />
               <span className="absolute -top-[3px] -right-[3px] w-[6px] h-[6px] bg-olive" />
               <span className="absolute -bottom-[3px] -left-[3px] w-[6px] h-[6px] bg-olive" />
@@ -80,7 +80,7 @@ export function Hero() {
                 ADAF · Tijuana
               </p>
 
-              <div className="font-serif text-[148px] leading-[0.86] font-semibold text-navy tracking-[-0.03em] text-center mt-4 tabular-nums">
+              <div className="font-serif text-[88px] md:text-[120px] lg:text-[148px] leading-[0.92] md:leading-[0.86] font-semibold text-navy tracking-[-0.03em] text-center mt-4 tabular-nums">
                 <CountUp to={25} duration={1.4} />
               </div>
 

@@ -53,7 +53,7 @@ export function ContactForm() {
         <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium mb-3">
           Mensaje recibido
         </p>
-        <h3 className="font-serif text-[24px] leading-[1.2] font-semibold text-navy tracking-[-0.008em]">
+        <h3 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-semibold text-navy tracking-[-0.008em]">
           Te respondemos en horario hábil.
         </h3>
         <p className="text-[15px] leading-[1.6] text-foreground/80 mt-4">
@@ -93,7 +93,7 @@ export function ContactForm() {
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label
             htmlFor="telefono"

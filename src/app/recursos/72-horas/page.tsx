@@ -7,6 +7,7 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
 import { Prose, P, H2, UL, LI, Note } from "@/components/page/Prose";
+import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
 import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -51,8 +52,8 @@ export default function Recurso72HorasPage() {
         />
 
         <section className="bg-background pt-20 pb-24">
-          <div className="max-w-[1280px] mx-auto px-12">
-            <div className="grid grid-cols-12 gap-12 items-start">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start">
               {/* Cover */}
               <div className="col-span-12 lg:col-span-5">
                 <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
@@ -104,56 +105,12 @@ export default function Recurso72HorasPage() {
                   </P>
                 </Prose>
 
-                <form className="mt-12 max-w-[560px] border-t border-rule pt-10">
-                  <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted mb-6">
+                <div className="mt-12 max-w-[560px] border-t border-rule pt-10">
+                  <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted mb-2">
                     Descarga la guía
                   </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <input
-                      type="text"
-                      required
-                      placeholder="Nombre completo"
-                      className="h-12 px-4 bg-background-warm border-b border-foreground/30 text-[14px] focus:outline-none focus:border-burgundy transition-colors"
-                    />
-                    <input
-                      type="email"
-                      required
-                      placeholder="Correo electrónico"
-                      className="h-12 px-4 bg-background-warm border-b border-foreground/30 text-[14px] focus:outline-none focus:border-burgundy transition-colors"
-                    />
-                  </div>
-                  <input
-                    type="tel"
-                    placeholder="Teléfono (opcional)"
-                    className="mt-3 w-full h-12 px-4 bg-background-warm border-b border-foreground/30 text-[14px] focus:outline-none focus:border-burgundy transition-colors"
-                  />
-                  <label className="flex items-start gap-3 mt-6 text-[13px] leading-[1.55] text-foreground/80">
-                    <input
-                      type="checkbox"
-                      required
-                      className="mt-[5px] accent-burgundy"
-                    />
-                    <span>
-                      He leído y acepto el{" "}
-                      <Link
-                        href="/aviso-de-privacidad"
-                        className="underline underline-offset-2 hover:text-burgundy"
-                      >
-                        aviso de privacidad
-                      </Link>
-                      .
-                    </span>
-                  </label>
-                  <button
-                    type="submit"
-                    className="mt-8 inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-                  >
-                    Descargar la guía
-                  </button>
-                  <p className="text-[13px] leading-[1.55] text-muted mt-5 max-w-[460px]">
-                    Recibirás la guía en tu correo en los próximos minutos.
-                  </p>
-                </form>
+                  <LeadMagnetForm withConsent />
+                </div>
               </div>
             </div>
           </div>
@@ -161,7 +118,7 @@ export default function Recurso72HorasPage() {
 
         {/* Aviso del documento */}
         <section className="bg-background-warm border-y border-rule">
-          <div className="max-w-[1280px] mx-auto px-12 py-16">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-16">
             <div className="max-w-[820px]">
               <Prose>
                 <Note title="Aviso del documento">
@@ -181,7 +138,7 @@ export default function Recurso72HorasPage() {
           <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
           <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
 
-          <div className="max-w-[1280px] mx-auto px-12 py-24">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-24">
             <div className="flex items-baseline gap-4 mb-10 justify-center">
               <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                 VII
@@ -193,7 +150,7 @@ export default function Recurso72HorasPage() {
             </div>
 
             <div className="max-w-[820px] mx-auto text-center">
-              <h2 className="font-serif text-[40px] leading-[1.12] font-semibold tracking-[-0.012em]">
+              <h2 className="font-serif text-[28px] md:text-[34px] lg:text-[40px] leading-[1.2] md:leading-[1.12] font-semibold tracking-[-0.012em]">
                 Si lo que enfrentas no admite espera, escríbenos.
               </h2>
               <p className="text-[17px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">

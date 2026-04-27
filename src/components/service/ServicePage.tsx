@@ -25,7 +25,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* Plazo crítico card + dual CTA */}
       <section className="bg-background pt-12 pb-12 border-b border-rule">
-        <div className="max-w-[1280px] mx-auto px-12 grid grid-cols-12 gap-12 items-center">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-center">
           <div className="col-span-12 lg:col-span-8 flex flex-wrap items-center gap-5">
             <Link
               href="/contacto"
@@ -45,7 +45,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
               <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium">
                 Plazo crítico
               </p>
-              <p className="font-serif text-[36px] leading-none font-semibold text-navy mt-3 tracking-[-0.018em]">
+              <p className="font-serif text-[28px] md:text-[36px] leading-none font-semibold text-navy mt-3 tracking-[-0.018em]">
                 {data.plazoCritico.numero}
               </p>
               <p className="text-[13px] leading-[1.5] text-foreground/80 mt-3">
@@ -58,11 +58,11 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* I — ¿Qué es y cuándo aplica? */}
       <section className="bg-background pt-20 pb-20">
-        <div className="max-w-[1280px] mx-auto px-12">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="I" label="Contexto del procedimiento" />
-          <div className="grid grid-cols-12 gap-12 mt-10">
+          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
             <div className="col-span-12 lg:col-span-4">
-              <h2 className="font-serif text-[36px] leading-[1.1] font-semibold text-navy tracking-[-0.012em] sticky top-32">
+              <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em] sticky top-32">
                 ¿Qué es y cuándo aplica?
               </h2>
             </div>
@@ -84,11 +84,11 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* II — ¿Cómo te ayudamos? */}
       <section className="bg-background-warm pt-20 pb-20">
-        <div className="max-w-[1280px] mx-auto px-12">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="II" label="Cómo te ayudamos" />
-          <div className="grid grid-cols-12 gap-12 mt-10 mb-14">
+          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-14">
             <div className="col-span-12 lg:col-span-7">
-              <h2 className="font-serif text-[40px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+              <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                 Pasos del procedimiento que llevamos por ti.
               </h2>
             </div>
@@ -116,11 +116,11 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* III — Plazos y consecuencias */}
       <section className="bg-background pt-20 pb-20">
-        <div className="max-w-[1280px] mx-auto px-12">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="III" label="Plazos y consecuencias" />
-          <div className="grid grid-cols-12 gap-12 mt-10 mb-12">
+          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
             <div className="col-span-12 lg:col-span-7">
-              <h2 className="font-serif text-[40px] leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
+              <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                 Plazos legales que están corriendo.
               </h2>
             </div>
@@ -149,11 +149,11 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* IV — Documentos */}
       <section className="bg-background-warm pt-20 pb-20">
-        <div className="max-w-[1280px] mx-auto px-12">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="IV" label="Documentación" />
-          <div className="grid grid-cols-12 gap-12 mt-10">
+          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
             <div className="col-span-12 lg:col-span-5">
-              <h2 className="font-serif text-[36px] leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
+              <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
                 Documentos que necesitamos para empezar.
               </h2>
               <p className="text-[14.5px] leading-[1.65] text-muted mt-5 max-w-[400px]">
@@ -180,10 +180,10 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* V — Resultado esperado */}
       <section className="bg-background pt-20 pb-20">
-        <div className="max-w-[1280px] mx-auto px-12">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="V" label="Expectativa realista" />
           <div className="mt-10 max-w-[820px]">
-            <h2 className="font-serif text-[36px] leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
+            <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
               Resultado esperado.
             </h2>
             <p className="text-[18px] leading-[1.65] text-foreground/85 mt-7 max-w-[720px]">
@@ -195,11 +195,11 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* VI — FAQ */}
       <section className="bg-background-warm pt-20 pb-20">
-        <div className="max-w-[1280px] mx-auto px-12">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="VI" label="Preguntas frecuentes" />
-          <div className="grid grid-cols-12 gap-12 mt-10">
+          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
             <div className="col-span-12 lg:col-span-4">
-              <h2 className="font-serif text-[36px] leading-[1.1] font-semibold text-navy tracking-[-0.012em] sticky top-32">
+              <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em] sticky top-32">
                 Preguntas frecuentes.
               </h2>
             </div>
@@ -244,7 +244,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
         <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
         <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
 
-        <div className="max-w-[1280px] mx-auto px-12 py-20">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-20">
           <div className="flex items-baseline gap-4 mb-8 justify-center">
             <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">VII</span>
             <span className="w-[80px] h-[1px] bg-background/30" />
@@ -253,7 +253,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
             </span>
           </div>
           <div className="max-w-[760px] mx-auto text-center">
-            <h2 className="font-serif text-[36px] leading-[1.12] font-semibold tracking-[-0.012em]">
+            <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
               Escríbenos los detalles de tu asunto.
             </h2>
             <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
@@ -286,9 +286,9 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
       {/* VIII — Materias relacionadas */}
       <section className="bg-background pt-20 pb-24">
-        <div className="max-w-[1280px] mx-auto px-12">
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="VIII" label="Otras materias" />
-          <div className="grid grid-cols-12 gap-12 mt-10 mb-12 items-end">
+          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12 items-end">
             <div className="col-span-12 lg:col-span-8">
               <h2 className="font-serif text-[34px] leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
                 Materias relacionadas con tu asunto.

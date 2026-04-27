@@ -42,9 +42,9 @@ export default function ContactoPage() {
 
         {/* I — Bloques de contacto */}
         <section className="bg-background pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="I" label="Vías de contacto" />
-            <div className="grid grid-cols-12 gap-12 mt-12">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-12">
               {/* Bloque 1: Formulario */}
               <div className="col-span-12 lg:col-span-7">
                 <div className="flex items-baseline gap-4 mb-6">
@@ -130,7 +130,7 @@ export default function ContactoPage() {
 
         {/* II — Aviso de confidencialidad */}
         <section className="bg-background pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <aside className="bg-background-warm border-l-[3px] border-olive px-8 py-7 max-w-[1080px]">
               <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium mb-3">
                 Aviso de confidencialidad
@@ -147,11 +147,11 @@ export default function ContactoPage() {
 
         {/* III — Oficina */}
         <section className="bg-background-warm pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="II" label="Oficina" />
-            <div className="grid grid-cols-12 gap-12 mt-10">
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
               <div className="col-span-12 lg:col-span-5">
-                <h2 className="font-serif text-[34px] leading-[1.12] font-semibold text-navy tracking-[-0.012em] mb-8">
+                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] mb-8">
                   Nueva Tijuana, Baja California.
                 </h2>
                 <dl className="space-y-7 border-t border-foreground/15 pt-7">

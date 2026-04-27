@@ -1,7 +1,7 @@
 export function Masthead() {
   return (
     <div className="bg-navy text-background">
-      <div className="max-w-[1280px] mx-auto px-12 h-9 flex items-center justify-between gap-6">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 h-9 flex items-center justify-between gap-6">
         <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/85">
           ADAF · Tijuana, Baja California · Frontera norte de México
         </p>

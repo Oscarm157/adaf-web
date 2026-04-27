@@ -188,7 +188,7 @@ export function CoverageMap() {
       </svg>
 
       {/* Legend */}
-      <div className="grid grid-cols-2 gap-4 mt-6 max-w-[440px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-6 max-w-[440px]">
         <div className="flex items-center gap-3 text-[12px]">
           <span className="w-2 h-2 bg-burgundy rounded-full" />
           <span className="text-foreground/85">Base de operación</span>

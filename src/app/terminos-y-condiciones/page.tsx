@@ -39,7 +39,7 @@ export default function TerminosPage() {
         />
 
         <section className="bg-background pt-16 pb-24">
-          <div className="max-w-[1280px] mx-auto px-12">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <Prose>
               <Note title="Plantilla pendiente de validación">
                 Esta es una plantilla orientativa. La versión final debe ser
