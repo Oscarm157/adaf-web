@@ -13,7 +13,10 @@ export function ChapterMark({
         align === "center" ? "justify-center" : ""
       }`}
     >
-      <span className="font-serif italic text-[14px] text-olive tracking-wide">
+      <span
+        aria-hidden="true"
+        className="font-serif italic text-[14px] text-olive tracking-wide"
+      >
         {numeral}
       </span>
       <span className="flex-1 max-w-[120px] h-[1px] bg-rule" />

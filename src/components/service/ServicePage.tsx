@@ -4,9 +4,11 @@ import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
 import { ProcedureTimeline } from "@/components/visual/ProcedureTimeline";
 import { PullQuote } from "@/components/visual/PullQuote";
+import { whatsappUrl } from "@/lib/whatsapp";
 import type { ServiceData } from "./types";
 
 export function ServicePage({ data }: { data: ServiceData }) {
+  const waLink = whatsappUrl(`/servicios/${data.slug}`);
   return (
     <>
       <PageHero
@@ -32,7 +34,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
               Agenda tu valoración
             </Link>
             <a
-              href="https://wa.me/526646475018"
+              href={waLink}
               className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
             >
               Hablar por WhatsApp
@@ -97,7 +99,10 @@ export function ServicePage({ data }: { data: ServiceData }) {
                 key={step.n}
                 className="grid grid-cols-12 gap-6 items-baseline border-b border-rule py-6 px-1"
               >
-                <span className="col-span-12 md:col-span-1 font-serif italic text-[18px] font-medium text-olive">
+                <span
+                  aria-hidden="true"
+                  className="col-span-12 md:col-span-1 font-serif italic text-[18px] font-medium text-olive"
+                >
                   {step.n}
                 </span>
                 <p className="col-span-12 md:col-span-11 text-[17px] leading-[1.65] text-foreground/85 max-w-[820px]">
@@ -162,7 +167,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
                   key={i}
                   className="flex items-baseline gap-3 text-[15px] leading-[1.55] text-foreground/85 border-b border-rule pb-3"
                 >
-                  <span className="font-serif italic text-[12px] text-olive shrink-0 w-6">
+                  <span aria-hidden="true" className="font-serif italic text-[12px] text-olive shrink-0 w-6">
                     {romanize(i + 1)}
                   </span>
                   <span>{d}</span>
@@ -206,13 +211,16 @@ export function ServicePage({ data }: { data: ServiceData }) {
                     className="group border-b border-rule py-6 px-1 [&[open]]:bg-background/50 transition-colors"
                   >
                     <summary className="flex items-baseline gap-4 cursor-pointer list-none">
-                      <span className="font-serif italic text-[14px] text-olive shrink-0 w-7">
+                      <span aria-hidden="true" className="font-serif italic text-[14px] text-olive shrink-0 w-7">
                         {romanize(i + 1)}
                       </span>
                       <span className="font-serif text-[20px] leading-[1.3] font-medium text-navy tracking-[-0.005em] flex-1 group-hover:text-burgundy transition-colors">
                         {faq.q}
                       </span>
-                      <span className="font-serif italic text-[20px] text-olive group-open:rotate-45 transition-transform duration-200 select-none">
+                      <span
+                        aria-hidden="true"
+                        className="font-serif italic text-[20px] text-olive group-open:rotate-45 transition-transform duration-200 select-none"
+                      >
                         +
                       </span>
                     </summary>
@@ -238,7 +246,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
 
         <div className="max-w-[1280px] mx-auto px-12 py-20">
           <div className="flex items-baseline gap-4 mb-8 justify-center">
-            <span className="font-serif italic text-[14px] text-olive">VII</span>
+            <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">VII</span>
             <span className="w-[80px] h-[1px] bg-background/30" />
             <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
               Atención
@@ -254,7 +262,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 mt-9">
               <a
-                href="https://wa.me/526646475018"
+                href={waLink}
                 className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
               >
                 Hablar por WhatsApp
@@ -266,7 +274,7 @@ export function ServicePage({ data }: { data: ServiceData }) {
                 Enviar mensaje
               </Link>
               <Link
-                href="/contacto#agendar"
+                href={waLink}
                 className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
               >
                 Agendar 20 min

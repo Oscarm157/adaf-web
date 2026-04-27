@@ -30,7 +30,10 @@ export function Header() {
               href={link.href}
               className="relative text-[13.5px] font-medium text-navy hover:text-burgundy transition-colors duration-200 group"
             >
-              <span className="font-serif italic text-olive text-[10px] mr-1.5 align-baseline">
+              <span
+                aria-hidden="true"
+                className="font-serif italic text-olive text-[10px] mr-1.5 align-baseline"
+              >
                 {romanize(i + 1)}
               </span>
               {link.label}

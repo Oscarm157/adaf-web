@@ -47,7 +47,10 @@ export function PageHero({
         {(numeral || label) && (
           <div className="flex items-baseline gap-4 mb-8">
             {numeral && (
-              <span className="font-serif italic text-[14px] text-olive">
+              <span
+                aria-hidden="true"
+                className="font-serif italic text-[14px] text-olive"
+              >
                 {numeral}
               </span>
             )}

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export function CTAFinal() {
   return (
-    <section className="bg-navy text-background relative overflow-hidden">
+    <section aria-label="Contacto" className="bg-navy text-background relative overflow-hidden">
       <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-olive/60" />
       <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
       <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
@@ -10,7 +10,7 @@ export function CTAFinal() {
 
       <div className="max-w-[1280px] mx-auto px-12 py-24">
         <div className="flex items-baseline gap-4 mb-10 justify-center">
-          <span className="font-serif italic text-[14px] text-olive">VIII</span>
+          <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">VIII</span>
           <span className="w-[80px] h-[1px] bg-background/30" />
           <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
             Contacto
@@ -40,7 +40,7 @@ export function CTAFinal() {
               Enviar mensaje
             </Link>
             <Link
-              href="/contacto#agendar"
+              href="https://wa.me/526646475018"
               className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
             >
               Agendar 20 min

@@ -19,9 +19,11 @@ import {
   posts,
   getPostBySlug,
   getAllPostSlugs,
+  slugify,
   type BodyBlock,
 } from "@/lib/posts";
 import { siteUrl, siteConfig } from "@/lib/seo";
+import { TableOfContents } from "@/components/blog/TableOfContents";
 
 export const dynamicParams = false;
 
@@ -55,7 +57,11 @@ export async function generateMetadata({
 function renderBlock(block: BodyBlock, idx: number) {
   switch (block.type) {
     case "h2":
-      return <H2 key={idx}>{block.text}</H2>;
+      return (
+        <H2 key={idx} id={slugify(block.text)}>
+          {block.text}
+        </H2>
+      );
     case "h3":
       return <H3 key={idx}>{block.text}</H3>;
     case "p":
@@ -184,7 +190,10 @@ export default async function BlogPostPage({
         {/* Cuerpo */}
         <section className="bg-background pt-16 pb-20">
           <div className="max-w-[1280px] mx-auto px-12">
-            <Prose>{post.body.map((b, i) => renderBlock(b, i))}</Prose>
+            <Prose>
+              <TableOfContents body={post.body} />
+              {post.body.map((b, i) => renderBlock(b, i))}
+            </Prose>
           </div>
         </section>
 
@@ -212,7 +221,7 @@ export default async function BlogPostPage({
                   Enviar mensaje
                 </Link>
                 <Link
-                  href="/contacto#agendar"
+                  href="https://wa.me/526646475018"
                   className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/30 hover:bg-navy hover:text-background transition-colors duration-200"
                 >
                   Agendar 20 min
@@ -226,7 +235,7 @@ export default async function BlogPostPage({
         <section className="bg-background pt-20 pb-24">
           <div className="max-w-[1280px] mx-auto px-12">
             <div className="flex items-baseline gap-4 mb-10">
-              <span className="font-serif italic text-[14px] text-olive">
+              <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                 IX
               </span>
               <span className="flex-1 max-w-[120px] h-[1px] bg-rule" />

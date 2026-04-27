@@ -46,9 +46,9 @@ export default function ContactoPage() {
             <ChapterMark numeral="I" label="Vías de contacto" />
             <div className="grid grid-cols-12 gap-12 mt-12">
               {/* Bloque 1: Formulario */}
-              <div className="col-span-12 lg:col-span-5">
+              <div className="col-span-12 lg:col-span-7">
                 <div className="flex items-baseline gap-4 mb-6">
-                  <span className="font-serif italic text-[14px] text-olive">
+                  <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                     I
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
@@ -67,9 +67,12 @@ export default function ContactoPage() {
               </div>
 
               {/* Bloque 2: WhatsApp */}
-              <div className="col-span-12 lg:col-span-3 lg:border-l lg:border-rule lg:pl-8">
+              <div
+                id="agendar"
+                className="col-span-12 lg:col-span-5 lg:border-l lg:border-rule lg:pl-8"
+              >
                 <div className="flex items-baseline gap-4 mb-6">
-                  <span className="font-serif italic text-[14px] text-olive">
+                  <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                     II
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
@@ -121,46 +124,6 @@ export default function ContactoPage() {
                 </dl>
               </div>
 
-              {/* Bloque 3: Agendar */}
-              <div
-                id="agendar"
-                className="col-span-12 lg:col-span-4 lg:border-l lg:border-rule lg:pl-8"
-              >
-                <div className="flex items-baseline gap-4 mb-6">
-                  <span className="font-serif italic text-[14px] text-olive">
-                    III
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                    Agenda
-                  </span>
-                </div>
-                <h2 className="font-serif text-[28px] leading-[1.15] font-semibold text-navy tracking-[-0.008em] mb-3">
-                  Agendar valoración 20 min.
-                </h2>
-                <p className="text-[14.5px] leading-[1.6] text-foreground/85 mb-5 max-w-[360px]">
-                  Bloques de veinte minutos por videollamada o teléfono para
-                  revisar la notificación que recibiste e identificar plazos y
-                  vías de defensa.
-                </p>
-                <p className="text-[14px] leading-[1.6] text-muted mb-8 max-w-[360px]">
-                  La valoración inicial es sin costo. Si decides avanzar, los
-                  honorarios se formalizan por escrito antes de iniciar
-                  cualquier trámite.
-                </p>
-
-                <button
-                  type="button"
-                  disabled
-                  className="inline-flex items-center justify-center bg-transparent text-muted text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] border border-foreground/20 cursor-not-allowed"
-                >
-                  [Calendly: pendiente del cliente]
-                </button>
-
-                <p className="text-[12px] leading-[1.55] text-muted mt-5 max-w-[320px]">
-                  Mientras integramos la herramienta de agenda, escríbenos por
-                  WhatsApp o formulario y coordinamos el horario.
-                </p>
-              </div>
             </div>
           </div>
         </section>

@@ -22,7 +22,7 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section className="bg-background-warm pt-24 pb-24">
+    <section aria-label="Principios" className="bg-background-warm pt-24 pb-24">
       <div className="max-w-[1280px] mx-auto px-12">
         <ChapterMark numeral="III" label="Principios" />
 
@@ -50,7 +50,10 @@ export function Pillars() {
             <StaggerItem key={p.n}>
               <article className="relative">
                 <div className="flex items-baseline gap-3 mb-5">
-                  <span className="font-serif italic text-[18px] text-olive">
+                  <span
+                    aria-hidden="true"
+                    className="font-serif italic text-[18px] text-olive"
+                  >
                     {p.n}.
                   </span>
                   <span className="flex-1 h-[1px] bg-rule" />

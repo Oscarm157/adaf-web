@@ -6,7 +6,6 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
-import { Note } from "@/components/page/Prose";
 import { CountUp } from "@/components/motion/CountUp";
 import { CoverageMap } from "@/components/visual/CoverageMap";
 import { siteUrl } from "@/lib/seo";
@@ -200,7 +199,10 @@ export default function ResultadosPage() {
                     className="border-b border-rule pb-7 last:border-0"
                   >
                     <div className="flex items-baseline gap-4 mb-3">
-                      <span className="font-serif italic text-[14px] text-olive">
+                      <span
+                        aria-hidden="true"
+                        className="font-serif italic text-[14px] text-olive"
+                      >
                         {c.numeral}
                       </span>
                       <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
@@ -241,7 +243,7 @@ export default function ResultadosPage() {
                       key={t}
                       className="flex items-baseline gap-4 py-4 border-b border-rule"
                     >
-                      <span className="font-serif italic text-[13px] text-olive w-7 shrink-0">
+                      <span aria-hidden="true" className="font-serif italic text-[13px] text-olive w-7 shrink-0">
                         {romanize(i + 1)}
                       </span>
                       <span className="text-[16px] leading-[1.5] text-foreground/85">
@@ -279,7 +281,7 @@ export default function ResultadosPage() {
                         i % 2 === 0 ? "sm:border-r sm:pr-6" : "sm:pl-6"
                       }`}
                     >
-                      <span className="font-serif italic text-[11px] text-olive w-7 shrink-0">
+                      <span aria-hidden="true" className="font-serif italic text-[11px] text-olive w-7 shrink-0">
                         {romanize(i + 1)}
                       </span>
                       <span className="leading-[1.4]">{a}</span>
@@ -291,31 +293,11 @@ export default function ResultadosPage() {
           </div>
         </section>
 
-        {/* V — Testimoniales */}
-        <section className="bg-background pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
-            <ChapterMark numeral="V" label="Testimoniales y reseñas" />
-            <div className="grid grid-cols-12 gap-12 mt-10">
-              <div className="col-span-12 lg:col-span-7">
-                <h2 className="font-serif text-[34px] leading-[1.12] font-semibold text-navy tracking-[-0.012em]">
-                  Reseñas verificadas en proceso de integración.
-                </h2>
-                <Note title="Nota editorial">
-                  Estamos en proceso de reactivar el Google Business Profile
-                  del despacho. Las reseñas verificadas se integrarán aquí en
-                  el siguiente paso. Mientras tanto, los expedientes que
-                  hemos llevado están protegidos por el secreto profesional y
-                  no se publican casos individualizados.
-                </Note>
-              </div>
-              <div className="col-span-12 lg:col-span-4 lg:col-start-9">
-                <div className="bg-background-warm aspect-[3/4] border border-rule" />
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* TODO: cuando reactiven Google Business Profile y haya reseñas
+            verificadas, restaurar aquí la sección "Testimoniales y reseñas"
+            (numeral V). Por ahora se omite para no mostrar placeholders. */}
 
-        {/* VI — CTA final navy */}
+        {/* V — CTA final navy */}
         <section className="bg-navy text-background relative overflow-hidden">
           <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-olive/60" />
           <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
@@ -324,7 +306,7 @@ export default function ResultadosPage() {
 
           <div className="max-w-[1280px] mx-auto px-12 py-20">
             <div className="flex items-baseline gap-4 mb-8 justify-center">
-              <span className="font-serif italic text-[14px] text-olive">VI</span>
+              <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">V</span>
               <span className="w-[80px] h-[1px] bg-background/30" />
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
                 Atención
@@ -352,7 +334,7 @@ export default function ResultadosPage() {
                   Enviar mensaje
                 </Link>
                 <Link
-                  href="/contacto#agendar"
+                  href="https://wa.me/526646475018"
                   className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
                 >
                   Agendar 20 min

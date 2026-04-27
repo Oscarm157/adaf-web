@@ -74,7 +74,7 @@ export function EditorialBand({
 
             {/* meta top-left */}
             <div className="absolute top-5 left-6 flex items-baseline gap-3">
-              <span className="font-serif italic text-[13px] text-olive">
+              <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
                 {numeral}
               </span>
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">

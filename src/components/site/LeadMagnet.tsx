@@ -3,7 +3,7 @@ import { ChapterMark } from "./ChapterMark";
 
 export function LeadMagnet() {
   return (
-    <section className="bg-background pt-24 pb-24">
+    <section aria-label="Recurso descargable" className="bg-background pt-24 pb-24">
       <div className="max-w-[1280px] mx-auto px-12">
         <ChapterMark numeral="VI" label="Recurso descargable" />
 
@@ -71,7 +71,10 @@ export function LeadMagnet() {
               >
                 Descargar la guía
               </button>
-              <p className="text-[11px] uppercase tracking-[0.16em] text-muted mt-5">
+              <p className="text-[13px] leading-[1.55] text-muted mt-5 max-w-[420px]">
+                Recibirás la guía en tu correo en los próximos minutos.
+              </p>
+              <p className="text-[11px] uppercase tracking-[0.16em] text-muted mt-3">
                 Sujeto al aviso de privacidad
               </p>
             </form>

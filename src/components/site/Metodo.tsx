@@ -26,7 +26,7 @@ const steps = [
 
 export function Metodo() {
   return (
-    <section className="bg-background-warm pt-24 pb-28">
+    <section aria-label="Método de trabajo" className="bg-background-warm pt-24 pb-28">
       <div className="max-w-[1280px] mx-auto px-12">
         <ChapterMark numeral="V" label="Método de trabajo" />
 

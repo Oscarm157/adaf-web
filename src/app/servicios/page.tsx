@@ -49,7 +49,10 @@ export default function ServiciosHub() {
                 >
                   <div className="px-2 md:px-7 py-8 group-hover:px-4 md:group-hover:px-8 transition-[padding] duration-300">
                     <div className="flex items-baseline gap-4 mb-3.5">
-                      <span className="font-serif italic text-[15px] font-medium text-olive tracking-wide w-7 shrink-0">
+                      <span
+                        aria-hidden="true"
+                        className="font-serif italic text-[15px] font-medium text-olive tracking-wide w-7 shrink-0"
+                      >
                         {s.numeral}
                       </span>
                       <span className="text-[13px] uppercase tracking-[0.14em] text-navy font-medium">

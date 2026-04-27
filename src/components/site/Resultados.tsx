@@ -47,7 +47,7 @@ const autoridades = [
 
 export function Resultados() {
   return (
-    <section className="bg-background pt-24 pb-24">
+    <section aria-label="Trayectoria" className="bg-background pt-24 pb-24">
       <div className="max-w-[1280px] mx-auto px-12">
         <ChapterMark numeral="IV" label="Práctica profesional" />
 
@@ -116,7 +116,7 @@ export function Resultados() {
                     i % 2 === 0 ? "sm:border-r sm:pr-6" : "sm:pl-6"
                   }`}
                 >
-                  <span className="font-serif italic text-[11px] text-olive w-7 shrink-0">
+                  <span aria-hidden="true" className="font-serif italic text-[11px] text-olive w-7 shrink-0">
                     {romanize(i + 1)}
                   </span>
                   <span className="leading-[1.4]">{a}</span>

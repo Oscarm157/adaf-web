@@ -62,7 +62,7 @@ const notas: Array<{
 
 export function Notas() {
   return (
-    <section className="bg-background pt-24 pb-24 border-t border-rule">
+    <section aria-label="Notas y análisis" className="bg-background pt-24 pb-24 border-t border-rule">
       <div className="max-w-[1280px] mx-auto px-12">
         <ChapterMark numeral="VII" label="Notas y análisis" />
 

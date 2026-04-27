@@ -77,7 +77,7 @@ const areas = [
 
 export function Areas() {
   return (
-    <section id="areas" className="bg-background pt-24 pb-24">
+    <section aria-label="Áreas de práctica" id="areas" className="bg-background pt-24 pb-24">
       <div className="max-w-[1280px] mx-auto px-12">
         <ChapterMark numeral="II" label="Áreas de práctica" />
 
@@ -108,7 +108,10 @@ export function Areas() {
             >
               <div className="px-2 md:px-7 py-7 group-hover:px-4 md:group-hover:px-8 transition-[padding] duration-300">
                 <div className="flex items-baseline gap-4 mb-3.5">
-                  <span className="font-serif italic text-[15px] font-medium text-olive tracking-wide w-7 shrink-0">
+                  <span
+                    aria-hidden="true"
+                    className="font-serif italic text-[15px] font-medium text-olive tracking-wide w-7 shrink-0"
+                  >
                     {area.n}
                   </span>
                   <span className="text-[13px] uppercase tracking-[0.14em] text-navy font-medium">

@@ -28,7 +28,10 @@ export function ProcedureTimeline({
       <ol className="md:hidden space-y-5">
         {parsed.map((s, i) => (
           <li key={i} className="flex items-baseline gap-4">
-            <span className="font-serif italic text-[12px] text-olive shrink-0 w-8">
+            <span
+              aria-hidden="true"
+              className="font-serif italic text-[12px] text-olive shrink-0 w-8"
+            >
               {romanize(i + 1)}
             </span>
             <div className="flex-1 border-b border-rule pb-3">

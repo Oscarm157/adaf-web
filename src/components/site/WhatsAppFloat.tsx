@@ -1,7 +1,13 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+import { whatsappUrl } from "@/lib/whatsapp";
+
 export function WhatsAppFloat() {
+  const pathname = usePathname();
   return (
     <a
-      href="https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20"
+      href={whatsappUrl(pathname)}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-7 right-7 z-40 w-14 h-14 bg-burgundy text-white rounded-full flex items-center justify-center shadow-[0_4px_20px_rgba(122,31,56,0.35)] hover:bg-burgundy-dark transition-colors duration-200"

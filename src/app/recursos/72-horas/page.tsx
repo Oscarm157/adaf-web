@@ -150,6 +150,9 @@ export default function Recurso72HorasPage() {
                   >
                     Descargar la guía
                   </button>
+                  <p className="text-[13px] leading-[1.55] text-muted mt-5 max-w-[460px]">
+                    Recibirás la guía en tu correo en los próximos minutos.
+                  </p>
                 </form>
               </div>
             </div>
@@ -180,7 +183,7 @@ export default function Recurso72HorasPage() {
 
           <div className="max-w-[1280px] mx-auto px-12 py-24">
             <div className="flex items-baseline gap-4 mb-10 justify-center">
-              <span className="font-serif italic text-[14px] text-olive">
+              <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                 VII
               </span>
               <span className="w-[80px] h-[1px] bg-background/30" />

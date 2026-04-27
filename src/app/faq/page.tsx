@@ -177,13 +177,16 @@ function FaqGroup({
                   className="group border-b border-rule py-6 px-1 [&[open]]:bg-background-warm/40 transition-colors"
                 >
                   <summary className="flex items-baseline gap-4 cursor-pointer list-none">
-                    <span className="font-serif italic text-[14px] text-olive shrink-0 w-7">
+                    <span aria-hidden="true" className="font-serif italic text-[14px] text-olive shrink-0 w-7">
                       {romanize(startIndex + i + 1)}
                     </span>
                     <span className="font-serif text-[20px] leading-[1.3] font-medium text-navy tracking-[-0.005em] flex-1 group-hover:text-burgundy transition-colors">
                       {faq.q}
                     </span>
-                    <span className="font-serif italic text-[20px] text-olive group-open:rotate-45 transition-transform duration-200 select-none">
+                    <span
+                      aria-hidden="true"
+                      className="font-serif italic text-[20px] text-olive group-open:rotate-45 transition-transform duration-200 select-none"
+                    >
                       +
                     </span>
                   </summary>
@@ -261,7 +264,7 @@ export default function FaqPage() {
 
           <div className="max-w-[1280px] mx-auto px-12 py-20">
             <div className="flex items-baseline gap-4 mb-8 justify-center">
-              <span className="font-serif italic text-[14px] text-olive">V</span>
+              <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">V</span>
               <span className="w-[80px] h-[1px] bg-background/30" />
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
                 Atención
@@ -289,7 +292,7 @@ export default function FaqPage() {
                   Enviar mensaje
                 </Link>
                 <Link
-                  href="/contacto#agendar"
+                  href="https://wa.me/526646475018"
                   className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
                 >
                   Agendar 20 min

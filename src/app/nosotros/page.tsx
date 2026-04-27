@@ -130,7 +130,10 @@ export default function NosotrosPage() {
                   } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
                 >
                   <div className="flex items-baseline gap-4 mb-5">
-                    <span className="font-serif italic text-[14px] text-olive">
+                    <span
+                      aria-hidden="true"
+                      className="font-serif italic text-[14px] text-olive"
+                    >
                       {p.numeral}
                     </span>
                     <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
@@ -183,7 +186,10 @@ export default function NosotrosPage() {
                     i % 2 === 0 ? "sm:border-r sm:pr-6" : "sm:pl-6"
                   }`}
                 >
-                  <span className="font-serif italic text-[13px] text-olive w-7 shrink-0">
+                  <span
+                    aria-hidden="true"
+                    className="font-serif italic text-[13px] text-olive w-7 shrink-0"
+                  >
                     {s.numeral}
                   </span>
                   <Link
@@ -202,43 +208,11 @@ export default function NosotrosPage() {
           </div>
         </section>
 
-        {/* IV — Equipo */}
-        <section className="bg-background-warm pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-12">
-            <ChapterMark numeral="IV" label="Equipo" />
-            <div className="grid grid-cols-12 gap-12 mt-10">
-              <div className="col-span-12 lg:col-span-5">
-                <div className="bg-background aspect-[3/4] border border-rule" />
-              </div>
-              <div className="col-span-12 lg:col-span-6 lg:col-start-7">
-                <h2 className="font-serif text-[34px] leading-[1.12] font-semibold text-navy tracking-[-0.012em]">
-                  Las personas detrás de cada expediente.
-                </h2>
-                <p className="text-[17px] leading-[1.7] text-foreground/85 mt-7 max-w-[560px]">
-                  La sección de equipo se incorporará una vez completada la
-                  sesión de fotografía profesional. Si necesitas saber con
-                  quién hablarías sobre tu asunto, contáctanos directamente.
-                </p>
-                <div className="flex flex-wrap items-center gap-4 mt-9">
-                  <a
-                    href="https://wa.me/526646475018"
-                    className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-                  >
-                    Hablar por WhatsApp
-                  </a>
-                  <Link
-                    href="/contacto"
-                    className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
-                  >
-                    Enviar mensaje
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        {/* TODO: Sección IV "Equipo" — restaurar con bios de texto cuando
+            el despacho entregue: nombre · especialidad · años · formación.
+            Por ahora se omite para no mostrar placeholders. */}
 
-        {/* V — CTA final navy */}
+        {/* IV — CTA final navy */}
         <section className="bg-navy text-background relative overflow-hidden">
           <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-olive/60" />
           <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
@@ -247,7 +221,7 @@ export default function NosotrosPage() {
 
           <div className="max-w-[1280px] mx-auto px-12 py-20">
             <div className="flex items-baseline gap-4 mb-8 justify-center">
-              <span className="font-serif italic text-[14px] text-olive">V</span>
+              <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">IV</span>
               <span className="w-[80px] h-[1px] bg-background/30" />
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
                 Atención
@@ -275,7 +249,7 @@ export default function NosotrosPage() {
                   Enviar mensaje
                 </Link>
                 <Link
-                  href="/contacto#agendar"
+                  href="https://wa.me/526646475018"
                   className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
                 >
                   Agendar 20 min

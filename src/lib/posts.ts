@@ -466,3 +466,14 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 export function getAllPostSlugs(): string[] {
   return posts.map((p) => p.slug);
 }
+
+export function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "") // strip diacritics
+    .replace(/[^a-z0-9\s-]/g, "")
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-");
+}
