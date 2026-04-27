@@ -6,6 +6,7 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
+import { ContactForm } from "@/components/forms/ContactForm";
 import { siteUrl } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -62,128 +63,7 @@ export default function ContactoPage() {
                   vía que prefieras.
                 </p>
 
-                <form action="" method="post" className="space-y-6">
-                  <div>
-                    <label
-                      htmlFor="nombre"
-                      className="block text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2"
-                    >
-                      Nombre completo
-                    </label>
-                    <input
-                      type="text"
-                      id="nombre"
-                      name="nombre"
-                      required
-                      className={inputClass}
-                      placeholder="Tu nombre"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-5">
-                    <div>
-                      <label
-                        htmlFor="telefono"
-                        className="block text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2"
-                      >
-                        Teléfono
-                      </label>
-                      <input
-                        type="tel"
-                        id="telefono"
-                        name="telefono"
-                        required
-                        className={inputClass}
-                        placeholder="664 000 0000"
-                      />
-                    </div>
-                    <div>
-                      <label
-                        htmlFor="email"
-                        className="block text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className={inputClass}
-                        placeholder="tu@correo.com"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="tipo"
-                      className="block text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2"
-                    >
-                      Tipo de asunto
-                    </label>
-                    <select
-                      id="tipo"
-                      name="tipo"
-                      required
-                      className={`${inputClass} appearance-none`}
-                      defaultValue=""
-                    >
-                      <option value="" disabled>
-                        Selecciona la materia
-                      </option>
-                      <option value="aduanera">Aduanera</option>
-                      <option value="fiscal-sat">Fiscal SAT</option>
-                      <option value="imss-infonavit">IMSS / INFONAVIT</option>
-                      <option value="sanitaria">Sanitaria</option>
-                      <option value="sict">SICT</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="mensaje"
-                      className="block text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2"
-                    >
-                      Descripción del caso
-                    </label>
-                    <textarea
-                      id="mensaje"
-                      name="mensaje"
-                      rows={5}
-                      required
-                      className="w-full bg-background-warm border-b border-foreground/30 px-4 py-3 text-[15px] text-foreground placeholder:text-muted focus:outline-none focus:border-burgundy transition-colors resize-none"
-                      placeholder="Cuéntanos brevemente qué notificación recibiste y de qué autoridad."
-                    />
-                  </div>
-
-                  <label className="flex items-start gap-3 text-[13px] leading-[1.55] text-foreground/80">
-                    <input
-                      type="checkbox"
-                      name="aviso"
-                      required
-                      className="mt-1 accent-burgundy"
-                    />
-                    <span>
-                      He leído y acepto el{" "}
-                      <Link
-                        href="/aviso-de-privacidad"
-                        className="text-burgundy underline-offset-2 hover:underline"
-                      >
-                        aviso de privacidad
-                      </Link>
-                      .
-                    </span>
-                  </label>
-
-                  <button
-                    type="submit"
-                    className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-                  >
-                    Enviar mensaje
-                  </button>
-                </form>
+                <ContactForm />
               </div>
 
               {/* Bloque 2: WhatsApp */}
