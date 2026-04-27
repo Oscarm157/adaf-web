@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ChapterMark } from "./ChapterMark";
 
 export function LeadMagnet() {
@@ -7,44 +8,17 @@ export function LeadMagnet() {
         <ChapterMark numeral="VI" label="Recurso descargable" />
 
         <div className="grid grid-cols-12 gap-12 mt-12 items-start">
-          {/* Left: PDF mockup as editorial cover */}
+          {/* Left: PDF cover image */}
           <div className="col-span-12 lg:col-span-5">
-            <div className="relative bg-background-warm aspect-[3/4] flex flex-col">
-              <span className="absolute top-3 left-3 w-[8px] h-[8px] border-t border-l border-olive" />
-              <span className="absolute top-3 right-3 w-[8px] h-[8px] border-t border-r border-olive" />
-              <span className="absolute bottom-3 left-3 w-[8px] h-[8px] border-b border-l border-olive" />
-              <span className="absolute bottom-3 right-3 w-[8px] h-[8px] border-b border-r border-olive" />
-
-              <div className="flex-1 flex flex-col justify-between px-12 py-14">
-                <div>
-                  <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                    ADAF · Tijuana
-                  </p>
-                  <span className="block w-[40px] h-[1px] bg-olive mt-3" />
-                </div>
-
-                <div>
-                  <p className="text-[12px] uppercase tracking-[0.16em] text-burgundy font-medium">
-                    Guía del contribuyente
-                  </p>
-                  <h3 className="font-serif text-[40px] leading-[1.05] font-semibold text-navy mt-4 tracking-[-0.014em]">
-                    Las primeras 72 horas.
-                  </h3>
-                  <p className="text-[15px] text-foreground/75 mt-6 leading-[1.55]">
-                    Qué hacer ante una visita del SAT, un embargo en aduana o
-                    un crédito fiscal.
-                  </p>
-                </div>
-
-                <div className="flex items-end justify-between">
-                  <p className="text-[10px] uppercase tracking-[0.22em] text-muted">
-                    12 páginas
-                  </p>
-                  <span className="font-serif italic text-[12px] text-olive">
-                    Guía gratuita
-                  </span>
-                </div>
-              </div>
+            <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
+              <Image
+                src="/portada-72-horas.png"
+                alt="Portada — Las primeras 72 horas, guía del contribuyente ADAF"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
 
