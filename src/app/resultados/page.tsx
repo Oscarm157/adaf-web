@@ -90,7 +90,7 @@ const autoridades = [
   "ANAM · Agencia Nacional de Aduanas de México",
   "IMSS · Instituto Mexicano del Seguro Social",
   "INFONAVIT",
-  "COFEPRIS · Comisión Federal de Riesgos Sanitarios",
+  "COFEPRIS · Comisión Federal para la Protección contra Riesgos Sanitarios",
   "COEPRIS Baja California",
   "SICT · Secretaría de Infraestructura, Comunicaciones y Transportes",
   "TFJA · Tribunal Federal de Justicia Administrativa",
