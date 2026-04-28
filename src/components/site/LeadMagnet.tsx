@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { ChapterMark } from "./ChapterMark";
 import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
+import { EditorialBand } from "@/components/visual/EditorialBand";
 
 export function LeadMagnet() {
   return (
@@ -9,18 +9,15 @@ export function LeadMagnet() {
         <ChapterMark numeral="VI" label="Recurso descargable" />
 
         <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-12 items-start">
-          {/* Left: PDF cover image */}
+          {/* Left: PDF cover placeholder */}
           <div className="col-span-12 lg:col-span-5">
-            <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
-              <Image
-                src="/portada-72-horas.jpg"
-                alt="Portada de Las primeras 72 horas, guía del contribuyente ADAF"
-                fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-cover"
-                priority
-              />
-            </div>
+            <EditorialBand
+              numeral="VI·a"
+              title="Portada de la guía"
+              tone="burgundy"
+              aspect="3/4"
+              fullBleed={false}
+            />
           </div>
 
           {/* Right: editorial body + form */}

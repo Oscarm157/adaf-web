@@ -5,6 +5,7 @@ import { PageHero } from "@/components/page/PageHero";
 import { ProcedureTimeline } from "@/components/visual/ProcedureTimeline";
 import { PullQuote } from "@/components/visual/PullQuote";
 import { whatsappUrl } from "@/lib/whatsapp";
+import { CALENDLY_URL } from "@/lib/calendly";
 import type { ServiceData } from "./types";
 
 export function ServicePage({ data }: { data: ServiceData }) {
@@ -27,12 +28,23 @@ export function ServicePage({ data }: { data: ServiceData }) {
       <section className="bg-background pt-12 pb-12 border-b border-rule">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-center">
           <div className="col-span-12 lg:col-span-8 flex flex-wrap items-center gap-5">
-            <Link
-              href="/contacto"
-              className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-            >
-              Agenda tu valoración
-            </Link>
+            {CALENDLY_URL ? (
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+              >
+                Agenda tu valoración
+              </a>
+            ) : (
+              <Link
+                href="/contacto"
+                className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+              >
+                Agenda tu valoración
+              </Link>
+            )}
             <a
               href={waLink}
               className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
@@ -261,18 +273,34 @@ export function ServicePage({ data }: { data: ServiceData }) {
               costo y los plazos legales que están corriendo.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 mt-9">
+              {CALENDLY_URL && (
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                >
+                  Agendar 20 minutos
+                </a>
+              )}
               <a
                 href={waLink}
-                className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                className={
+                  CALENDLY_URL
+                    ? "inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
+                    : "inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                }
               >
                 Hablar por WhatsApp
               </a>
-              <Link
-                href="/contacto"
-                className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
-              >
-                Enviar mensaje
-              </Link>
+              {!CALENDLY_URL && (
+                <Link
+                  href="/contacto"
+                  className="inline-flex items-center justify-center bg-transparent text-background text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-background/40 hover:bg-background hover:text-navy transition-colors duration-200"
+                >
+                  Enviar mensaje
+                </Link>
+              )}
             </div>
           </div>
         </div>

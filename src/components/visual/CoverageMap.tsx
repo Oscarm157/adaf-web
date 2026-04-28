@@ -3,22 +3,29 @@
 import { motion, useInView, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 
-// Schematic SVG: Baja California península + frontera norte de México
-// Coords aproximadas, no a escala. Editorial, no GIS.
+type Anchor = "start" | "middle" | "end";
 
 type Loc = {
   cx: number;
   cy: number;
   label: string;
   type: "primary" | "secondary";
+  anchor: Anchor;
+  labelDx: number;
+  labelDy: number;
 };
 
 const locations: Loc[] = [
-  { cx: 138, cy: 48, label: "Tijuana", type: "primary" },
-  { cx: 168, cy: 60, label: "Tecate", type: "primary" },
-  { cx: 130, cy: 70, label: "Rosarito", type: "primary" },
-  { cx: 200, cy: 90, label: "Mexicali", type: "secondary" },
-  { cx: 175, cy: 195, label: "Ensenada", type: "secondary" },
+  // Tijuana — base operativa, esquina NO
+  { cx: 105, cy: 70, label: "Tijuana", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
+  // Tecate — sobre la frontera, mid
+  { cx: 175, cy: 60, label: "Tecate", type: "primary", anchor: "middle", labelDx: 0, labelDy: -10 },
+  // Rosarito — sur de Tijuana, costa pacífico
+  { cx: 95, cy: 110, label: "Rosarito", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
+  // Mexicali — frontera, extremo este
+  { cx: 295, cy: 70, label: "Mexicali", type: "secondary", anchor: "start", labelDx: 10, labelDy: 4 },
+  // Ensenada — pacífico, sur
+  { cx: 110, cy: 195, label: "Ensenada", type: "secondary", anchor: "end", labelDx: -10, labelDy: 4 },
 ];
 
 export function CoverageMap() {
@@ -30,7 +37,7 @@ export function CoverageMap() {
   return (
     <div ref={ref} className="relative w-full">
       <svg
-        viewBox="0 0 380 360"
+        viewBox="0 0 480 360"
         className="w-full h-auto"
         aria-labelledby="coverageTitle"
         role="img"
@@ -39,40 +46,60 @@ export function CoverageMap() {
           Cobertura procesal: Baja California y representación federal
         </title>
 
-        {/* Frontera Norte (US line) */}
+        {/* Frontera Norte — línea + label */}
         <motion.line
-          x1="0"
-          y1="20"
-          x2="380"
-          y2="20"
+          x1="20"
+          y1="42"
+          x2="320"
+          y2="42"
           stroke="#9B8F2E"
-          strokeWidth="0.6"
-          strokeDasharray="3 3"
+          strokeWidth="0.8"
+          strokeDasharray="3 4"
           initial={reduce ? false : { pathLength: 0 }}
           animate={animate ? { pathLength: 1 } : { pathLength: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         />
         <text
-          x="0"
-          y="14"
-          fontSize="8"
+          x="20"
+          y="32"
+          fontSize="8.5"
           fill="#5A5853"
-          letterSpacing="1.4"
+          letterSpacing="1.6"
           fontFamily="Inter, system-ui"
           fontWeight="500"
         >
-          FRONTERA MÉXICO · ESTADOS UNIDOS
+          FRONTERA · MÉXICO – ESTADOS UNIDOS
         </text>
 
-        {/* Baja California silhouette (simplified) */}
+        {/* Silueta Baja California (norte) — simplificada, suficiente espacio para labels */}
         <motion.path
-          d="M 110 28 L 220 28 L 222 70 L 240 105 L 252 145 L 250 200 L 240 250 L 215 305 L 195 340 L 175 320 L 165 295 L 175 275 L 175 245 L 160 215 L 145 200 L 135 180 L 130 155 L 125 130 L 120 100 L 115 75 L 112 50 Z"
+          d="
+            M 80 42
+            L 320 42
+            L 320 88
+            L 280 110
+            L 240 130
+            L 215 165
+            L 195 205
+            L 165 245
+            L 140 275
+            L 120 295
+            L 100 270
+            L 90 235
+            L 75 195
+            L 70 155
+            L 70 115
+            L 75 80
+            Z
+          "
           fill="#F1EFEA"
           stroke="#0F2A47"
           strokeWidth="1"
           initial={reduce ? false : { pathLength: 0, opacity: 0 }}
           animate={
-            animate ? { pathLength: 1, opacity: 1 } : { pathLength: 0, opacity: 0 }
+            animate
+              ? { pathLength: 1, opacity: 1 }
+              : { pathLength: 0, opacity: 0 }
           }
           transition={{
             pathLength: { duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 },
@@ -93,7 +120,7 @@ export function CoverageMap() {
               }
               transition={{
                 duration: 0.4,
-                delay: 1.2 + i * 0.15,
+                delay: 1.2 + i * 0.12,
                 type: "spring",
                 stiffness: 240,
                 damping: 18,
@@ -113,10 +140,11 @@ export function CoverageMap() {
                 />
               )}
               <text
-                x={loc.cx + 9}
-                y={loc.cy + 3}
+                x={loc.cx + loc.labelDx}
+                y={loc.cy + loc.labelDy}
                 fontSize="11"
                 fill="#0F2A47"
+                textAnchor={loc.anchor}
                 fontFamily="'Source Serif 4', Georgia, serif"
                 fontWeight={loc.type === "primary" ? 600 : 400}
               >
@@ -126,69 +154,148 @@ export function CoverageMap() {
           );
         })}
 
-        {/* Federal radial mark */}
+        {/* Divisor vertical entre mapa y bloque federal */}
+        <motion.line
+          x1="355"
+          y1="60"
+          x2="355"
+          y2="290"
+          stroke="#5A5853"
+          strokeOpacity="0.18"
+          strokeWidth="0.8"
+          initial={reduce ? false : { pathLength: 0 }}
+          animate={animate ? { pathLength: 1 } : { pathLength: 0 }}
+          transition={{ duration: 1.0, delay: 1.4, ease: [0.16, 1, 0.3, 1] }}
+        />
+
+        {/* Bloque federal */}
         <motion.g
-          initial={reduce ? false : { opacity: 0 }}
-          animate={animate ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.6, delay: 2 }}
+          initial={reduce ? false : { opacity: 0, x: 8 }}
+          animate={animate ? { opacity: 1, x: 0 } : { opacity: 0, x: 8 }}
+          transition={{ duration: 0.7, delay: 1.7, ease: [0.16, 1, 0.3, 1] }}
         >
           <text
-            x="270"
-            y="180"
-            fontSize="10"
+            x="375"
+            y="80"
+            fontSize="8.5"
             fill="#5A5853"
-            letterSpacing="1.4"
+            letterSpacing="1.6"
             fontFamily="Inter, system-ui"
             fontWeight="500"
           >
             REPRESENTACIÓN
           </text>
           <text
-            x="270"
-            y="194"
-            fontSize="10"
+            x="375"
+            y="94"
+            fontSize="8.5"
             fill="#5A5853"
-            letterSpacing="1.4"
+            letterSpacing="1.6"
             fontFamily="Inter, system-ui"
             fontWeight="500"
           >
             FEDERAL
           </text>
-          <text
-            x="270"
-            y="218"
-            fontSize="13"
-            fill="#0F2A47"
-            fontFamily="'Source Serif 4', Georgia, serif"
-            fontWeight="600"
-            fontStyle="italic"
-          >
-            TFJA · Juzgados
-          </text>
-          <text
-            x="270"
-            y="234"
-            fontSize="13"
-            fill="#0F2A47"
-            fontFamily="'Source Serif 4', Georgia, serif"
-            fontWeight="600"
-            fontStyle="italic"
-          >
-            de Distrito · TCC
-          </text>
+
           <line
-            x1="252"
-            y1="200"
-            x2="262"
-            y2="200"
+            x1="375"
+            y1="108"
+            x2="405"
+            y2="108"
             stroke="#9B8F2E"
             strokeWidth="0.8"
           />
+
+          <text
+            x="375"
+            y="132"
+            fontSize="13"
+            fill="#0F2A47"
+            fontFamily="'Source Serif 4', Georgia, serif"
+            fontWeight="600"
+            fontStyle="italic"
+          >
+            TFJA
+          </text>
+          <text
+            x="375"
+            y="150"
+            fontSize="10.5"
+            fill="#0F2A47"
+            opacity="0.75"
+            fontFamily="'Source Serif 4', Georgia, serif"
+          >
+            Tribunal Federal de
+          </text>
+          <text
+            x="375"
+            y="164"
+            fontSize="10.5"
+            fill="#0F2A47"
+            opacity="0.75"
+            fontFamily="'Source Serif 4', Georgia, serif"
+          >
+            Justicia Administrativa
+          </text>
+
+          <text
+            x="375"
+            y="194"
+            fontSize="13"
+            fill="#0F2A47"
+            fontFamily="'Source Serif 4', Georgia, serif"
+            fontWeight="600"
+            fontStyle="italic"
+          >
+            Juzgados de Distrito
+          </text>
+          <text
+            x="375"
+            y="210"
+            fontSize="10.5"
+            fill="#0F2A47"
+            opacity="0.75"
+            fontFamily="'Source Serif 4', Georgia, serif"
+          >
+            Poder Judicial Federal
+          </text>
+
+          <text
+            x="375"
+            y="240"
+            fontSize="13"
+            fill="#0F2A47"
+            fontFamily="'Source Serif 4', Georgia, serif"
+            fontWeight="600"
+            fontStyle="italic"
+          >
+            TCC
+          </text>
+          <text
+            x="375"
+            y="256"
+            fontSize="10.5"
+            fill="#0F2A47"
+            opacity="0.75"
+            fontFamily="'Source Serif 4', Georgia, serif"
+          >
+            Tribunales Colegiados
+          </text>
+          <text
+            x="375"
+            y="270"
+            fontSize="10.5"
+            fill="#0F2A47"
+            opacity="0.75"
+            fontFamily="'Source Serif 4', Georgia, serif"
+          >
+            de Circuito
+          </text>
         </motion.g>
       </svg>
 
       {/* Legend */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mt-6 max-w-[440px]">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-6 max-w-[560px]">
         <div className="flex items-center gap-3 text-[12px]">
           <span className="w-2 h-2 bg-burgundy rounded-full" />
           <span className="text-foreground/85">Base de operación</span>
@@ -196,6 +303,10 @@ export function CoverageMap() {
         <div className="flex items-center gap-3 text-[12px]">
           <span className="w-2 h-2 bg-olive rounded-full" />
           <span className="text-foreground/85">Otras zonas BC</span>
+        </div>
+        <div className="flex items-center gap-3 text-[12px]">
+          <span className="w-3 h-[1px] bg-olive" />
+          <span className="text-foreground/85">Frontera norte</span>
         </div>
       </div>
     </div>

@@ -25,14 +25,12 @@ export default function Home() {
           title="Frontera · vista del cruce"
           tone="navy"
           aspect="21/9"
-          src="/editorial/home-banner-1-expediente.png"
-          alt="Mesa de trabajo con expedientes, fotografía editorial"
         />
         <Areas />
-        <PullQuote cite="Principio de la práctica">
-          La defensa empieza con la lectura del expediente. Los plazos legales
-          corren desde la notificación, no desde el momento en que decides
-          actuar.
+        <PullQuote cite="Cómo entendemos nuestra labor">
+          Los plazos del procedimiento corren desde la notificación. La defensa
+          empieza con la lectura cuidadosa del expediente, no con un escrito
+          apurado.
         </PullQuote>
         <Pillars />
         <Resultados />
@@ -41,8 +39,6 @@ export default function Home() {
           title="Balanza"
           tone="olive"
           aspect="21/9"
-          src="/editorial/home-banner-3-pasillo.png"
-          alt="Pasillo institucional con luz lateral, fotografía editorial"
         />
         <Metodo />
         <LeadMagnet />
@@ -52,8 +48,6 @@ export default function Home() {
           title="Edificio institucional"
           tone="navy"
           aspect="21/9"
-          src="/editorial/home-banner-4-edificio.png"
-          alt="Fachada de edificio institucional al atardecer, fotografía editorial"
         />
         <CTAFinal />
       </main>

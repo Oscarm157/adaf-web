@@ -39,8 +39,6 @@ export function Pillars() {
               tone="burgundy"
               aspect="3/4"
               fullBleed={false}
-              src="/editorial/home-banner-2-archivo.png"
-              alt="Pared de archivo con lomos de carpetas, fotografía editorial"
             />
           </Reveal>
         </div>

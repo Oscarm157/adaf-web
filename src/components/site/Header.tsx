@@ -2,9 +2,11 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import { CALENDLY_URL } from "@/lib/calendly";
 
 const navLinks = [
   { href: "/nosotros", label: "Nosotros" },
@@ -40,12 +42,16 @@ export function Header() {
     <>
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-rule">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 h-[72px] md:h-[84px] flex items-center justify-between">
-          <Link href="/" className="flex items-baseline gap-3 leading-none">
-            <span className="font-serif text-[24px] md:text-[28px] font-bold text-navy tracking-[-0.012em]">
-              ADAF
-            </span>
-            <span className="hidden xl:inline-block w-[1px] h-[14px] bg-rule" />
-            <span className="hidden xl:inline-block font-serif italic text-[13px] text-muted leading-none">
+          <Link href="/" className="flex items-center gap-3 leading-none" aria-label="ADAF · Asesoría y Defensa Aduanera Fiscal — inicio">
+            <Image
+              src="/logo-adaf.jpg"
+              alt="ADAF"
+              width={500}
+              height={500}
+              priority
+              className="h-12 md:h-14 w-auto select-none"
+            />
+            <span className="hidden xl:inline-block font-serif italic text-[13px] text-muted leading-tight max-w-[180px]">
               Asesoría y Defensa Aduanera Fiscal
             </span>
           </Link>
@@ -70,13 +76,25 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link
-              href="/contacto"
-              className="hidden md:inline-flex items-center justify-center bg-burgundy text-white text-[12px] xl:text-[13px] font-medium tracking-[0.04em] uppercase px-4 xl:px-5 h-10 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200 whitespace-nowrap"
-            >
-              <span className="lg:hidden xl:inline">Agenda tu valoración</span>
-              <span className="hidden lg:inline xl:hidden">Agenda valoración</span>
-            </Link>
+            {CALENDLY_URL ? (
+              <a
+                href={CALENDLY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden md:inline-flex items-center justify-center bg-burgundy text-white text-[12px] xl:text-[13px] font-medium tracking-[0.04em] uppercase px-4 xl:px-5 h-10 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200 whitespace-nowrap"
+              >
+                <span className="lg:hidden xl:inline">Agenda tu valoración</span>
+                <span className="hidden lg:inline xl:hidden">Agenda valoración</span>
+              </a>
+            ) : (
+              <Link
+                href="/contacto"
+                className="hidden md:inline-flex items-center justify-center bg-burgundy text-white text-[12px] xl:text-[13px] font-medium tracking-[0.04em] uppercase px-4 xl:px-5 h-10 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200 whitespace-nowrap"
+              >
+                <span className="lg:hidden xl:inline">Agenda tu valoración</span>
+                <span className="hidden lg:inline xl:hidden">Agenda valoración</span>
+              </Link>
+            )}
             {/* Mobile menu trigger */}
             <button
               type="button"
@@ -115,9 +133,13 @@ export function Header() {
               className="lg:hidden fixed top-0 right-0 bottom-0 z-[70] w-[88%] max-w-[400px] bg-background shadow-[-16px_0_60px_-30px_rgba(15,42,71,0.4)] flex flex-col"
             >
               <div className="flex items-center justify-between px-6 h-[72px] border-b border-rule">
-                <span className="font-serif text-[20px] font-bold text-navy tracking-[-0.012em]">
-                  ADAF
-                </span>
+                <Image
+                  src="/logo-adaf.jpg"
+                  alt="ADAF"
+                  width={500}
+                  height={500}
+                  className="h-10 w-auto select-none"
+                />
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
@@ -159,12 +181,23 @@ export function Header() {
                 </ul>
 
                 <div className="mt-10">
-                  <Link
-                    href="/contacto"
-                    className="inline-flex w-full items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-                  >
-                    Agenda tu valoración
-                  </Link>
+                  {CALENDLY_URL ? (
+                    <a
+                      href={CALENDLY_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex w-full items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                    >
+                      Agenda tu valoración
+                    </a>
+                  ) : (
+                    <Link
+                      href="/contacto"
+                      className="inline-flex w-full items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                    >
+                      Agenda tu valoración
+                    </Link>
+                  )}
                   <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                     className="mt-3 inline-flex w-full items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/40 hover:bg-navy hover:text-background transition-colors duration-200"
                   >

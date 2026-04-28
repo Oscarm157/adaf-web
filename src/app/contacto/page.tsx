@@ -8,6 +8,7 @@ import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
 import { siteUrl } from "@/lib/seo";
+import { CALENDLY_URL } from "@/lib/calendly";
 
 export const metadata: Metadata = {
   title: "Contacto · Valoración inicial sin costo",
@@ -76,22 +77,35 @@ export default function ContactoPage() {
                     II
                   </span>
                   <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                    WhatsApp
+                    {CALENDLY_URL ? "Agenda o WhatsApp" : "WhatsApp"}
                   </span>
                 </div>
                 <h2 className="font-serif text-[28px] leading-[1.15] font-semibold text-navy tracking-[-0.008em] mb-3">
-                  Mensaje directo.
+                  {CALENDLY_URL ? "Agenda 20 minutos o escribe directo." : "Mensaje directo."}
                 </h2>
                 <p className="text-[14.5px] leading-[1.6] text-muted mb-7 max-w-[300px]">
-                  Vía rápida para casos en los que el plazo legal está
-                  corriendo y necesitas orientación inmediata.
+                  {CALENDLY_URL
+                    ? "Bloquea un horario para una valoración inicial, o usa WhatsApp si el plazo legal está corriendo y necesitas orientación inmediata."
+                    : "Vía rápida para casos en los que el plazo legal está corriendo y necesitas orientación inmediata."}
                 </p>
 
-                <a href="https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200 mb-8"
-                >
-                  Abrir WhatsApp
-                </a>
+                <div className="flex flex-col items-start gap-3 mb-8">
+                  {CALENDLY_URL && (
+                    <a
+                      href={CALENDLY_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                    >
+                      Agendar 20 minutos
+                    </a>
+                  )}
+                  <a href="https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
+                  >
+                    Abrir WhatsApp
+                  </a>
+                </div>
 
                 <dl className="space-y-4 border-t border-rule pt-6">
                   <div>

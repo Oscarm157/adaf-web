@@ -21,6 +21,13 @@ const aspectClass: Record<string, string> = {
   "3/4": "aspect-[3/4]",
 };
 
+const aspectPx: Record<string, string> = {
+  "21/9": "2100 × 900 px",
+  "16/9": "1920 × 1080 px",
+  "4/3": "1200 × 900 px",
+  "3/4": "900 × 1200 px",
+};
+
 export function EditorialBand({
   numeral,
   title,
@@ -68,7 +75,7 @@ export function EditorialBand({
                 style={{ backgroundColor: toneVar[tone] }}
               />
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
-                {toneLabel[tone]} · {aspect.replace("/", ":")}
+                {toneLabel[tone]} · {aspect.replace("/", ":")} · {aspectPx[aspect]}
               </span>
             </div>
 
@@ -89,8 +96,8 @@ export function EditorialBand({
                 <p className="font-serif text-[28px] leading-[1.15] text-navy/85 tracking-[-0.012em] mt-5">
                   {title}
                 </p>
-                <p className="font-serif italic text-[13px] text-muted mt-3">
-                  Imagen pendiente · Nano Banana
+                <p className="font-mono text-[11px] tracking-[0.14em] text-muted mt-3">
+                  {aspect.replace("/", ":")} · {aspectPx[aspect]}
                 </p>
               </div>
             </div>

@@ -5,6 +5,7 @@ import { Masthead } from "@/components/site/Masthead";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+import { CALENDLY_URL } from "@/lib/calendly";
 import {
   Prose,
   P,
@@ -208,17 +209,36 @@ export default async function BlogPostPage({
               </p>
 
               <div className="flex flex-wrap items-center gap-4 mt-9">
-                <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                {CALENDLY_URL && (
+                  <a
+                    href={CALENDLY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                  >
+                    Agendar 20 minutos
+                  </a>
+                )}
+                <a
+                  href="https://wa.me/526646475018"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={
+                    CALENDLY_URL
+                      ? "inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/30 hover:bg-navy hover:text-background transition-colors duration-200"
+                      : "inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                  }
                 >
                   Hablar por WhatsApp
                 </a>
-                <Link
-                  href="/contacto"
-                  className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/30 hover:bg-navy hover:text-background transition-colors duration-200"
-                >
-                  Enviar mensaje
-                </Link>
+                {!CALENDLY_URL && (
+                  <Link
+                    href="/contacto"
+                    className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/30 hover:bg-navy hover:text-background transition-colors duration-200"
+                  >
+                    Enviar mensaje
+                  </Link>
+                )}
               </div>
             </div>
           </div>

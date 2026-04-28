@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { CountUp } from "@/components/motion/CountUp";
+import { CALENDLY_URL } from "@/lib/calendly";
 
 export function Hero() {
   return (
@@ -41,12 +42,23 @@ export function Hero() {
 
             <StaggerItem>
               <div className="flex flex-wrap items-center gap-5 mt-10">
-                <Link
-                  href="/contacto"
-                  className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-                >
-                  Agenda tu valoración
-                </Link>
+                {CALENDLY_URL ? (
+                  <a
+                    href={CALENDLY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                  >
+                    Agenda tu valoración
+                  </a>
+                ) : (
+                  <Link
+                    href="/contacto"
+                    className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                  >
+                    Agenda tu valoración
+                  </Link>
+                )}
                 <a href="https://wa.me/526646475018" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
                 >
