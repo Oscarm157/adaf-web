@@ -26,13 +26,8 @@ export function Pillars() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         <ChapterMark numeral="III" label="Principios" />
 
-        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-16 items-end">
-          <Reveal className="col-span-12 lg:col-span-8">
-            <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[42px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
-              Tres principios sostienen cada caso.
-            </h2>
-          </Reveal>
-          <Reveal delay={0.15} className="col-span-12 lg:col-span-4">
+        <div className="grid grid-cols-12 gap-y-12 gap-x-6 md:gap-x-12 lg:gap-x-20 mt-12 mb-20 items-end">
+          <Reveal className="col-span-12 md:col-span-7 lg:col-span-5">
             <EditorialBand
               numeral="III·b"
               title="Expedientes"
@@ -42,6 +37,11 @@ export function Pillars() {
               src="/editorial/editorial-ii-expedientes.png"
               alt="Pila de expedientes legales sobre escritorio de walnut"
             />
+          </Reveal>
+          <Reveal delay={0.15} className="col-span-12 md:col-span-5 lg:col-span-7 lg:pb-2">
+            <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[44px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em] max-w-[520px]">
+              Tres principios sostienen cada caso.
+            </h2>
           </Reveal>
         </div>
 
