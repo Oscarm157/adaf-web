@@ -43,14 +43,6 @@ export default function Home() {
         <Metodo />
         <LeadMagnet />
         <Notas />
-        <EditorialBand
-          numeral="VII·b"
-          title="Edificio institucional"
-          tone="navy"
-          aspect="3/2"
-          src="/editorial/editorial-viii-edificio.png"
-          alt="Edificio federal modernista mexicano, fachada simétrica"
-        />
         <CTAFinal />
       </main>
       <Footer />
