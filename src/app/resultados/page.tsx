@@ -191,27 +191,56 @@ export default function ResultadosPage() {
 
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start border-t border-foreground/15 pt-12">
               <div className="col-span-12 lg:col-span-7 lg:pr-6">
-                <figure className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[3/4] overflow-hidden border border-rule bg-background">
-                  <Image
-                    src="/editorial/editorial-bc-mapa-frontera.png"
-                    alt="Mapa minimalista de la frontera norte de Baja California, con las plazas de Tijuana, Tecate, Rosarito y Mexicali"
-                    fill
-                    sizes="(min-width: 1024px) 560px, (min-width: 768px) 60vw, 100vw"
-                    className="object-contain p-4 md:p-6"
-                  />
-                </figure>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-6 max-w-[560px] mx-auto lg:mx-0">
-                  <div className="flex items-center gap-3 text-[12px]">
-                    <span className="w-2 h-2 bg-burgundy rounded-full" />
-                    <span className="text-foreground/85">Base de operación</span>
+                <div className="max-w-[560px] mx-auto lg:mx-0">
+                  <div className="flex items-baseline gap-3 mb-4">
+                    <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
+                      II·b
+                    </span>
+                    <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
+                      Mapa de cobertura
+                    </span>
+                    <span className="flex-1 h-[1px] bg-rule" />
                   </div>
-                  <div className="flex items-center gap-3 text-[12px]">
-                    <span className="w-2 h-2 bg-olive rounded-full" />
-                    <span className="text-foreground/85">Plazas atendidas</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-[12px]">
-                    <span className="w-3 h-[1px] bg-olive" />
-                    <span className="text-foreground/85">Frontera norte</span>
+
+                  <figure className="relative aspect-[3/4] overflow-hidden border border-foreground/15 bg-background shadow-[0_2px_18px_-12px_rgba(15,42,71,0.25)]">
+                    <span aria-hidden="true" className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />
+                    <span aria-hidden="true" className="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-olive z-10 pointer-events-none" />
+                    <span aria-hidden="true" className="absolute bottom-3 left-3 w-2.5 h-2.5 border-b border-l border-olive z-10 pointer-events-none" />
+                    <span aria-hidden="true" className="absolute bottom-3 right-3 w-2.5 h-2.5 border-b border-r border-olive z-10 pointer-events-none" />
+
+                    <span aria-hidden="true" className="absolute top-5 left-7 z-10 text-[9px] uppercase tracking-[0.22em] text-muted/80 font-medium pointer-events-none">
+                      Frontera · México – Estados Unidos
+                    </span>
+                    <span aria-hidden="true" className="absolute bottom-5 right-7 z-10 font-serif italic text-[11px] text-olive pointer-events-none">
+                      Baja California
+                    </span>
+
+                    <Image
+                      src="/editorial/editorial-bc-mapa-frontera.png"
+                      alt="Mapa minimalista de la frontera norte de Baja California, con las plazas de Tijuana, Tecate, Rosarito y Mexicali"
+                      fill
+                      sizes="(min-width: 1024px) 560px, (min-width: 768px) 60vw, 100vw"
+                      className="object-contain p-8 md:p-10"
+                    />
+                  </figure>
+
+                  <figcaption className="text-[11px] uppercase tracking-[0.18em] text-muted font-medium mt-4 text-center lg:text-left">
+                    Tijuana · Tecate · Rosarito · Mexicali
+                  </figcaption>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-6 pt-5 border-t border-rule">
+                    <div className="flex items-center gap-3 text-[12px]">
+                      <span className="w-2 h-2 bg-burgundy rounded-full" />
+                      <span className="text-foreground/85">Base de operación</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-[12px]">
+                      <span className="w-2 h-2 bg-olive rounded-full" />
+                      <span className="text-foreground/85">Plazas atendidas</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-[12px]">
+                      <span className="w-3 h-[1px] bg-olive" />
+                      <span className="text-foreground/85">Frontera norte</span>
+                    </div>
                   </div>
                 </div>
               </div>
