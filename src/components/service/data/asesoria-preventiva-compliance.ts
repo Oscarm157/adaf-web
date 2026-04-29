@@ -94,6 +94,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Asesoría preventiva y compliance fiscal-aduanero · Tijuana",
   metaDescription: "Diagnóstico de riesgos, regularización espontánea y compliance fiscal, aduanero, laboral y sanitario. Iguala mensual o por proyecto. ADAF Tijuana.",
+  editorial: {
+    src: "/editorial/editorial-iv-portada-guia.png",
+    alt: "Portafolio burgundy con documento",
+    tone: "burgundy",
+    numeral: "X·b",
+    title: "Documentación interna",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-x-sello-notarial.png",
+    alt: "Sello notarial brass sobre documento",
+    tone: "olive",
+    numeral: "IV·b",
+    title: "Sello notarial",
+  },
 };
 
 export default data;

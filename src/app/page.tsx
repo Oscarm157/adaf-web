@@ -40,7 +40,7 @@ export default function Home() {
           numeral="IV·b"
           title="Balanza"
           tone="olive"
-          aspect="21/9"
+          aspect="3/2"
           src="/editorial/editorial-iii-balanza.png"
           alt="Balanza de dos platos sobre superficie sage-olive"
         />
@@ -51,7 +51,7 @@ export default function Home() {
           numeral="VII·b"
           title="Edificio institucional"
           tone="navy"
-          aspect="21/9"
+          aspect="3/2"
           src="/editorial/editorial-viii-edificio.png"
           alt="Edificio federal modernista mexicano, fachada simétrica"
         />

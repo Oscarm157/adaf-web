@@ -89,6 +89,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Defensa IMSS e INFONAVIT en Tijuana · Capitales constitutivos",
   metaDescription: "Defensa contra cédulas de liquidación, capitales constitutivos y multas patronales. Recurso de inconformidad y juicio de nulidad. ADAF Tijuana.",
+  editorial: {
+    src: "/editorial/editorial-ii-expedientes.png",
+    alt: "Pila de expedientes legales sobre escritorio",
+    tone: "burgundy",
+    numeral: "III·b",
+    title: "Expedientes patronales",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-viii-edificio.png",
+    alt: "Edificio federal modernista mexicano",
+    tone: "navy",
+    numeral: "IV·b",
+    title: "Edificio institucional",
+  },
 };
 
 export default data;

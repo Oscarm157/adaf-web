@@ -98,6 +98,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Defensa aduanera en Tijuana · PAMA, embargo y multas",
   metaDescription: "Representación ante ANAM y tribunales federales en PAMA, embargo precautorio, devolución de mercancía y multas de comercio exterior. ADAF Tijuana.",
+  editorial: {
+    src: "/editorial/editorial-vii-embargo-contenedor.png",
+    alt: "Contenedor olive en patio aduanal vacío",
+    tone: "olive",
+    numeral: "I·b",
+    title: "Contenedor en patio aduanal",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-viii-edificio.png",
+    alt: "Edificio federal modernista mexicano",
+    tone: "navy",
+    numeral: "IV·b",
+    title: "Edificio institucional",
+  },
 };
 
 export default data;

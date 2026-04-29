@@ -101,6 +101,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Defensa fiscal SAT en Tijuana · Créditos, auditorías, visitas",
   metaDescription: "Defensa ante el SAT: visitas domiciliarias, revisiones, créditos fiscales, restricción de sellos, recurso de revocación y juicio de nulidad.",
+  editorial: {
+    src: "/editorial/editorial-vi-visita-puerta.png",
+    alt: "Puerta institucional con luz cálida adentro",
+    tone: "burgundy",
+    numeral: "II·b",
+    title: "Puerta institucional",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-ii-expedientes.png",
+    alt: "Pila de expedientes legales sobre escritorio",
+    tone: "burgundy",
+    numeral: "IV·b",
+    title: "Expedientes",
+  },
 };
 
 export default data;

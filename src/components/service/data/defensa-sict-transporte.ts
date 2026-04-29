@@ -85,6 +85,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Defensa SICT en Tijuana · Multas en autotransporte federal",
   metaDescription: "Defensa contra multas de la SICT en autotransporte federal: boletas, retención de unidades, suspensión y cancelación de placas. ADAF Tijuana.",
+  editorial: {
+    src: "/editorial/test-frontera-F-tijuana-duotono.png",
+    alt: "Cruce de carga Otay Mesa, vista aérea",
+    tone: "navy",
+    numeral: "V·b",
+    title: "Frontera norte",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-viii-edificio.png",
+    alt: "Edificio federal modernista mexicano",
+    tone: "navy",
+    numeral: "IV·b",
+    title: "Edificio institucional",
+  },
 };
 
 export default data;

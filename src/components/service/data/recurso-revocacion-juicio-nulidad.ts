@@ -88,6 +88,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Recurso de revocación y juicio de nulidad en Tijuana",
   metaDescription: "Impugnación de resoluciones fiscales y administrativas. Recurso de revocación ante SAT y juicio contencioso ante TFJA. ADAF Tijuana.",
+  editorial: {
+    src: "/editorial/editorial-iii-balanza.png",
+    alt: "Balanza de dos platos sobre superficie sage-olive",
+    tone: "olive",
+    numeral: "VIII·b",
+    title: "Balanza",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-viii-edificio.png",
+    alt: "Edificio federal modernista mexicano",
+    tone: "navy",
+    numeral: "IV·b",
+    title: "Edificio institucional",
+  },
 };
 
 export default data;

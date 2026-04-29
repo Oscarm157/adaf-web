@@ -1,14 +1,30 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 import { Masthead } from "@/components/site/Masthead";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
+import { OfficeStatus } from "@/components/site/OfficeStatus";
 import { PageHero } from "@/components/page/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
-import { siteUrl } from "@/lib/seo";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { siteConfig, siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
+
+const MAPS_QUERY = encodeURIComponent(
+  `${siteConfig.address.street}, ${siteConfig.address.neighborhood}, ${siteConfig.address.locality}, ${siteConfig.address.region}, México`,
+);
+const MAPS_EMBED = `https://maps.google.com/maps?q=${MAPS_QUERY}&z=16&hl=es&output=embed`;
+const MAPS_LINK = "https://maps.app.goo.gl/mYuH7rHaBWbDGXnQ9";
+
+const quickActions = [
+  { icon: Phone, label: "Llamar", value: "664 647 5018", href: "tel:+526646475018" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Chat directo", href: "https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." },
+  { icon: Mail, label: "Email", value: "juridicoadaf@gmail.com", href: "mailto:juridicoadaf@gmail.com" },
+  { icon: MapPin, label: "Cómo llegar", value: "Nueva Tijuana, BC", href: MAPS_LINK },
+];
 
 export const metadata: Metadata = {
   title: "Contacto · Valoración inicial sin costo",
@@ -40,6 +56,47 @@ export default function ContactoPage() {
           h1="Escríbenos los detalles de tu asunto."
           lede="Te respondemos en horario hábil con una valoración inicial sin costo. Te decimos qué tipo de procedimiento es, cuántos días hay para actuar y qué información necesitamos para empezar."
         />
+
+        {/* 0 — Acceso rápido */}
+        <section className="bg-background border-b border-rule pt-2 pb-10">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+            <div className="flex items-baseline gap-4 mb-6">
+              <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
+                0
+              </span>
+              <span className="w-[60px] h-[1px] bg-rule" />
+              <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
+                Acceso rápido
+              </span>
+              <span className="flex-1 h-[1px] bg-rule hidden md:block" />
+              <OfficeStatus />
+            </div>
+            <Stagger className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+              {quickActions.map(({ icon: Icon, label, value, href }) => (
+                <StaggerItem key={label}>
+                  <a
+                    href={href}
+                    target={href.startsWith("http") ? "_blank" : undefined}
+                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    className="group flex items-center gap-3 md:gap-4 border border-rule bg-background hover:bg-background-warm hover:border-burgundy/40 px-4 md:px-5 h-[68px] transition-colors duration-200"
+                  >
+                    <span className="shrink-0 w-9 h-9 inline-flex items-center justify-center border border-rule bg-background-warm group-hover:border-burgundy/30 group-hover:bg-background transition-colors">
+                      <Icon className="w-4 h-4 text-navy group-hover:text-burgundy transition-colors" strokeWidth={1.5} />
+                    </span>
+                    <span className="flex flex-col min-w-0">
+                      <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
+                        {label}
+                      </span>
+                      <span className="text-[13.5px] text-navy font-medium truncate group-hover:text-burgundy transition-colors">
+                        {value}
+                      </span>
+                    </span>
+                  </a>
+                </StaggerItem>
+              ))}
+            </Stagger>
+          </div>
+        </section>
 
         {/* I — Bloques de contacto */}
         <section className="bg-background pt-20 pb-20">
@@ -203,35 +260,46 @@ export default function ContactoPage() {
                     <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
                       Horario
                     </dt>
-                    <dd className="text-[16px] leading-[1.55] text-foreground/85">
+                    <dd className="text-[16px] leading-[1.55] text-foreground/85 mb-3">
                       Lunes a viernes · 09:00 a 17:00
+                    </dd>
+                    <dd>
+                      <OfficeStatus />
                     </dd>
                   </div>
                 </dl>
               </div>
 
-              <div className="col-span-12 lg:col-span-7">
-                <a
-                  href="https://maps.app.goo.gl/mYuH7rHaBWbDGXnQ9"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block border border-rule bg-background-warm hover:bg-background transition-colors duration-200 px-8 py-12 group h-full"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-burgundy mb-4">
-                    Ubicación
-                  </p>
-                  <h3 className="font-serif text-[22px] md:text-[26px] leading-[1.2] font-semibold text-navy tracking-[-0.008em]">
+              <Reveal className="col-span-12 lg:col-span-7" delay={0.1} y={20}>
+                <figure className="relative border border-rule bg-background-warm overflow-hidden">
+                  <span className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />
+                  <span className="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-olive z-10 pointer-events-none" />
+                  <span className="absolute bottom-3 left-3 w-2.5 h-2.5 border-b border-l border-olive z-10 pointer-events-none" />
+                  <span className="absolute bottom-3 right-3 w-2.5 h-2.5 border-b border-r border-olive z-10 pointer-events-none" />
+                  <iframe
+                    title="Ubicación de la oficina ADAF en Nueva Tijuana"
+                    src={MAPS_EMBED}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                    className="block w-full aspect-[4/3] md:aspect-[3/2] border-0 grayscale-[0.15] contrast-[0.95]"
+                  />
+                </figure>
+                <div className="flex items-baseline justify-between gap-6 mt-4 px-1">
+                  <p className="text-[12px] uppercase tracking-[0.18em] text-muted font-medium">
                     Blvd. de las Bellas Artes 19213, Local 15
-                  </h3>
-                  <p className="text-[15px] text-foreground/80 mt-2 leading-[1.55]">
-                    Nueva Tijuana, 22435 Tijuana, Baja California, México.
                   </p>
-                  <span className="inline-flex items-center gap-1.5 text-[12px] uppercase tracking-[0.16em] font-medium text-burgundy mt-8 group-hover:gap-3 transition-all duration-200">
+                  <a
+                    href={MAPS_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[12px] uppercase tracking-[0.16em] font-medium text-burgundy hover:gap-3 transition-all duration-200 shrink-0"
+                  >
                     Abrir en Google Maps
                     <span aria-hidden="true">→</span>
-                  </span>
-                </a>
-              </div>
+                  </a>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>

@@ -7,8 +7,8 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
+import Image from "next/image";
 import { allServices } from "@/components/service/data";
-import { SealMark } from "@/components/visual/SealMark";
 import { PullQuote } from "@/components/visual/PullQuote";
 import { CALENDLY_URL } from "@/lib/calendly";
 import { siteUrl } from "@/lib/seo";
@@ -68,7 +68,19 @@ export default function NosotrosPage() {
             <ChapterMark numeral="I" label="La firma" />
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-12 items-start">
               <div className="col-span-12 lg:col-span-4 flex justify-start lg:justify-center">
-                <SealMark size={260} />
+                <figure className="flex flex-col items-start lg:items-center gap-5 max-w-[280px]">
+                  <Image
+                    src="/logo-adaf.png"
+                    alt="ADAF · Asesoría y Defensa Aduanera Fiscal"
+                    width={500}
+                    height={500}
+                    priority
+                    className="w-full h-auto select-none"
+                  />
+                  <figcaption className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted text-left lg:text-center">
+                    Tijuana · Baja California · México
+                  </figcaption>
+                </figure>
               </div>
               <div className="col-span-12 lg:col-span-7 lg:col-start-6">
                 <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em]">

@@ -93,6 +93,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Defensa COFEPRIS y COEPRIS en Tijuana · Multas y suspensiones",
   metaDescription: "Defensa contra sanciones sanitarias federales (COFEPRIS) y estatales (COEPRIS BC): multas, suspensiones y aseguramiento de producto. ADAF Tijuana.",
+  editorial: {
+    src: "/editorial/editorial-iii-balanza.png",
+    alt: "Balanza de dos platos sobre superficie sage-olive",
+    tone: "olive",
+    numeral: "IV·b",
+    title: "Balanza",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-vi-visita-puerta.png",
+    alt: "Puerta institucional con luz cálida adentro",
+    tone: "burgundy",
+    numeral: "IV·c",
+    title: "Puerta institucional",
+  },
 };
 
 export default data;

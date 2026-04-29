@@ -17,6 +17,7 @@ const toneLabel: Record<Tone, string> = {
 const aspectClass: Record<string, string> = {
   "21/9": "aspect-[21/9]",
   "16/9": "aspect-[16/9]",
+  "3/2": "aspect-[3/2]",
   "4/3": "aspect-[4/3]",
   "3/4": "aspect-[3/4]",
 };
@@ -24,6 +25,7 @@ const aspectClass: Record<string, string> = {
 const aspectPx: Record<string, string> = {
   "21/9": "2100 × 900 px",
   "16/9": "1920 × 1080 px",
+  "3/2": "1800 × 1200 px",
   "4/3": "1200 × 900 px",
   "3/4": "900 × 1200 px",
 };
@@ -40,7 +42,7 @@ export function EditorialBand({
   numeral: string;
   title: string;
   tone: Tone;
-  aspect?: "21/9" | "16/9" | "4/3" | "3/4";
+  aspect?: "21/9" | "16/9" | "3/2" | "4/3" | "3/4";
   src?: string;
   alt?: string;
   fullBleed?: boolean;

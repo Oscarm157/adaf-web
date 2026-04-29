@@ -86,6 +86,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Multas de comercio exterior en Tijuana · Clasificación y valor",
   metaDescription: "Defensa contra multas de comercio exterior por clasificación arancelaria, valor en aduana y RNAs. Recurso de revocación y juicio de nulidad.",
+  editorial: {
+    src: "/editorial/editorial-vii-embargo-contenedor.png",
+    alt: "Contenedor olive en patio aduanal vacío",
+    tone: "olive",
+    numeral: "VII·b",
+    title: "Contenedor en patio aduanal",
+  },
+  editorialSecondary: {
+    src: "/editorial/test-frontera-F-tijuana-duotono.png",
+    alt: "Cruce de carga Otay Mesa, vista aérea",
+    tone: "navy",
+    numeral: "IV·b",
+    title: "Frontera norte",
+  },
 };
 
 export default data;

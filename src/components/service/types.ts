@@ -20,6 +20,14 @@ export type ServiceRelacionado = {
   pregunta: string;
 };
 
+export type ServiceEditorial = {
+  src: string;
+  alt: string;
+  tone: "navy" | "burgundy" | "olive";
+  numeral: string;
+  title: string;
+};
+
 export type ServiceData = {
   slug: string;
   numeral: string;
@@ -37,4 +45,6 @@ export type ServiceData = {
   relacionados: ServiceRelacionado[];
   metaTitle: string;
   metaDescription: string;
+  editorial?: ServiceEditorial;
+  editorialSecondary?: ServiceEditorial;
 };

@@ -94,6 +94,20 @@ const data: ServiceData = {
   ],
   metaTitle: "Defensa penal-fiscal en Tijuana · Defraudación y contrabando",
   metaDescription: "Defensa en investigaciones y procesos penales por defraudación fiscal, contrabando, simulación de operaciones (69-B) y delitos fiscales federales.",
+  editorial: {
+    src: "/editorial/editorial-ix-despacho-interior.png",
+    alt: "Despacho jurídico con pared de códigos",
+    tone: "burgundy",
+    numeral: "IX·b",
+    title: "Despacho",
+  },
+  editorialSecondary: {
+    src: "/editorial/editorial-viii-edificio.png",
+    alt: "Edificio federal modernista mexicano",
+    tone: "navy",
+    numeral: "IV·b",
+    title: "Edificio institucional",
+  },
 };
 
 export default data;
