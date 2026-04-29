@@ -11,7 +11,7 @@ const notas: Array<{
   titulo: string;
   resumen: string;
   slug: string;
-  cover: { title: string; tone: Tone };
+  cover: { title: string; tone: Tone; src: string; alt: string };
 }> = [
   {
     cat: "Reformas",
@@ -21,7 +21,12 @@ const notas: Array<{
     resumen:
       "Modificaciones principales en sellos digitales, restricciones, RFC y comprobantes, con su impacto práctico antes del cierre del ejercicio.",
     slug: "reforma-cff-2026",
-    cover: { title: "Libro abierto", tone: "navy" },
+    cover: {
+      title: "Libro abierto",
+      tone: "navy",
+      src: "/editorial/editorial-v-cff-libro.png",
+      alt: "Libro abierto de código legal sobre escritorio",
+    },
   },
   {
     cat: "Procedimientos",
@@ -31,7 +36,12 @@ const notas: Array<{
     resumen:
       "Qué hacer al inicio de la diligencia, documentación que pueden requerir, plazos para aportar pruebas y errores comunes que escalan el procedimiento.",
     slug: "visita-domiciliaria-sat",
-    cover: { title: "Puerta", tone: "burgundy" },
+    cover: {
+      title: "Puerta",
+      tone: "burgundy",
+      src: "/editorial/editorial-vi-visita-puerta.png",
+      alt: "Puerta institucional entreabierta con luz cálida adentro",
+    },
   },
   {
     cat: "Aduanero",
@@ -41,7 +51,12 @@ const notas: Array<{
     resumen:
       "Plazo de 10 días para pruebas y alegatos, vías de defensa procedentes y procedimiento para recuperar la mercancía con garantía mientras se resuelve el fondo.",
     slug: "embargo-aduana-pama",
-    cover: { title: "Contenedor", tone: "olive" },
+    cover: {
+      title: "Contenedor",
+      tone: "olive",
+      src: "/editorial/editorial-vii-embargo-contenedor.png",
+      alt: "Contenedor olive en patio aduanal vacío",
+    },
   },
 ];
 
@@ -84,6 +99,8 @@ export function Notas() {
                   tone={n.cover.tone}
                   aspect="4/3"
                   fullBleed={false}
+                  src={n.cover.src}
+                  alt={n.cover.alt}
                 />
               </div>
               <div className="flex items-baseline justify-between mb-6">

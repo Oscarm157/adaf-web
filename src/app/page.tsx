@@ -25,6 +25,8 @@ export default function Home() {
           title="Frontera · vista del cruce"
           tone="navy"
           aspect="21/9"
+          src="/editorial/test-frontera-F-tijuana-duotono.png"
+          alt="Cruce de carga Otay Mesa, vista aérea"
         />
         <Areas />
         <PullQuote cite="Cómo entendemos nuestra labor">
@@ -39,6 +41,8 @@ export default function Home() {
           title="Balanza"
           tone="olive"
           aspect="21/9"
+          src="/editorial/editorial-iii-balanza.png"
+          alt="Balanza de dos platos sobre superficie sage-olive"
         />
         <Metodo />
         <LeadMagnet />
@@ -48,6 +52,8 @@ export default function Home() {
           title="Edificio institucional"
           tone="navy"
           aspect="21/9"
+          src="/editorial/editorial-viii-edificio.png"
+          alt="Edificio federal modernista mexicano, fachada simétrica"
         />
         <CTAFinal />
       </main>

@@ -39,6 +39,8 @@ export function Pillars() {
               tone="burgundy"
               aspect="3/4"
               fullBleed={false}
+              src="/editorial/editorial-ii-expedientes.png"
+              alt="Pila de expedientes legales sobre escritorio de walnut"
             />
           </Reveal>
         </div>

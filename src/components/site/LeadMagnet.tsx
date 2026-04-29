@@ -17,6 +17,8 @@ export function LeadMagnet() {
               tone="burgundy"
               aspect="3/4"
               fullBleed={false}
+              src="/editorial/editorial-iv-portada-guia.png"
+              alt="Portafolio burgundy cerrado con documento asomando"
             />
           </div>
 
