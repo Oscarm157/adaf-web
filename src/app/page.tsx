@@ -10,7 +10,7 @@ import { Notas } from "@/components/site/Notas";
 import { CTAFinal } from "@/components/site/CTAFinal";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
-import { PullQuote } from "@/components/visual/PullQuote";
+import { AuthoritiesBand } from "@/components/visual/AuthoritiesBand";
 import { EditorialBand } from "@/components/visual/EditorialBand";
 
 export default function Home() {
@@ -29,11 +29,7 @@ export default function Home() {
           alt="Cruce de carga Otay Mesa, vista aérea"
         />
         <Areas />
-        <PullQuote cite="Cómo entendemos nuestra labor">
-          Los plazos del procedimiento corren desde la notificación. La defensa
-          empieza con la lectura cuidadosa del expediente, no con un escrito
-          apurado.
-        </PullQuote>
+        <AuthoritiesBand />
         <Pillars />
         <Resultados />
         <EditorialBand

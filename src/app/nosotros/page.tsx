@@ -9,7 +9,7 @@ import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
 import Image from "next/image";
 import { allServices } from "@/components/service/data";
-import { PullQuote } from "@/components/visual/PullQuote";
+import { AuthoritiesBand } from "@/components/visual/AuthoritiesBand";
 import { CALENDLY_URL } from "@/lib/calendly";
 import { siteUrl } from "@/lib/seo";
 
@@ -115,11 +115,7 @@ export default function NosotrosPage() {
           </div>
         </section>
 
-        <PullQuote cite="Cómo entendemos nuestra labor">
-          Los plazos del procedimiento corren desde la notificación. La defensa
-          empieza con la lectura cuidadosa del expediente, no con un escrito
-          apurado.
-        </PullQuote>
+        <AuthoritiesBand />
 
         {/* II,  Principios */}
         <section className="bg-background-warm pt-20 pb-20">

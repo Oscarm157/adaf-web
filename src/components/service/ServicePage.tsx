@@ -69,40 +69,41 @@ export function ServicePage({ data }: { data: ServiceData }) {
         </div>
       </section>
 
-      {/* Editorial atmosphere band — chapter opener */}
-      {data.editorial && (
-        <EditorialBand
-          numeral={data.editorial.numeral}
-          title={data.editorial.title}
-          tone={data.editorial.tone}
-          aspect="3/2"
-          src={data.editorial.src}
-          alt={data.editorial.alt}
-        />
-      )}
-
-      {/* I — ¿Qué es y cuándo aplica? */}
-      <section className="bg-background pt-20 pb-20">
+      {/* I — ¿Qué es y cuándo aplica? · con editorial lateral */}
+      <section className="bg-background pt-16 pb-20">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="I" label="Contexto del procedimiento" />
-          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
-            <div className="col-span-12 lg:col-span-4">
-              <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em] sticky top-32">
+          <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 items-start">
+            <div className="col-span-12 lg:col-span-3">
+              <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[32px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] lg:sticky lg:top-32">
                 ¿Qué es y cuándo aplica?
               </h2>
             </div>
-            <div className="col-span-12 lg:col-span-7 lg:col-start-6">
+            <div className="col-span-12 md:col-span-7 lg:col-span-5">
               <div className="space-y-6">
                 {data.queEs.map((p, i) => (
                   <p
                     key={i}
-                    className="text-[17px] leading-[1.7] text-foreground/85 max-w-[640px]"
+                    className="text-[17px] leading-[1.7] text-foreground/85 max-w-[560px]"
                   >
                     {p}
                   </p>
                 ))}
               </div>
             </div>
+            {data.editorial && (
+              <div className="col-span-12 md:col-span-5 lg:col-span-4">
+                <EditorialBand
+                  numeral={data.editorial.numeral}
+                  title={data.editorial.title}
+                  tone={data.editorial.tone}
+                  aspect="3/4"
+                  fullBleed={false}
+                  src={data.editorial.src}
+                  alt={data.editorial.alt}
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
