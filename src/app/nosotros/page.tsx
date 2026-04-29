@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/nosotros`,
     title: "Nosotros · ADAF Asesoría y Defensa Aduanera Fiscal",
     description:
-      "Despacho jurídico en Tijuana con 25 años de práctica continua en materia fiscal, aduanera y administrativa.",
+      "ADAF, Asesoría y Defensa Aduanera Fiscal. Veinticinco años representando casos en materia fiscal, aduanera y administrativa en Tijuana, Tecate, Rosarito y la frontera norte.",
   },
 };
 

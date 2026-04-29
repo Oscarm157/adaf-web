@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: `${siteUrl}/faq`,
-    title: "Preguntas frecuentes · ADAF",
+    title: "Preguntas frecuentes · Despacho ADAF",
     description:
-      "Respuestas a las preguntas que recibimos con mayor frecuencia sobre defensa fiscal, aduanera y administrativa.",
+      "Respuestas concretas sobre el despacho, los procedimientos administrativos, honorarios y logística de la representación.",
   },
 };
 

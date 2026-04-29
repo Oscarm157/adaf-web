@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/resultados`,
     title: "Resultados · ADAF",
     description:
-      "Veinticinco años de práctica continua en materia fiscal, aduanera y administrativa.",
+      "Datos generales de la práctica de ADAF: 25 años, diez áreas, cobertura BC y federal. Los expedientes específicos están protegidos por el secreto profesional.",
   },
 };
 

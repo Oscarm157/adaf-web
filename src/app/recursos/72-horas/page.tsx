@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Las primeras 72 horas · ADAF",
     description:
-      "Guía práctica para responder los primeros días tras una visita del SAT, un embargo en aduana o un crédito fiscal.",
+      "Guía práctica del despacho ADAF para los primeros días tras una visita del SAT, un embargo en aduana o un crédito fiscal. Pasos, plazos y errores frecuentes.",
     url: `${siteUrl}/recursos/72-horas`,
     type: "article",
   },

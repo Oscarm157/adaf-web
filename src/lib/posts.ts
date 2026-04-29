@@ -26,7 +26,7 @@ export const posts: BlogPost[] = [
     cat: "Reformas",
     fecha: "27 abr 2026",
     fechaIso: "2026-04-27",
-    folio: "Nota 001",
+    folio: "Art. 001",
     titulo:
       "Reforma al CFF 2026: cambios para empresarios e importadores",
     resumen:
@@ -43,7 +43,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Esta nota organiza los bloques de cambios que estamos viendo en la práctica del despacho (sellos digitales, registro federal de contribuyentes, comprobantes fiscales y procedimientos en torno al artículo 69-B del CFF) y aterriza acciones concretas que conviene revisar antes del próximo cierre de ejercicio. Cuando un cambio puntual depende de una redacción específica que aún no consideramos cerrada, lo dejamos señalado para validación interna del despacho.",
+        text: "Este artículo organiza los bloques de cambios que estamos viendo en la práctica del despacho (sellos digitales, registro federal de contribuyentes, comprobantes fiscales y procedimientos en torno al artículo 69-B del CFF) y precisa acciones concretas que conviene revisar antes del próximo cierre de ejercicio. Cuando un cambio puntual depende de una redacción específica, queda sujeto a la normatividad definitiva publicada.",
       },
       {
         type: "h2",
@@ -60,7 +60,7 @@ export const posts: BlogPost[] = [
       {
         type: "note",
         title: "En la práctica",
-        text: "La restricción del sello suele detonarse por omisiones que el contribuyente no había percibido como graves: una declaración mensual presentada en cero por error, un domicilio fiscal con discrepancia frente a registros aduanales, un proveedor incluido en una lista del 69-B presuntivo. Antes de que la restricción ocurra, conviene auditar los datos del RFC y la consistencia de las declaraciones del ejercicio.",
+        text: "La restricción del sello suele originarse por omisiones que el contribuyente no había percibido como graves: una declaración mensual presentada en cero por error, un domicilio fiscal con discrepancia frente a registros aduanales, un proveedor incluido en una lista del 69-B presuntivo. Antes de que la restricción ocurra, conviene auditar los datos del RFC y la consistencia de las declaraciones del ejercicio.",
       },
       {
         type: "h2",
@@ -127,7 +127,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Para una empresa que importa de manera continua, el patrón es claro: los cambios al CFF se sienten primero en la operación (en el sello digital, en el catálogo del RFC, en los CFDI con complemento de comercio exterior) y se manifiestan en una revisión meses después. Lo que en enero parece un dato menor, al cierre del ejercicio puede ser el detonador de un crédito fiscal con multas y actualizaciones.",
+        text: "Para una empresa que importa de manera continua, el patrón es claro: los cambios al CFF se sienten primero en la operación (en el sello digital, en el catálogo del RFC, en los CFDI con complemento de comercio exterior) y se manifiestan en una revisión meses después. Lo que en enero parece un dato menor, al cierre del ejercicio puede ser la causa de un crédito fiscal con multas y actualizaciones.",
       },
       {
         type: "p",
@@ -162,7 +162,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "La reforma se lee distinto desde la operación que desde el escritorio. Si tu empresa importa con regularidad y quieres anticipar el efecto de estos cambios sobre tus contingencias actuales, una valoración preventiva ordena el panorama antes de que llegue la primera notificación.",
+        text: "La reforma se lee distinto desde la operación que desde el escritorio. Si la empresa importa con regularidad y desea anticipar el efecto de estos cambios sobre sus contingencias actuales, una valoración preventiva ordena el panorama antes de que llegue la primera notificación.",
       },
     ],
   },
@@ -171,7 +171,7 @@ export const posts: BlogPost[] = [
     cat: "Procedimientos",
     fecha: "20 abr 2026",
     fechaIso: "2026-04-20",
-    folio: "Nota 002",
+    folio: "Art. 002",
     titulo:
       "Visita domiciliaria del SAT: derechos del contribuyente",
     resumen:
@@ -188,7 +188,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Esta nota explica la diferencia entre una visita domiciliaria y una revisión de gabinete, los derechos del contribuyente al inicio de la diligencia conforme al artículo 44 del CFF, qué documentos conviene firmar y cuáles no, y los plazos que empiezan a correr desde el levantamiento de cada acta.",
+        text: "Este artículo explica la diferencia entre una visita domiciliaria y una revisión de gabinete, los derechos del contribuyente al inicio de la diligencia conforme al artículo 44 del CFF, qué documentos conviene firmar y cuáles no, y los plazos que empiezan a correr desde el levantamiento de cada acta.",
       },
       {
         type: "h2",
@@ -316,7 +316,7 @@ export const posts: BlogPost[] = [
     cat: "Aduanero",
     fecha: "12 abr 2026",
     fechaIso: "2026-04-12",
-    folio: "Nota 003",
+    folio: "Art. 003",
     titulo:
       "Embargo precautorio en aduana: pasos para responder un PAMA",
     resumen:
@@ -333,7 +333,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Esta nota describe qué es el PAMA, el plazo de 10 días para pruebas y alegatos, las vías de defensa que abre la resolución y el procedimiento para recuperar la mercancía con garantía mientras se resuelve el fondo del asunto.",
+        text: "Este artículo describe qué es el PAMA, el plazo de 10 días para pruebas y alegatos, las vías de defensa que abre la resolución y el procedimiento para recuperar la mercancía con garantía mientras se resuelve el fondo del asunto.",
       },
       {
         type: "h2",
@@ -453,7 +453,7 @@ export const posts: BlogPost[] = [
       },
       {
         type: "p",
-        text: "Si tu empresa tiene mercancía retenida o acaba de recibir el acta de inicio, el plazo de 10 días corre desde ese momento. Una valoración temprana ordena el escrito de pruebas y alegatos y abre, cuando procede, la vía de recuperación con garantía mientras se resuelve el fondo.",
+        text: "Si la empresa tiene mercancía retenida o acaba de recibir el acta de inicio, el plazo de 10 días corre desde ese momento. Una valoración temprana ordena el escrito de pruebas y alegatos y abre, cuando procede, la vía de recuperación con garantía mientras se resuelve el fondo.",
       },
     ],
   },

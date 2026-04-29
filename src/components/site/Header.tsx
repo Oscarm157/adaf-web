@@ -12,7 +12,7 @@ const navLinks = [
   { href: "/nosotros", label: "Nosotros" },
   { href: "/servicios", label: "Servicios" },
   { href: "/resultados", label: "Resultados" },
-  { href: "/blog", label: "Notas" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "FAQ" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -42,7 +42,7 @@ export function Header() {
     <>
       <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-sm border-b border-rule">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 h-[72px] md:h-[84px] flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3 leading-none" aria-label="ADAF · Asesoría y Defensa Aduanera Fiscal — inicio">
+          <Link href="/" className="flex items-center gap-3 leading-none" aria-label="ADAF, Asesoría y Defensa Aduanera Fiscal. Inicio">
             <Image
               src="/logo-adaf.png"
               alt="ADAF · Asesoría y Defensa Aduanera Fiscal"

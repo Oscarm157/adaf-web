@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Servicios · ADAF Asesoría y Defensa Aduanera Fiscal",
     description:
-      "Diez áreas de defensa especializada en materia fiscal, aduanera y administrativa.",
+      "Diez áreas de defensa especializada: aduanera, fiscal SAT, IMSS / INFONAVIT, sanitaria COFEPRIS / COEPRIS, SICT autotransporte, amparos, comercio exterior, recurso, juicio de nulidad, penal-fiscal y asesoría preventiva.",
     url: `${siteUrl}/servicios`,
   },
 };

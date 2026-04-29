@@ -10,14 +10,14 @@ import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
 export const metadata: Metadata = {
-  title: "Notas y análisis",
+  title: "Blog",
   description:
     "Comentarios técnicos de ADAF sobre reformas, criterios de autoridad y procedimientos en materia fiscal, aduanera y administrativa.",
   alternates: { canonical: "/blog" },
   openGraph: {
-    title: "Notas y análisis · ADAF",
+    title: "Blog · ADAF",
     description:
-      "Comentarios técnicos sobre reformas, criterios de autoridad y procedimientos en materia fiscal, aduanera y administrativa.",
+      "Comentarios técnicos de ADAF sobre reformas, criterios de autoridad y procedimientos en materia fiscal, aduanera y administrativa.",
     url: `${siteUrl}/blog`,
     type: "website",
   },
@@ -35,12 +35,12 @@ export default function BlogIndexPage() {
       <main>
         <PageHero
           numeral="I"
-          label="Notas y análisis"
+          label="Blog"
           h1="Comentarios técnicos sobre reformas, criterios y procedimientos."
-          lede="Notas redactadas por el despacho sobre los temas que llegan con más frecuencia a nuestros expedientes: reformas al CFF, criterios de autoridad, procedimientos aduaneros y administrativos. No sustituyen la asesoría sobre un caso específico."
+          lede="Análisis redactados por el despacho sobre los temas que llegan con más frecuencia a nuestros expedientes: reformas al CFF, criterios de autoridad, procedimientos aduaneros y administrativos. No sustituyen la asesoría sobre un caso específico."
           crumbs={[
             { label: "Inicio", href: "/" },
-            { label: "Notas y análisis" },
+            { label: "Blog" },
           ]}
         />
 
@@ -77,7 +77,7 @@ export default function BlogIndexPage() {
                   </p>
 
                   <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] font-medium text-navy mt-7 group-hover:gap-3 group-hover:text-burgundy transition-all duration-300">
-                    Leer la nota
+                    Leer el artículo
                     <span>→</span>
                   </span>
                 </Link>
@@ -105,11 +105,11 @@ export default function BlogIndexPage() {
 
             <div className="max-w-[680px] mx-auto text-center">
               <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
-                ¿Tu caso se parece a alguna nota?
+                ¿Su caso se parece a alguno de estos artículos?
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.6] max-w-[540px] mx-auto">
                 Comentamos casos concretos a partir del expediente. Si una
-                de estas notas refleja la situación que enfrentas,
+                de estos artículos refleja la situación que enfrentas,
                 escríbenos para una valoración inicial.
               </p>
 

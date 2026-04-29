@@ -32,7 +32,7 @@ export function TableOfContents({ body }: { body: BodyBlock[] }) {
       className="border-y border-rule py-7 mb-12 not-prose"
     >
       <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted mb-5">
-        En esta nota
+        En este artículo
       </p>
       <ol className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-2.5">
         {headings.map((h, i) => (

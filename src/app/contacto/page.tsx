@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: `${siteUrl}/contacto`,
     title: "Contacto · ADAF",
     description:
-      "Formulario, WhatsApp y agenda de valoración inicial sin costo.",
+      "Escríbenos los detalles de tu asunto. Formulario, WhatsApp y agenda de valoración inicial sin costo. Oficina en Nueva Tijuana.",
   },
 };
 

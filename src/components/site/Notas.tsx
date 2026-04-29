@@ -16,7 +16,7 @@ const notas: Array<{
   {
     cat: "Reformas",
     fecha: "27 abr 2026",
-    folio: "Nota 001",
+    folio: "Art. 001",
     titulo: "Reforma al CFF 2026: cambios para empresarios e importadores",
     resumen:
       "Modificaciones principales en sellos digitales, restricciones, RFC y comprobantes, con su impacto práctico antes del cierre del ejercicio.",
@@ -31,7 +31,7 @@ const notas: Array<{
   {
     cat: "Procedimientos",
     fecha: "20 abr 2026",
-    folio: "Nota 002",
+    folio: "Art. 002",
     titulo: "Visita domiciliaria del SAT: derechos del contribuyente",
     resumen:
       "Qué hacer al inicio de la diligencia, documentación que pueden requerir, plazos para aportar pruebas y errores comunes que escalan el procedimiento.",
@@ -46,7 +46,7 @@ const notas: Array<{
   {
     cat: "Aduanero",
     fecha: "12 abr 2026",
-    folio: "Nota 003",
+    folio: "Art. 003",
     titulo: "Embargo precautorio en aduana: pasos para responder un PAMA",
     resumen:
       "Plazo de 10 días para pruebas y alegatos, vías de defensa procedentes y procedimiento para recuperar la mercancía con garantía mientras se resuelve el fondo.",
@@ -62,9 +62,9 @@ const notas: Array<{
 
 export function Notas() {
   return (
-    <section aria-label="Notas y análisis" className="bg-background pt-24 pb-24 border-t border-rule">
+    <section aria-label="Blog" className="bg-background pt-24 pb-24 border-t border-rule">
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-        <ChapterMark numeral="VII" label="Notas y análisis" />
+        <ChapterMark numeral="VII" label="Blog" />
 
         <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-14 items-end">
           <div className="col-span-12 lg:col-span-8">
@@ -77,7 +77,7 @@ export function Notas() {
               href="/blog"
               className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.16em] font-medium text-navy hover:text-burgundy transition-colors duration-200"
             >
-              Ver todas las notas
+              Ver todo el blog
               <span>→</span>
             </Link>
           </div>
@@ -125,7 +125,7 @@ export function Notas() {
               </p>
 
               <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] font-medium text-navy mt-7 group-hover:gap-3 group-hover:text-burgundy transition-all duration-300">
-                Leer la nota
+                Leer más
                 <span>→</span>
               </span>
             </Link>

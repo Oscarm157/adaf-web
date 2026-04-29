@@ -148,7 +148,7 @@ export default async function BlogPostPage({
                 href="/blog"
                 className="hover:text-burgundy transition-colors"
               >
-                Notas
+                Blog
               </Link>
               <span>›</span>
               <span className="text-foreground truncate max-w-[420px]">
@@ -244,7 +244,7 @@ export default async function BlogPostPage({
           </div>
         </section>
 
-        {/* Otras notas */}
+        {/* Más artículos */}
         <section className="bg-background pt-20 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <div className="flex items-baseline gap-4 mb-10">
@@ -253,7 +253,7 @@ export default async function BlogPostPage({
               </span>
               <span className="flex-1 max-w-[120px] h-[1px] bg-rule" />
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
-                Otras notas
+                Más artículos
               </span>
             </div>
 
@@ -284,7 +284,7 @@ export default async function BlogPostPage({
                     {n.resumen}
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] font-medium text-navy mt-7 group-hover:gap-3 group-hover:text-burgundy transition-all duration-300">
-                    Leer la nota
+                    Leer el artículo
                     <span>→</span>
                   </span>
                 </Link>

@@ -13,7 +13,7 @@ const areas = [
 const despacho = [
   { href: "/nosotros", label: "Nosotros" },
   { href: "/resultados", label: "Resultados" },
-  { href: "/blog", label: "Notas y análisis" },
+  { href: "/blog", label: "Blog" },
   { href: "/faq", label: "Preguntas frecuentes" },
   { href: "/contacto", label: "Contacto" },
 ];
@@ -26,7 +26,7 @@ export function Footer() {
         <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12">
           {/* Brand */}
           <div className="col-span-12 md:col-span-4">
-            <Link href="/" className="inline-flex items-center" aria-label="ADAF · Asesoría y Defensa Aduanera Fiscal — inicio">
+            <Link href="/" className="inline-flex items-center" aria-label="ADAF, Asesoría y Defensa Aduanera Fiscal. Inicio">
               <Image
                 src="/logo-adaf.png"
                 alt="ADAF · Asesoría y Defensa Aduanera Fiscal"
@@ -101,20 +101,20 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Notas técnicas */}
+          {/* Blog */}
           <div className="col-span-12 md:col-span-3">
             <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-6">
-              Notas técnicas
+              Blog
             </p>
             <p className="font-serif italic text-[14px] text-foreground/85 leading-[1.5] mb-5">
               Publicamos análisis sobre reformas, criterios y casos relevantes
-              en la sección de notas.
+              en nuestro blog.
             </p>
             <Link
               href="/blog"
               className="inline-flex items-center justify-center w-full h-11 bg-navy text-background text-[12px] uppercase tracking-[0.12em] font-medium rounded-[2px] hover:bg-burgundy transition-colors duration-200"
             >
-              Leer las notas
+              Ir al blog
             </Link>
           </div>
         </div>
