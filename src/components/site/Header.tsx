@@ -45,15 +45,12 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 leading-none" aria-label="ADAF · Asesoría y Defensa Aduanera Fiscal — inicio">
             <Image
               src="/logo-adaf.png"
-              alt="ADAF"
+              alt="ADAF · Asesoría y Defensa Aduanera Fiscal"
               width={500}
               height={500}
               priority
               className="h-12 md:h-14 w-auto select-none"
             />
-            <span className="hidden xl:inline-block font-serif italic text-[13px] text-muted leading-tight max-w-[180px]">
-              Asesoría y Defensa Aduanera Fiscal
-            </span>
           </Link>
 
           {/* Desktop nav */}
