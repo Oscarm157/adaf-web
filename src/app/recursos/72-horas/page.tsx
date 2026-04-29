@@ -7,7 +7,7 @@ import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
 import { Prose, P, H2, UL, LI, Note } from "@/components/page/Prose";
 import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
-import { EditorialBand } from "@/components/visual/EditorialBand";
+import Image from "next/image";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
@@ -55,15 +55,18 @@ export default function Recurso72HorasPage() {
         <section className="bg-background pt-20 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start">
-              {/* Cover placeholder */}
+              {/* Cover image */}
               <div className="col-span-12 lg:col-span-5">
-                <EditorialBand
-                  numeral="VI·a"
-                  title="Portada de la guía"
-                  tone="burgundy"
-                  aspect="3/4"
-                  fullBleed={false}
-                />
+                <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
+                  <Image
+                    src="/portada-72-horas.jpg"
+                    alt="Portada, Las primeras 72 horas, guía del contribuyente ADAF"
+                    fill
+                    sizes="(min-width: 1024px) 40vw, 100vw"
+                    className="object-cover"
+                    priority
+                  />
+                </div>
               </div>
 
               {/* Cuerpo + form */}

@@ -228,20 +228,6 @@ export default function ResultadosPage() {
                     Tijuana · Tecate · Rosarito · Mexicali
                   </figcaption>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-6 pt-5 border-t border-rule">
-                    <div className="flex items-center gap-3 text-[12px]">
-                      <span className="w-2 h-2 bg-burgundy rounded-full" />
-                      <span className="text-foreground/85">Base de operación</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-[12px]">
-                      <span className="w-2 h-2 bg-olive rounded-full" />
-                      <span className="text-foreground/85">Plazas atendidas</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-[12px]">
-                      <span className="w-3 h-[1px] bg-olive" />
-                      <span className="text-foreground/85">Frontera norte</span>
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="col-span-12 lg:col-span-5 space-y-8">
