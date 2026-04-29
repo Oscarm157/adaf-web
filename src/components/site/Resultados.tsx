@@ -21,13 +21,13 @@ const stats: {
   },
   {
     numero: "BC",
-    label: "Cobertura procesal estatal y federal",
-    note: "Tijuana · Tecate · Rosarito",
+    label: "Jurisdicción procesal",
+    note: "Estatal y federal",
   },
   {
-    numero: "1:1",
-    label: "Por abogado responsable, cada caso",
-    note: "De inicio a fin del procedimiento",
+    numero: "MX·US",
+    label: "Frontera norte como base",
+    note: "Tijuana · Tecate · Rosarito · Mexicali",
   },
 ];
 
