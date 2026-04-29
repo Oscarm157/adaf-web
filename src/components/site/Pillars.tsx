@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { ChapterMark } from "./ChapterMark";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { EditorialBand } from "@/components/visual/EditorialBand";
 
 const pillars = [
   {
@@ -26,22 +26,30 @@ export function Pillars() {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
         <ChapterMark numeral="III" label="Principios" />
 
-        <div className="grid grid-cols-12 gap-y-12 gap-x-6 md:gap-x-12 lg:gap-x-20 mt-12 mb-20 items-end">
-          <Reveal className="col-span-12 md:col-span-7 lg:col-span-5">
-            <EditorialBand
-              numeral="III·b"
-              title="Expedientes"
-              tone="burgundy"
-              aspect="3/4"
-              fullBleed={false}
-              src="/editorial/editorial-ii-expedientes.png"
-              alt="Pila de expedientes legales sobre escritorio de walnut"
-            />
-          </Reveal>
-          <Reveal delay={0.15} className="col-span-12 md:col-span-5 lg:col-span-7 lg:pb-2">
-            <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[44px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em] max-w-[520px]">
+        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-x-10 lg:gap-x-16 mt-12 mb-20 items-center">
+          <Reveal className="col-span-12 md:col-span-7 lg:col-span-7">
+            <h2 className="font-serif text-[32px] md:text-[44px] lg:text-[52px] leading-[1.04] md:leading-[1.02] font-semibold text-navy tracking-[-0.018em] max-w-[580px]">
               Tres principios sostienen cada caso.
             </h2>
+            <div className="flex items-baseline gap-3 mt-7">
+              <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
+                III·b
+              </span>
+              <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
+                Expedientes y método de trabajo
+              </span>
+            </div>
+          </Reveal>
+          <Reveal delay={0.15} className="col-span-12 md:col-span-5 lg:col-span-5">
+            <figure className="relative w-full aspect-square overflow-hidden border border-rule">
+              <Image
+                src="/editorial/editorial-ii-expedientes.png"
+                alt="Pila de expedientes burgundy sobre escritorio walnut"
+                fill
+                sizes="(min-width: 1024px) 480px, (min-width: 768px) 40vw, 100vw"
+                className="object-cover"
+              />
+            </figure>
           </Reveal>
         </div>
 

@@ -25,8 +25,8 @@ export default function Home() {
           title="Frontera · vista del cruce"
           tone="navy"
           aspect="21/9"
-          src="/editorial/test-frontera-F-tijuana-duotono.png"
-          alt="Cruce de carga Otay Mesa, vista aérea"
+          src="/editorial/editorial-i-frontera-customs.png"
+          alt="Filas de tráileres bajo el cobertizo de aduanas al atardecer"
         />
         <Areas />
         <AuthoritiesBand />

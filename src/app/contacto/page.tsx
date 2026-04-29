@@ -271,6 +271,18 @@ export default function ContactoPage() {
               </div>
 
               <Reveal className="col-span-12 lg:col-span-7" delay={0.1} y={20}>
+                <div className="flex items-baseline gap-4 mb-5">
+                  <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
+                    II·b
+                  </span>
+                  <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
+                    Ubicación
+                  </span>
+                  <span className="flex-1 h-[1px] bg-rule" />
+                </div>
+                <h3 className="font-serif text-[20px] md:text-[22px] leading-[1.2] font-semibold text-navy tracking-[-0.008em] mb-6">
+                  Cómo encontrarnos.
+                </h3>
                 <figure className="relative border border-rule bg-background-warm overflow-hidden">
                   <span className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />
                   <span className="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-olive z-10 pointer-events-none" />

@@ -10,8 +10,15 @@ import { PageHero } from "@/components/page/PageHero";
 import Image from "next/image";
 import { allServices } from "@/components/service/data";
 import { AuthoritiesBand } from "@/components/visual/AuthoritiesBand";
+import { OfficeStatus } from "@/components/site/OfficeStatus";
 import { CALENDLY_URL } from "@/lib/calendly";
-import { siteUrl } from "@/lib/seo";
+import { siteConfig, siteUrl } from "@/lib/seo";
+
+const NOSOTROS_MAPS_QUERY = encodeURIComponent(
+  `${siteConfig.address.street}, ${siteConfig.address.neighborhood}, ${siteConfig.address.locality}, ${siteConfig.address.region}, México`,
+);
+const NOSOTROS_MAPS_EMBED = `https://maps.google.com/maps?q=${NOSOTROS_MAPS_QUERY}&z=16&hl=es&output=embed`;
+const NOSOTROS_MAPS_LINK = "https://maps.app.goo.gl/mYuH7rHaBWbDGXnQ9";
 
 export const metadata: Metadata = {
   title: "Nosotros · Despacho jurídico en Tijuana",
@@ -217,11 +224,97 @@ export default function NosotrosPage() {
           </div>
         </section>
 
-        {/* TODO: Sección IV "Equipo",  restaurar con bios de texto cuando
+        {/* TODO: Sección "Equipo",  restaurar con bios de texto cuando
             el despacho entregue: nombre · especialidad · años · formación.
             Por ahora se omite para no mostrar placeholders. */}
 
-        {/* IV , CTA final navy */}
+        {/* IV , Oficina */}
+        <section className="bg-background-warm pt-20 pb-20 border-t border-rule">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+            <ChapterMark numeral="IV" label="Oficina" />
+            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 items-start">
+              <div className="col-span-12 lg:col-span-5">
+                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em]">
+                  Nueva Tijuana, Baja California.
+                </h2>
+                <p className="text-[15px] leading-[1.65] text-foreground/80 mt-5 max-w-[420px]">
+                  Atendemos en oficina con cita previa. Los expedientes y la
+                  documentación física se reciben en este domicilio.
+                </p>
+                <dl className="space-y-7 border-t border-foreground/15 pt-8 mt-8">
+                  <div>
+                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
+                      Dirección
+                    </dt>
+                    <dd className="text-[16px] leading-[1.55] text-foreground/85 max-w-[360px]">
+                      Blvd. de las Bellas Artes 19213, Local 15, Nueva
+                      Tijuana, 22435 Tijuana, BC.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
+                      Teléfono
+                    </dt>
+                    <dd>
+                      <a
+                        href="tel:+526646475018"
+                        className="font-serif text-[20px] text-navy hover:text-burgundy transition-colors"
+                      >
+                        664 647 5018
+                      </a>
+                    </dd>
+                  </div>
+                  <div>
+                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
+                      Horario
+                    </dt>
+                    <dd className="text-[16px] leading-[1.55] text-foreground/85 mb-3">
+                      Lunes a viernes · 09:00 a 17:00
+                    </dd>
+                    <dd>
+                      <OfficeStatus />
+                    </dd>
+                  </div>
+                </dl>
+                <div className="flex flex-wrap items-center gap-4 mt-10">
+                  <Link
+                    href="/contacto"
+                    className="inline-flex items-center justify-center bg-burgundy text-white text-[12px] font-medium tracking-[0.06em] uppercase px-6 h-11 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                  >
+                    Agendar visita
+                  </Link>
+                  <a
+                    href={NOSOTROS_MAPS_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-[12px] uppercase tracking-[0.16em] font-medium text-navy hover:text-burgundy transition-colors duration-200"
+                  >
+                    Cómo llegar
+                    <ArrowRight className="w-3 h-3" strokeWidth={1.5} />
+                  </a>
+                </div>
+              </div>
+              <div className="col-span-12 lg:col-span-7">
+                <figure className="relative border border-rule bg-background overflow-hidden">
+                  <span className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />
+                  <span className="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-olive z-10 pointer-events-none" />
+                  <span className="absolute bottom-3 left-3 w-2.5 h-2.5 border-b border-l border-olive z-10 pointer-events-none" />
+                  <span className="absolute bottom-3 right-3 w-2.5 h-2.5 border-b border-r border-olive z-10 pointer-events-none" />
+                  <iframe
+                    title="Ubicación de la oficina ADAF en Nueva Tijuana"
+                    src={NOSOTROS_MAPS_EMBED}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                    className="block w-full aspect-[4/3] md:aspect-[3/2] border-0 grayscale-[0.15] contrast-[0.95]"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* V , CTA final navy */}
         <section className="bg-navy text-background relative overflow-hidden">
           <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-olive/60" />
           <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
@@ -230,7 +323,7 @@ export default function NosotrosPage() {
 
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-20">
             <div className="flex items-baseline gap-4 mb-8 justify-center">
-              <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">IV</span>
+              <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">V</span>
               <span className="w-[80px] h-[1px] bg-background/30" />
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
                 Atención

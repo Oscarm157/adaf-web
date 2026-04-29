@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const areas = [
   { href: "/servicios/defensa-aduanera", label: "Defensa aduanera" },
@@ -25,14 +26,15 @@ export function Footer() {
         <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12">
           {/* Brand */}
           <div className="col-span-12 md:col-span-4">
-            <Link href="/" className="flex items-baseline gap-3">
-              <span className="font-serif text-[28px] font-bold text-navy tracking-[-0.012em]">
-                ADAF
-              </span>
+            <Link href="/" className="inline-flex items-center" aria-label="ADAF · Asesoría y Defensa Aduanera Fiscal — inicio">
+              <Image
+                src="/logo-adaf.png"
+                alt="ADAF · Asesoría y Defensa Aduanera Fiscal"
+                width={500}
+                height={500}
+                className="h-14 w-auto select-none"
+              />
             </Link>
-            <p className="font-serif italic text-[14px] text-muted mt-3">
-              Asesoría y Defensa Aduanera Fiscal
-            </p>
 
             <div className="mt-10 space-y-4 text-[14px] text-foreground/80 leading-[1.55]">
               <div>

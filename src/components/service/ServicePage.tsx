@@ -204,40 +204,6 @@ export function ServicePage({ data }: { data: ServiceData }) {
         </div>
       </section>
 
-      {/* Editorial breather — between IV (Documentación) and V (Resultado) */}
-      {data.editorialSecondary && (
-        <section className="bg-background pt-16 pb-4">
-          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <div className="grid grid-cols-12 gap-y-8 gap-x-6 md:gap-x-12 lg:gap-x-16 items-center">
-              <div className="col-span-12 md:col-span-5 lg:col-span-5">
-                <div className="flex items-baseline gap-3 mb-5">
-                  <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
-                    {data.editorialSecondary.numeral}
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                    Detalle del procedimiento
-                  </span>
-                </div>
-                <p className="font-serif italic text-[20px] md:text-[22px] leading-[1.35] text-navy/85 tracking-[-0.005em] max-w-[380px]">
-                  {data.editorialSecondary.title}
-                </p>
-              </div>
-              <div className="col-span-12 md:col-span-7 lg:col-span-7">
-                <EditorialBand
-                  numeral={data.editorialSecondary.numeral}
-                  title={data.editorialSecondary.title}
-                  tone={data.editorialSecondary.tone}
-                  aspect="4/3"
-                  fullBleed={false}
-                  src={data.editorialSecondary.src}
-                  alt={data.editorialSecondary.alt}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* V — Resultado esperado */}
       <section className="bg-background pt-20 pb-20">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
