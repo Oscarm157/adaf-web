@@ -7,7 +7,7 @@ import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
 import { CountUp } from "@/components/motion/CountUp";
-import { CoverageMap } from "@/components/visual/CoverageMap";
+import Image from "next/image";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
@@ -191,7 +191,29 @@ export default function ResultadosPage() {
 
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start border-t border-foreground/15 pt-12">
               <div className="col-span-12 lg:col-span-7 lg:pr-6">
-                <CoverageMap />
+                <figure className="relative w-full max-w-[560px] mx-auto lg:mx-0 aspect-[3/4] overflow-hidden border border-rule bg-background">
+                  <Image
+                    src="/editorial/editorial-bc-mapa-frontera.png"
+                    alt="Mapa minimalista de la frontera norte de Baja California, con las plazas de Tijuana, Tecate, Rosarito y Mexicali"
+                    fill
+                    sizes="(min-width: 1024px) 560px, (min-width: 768px) 60vw, 100vw"
+                    className="object-contain p-4 md:p-6"
+                  />
+                </figure>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-6 max-w-[560px] mx-auto lg:mx-0">
+                  <div className="flex items-center gap-3 text-[12px]">
+                    <span className="w-2 h-2 bg-burgundy rounded-full" />
+                    <span className="text-foreground/85">Base de operación</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-[12px]">
+                    <span className="w-2 h-2 bg-olive rounded-full" />
+                    <span className="text-foreground/85">Plazas atendidas</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-[12px]">
+                    <span className="w-3 h-[1px] bg-olive" />
+                    <span className="text-foreground/85">Frontera norte</span>
+                  </div>
+                </div>
               </div>
               <div className="col-span-12 lg:col-span-5 space-y-8">
                 {cobertura.map((c) => (

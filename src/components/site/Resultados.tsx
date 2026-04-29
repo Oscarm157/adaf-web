@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ChapterMark } from "./ChapterMark";
 import { CountUp } from "@/components/motion/CountUp";
 
@@ -22,13 +21,13 @@ const stats: {
   },
   {
     numero: "BC",
-    label: "Jurisdicción procesal",
-    note: "Estatal y federal",
+    label: "Cobertura procesal estatal y federal",
+    note: "Tijuana · Tecate · Rosarito",
   },
   {
-    numero: "MX·US",
-    label: "Frontera norte como base",
-    note: "Tijuana · Tecate · Rosarito · Mexicali",
+    numero: "1:1",
+    label: "Por abogado responsable, cada caso",
+    note: "De inicio a fin del procedimiento",
   },
 ];
 
@@ -91,42 +90,6 @@ export function Resultados() {
               </p>
             </div>
           ))}
-        </div>
-
-        {/* Cobertura · spread con mapa */}
-        <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 lg:gap-x-16 mt-20 items-center">
-          <div className="col-span-12 md:col-span-7 lg:col-span-7">
-            <div className="flex items-baseline gap-3 mb-5">
-              <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
-                IV·b
-              </span>
-              <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                Cobertura geográfica
-              </span>
-            </div>
-            <h3 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em] max-w-[480px]">
-              Frontera norte como base, alcance estatal y federal.
-            </h3>
-            <p className="text-[15px] leading-[1.65] text-foreground/80 mt-6 max-w-[460px]">
-              Atendemos casos físicamente desde Tijuana, Tecate, Rosarito y
-              Mexicali, con representación procesal estatal en Baja California
-              y federal ante autoridades y tribunales en todo el país.
-            </p>
-            <p className="font-serif italic text-[12px] text-olive mt-5">
-              MX · US · Frontera norte de Baja California
-            </p>
-          </div>
-          <div className="col-span-12 md:col-span-5 lg:col-span-4 lg:col-start-9">
-            <figure className="relative w-full aspect-[3/4] overflow-hidden border border-rule bg-background-warm">
-              <Image
-                src="/editorial/editorial-bc-mapa-frontera.png"
-                alt="Mapa minimalista de la frontera norte de Baja California, con las plazas de Tijuana, Tecate, Rosarito y Mexicali"
-                fill
-                sizes="(min-width: 1024px) 380px, (min-width: 768px) 40vw, 100vw"
-                className="object-cover"
-              />
-            </figure>
-          </div>
         </div>
 
         {/* Authorities ledger */}
