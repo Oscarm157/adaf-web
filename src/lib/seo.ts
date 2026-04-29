@@ -38,7 +38,7 @@ export const legalServiceJsonLd = {
   telephone: siteConfig.phone,
   email: `mailto:${siteConfig.email}`,
   image: `${siteUrl}/opengraph-image`,
-  logo: `${siteUrl}/logo-adaf.jpg`,
+  logo: `${siteUrl}/logo-adaf.png`,
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",

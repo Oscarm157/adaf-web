@@ -44,7 +44,7 @@ export function Header() {
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 h-[72px] md:h-[84px] flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 leading-none" aria-label="ADAF · Asesoría y Defensa Aduanera Fiscal — inicio">
             <Image
-              src="/logo-adaf.jpg"
+              src="/logo-adaf.png"
               alt="ADAF"
               width={500}
               height={500}
@@ -134,7 +134,7 @@ export function Header() {
             >
               <div className="flex items-center justify-between px-6 h-[72px] border-b border-rule">
                 <Image
-                  src="/logo-adaf.jpg"
+                  src="/logo-adaf.png"
                   alt="ADAF"
                   width={500}
                   height={500}
