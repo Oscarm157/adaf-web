@@ -54,7 +54,7 @@ export function ContactForm() {
           Mensaje recibido
         </p>
         <h3 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-semibold text-navy tracking-[-0.008em]">
-          Te respondemos en horario hábil.
+          Te respondemos dentro de las próximas horas.
         </h3>
         <p className="text-[15px] leading-[1.6] text-foreground/80 mt-4">
           Revisaremos los datos de tu asunto y te contactaremos por la vía que

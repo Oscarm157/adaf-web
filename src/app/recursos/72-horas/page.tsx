@@ -156,7 +156,7 @@ export default function Recurso72HorasPage() {
               </h2>
               <p className="text-[17px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
                 La guía es un mapa general; cada expediente requiere
-                lectura propia. Te respondemos en horario hábil con una
+                lectura propia. Te respondemos dentro de las próximas horas con una
                 valoración inicial sin costo.
               </p>
 

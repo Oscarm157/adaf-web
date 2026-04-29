@@ -54,7 +54,7 @@ export default function ContactoPage() {
           numeral="IV"
           label="Contacto"
           h1="Escríbenos los detalles de tu asunto."
-          lede="Te respondemos en horario hábil con una valoración inicial sin costo. Te decimos qué tipo de procedimiento es, cuántos días hay para actuar y qué información necesitamos para empezar."
+          lede="Te respondemos dentro de las próximas horas con una valoración inicial sin costo. Te decimos qué tipo de procedimiento es, cuántos días hay para actuar y qué información necesitamos para empezar."
         />
 
         {/* 0 — Acceso rápido */}
@@ -117,7 +117,7 @@ export default function ContactoPage() {
                   Escríbenos los datos de tu caso.
                 </h2>
                 <p className="text-[14.5px] leading-[1.6] text-muted mb-8 max-w-[420px]">
-                  Recibimos el mensaje en horario hábil y respondemos por la
+                  Recibimos el mensaje dentro de las próximas horas y respondemos por la
                   vía que prefieras.
                 </p>
 

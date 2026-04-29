@@ -23,7 +23,7 @@ export function CTAFinal() {
             Cuéntanos tu caso.
           </h2>
           <p className="text-[17px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
-            Te respondemos en horario hábil con una valoración inicial sin
+            Te respondemos dentro de las próximas horas con una valoración inicial sin
             costo y los plazos legales que están corriendo en tu asunto.
           </p>
 

@@ -40,7 +40,7 @@ const grupoDespacho: FAQ[] = [
   },
   {
     q: "¿Atienden de manera presencial o virtual?",
-    a: "Ambas modalidades. Recibimos en la oficina de Nueva Tijuana en horario hábil y también atendemos por videollamada y WhatsApp cuando el cliente está fuera de la ciudad o necesita coordinar con sus contadores u otros asesores.",
+    a: "Ambas modalidades. Recibimos en la oficina de Nueva Tijuana dentro de las próximas horas y también atendemos por videollamada y WhatsApp cuando el cliente está fuera de la ciudad o necesita coordinar con sus contadores u otros asesores.",
   },
 ];
 
@@ -276,8 +276,8 @@ export default function FaqPage() {
                 ¿Tu pregunta no está aquí?
               </h2>
               <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
-                Escríbenos los detalles de tu asunto. Te respondemos en
-                horario hábil con una valoración inicial sin costo.
+                Escríbenos los detalles de tu asunto. Te respondemos
+                dentro de las próximas horas con una valoración inicial sin costo.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4 mt-9">
                 {CALENDLY_URL && (
