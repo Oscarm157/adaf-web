@@ -2,6 +2,7 @@
 
 import { motion, useInView, useReducedMotion } from "motion/react";
 import { useRef } from "react";
+import { BC_PATH } from "./bcPath";
 
 type Anchor = "start" | "middle" | "end";
 
@@ -16,16 +17,16 @@ type Loc = {
 };
 
 const locations: Loc[] = [
-  // Tijuana — base operativa, esquina NO
-  { cx: 105, cy: 70, label: "Tijuana", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
-  // Tecate — sobre la frontera, mid
-  { cx: 175, cy: 60, label: "Tecate", type: "primary", anchor: "middle", labelDx: 0, labelDy: -10 },
-  // Rosarito — sur de Tijuana, costa pacífico
-  { cx: 95, cy: 110, label: "Rosarito", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
-  // Mexicali — frontera, extremo este
-  { cx: 295, cy: 70, label: "Mexicali", type: "secondary", anchor: "start", labelDx: 10, labelDy: 4 },
+  // Tijuana — esquina NO, sobre la frontera
+  { cx: 112, cy: 78, label: "Tijuana", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
+  // Tecate — frontera, entre Tijuana y Mexicali (label debajo para no chocar con la línea)
+  { cx: 182, cy: 72, label: "Tecate", type: "primary", anchor: "middle", labelDx: 0, labelDy: 16 },
+  // Rosarito — costa pacífico, sur de Tijuana
+  { cx: 108, cy: 102, label: "Rosarito", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
+  // Mexicali — frontera, extremo NE
+  { cx: 228, cy: 76, label: "Mexicali", type: "secondary", anchor: "start", labelDx: 10, labelDy: 4 },
   // Ensenada — pacífico, sur
-  { cx: 110, cy: 195, label: "Ensenada", type: "secondary", anchor: "end", labelDx: -10, labelDy: 4 },
+  { cx: 150, cy: 150, label: "Ensenada", type: "secondary", anchor: "end", labelDx: -10, labelDy: 4 },
 ];
 
 type Variant = "light" | "dark";
@@ -91,10 +92,10 @@ export function CoverageMap({ variant = "light" }: { variant?: Variant }) {
 
         {/* Frontera Norte — línea + label */}
         <motion.line
-          x1="20"
-          y1="42"
+          x1="70"
+          y1="57"
           x2="320"
-          y2="42"
+          y2="57"
           stroke={c.frontera}
           strokeWidth="0.8"
           strokeDasharray="3 4"
@@ -103,8 +104,8 @@ export function CoverageMap({ variant = "light" }: { variant?: Variant }) {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         />
         <text
-          x="20"
-          y="32"
+          x="70"
+          y="47"
           fontSize="8.5"
           fill={c.fronteraText}
           letterSpacing="1.6"
@@ -114,41 +115,21 @@ export function CoverageMap({ variant = "light" }: { variant?: Variant }) {
           FRONTERA · MÉXICO – ESTADOS UNIDOS
         </text>
 
-        {/* Silueta Baja California (norte) — simplificada, suficiente espacio para labels */}
-        <motion.path
-          d="
-            M 80 42
-            L 320 42
-            L 320 88
-            L 280 110
-            L 240 130
-            L 215 165
-            L 195 205
-            L 165 245
-            L 140 275
-            L 120 295
-            L 100 270
-            L 90 235
-            L 75 195
-            L 70 155
-            L 70 115
-            L 75 80
-            Z
-          "
-          fill={c.siluetaFill}
-          stroke={c.siluetaStroke}
-          strokeWidth="1"
-          initial={reduce ? false : { pathLength: 0, opacity: 0 }}
-          animate={
-            animate
-              ? { pathLength: 1, opacity: 1 }
-              : { pathLength: 0, opacity: 0 }
-          }
-          transition={{
-            pathLength: { duration: 1.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 },
-            opacity: { duration: 0.4, delay: 0.2 },
-          }}
-        />
+        {/* Silueta real de Baja California (Norte) — simplemaps mx.svg */}
+        <motion.g
+          transform="translate(74 59) scale(1.45)"
+          initial={reduce ? false : { opacity: 0 }}
+          animate={animate ? { opacity: 1 } : { opacity: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+        >
+          <path
+            d={BC_PATH}
+            fill={c.siluetaFill}
+            stroke={c.siluetaStroke}
+            strokeWidth={0.7}
+            strokeLinejoin="round"
+          />
+        </motion.g>
 
         {/* Locations */}
         {locations.map((loc, i) => {

@@ -43,3 +43,6 @@ next-env.d.ts
 # editorial pipeline — contact sheet (regenerable) y tests
 public/editorial/index.html
 public/editorial/test-*.png
+
+# Capturas de referencia, no assets
+public/FireShot*

@@ -3,8 +3,17 @@
 import { motion, useInView, useReducedMotion } from "motion/react";
 import { useRef } from "react";
 
-// Marca decorativa estilo sello editorial — sin texto inventado.
-// Líneas concéntricas, número romano y texto institucional verificable.
+// Emblema de marca ADAF: clúster de tres rombos (olivo, azul, vino) del logo
+// real + wordmark serif. Reemplaza el sello tipo notario (cliché). Datos
+// institucionales verificables, sin texto inventado.
+
+const diamonds = [
+  { cx: 134, cy: 58, fill: "#9B8F2E" }, // olivo, arriba-derecha
+  { cx: 104, cy: 80, fill: "#1B3A5B" }, // azul, izquierda
+  { cx: 124, cy: 104, fill: "#7A1F38" }, // vino, abajo
+];
+
+const S = 30; // lado del rombo
 
 export function SealMark({
   size = 220,
@@ -27,150 +36,74 @@ export function SealMark({
       className={className}
       aria-hidden="true"
     >
-      <defs>
-        <path
-          id="seal-circle-top"
-          d="M 30 120 A 90 90 0 0 1 210 120"
-          fill="none"
+      {/* Clúster de tres rombos */}
+      {diamonds.map((d, i) => (
+        <motion.rect
+          key={d.fill}
+          x={d.cx - S / 2}
+          y={d.cy - S / 2}
+          width={S}
+          height={S}
+          rx={2.5}
+          fill={d.fill}
+          transform={`rotate(45 ${d.cx} ${d.cy})`}
+          initial={reduce ? false : { opacity: 0, scale: 0.6 }}
+          animate={animate ? { opacity: 1, scale: 1 } : {}}
+          transition={{
+            duration: 0.5,
+            delay: 0.1 + i * 0.12,
+            type: "spring",
+            stiffness: 240,
+            damping: 20,
+          }}
+          style={{ transformBox: "fill-box", transformOrigin: "center" }}
         />
-        <path
-          id="seal-circle-bottom"
-          d="M 30 120 A 90 90 0 0 0 210 120"
-          fill="none"
-        />
-      </defs>
+      ))}
 
-      {/* Outer ring */}
-      <motion.circle
-        cx="120"
-        cy="120"
-        r="110"
-        fill="none"
-        stroke="#0F2A47"
-        strokeWidth="0.8"
-        initial={reduce ? false : { pathLength: 0, opacity: 0 }}
-        animate={animate ? { pathLength: 1, opacity: 1 } : {}}
-        transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-      />
-
-      {/* Inner ring */}
-      <motion.circle
-        cx="120"
-        cy="120"
-        r="92"
-        fill="none"
-        stroke="#0F2A47"
-        strokeWidth="0.5"
-        initial={reduce ? false : { pathLength: 0, opacity: 0 }}
-        animate={animate ? { pathLength: 1, opacity: 1 } : {}}
-        transition={{ duration: 1.4, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-      />
-
-      {/* Top arc text */}
-      <motion.text
-        fontSize="9"
-        letterSpacing="3"
-        fill="#5A5853"
-        fontFamily="Inter, system-ui"
-        fontWeight="500"
-        initial={reduce ? false : { opacity: 0 }}
-        animate={animate ? { opacity: 1 } : {}}
-        transition={{ duration: 0.6, delay: 0.8 }}
-      >
-        <textPath href="#seal-circle-top" startOffset="50%" textAnchor="middle">
-          ASESORÍA Y DEFENSA ADUANERA FISCAL
-        </textPath>
-      </motion.text>
-
-      {/* Bottom arc text */}
-      <motion.text
-        fontSize="9"
-        letterSpacing="3"
-        fill="#5A5853"
-        fontFamily="Inter, system-ui"
-        fontWeight="500"
-        initial={reduce ? false : { opacity: 0 }}
-        animate={animate ? { opacity: 1 } : {}}
-        transition={{ duration: 0.6, delay: 1.0 }}
-      >
-        <textPath
-          href="#seal-circle-bottom"
-          startOffset="50%"
-          textAnchor="middle"
-        >
-          TIJUANA · BAJA CALIFORNIA · MÉXICO
-        </textPath>
-      </motion.text>
-
-      {/* Center: serif ADAF */}
+      {/* Wordmark */}
       <motion.g
-        initial={reduce ? false : { opacity: 0, scale: 0.85 }}
-        animate={animate ? { opacity: 1, scale: 1 } : {}}
-        transition={{ duration: 0.6, delay: 0.5, type: "spring", stiffness: 220, damping: 22 }}
-        style={{ transformOrigin: "120px 120px" }}
+        initial={reduce ? false : { opacity: 0, y: 8 }}
+        animate={animate ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
       >
         <text
           x="120"
-          y="115"
-          fontSize="40"
+          y="160"
+          fontSize="34"
           fill="#0F2A47"
           fontFamily="'Source Serif 4', Georgia, serif"
           fontWeight="700"
           textAnchor="middle"
-          letterSpacing="3"
+          letterSpacing="5"
         >
           ADAF
         </text>
-        <line
-          x1="86"
-          y1="128"
-          x2="154"
-          y2="128"
-          stroke="#9B8F2E"
-          strokeWidth="0.8"
-        />
+        <line x1="92" y1="176" x2="148" y2="176" stroke="#9B8F2E" strokeWidth="0.8" />
         <text
           x="120"
-          y="148"
-          fontSize="11"
+          y="194"
+          fontSize="12"
           fill="#7A1F38"
           fontFamily="'Source Serif 4', Georgia, serif"
           fontWeight="500"
           fontStyle="italic"
           textAnchor="middle"
         >
-          25 años
+          veinticinco años
         </text>
         <text
           x="120"
-          y="166"
+          y="212"
           fontSize="8"
           fill="#5A5853"
           fontFamily="Inter, system-ui"
           fontWeight="500"
           textAnchor="middle"
-          letterSpacing="2"
+          letterSpacing="2.4"
         >
           DEFENSA · FRONTERA NORTE
         </text>
       </motion.g>
-
-      {/* Decorative cardinal marks */}
-      {[0, 90, 180, 270].map((angle, i) => (
-        <motion.g
-          key={angle}
-          initial={reduce ? false : { opacity: 0 }}
-          animate={animate ? { opacity: 1 } : {}}
-          transition={{ duration: 0.4, delay: 1.2 + i * 0.08 }}
-        >
-          <circle
-            cx={120 + Math.cos((angle * Math.PI) / 180) * 101}
-            cy={120 + Math.sin((angle * Math.PI) / 180) * 101}
-            r="1.4"
-            fill="#9B8F2E"
-          />
-        </motion.g>
-      ))}
     </svg>
   );
 }
