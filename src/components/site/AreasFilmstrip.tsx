@@ -7,17 +7,13 @@ import { ChapterMark } from "./ChapterMark";
 import { useLayoutEffectIsomorphic } from "@/components/motion/useLayoutEffectIsomorphic";
 import { gsap, registerGsap } from "@/lib/gsap";
 
+// Las 5 materias más frecuentes en la frontera; el resto vive en /servicios.
 const areas = [
   { n: "I", slug: "defensa-aduanera", label: "Defensa aduanera", pregunta: "Embargo precautorio y PAMA en aduana", body: "Procedimiento Administrativo en Materia Aduanera, devolución de mercancía y multas de comercio exterior." },
   { n: "II", slug: "defensa-fiscal-sat", label: "Defensa fiscal SAT", pregunta: "Créditos fiscales y auditorías del SAT", body: "Visitas domiciliarias, revisiones de gabinete, créditos fiscales y restricción de sellos digitales." },
-  { n: "III", slug: "defensa-imss-infonavit", label: "Defensa IMSS / INFONAVIT", pregunta: "Cédulas de liquidación y capitales constitutivos", body: "Multas patronales, diferencias de cuotas obrero-patronales y procedimientos de inconformidad." },
-  { n: "IV", slug: "defensa-sanitaria", label: "Defensa sanitaria · COFEPRIS / COEPRIS", pregunta: "Sanciones sanitarias y aseguramiento de producto", body: "Multas, suspensiones de actividad y aseguramiento ante COFEPRIS (federal) y COEPRIS (estatal)." },
-  { n: "V", slug: "defensa-sict-transporte", label: "Defensa SICT", pregunta: "Multas en autotransporte federal", body: "Boletas de infracción, retención de unidades y cancelación de placas o licencias federales." },
-  { n: "VI", slug: "amparos-fiscales", label: "Amparos fiscales", pregunta: "Amparo en materia fiscal y administrativa", body: "Amparo indirecto y directo contra leyes y resoluciones inconstitucionales." },
-  { n: "VII", slug: "multas-comercio-exterior", label: "Comercio exterior", pregunta: "Multas por clasificación, valor y NOMs", body: "Sanciones por clasificación arancelaria, valor en aduana y regulaciones no arancelarias." },
-  { n: "VIII", slug: "recurso-revocacion-juicio-nulidad", label: "Recurso · Juicio de nulidad", pregunta: "Impugnación de resoluciones administrativas", body: "Vía administrativa y jurisdiccional ante el Tribunal Federal de Justicia Administrativa." },
-  { n: "IX", slug: "defensa-penal-fiscal", label: "Defensa penal-fiscal", pregunta: "Investigación por delitos fiscales", body: "Defraudación fiscal, contrabando equiparado y operaciones inexistentes (artículo 69-B)." },
-  { n: "X", slug: "asesoria-preventiva-compliance", label: "Asesoría preventiva", pregunta: "Compliance fiscal y aduanero", body: "Diagnóstico de riesgos, regularización espontánea y programas de cumplimiento." },
+  { n: "III", slug: "multas-comercio-exterior", label: "Comercio exterior", pregunta: "Multas por clasificación, valor y NOMs", body: "Sanciones por clasificación arancelaria, valor en aduana y regulaciones no arancelarias." },
+  { n: "IV", slug: "defensa-imss-infonavit", label: "Defensa IMSS / INFONAVIT", pregunta: "Cédulas de liquidación y capitales constitutivos", body: "Multas patronales, diferencias de cuotas obrero-patronales y procedimientos de inconformidad." },
+  { n: "V", slug: "amparos-fiscales", label: "Amparos fiscales", pregunta: "Amparo en materia fiscal y administrativa", body: "Amparo indirecto y directo contra leyes y resoluciones inconstitucionales." },
 ];
 
 export function AreasFilmstrip() {
@@ -68,10 +64,10 @@ export function AreasFilmstrip() {
             {/* Panel intro */}
             <div className="shrink-0 w-[clamp(320px,32vw,460px)] flex flex-col justify-center pr-10">
               <ChapterMark numeral="II" label="Áreas de práctica" />
-              <h2 className="display-md text-navy mt-8">Diez áreas de defensa especializada.</h2>
+              <h2 className="display-md text-navy mt-8">Áreas de defensa especializada.</h2>
               <p className="text-[15px] leading-[1.65] text-muted mt-6 max-w-[380px]">
-                Organizamos la práctica por tipo de procedimiento y autoridad competente.
-                Desliza para recorrerlas.
+                Las materias más frecuentes en la frontera. Desliza para verlas;
+                el índice completo está en servicios.
               </p>
               <span className="mt-8 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-burgundy">
                 Desliza
@@ -111,9 +107,9 @@ export function AreasFilmstrip() {
               href="/servicios"
               className="group shrink-0 w-[clamp(280px,24vw,360px)] flex flex-col justify-center bg-navy text-cream p-9 mr-6 md:mr-10 lg:mr-12"
             >
-              <p className="display-md text-cream">Todas las materias.</p>
+              <p className="display-md text-cream">Las 10 materias.</p>
               <span className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.16em] font-medium text-[#C9B85A] mt-6 group-hover:gap-3 transition-all duration-300">
-                Ir al índice completo
+                Ver todas
                 <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
               </span>
             </Link>
@@ -126,13 +122,13 @@ export function AreasFilmstrip() {
           <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-14">
             <div className="col-span-12 lg:col-span-7">
               <h2 className="font-serif text-[28px] md:text-[36px] lg:text-[42px] leading-[1.1] font-semibold text-navy tracking-[-0.014em]">
-                Diez áreas de defensa especializada.
+                Áreas de defensa especializada.
               </h2>
             </div>
             <div className="col-span-12 lg:col-span-4 lg:col-start-9 lg:pt-2">
               <p className="text-[15px] leading-[1.65] text-muted max-w-[420px]">
-                Organizamos la práctica por tipo de procedimiento y autoridad competente.
-                Selecciona la materia que corresponde a tu asunto.
+                Las materias más frecuentes en la frontera. El índice completo, con las
+                diez, está en servicios.
               </p>
             </div>
           </div>
@@ -158,6 +154,13 @@ export function AreasFilmstrip() {
               </Link>
             ))}
           </div>
+          <Link
+            href="/servicios"
+            className="group mt-10 inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.16em] font-medium text-navy hover:text-burgundy transition-colors duration-200"
+          >
+            Ver las 10 materias
+            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
+          </Link>
         </div>
       )}
     </section>
