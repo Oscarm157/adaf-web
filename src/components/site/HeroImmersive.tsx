@@ -75,7 +75,7 @@ export function HeroImmersive() {
             </span>
           </div>
 
-          <h1 className="display-xl text-cream max-w-[16ch]">
+          <h1 className="display-xl font-normal text-cream max-w-[20ch]">
             {lines.map((line, i) => (
               <span key={line} className="block overflow-hidden">
                 <motion.span

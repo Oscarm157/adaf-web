@@ -1,7 +1,7 @@
 import { Masthead } from "@/components/site/Masthead";
 import { Header } from "@/components/site/Header";
 import { HeroImmersive } from "@/components/site/HeroImmersive";
-import { StatementOpening } from "@/components/site/StatementOpening";
+import { TwoSegments } from "@/components/site/TwoSegments";
 import { AreasFilmstrip } from "@/components/site/AreasFilmstrip";
 import { CoverageBand } from "@/components/site/CoverageBand";
 import { PlazosSection } from "@/components/site/PlazosSection";
@@ -22,7 +22,7 @@ export default function Home() {
       <main>
         {/* Ritmo de superficies: D → L → W → D → L → D → W → L → W → L → D */}
         <HeroImmersive />        {/* I · dark */}
-        <StatementOpening />     {/* — · light */}
+        <TwoSegments />          {/* — · light · 2 segmentos (urgencia / estratégico) */}
         <AreasFilmstrip />       {/* II · warm */}
         <CoverageBand />         {/* III · dark */}
         <PlazosSection />        {/* IV · light */}
