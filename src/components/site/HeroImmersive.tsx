@@ -52,8 +52,8 @@ export function HeroImmersive() {
         className="absolute inset-x-0 -top-[8%] h-[116%] will-change-transform"
       >
         <Image
-          src="/editorial/editorial-i-frontera-customs.png"
-          alt="Filas de tráileres bajo el cobertizo de aduanas en la frontera al atardecer"
+          src="/editorial/hero-frontera-amplia.png"
+          alt="Vista lejana de la franja fronteriza al atardecer, con filas de tráileres y aduanas al fondo"
           fill
           priority
           sizes="100vw"

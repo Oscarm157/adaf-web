@@ -326,6 +326,18 @@
       "prompt": "Cyanotype-process print in deep navy ink tone (#0F2A47) on warm cream-prepared paper (#FAFAF7), 21:9 ultra-wide. Subject: aerial view of a US-Mexico border cargo crossing — a row of freight trucks queued at inspection booths, concrete infrastructure, distant hills. Cyanotype aesthetic: subject rendered as a single dense navy tone against the cream paper, with the soft mid-tones characteristic of contact-printed cyanotypes, slight uneven chemistry at the paper edges (small lighter mottles, a faint border irregularity where the emulsion was brushed). The image reads as if it were a contact print exposed onto prepared paper — NOT a digital photograph, NOT a drawing, NOT an engraving, NOT line work. Style references: Anna Atkins botanical cyanotypes, contemporary architectural archive cyanotypes, museum-archival single-tone print. Composition: generous negative space at top, low horizon, calm. No people, no faces, no readable signage or text, no logos, no numbers, no color other than the single navy tone, no gradients beyond the natural cyanotype mid-tones, no 3D render.",
       "lastGeneratedAt": "2026-04-27T08:13:22.277Z",
       "lastPredictionId": "51gmy0zdhxrmt0cxsqzsc0xc54"
+    },
+    {
+      "id": "hero-frontera-amplia",
+      "title": "Hero · Frontera vista amplia (sin texto)",
+      "subject": "Vista lejana y atmosférica de la franja fronteriza Tijuana al atardecer",
+      "tone": "navy",
+      "aspect": "16:9",
+      "filename": "hero-frontera-amplia.png",
+      "status": "done",
+      "prompt": "Wide cinematic horizontal photograph, distant elevated dusk view of the Mexico-US border landscape near Tijuana: the long international border line and far-off rows of cargo trucks and customs lanes seen small in the distance, low rolling brown hills on the horizon, hazy golden-and-slate atmospheric light, deep soft shadows, a large calm sky filling the upper half. Muted navy, slate-blue and warm amber palette. Sober, editorial, atmospheric, cinematic aerial depth. Generous empty sky and negative space in the upper area for text overlay. No readable text, no signage, no billboards, no logos, no lettering, no large foreground objects, no people in the foreground.",
+      "lastGeneratedAt": "2026-06-26T22:18:13.668Z",
+      "lastPredictionId": "cepnb6zxs9rmt0cz0r1bbnjakr"
     }
   ]
 }
