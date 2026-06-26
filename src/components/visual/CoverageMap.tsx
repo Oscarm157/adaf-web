@@ -28,7 +28,50 @@ const locations: Loc[] = [
   { cx: 110, cy: 195, label: "Ensenada", type: "secondary", anchor: "end", labelDx: -10, labelDy: 4 },
 ];
 
-export function CoverageMap() {
+type Variant = "light" | "dark";
+
+type Palette = {
+  frontera: string;
+  fronteraText: string;
+  siluetaFill: string;
+  siluetaStroke: string;
+  primary: string;
+  secondary: string;
+  label: string;
+  labelSub: string;
+  divider: string;
+  legendText: string;
+};
+
+const palettes: Record<Variant, Palette> = {
+  light: {
+    frontera: "#9B8F2E",
+    fronteraText: "#5A5853",
+    siluetaFill: "#F1EFEA",
+    siluetaStroke: "#0F2A47",
+    primary: "#7A1F38",
+    secondary: "#9B8F2E",
+    label: "#0F2A47",
+    labelSub: "#5A5853",
+    divider: "#5A5853",
+    legendText: "rgba(17,20,24,0.85)",
+  },
+  dark: {
+    frontera: "#C9B85A",
+    fronteraText: "rgba(244,241,234,0.6)",
+    siluetaFill: "rgba(244,241,234,0.05)",
+    siluetaStroke: "rgba(244,241,234,0.5)",
+    primary: "#C9506B",
+    secondary: "#C9B85A",
+    label: "#F4F1EA",
+    labelSub: "rgba(244,241,234,0.72)",
+    divider: "rgba(244,241,234,0.22)",
+    legendText: "rgba(244,241,234,0.8)",
+  },
+};
+
+export function CoverageMap({ variant = "light" }: { variant?: Variant }) {
+  const c = palettes[variant];
   const ref = useRef<HTMLDivElement | null>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const reduce = useReducedMotion();
@@ -37,7 +80,7 @@ export function CoverageMap() {
   return (
     <div ref={ref} className="relative w-full">
       <svg
-        viewBox="0 0 480 360"
+        viewBox="0 0 545 360"
         className="w-full h-auto"
         aria-labelledby="coverageTitle"
         role="img"
@@ -52,7 +95,7 @@ export function CoverageMap() {
           y1="42"
           x2="320"
           y2="42"
-          stroke="#9B8F2E"
+          stroke={c.frontera}
           strokeWidth="0.8"
           strokeDasharray="3 4"
           initial={reduce ? false : { pathLength: 0 }}
@@ -63,7 +106,7 @@ export function CoverageMap() {
           x="20"
           y="32"
           fontSize="8.5"
-          fill="#5A5853"
+          fill={c.fronteraText}
           letterSpacing="1.6"
           fontFamily="Inter, system-ui"
           fontWeight="500"
@@ -92,8 +135,8 @@ export function CoverageMap() {
             L 75 80
             Z
           "
-          fill="#F1EFEA"
-          stroke="#0F2A47"
+          fill={c.siluetaFill}
+          stroke={c.siluetaStroke}
           strokeWidth="1"
           initial={reduce ? false : { pathLength: 0, opacity: 0 }}
           animate={
@@ -110,7 +153,7 @@ export function CoverageMap() {
         {/* Locations */}
         {locations.map((loc, i) => {
           const r = loc.type === "primary" ? 4 : 3;
-          const fill = loc.type === "primary" ? "#7A1F38" : "#9B8F2E";
+          const fill = loc.type === "primary" ? c.primary : c.secondary;
           return (
             <motion.g
               key={loc.label}
@@ -143,7 +186,7 @@ export function CoverageMap() {
                 x={loc.cx + loc.labelDx}
                 y={loc.cy + loc.labelDy}
                 fontSize="11"
-                fill="#0F2A47"
+                fill={c.label}
                 textAnchor={loc.anchor}
                 fontFamily="'Source Serif 4', Georgia, serif"
                 fontWeight={loc.type === "primary" ? 600 : 400}
@@ -160,8 +203,8 @@ export function CoverageMap() {
           y1="60"
           x2="355"
           y2="290"
-          stroke="#5A5853"
-          strokeOpacity="0.18"
+          stroke={c.divider}
+          strokeOpacity="1"
           strokeWidth="0.8"
           initial={reduce ? false : { pathLength: 0 }}
           animate={animate ? { pathLength: 1 } : { pathLength: 0 }}
@@ -178,7 +221,7 @@ export function CoverageMap() {
             x="375"
             y="80"
             fontSize="8.5"
-            fill="#5A5853"
+            fill={c.labelSub}
             letterSpacing="1.6"
             fontFamily="Inter, system-ui"
             fontWeight="500"
@@ -189,7 +232,7 @@ export function CoverageMap() {
             x="375"
             y="94"
             fontSize="8.5"
-            fill="#5A5853"
+            fill={c.labelSub}
             letterSpacing="1.6"
             fontFamily="Inter, system-ui"
             fontWeight="500"
@@ -202,7 +245,7 @@ export function CoverageMap() {
             y1="108"
             x2="405"
             y2="108"
-            stroke="#9B8F2E"
+            stroke={c.frontera}
             strokeWidth="0.8"
           />
 
@@ -210,7 +253,7 @@ export function CoverageMap() {
             x="375"
             y="132"
             fontSize="13"
-            fill="#0F2A47"
+            fill={c.label}
             fontFamily="'Source Serif 4', Georgia, serif"
             fontWeight="600"
             fontStyle="italic"
@@ -221,7 +264,7 @@ export function CoverageMap() {
             x="375"
             y="150"
             fontSize="10.5"
-            fill="#0F2A47"
+            fill={c.label}
             opacity="0.75"
             fontFamily="'Source Serif 4', Georgia, serif"
           >
@@ -231,7 +274,7 @@ export function CoverageMap() {
             x="375"
             y="164"
             fontSize="10.5"
-            fill="#0F2A47"
+            fill={c.label}
             opacity="0.75"
             fontFamily="'Source Serif 4', Georgia, serif"
           >
@@ -242,7 +285,7 @@ export function CoverageMap() {
             x="375"
             y="194"
             fontSize="13"
-            fill="#0F2A47"
+            fill={c.label}
             fontFamily="'Source Serif 4', Georgia, serif"
             fontWeight="600"
             fontStyle="italic"
@@ -253,7 +296,7 @@ export function CoverageMap() {
             x="375"
             y="210"
             fontSize="10.5"
-            fill="#0F2A47"
+            fill={c.label}
             opacity="0.75"
             fontFamily="'Source Serif 4', Georgia, serif"
           >
@@ -264,7 +307,7 @@ export function CoverageMap() {
             x="375"
             y="240"
             fontSize="13"
-            fill="#0F2A47"
+            fill={c.label}
             fontFamily="'Source Serif 4', Georgia, serif"
             fontWeight="600"
             fontStyle="italic"
@@ -275,7 +318,7 @@ export function CoverageMap() {
             x="375"
             y="256"
             fontSize="10.5"
-            fill="#0F2A47"
+            fill={c.label}
             opacity="0.75"
             fontFamily="'Source Serif 4', Georgia, serif"
           >
@@ -285,7 +328,7 @@ export function CoverageMap() {
             x="375"
             y="270"
             fontSize="10.5"
-            fill="#0F2A47"
+            fill={c.label}
             opacity="0.75"
             fontFamily="'Source Serif 4', Georgia, serif"
           >
@@ -297,16 +340,16 @@ export function CoverageMap() {
       {/* Legend */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-6 mt-6 max-w-[560px]">
         <div className="flex items-center gap-3 text-[12px]">
-          <span className="w-2 h-2 bg-burgundy rounded-full" />
-          <span className="text-foreground/85">Base de operación</span>
+          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: c.primary }} />
+          <span style={{ color: c.legendText }}>Base de operación</span>
         </div>
         <div className="flex items-center gap-3 text-[12px]">
-          <span className="w-2 h-2 bg-olive rounded-full" />
-          <span className="text-foreground/85">Otras zonas BC</span>
+          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: c.secondary }} />
+          <span style={{ color: c.legendText }}>Otras zonas BC</span>
         </div>
         <div className="flex items-center gap-3 text-[12px]">
-          <span className="w-3 h-[1px] bg-olive" />
-          <span className="text-foreground/85">Frontera norte</span>
+          <span className="w-3 h-[1px]" style={{ backgroundColor: c.frontera }} />
+          <span style={{ color: c.legendText }}>Frontera norte</span>
         </div>
       </div>
     </div>
