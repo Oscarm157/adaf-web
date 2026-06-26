@@ -47,4 +47,14 @@ export type ServiceData = {
   metaDescription: string;
   editorial?: ServiceEditorial;
   editorialSecondary?: ServiceEditorial;
+  /** Foto ancha para el hero dark inmersivo. Si falta, se usa un fallback. */
+  heroImage?: { src: string; alt: string };
+  /** Banda dark cinematográfica de consecuencia. Copy lifteado de data aprobada. */
+  band?: {
+    image: string;
+    alt: string;
+    eyebrow: string;
+    lines: string[];
+    body?: string;
+  };
 };

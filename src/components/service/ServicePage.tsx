@@ -1,19 +1,28 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ChapterMark } from "@/components/site/ChapterMark";
-import { PageHero } from "@/components/page/PageHero";
+import { ImmersiveHero } from "@/components/page/ImmersiveHero";
+import { CinematicBand } from "@/components/site/CinematicBand";
+import { Reveal } from "@/components/motion/Reveal";
 import { ProcedureTimeline } from "@/components/visual/ProcedureTimeline";
-import { PullQuote } from "@/components/visual/PullQuote";
 import { EditorialBand } from "@/components/visual/EditorialBand";
 import { whatsappUrl } from "@/lib/whatsapp";
 import { CALENDLY_URL } from "@/lib/calendly";
 import type { ServiceData } from "./types";
 
+const HERO_FALLBACK = {
+  src: "/editorial/servicios-banner-consecuencia-dark.png",
+  alt: "Patio aduanal de noche bajo reflector",
+};
+
 export function ServicePage({ data }: { data: ServiceData }) {
   const waLink = whatsappUrl(`/servicios/${data.slug}`);
+  const hero = data.heroImage ?? HERO_FALLBACK;
   return (
     <>
-      <PageHero
+      <ImmersiveHero
+        image={hero.src}
+        alt={hero.alt}
         crumbs={[
           { label: "Inicio", href: "/" },
           { label: "Servicios", href: "/servicios" },
@@ -173,6 +182,17 @@ export function ServicePage({ data }: { data: ServiceData }) {
         </div>
       </section>
 
+      {/* Banda dark de consecuencia (solo si el servicio la define) */}
+      {data.band && (
+        <CinematicBand
+          image={data.band.image}
+          alt={data.band.alt}
+          eyebrow={data.band.eyebrow}
+          lines={data.band.lines}
+          body={data.band.body}
+        />
+      )}
+
       {/* IV — Documentos */}
       <section className="bg-background-warm pt-20 pb-20">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
@@ -208,14 +228,14 @@ export function ServicePage({ data }: { data: ServiceData }) {
       <section className="bg-background pt-20 pb-20">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
           <ChapterMark numeral="V" label="Expectativa realista" />
-          <div className="mt-10 max-w-[820px]">
+          <Reveal className="mt-10 max-w-[820px]">
             <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
               Resultado esperado.
             </h2>
             <p className="text-[18px] leading-[1.65] text-foreground/85 mt-7 max-w-[720px]">
               {data.resultado}
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 

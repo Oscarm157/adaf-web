@@ -338,6 +338,38 @@
       "prompt": "Wide cinematic horizontal photograph, distant elevated dusk view of the Mexico-US border landscape near Tijuana: the long international border line and far-off rows of cargo trucks and customs lanes seen small in the distance, low rolling brown hills on the horizon, hazy golden-and-slate atmospheric light, deep soft shadows, a large calm sky filling the upper half. Muted navy, slate-blue and warm amber palette. Sober, editorial, atmospheric, cinematic aerial depth. Generous empty sky and negative space in the upper area for text overlay. No readable text, no signage, no billboards, no logos, no lettering, no large foreground objects, no people in the foreground.",
       "lastGeneratedAt": "2026-06-26T22:18:13.668Z",
       "lastPredictionId": "cepnb6zxs9rmt0cz0r1bbnjakr"
+    },
+    {
+      "id": "nosotros-banner-despacho-dark",
+      "title": "Nosotros · Banda firma — despacho al anochecer (foto dark)",
+      "subject": "Interior de despacho jurídico en penumbra, lámpara cálida",
+      "tone": "burgundy",
+      "aspect": "21:9",
+      "filename": "nosotros-banner-despacho-dark.png",
+      "status": "done",
+      "input": {
+        "aspect_ratio": "21:9",
+        "output_format": "png"
+      },
+      "prompt": "Wide cinematic horizontal photograph, 21:9 ultra-wide, of the interior of a serious contemporary law office in the early evening. A long wall of Mexican legal code volumes with uniform dark spines lines one side, the spines clearly visible and catching soft light, not lost in black. Strong cool daylight pours through a tall window on the far side, casting a bright shaft across the polished stone floor and clearly lighting the walnut conference table, whose wood grain is visible. A warm brass desk lamp glows as a secondary warm accent on the table. Refined chiaroscuro but WELL EXPOSED, the whole room reads clearly with rich mid-tones, balanced warm-amber and cool-navy palette, long soft shadows, calm silent atmosphere. Keep one calmer darker zone in the upper area for text overlay. Fine film grain. Premium institutional editorial photography in the spirit of FT Weekend Magazine interiors. Sharp realistic detail. No people, no hands, no readable text on the books, no logos, no signage, no lettering anywhere.",
+      "lastGeneratedAt": "2026-06-26T23:37:10.408Z",
+      "lastPredictionId": "sfmsj9j51nrmt0cz0s5r650ejg"
+    },
+    {
+      "id": "servicios-banner-consecuencia-dark",
+      "title": "Servicios · Banda consecuencia — contenedor retenido de noche (foto dark)",
+      "subject": "Contenedor en patio aduanal bajo reflectores, de noche",
+      "tone": "olive",
+      "aspect": "21:9",
+      "filename": "servicios-banner-consecuencia-dark.png",
+      "status": "done",
+      "input": {
+        "aspect_ratio": "21:9",
+        "output_format": "png"
+      },
+      "prompt": "Wide cinematic horizontal photograph, 21:9 ultra-wide, of a single shipping container standing alone in a customs inspection yard at blue hour, just after sunset. The sky still holds soft residual indigo-and-slate light with a faint warm band low on the horizon, NOT pitch black. A tall floodlight adds a warm sodium key on the closed container doors while ambient dusk light fills the scene so the wet concrete, ground markings and the distant low Tijuana hills with scattered city lights are all clearly visible with rich mid-tones. Just one container, NOT a stack, NOT a pyramid. The container surface is completely blank, no codes, no numbers, no company names, no flags, no logos, no graffiti, no markings. Moody but well-exposed cinematic grade, balanced exposure with detail in the shadows, cool navy and slate tones with one warm highlight, slight industrial haze, fine film grain. Keep the upper sky band cleaner and a touch darker for text overlay. Sober, restrained, monolithic single-subject composition. Premium documentary editorial photography, 35mm, Mexican border industrial mood at dusk. No people, no vehicles, no readable signage, no text, no lettering anywhere.",
+      "lastGeneratedAt": "2026-06-26T23:36:40.803Z",
+      "lastPredictionId": "nn3hv5yfg1rmt0cz0s5avnpmp4"
     }
   ]
 }

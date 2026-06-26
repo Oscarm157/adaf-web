@@ -16,17 +16,20 @@ type Loc = {
   labelDy: number;
 };
 
+// Coordenadas ancladas a la geometría real del path (contorno con transform
+// translate(74 59) scale(1.45) aplicado): la costa del Pacífico arranca en
+// x≈126, no en x≈74. Cada punto se coloca dentro de la masa terrestre.
 const locations: Loc[] = [
-  // Tijuana — esquina NO, sobre la frontera
-  { cx: 112, cy: 78, label: "Tijuana", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
+  // Tijuana — esquina NO, costa ∩ frontera
+  { cx: 132, cy: 72, label: "Tijuana", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
   // Tecate — frontera, entre Tijuana y Mexicali (label debajo para no chocar con la línea)
-  { cx: 182, cy: 72, label: "Tecate", type: "primary", anchor: "middle", labelDx: 0, labelDy: 16 },
-  // Rosarito — costa pacífico, sur de Tijuana
-  { cx: 108, cy: 102, label: "Rosarito", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
+  { cx: 181, cy: 72, label: "Tecate", type: "primary", anchor: "middle", labelDx: 0, labelDy: 16 },
+  // Rosarito — costa pacífico, justo al sur de Tijuana
+  { cx: 142, cy: 90, label: "Rosarito", type: "primary", anchor: "end", labelDx: -10, labelDy: 4 },
   // Mexicali — frontera, extremo NE
-  { cx: 228, cy: 76, label: "Mexicali", type: "secondary", anchor: "start", labelDx: 10, labelDy: 4 },
-  // Ensenada — pacífico, sur
-  { cx: 150, cy: 150, label: "Ensenada", type: "secondary", anchor: "end", labelDx: -10, labelDy: 4 },
+  { cx: 219, cy: 70, label: "Mexicali", type: "secondary", anchor: "start", labelDx: 10, labelDy: 4 },
+  // Ensenada — costa pacífico, sur (la costa a esa latitud está en x≈158)
+  { cx: 164, cy: 146, label: "Ensenada", type: "secondary", anchor: "end", labelDx: -10, labelDy: 4 },
 ];
 
 type Variant = "light" | "dark";
@@ -92,10 +95,10 @@ export function CoverageMap({ variant = "light" }: { variant?: Variant }) {
 
         {/* Frontera Norte — línea + label */}
         <motion.line
-          x1="70"
-          y1="57"
-          x2="320"
-          y2="57"
+          x1="120"
+          y1="71"
+          x2="232"
+          y2="56"
           stroke={c.frontera}
           strokeWidth="0.8"
           strokeDasharray="3 4"
@@ -104,7 +107,7 @@ export function CoverageMap({ variant = "light" }: { variant?: Variant }) {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         />
         <text
-          x="70"
+          x="120"
           y="47"
           fontSize="8.5"
           fill={c.fronteraText}

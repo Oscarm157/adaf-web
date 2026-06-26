@@ -98,6 +98,17 @@ const data: ServiceData = {
   ],
   metaTitle: "Defensa aduanera en Tijuana · PAMA, embargo y multas",
   metaDescription: "Representación ante ANAM y tribunales federales en PAMA, embargo precautorio, devolución de mercancía y multas de comercio exterior. ADAF Tijuana.",
+  heroImage: {
+    src: "/editorial/editorial-vii-embargo-contenedor.png",
+    alt: "Contenedor retenido en patio aduanal al atardecer",
+  },
+  band: {
+    image: "/editorial/servicios-banner-consecuencia-dark.png",
+    alt: "Contenedor retenido bajo reflector en patio aduanal de noche",
+    eyebrow: "Si no actúas dentro del plazo",
+    lines: ["La mercancía pasa a", "propiedad del Fisco", "Federal por abandono."],
+    body: "La resolución queda firme, se ejecutan las contribuciones omitidas y las multas, que pueden alcanzar el 130% del valor en aduana de la mercancía.",
+  },
   editorial: {
     src: "/editorial/editorial-vii-embargo-contenedor.png",
     alt: "Contenedor olive en patio aduanal vacío",
