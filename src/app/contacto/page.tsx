@@ -20,8 +20,8 @@ const MAPS_EMBED = `https://maps.google.com/maps?q=${MAPS_QUERY}&z=16&hl=es&outp
 const MAPS_LINK = "https://maps.app.goo.gl/mYuH7rHaBWbDGXnQ9";
 
 const quickActions = [
-  { icon: Phone, label: "Llamar", value: "664 647 5018", href: "tel:+526646475018" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Chat directo", href: "https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." },
+  { icon: Phone, label: "Llamar", value: "664 252 1509", href: "tel:+526642521509" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Chat directo", href: "https://wa.me/526642521509?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." },
   { icon: Mail, label: "Email", value: "juridicoadaf@gmail.com", href: "mailto:juridicoadaf@gmail.com" },
   { icon: MapPin, label: "Cómo llegar", value: "Nueva Tijuana, BC", href: MAPS_LINK },
 ];
@@ -157,7 +157,7 @@ export default function ContactoPage() {
                       Agendar 20 minutos
                     </a>
                   )}
-                  <a href="https://wa.me/526646475018?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." target="_blank" rel="noopener noreferrer"
+                  <a href="https://wa.me/526642521509?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
                   >
                     Abrir WhatsApp
@@ -170,10 +170,10 @@ export default function ContactoPage() {
                       Teléfono
                     </dt>
                     <dd>
-                      <a href="tel:+526646475018" target="_blank" rel="noopener noreferrer"
+                      <a href="tel:+526642521509" target="_blank" rel="noopener noreferrer"
                         className="font-serif text-[18px] text-navy hover:text-burgundy transition-colors"
                       >
-                        664 647 5018
+                        664 252 1509
                       </a>
                     </dd>
                   </div>
@@ -237,10 +237,10 @@ export default function ContactoPage() {
                       Teléfono
                     </dt>
                     <dd>
-                      <a href="tel:+526646475018" target="_blank" rel="noopener noreferrer"
+                      <a href="tel:+526642521509" target="_blank" rel="noopener noreferrer"
                         className="font-serif text-[20px] text-navy hover:text-burgundy transition-colors"
                       >
-                        664 647 5018
+                        664 252 1509
                       </a>
                     </dd>
                   </div>

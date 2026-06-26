@@ -12,6 +12,7 @@
   --rule: #E2DED5;
   --ink: #0B0E14;
   --cream: #F4F1EA;
+  --blue: #2C5A8C;
 }
 
 @theme inline {
@@ -26,6 +27,7 @@
   --color-rule: var(--rule);
   --color-ink: var(--ink);
   --color-cream: var(--cream);
+  --color-blue: var(--blue);
   --font-serif: var(--font-source-serif);
   --font-sans: var(--font-inter);
 }

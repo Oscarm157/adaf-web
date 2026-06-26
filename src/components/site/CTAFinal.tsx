@@ -36,7 +36,7 @@ export function CTAFinal() {
                 </a>
               )}
               <a
-                href="https://wa.me/526646475018"
+                href="https://wa.me/526642521509"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={
@@ -62,7 +62,7 @@ export function CTAFinal() {
           <div className="col-span-12 lg:col-span-4 lg:col-start-9">
             <dl className="divide-y divide-cream/15 border-y border-cream/15">
               {[
-                { k: "Teléfono", v: "664 647 5018", href: "tel:+526646475018" },
+                { k: "Teléfono", v: "664 252 1509", href: "tel:+526642521509" },
                 { k: "Correo", v: "juridicoadaf@gmail.com", href: "mailto:juridicoadaf@gmail.com" },
                 { k: "Horario", v: "Lun a vie · 09:00 a 17:00" },
                 { k: "Tijuana", v: "Blvd. Bellas Artes 19213, Local 15" },

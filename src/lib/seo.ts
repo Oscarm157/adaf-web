@@ -8,8 +8,8 @@ export const siteConfig = {
   url: siteUrl,
   ogImage: `${siteUrl}/opengraph-image`,
   locale: "es_MX",
-  phone: "+52-664-647-5018",
-  phoneDisplay: "664 647 5018",
+  phone: "+52-664-252-1509",
+  phoneDisplay: "664 252 1509",
   email: "juridicoadaf@gmail.com",
   address: {
     street: "Blvd. de las Bellas Artes 19213, Local 15",

@@ -59,7 +59,7 @@ export function ContactForm() {
         <p className="text-[15px] leading-[1.6] text-foreground/80 mt-4">
           Revisaremos los datos de tu asunto y te contactaremos por la vía que
           prefieras. Si el plazo legal está corriendo y necesitas orientación
-          inmediata, escríbenos por WhatsApp al 664 647 5018.
+          inmediata, escríbenos por WhatsApp al 664 252 1509.
         </p>
         <button
           type="button"

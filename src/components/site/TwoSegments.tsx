@@ -44,7 +44,7 @@ export function TwoSegments() {
               </ul>
               <div className="mt-auto pt-9 flex flex-wrap items-center gap-5">
                 <a
-                  href="https://wa.me/526646475018"
+                  href="https://wa.me/526642521509"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center bg-burgundy text-white text-[12px] font-medium tracking-[0.06em] uppercase px-6 h-11 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
@@ -65,7 +65,7 @@ export function TwoSegments() {
           {/* Segmento 2 — estratégico */}
           <Reveal delay={0.1} className="bg-background-warm">
             <div className="group h-full flex flex-col p-8 md:p-10 lg:p-12">
-              <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-navy">
+              <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-blue">
                 Estratégico
               </span>
               <h3 className="font-serif text-[24px] md:text-[30px] leading-[1.15] font-semibold text-navy tracking-[-0.012em] mt-5">
@@ -79,7 +79,7 @@ export function TwoSegments() {
               <ul className="mt-6 space-y-2 text-[13.5px] text-muted">
                 {["Auditorías y visitas domiciliarias", "Créditos fiscales y sellos digitales", "Recurso, juicio de nulidad y amparo"].map((it) => (
                   <li key={it} className="flex items-baseline gap-3">
-                    <span className="bg-olive shrink-0 w-[5px] h-[5px] mt-[7px]" />
+                    <span className="bg-blue shrink-0 w-[5px] h-[5px] mt-[7px]" />
                     {it}
                   </li>
                 ))}

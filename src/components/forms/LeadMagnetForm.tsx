@@ -50,7 +50,7 @@ export function LeadMagnetForm({ withConsent = false }: { withConsent?: boolean 
           Te enviaremos la guía dentro de las próximas horas.
         </h3>
         <p className="text-[14.5px] leading-[1.6] text-foreground/80 mt-3">
-          Si tu asunto es urgente, escríbenos por WhatsApp al 664 647 5018.
+          Si tu asunto es urgente, escríbenos por WhatsApp al 664 252 1509.
         </p>
       </div>
     );

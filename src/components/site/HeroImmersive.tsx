@@ -111,7 +111,7 @@ export function HeroImmersive() {
                 Agenda tu valoración
               </a>
               <a
-                href="https://wa.me/526646475018"
+                href="https://wa.me/526642521509"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-transparent text-cream text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-cream/40 hover:bg-cream hover:text-ink transition-colors duration-200"

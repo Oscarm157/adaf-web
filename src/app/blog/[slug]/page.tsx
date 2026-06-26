@@ -220,7 +220,7 @@ export default async function BlogPostPage({
                   </a>
                 )}
                 <a
-                  href="https://wa.me/526646475018"
+                  href="https://wa.me/526642521509"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={

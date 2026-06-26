@@ -51,7 +51,7 @@ export function Footer() {
                 <p className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
                   Contacto
                 </p>
-                <p>664 647 5018</p>
+                <p>664 252 1509</p>
                 <p>juridicoadaf@gmail.com</p>
               </div>
               <div>

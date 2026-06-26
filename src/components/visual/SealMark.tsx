@@ -9,7 +9,7 @@ import { useRef } from "react";
 
 const diamonds = [
   { cx: 134, cy: 58, fill: "#9B8F2E" }, // olivo, arriba-derecha
-  { cx: 104, cy: 80, fill: "#1B3A5B" }, // azul, izquierda
+  { cx: 104, cy: 80, fill: "#2C5A8C" }, // azul marino, izquierda
   { cx: 124, cy: 104, fill: "#7A1F38" }, // vino, abajo
 ];
 

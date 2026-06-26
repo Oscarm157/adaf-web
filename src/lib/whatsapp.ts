@@ -2,7 +2,7 @@
 // según la página en que se encuentra el usuario. Reusable en WhatsAppFloat,
 // botones de Contacto, ServicePage y CTAs.
 
-const PHONE = "526646475018";
+const PHONE = "526642521509";
 
 const messages: Record<string, string> = {
   "/servicios/defensa-aduanera":

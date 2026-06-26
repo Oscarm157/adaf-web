@@ -257,10 +257,10 @@ export default function NosotrosPage() {
                     </dt>
                     <dd>
                       <a
-                        href="tel:+526646475018"
+                        href="tel:+526642521509"
                         className="font-serif text-[20px] text-navy hover:text-burgundy transition-colors"
                       >
-                        664 647 5018
+                        664 252 1509
                       </a>
                     </dd>
                   </div>
@@ -349,7 +349,7 @@ export default function NosotrosPage() {
                   </a>
                 )}
                 <a
-                  href="https://wa.me/526646475018"
+                  href="https://wa.me/526642521509"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={

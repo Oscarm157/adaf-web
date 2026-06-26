@@ -9,7 +9,7 @@ export function Masthead() {
           Defensa fiscal · Aduanera · Administrativa · 25 años
         </p>
         <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/85">
-          664 647 5018
+          664 252 1509
         </p>
       </div>
     </div>
