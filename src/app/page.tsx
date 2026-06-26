@@ -1,17 +1,18 @@
 import { Masthead } from "@/components/site/Masthead";
 import { Header } from "@/components/site/Header";
-import { Hero } from "@/components/site/Hero";
-import { Areas } from "@/components/site/Areas";
-import { Pillars } from "@/components/site/Pillars";
-import { Resultados } from "@/components/site/Resultados";
-import { Metodo } from "@/components/site/Metodo";
+import { HeroImmersive } from "@/components/site/HeroImmersive";
+import { StatementOpening } from "@/components/site/StatementOpening";
+import { AreasFilmstrip } from "@/components/site/AreasFilmstrip";
+import { CoverageBand } from "@/components/site/CoverageBand";
+import { PlazosSection } from "@/components/site/PlazosSection";
+import { CinematicQuoteBand } from "@/components/site/CinematicQuoteBand";
+import { MetodoSticky } from "@/components/site/MetodoSticky";
+import { Principios } from "@/components/site/Principios";
 import { LeadMagnet } from "@/components/site/LeadMagnet";
 import { Notas } from "@/components/site/Notas";
 import { CTAFinal } from "@/components/site/CTAFinal";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
-import { AuthoritiesBand } from "@/components/visual/AuthoritiesBand";
-import { EditorialBand } from "@/components/visual/EditorialBand";
 
 export default function Home() {
   return (
@@ -19,31 +20,18 @@ export default function Home() {
       <Masthead />
       <Header />
       <main>
-        <Hero />
-        <EditorialBand
-          numeral="I·b"
-          title="Frontera · vista del cruce"
-          tone="navy"
-          aspect="21/9"
-          src="/editorial/editorial-i-frontera-customs.png"
-          alt="Filas de tráileres bajo el cobertizo de aduanas al atardecer"
-        />
-        <Areas />
-        <AuthoritiesBand />
-        <Pillars />
-        <Resultados />
-        <EditorialBand
-          numeral="IV·b"
-          title="Balanza"
-          tone="olive"
-          aspect="3/2"
-          src="/editorial/editorial-iii-balanza.png"
-          alt="Balanza de dos platos sobre superficie sage-olive"
-        />
-        <Metodo />
-        <LeadMagnet />
-        <Notas />
-        <CTAFinal />
+        {/* Ritmo de superficies: D → L → W → D → L → D → W → L → W → L → D */}
+        <HeroImmersive />        {/* I · dark */}
+        <StatementOpening />     {/* — · light */}
+        <AreasFilmstrip />       {/* II · warm */}
+        <CoverageBand />         {/* III · dark */}
+        <PlazosSection />        {/* IV · light */}
+        <CinematicQuoteBand />   {/* V · dark */}
+        <MetodoSticky />         {/* VI · warm */}
+        <Principios />           {/* VII · light */}
+        <LeadMagnet />           {/* VIII · warm */}
+        <Notas />                {/* IX · light */}
+        <CTAFinal />             {/* X · dark */}
       </main>
       <Footer />
       <WhatsAppFloat />

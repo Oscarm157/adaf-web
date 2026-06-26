@@ -10,6 +10,8 @@
   --burgundy-dark: #5F1729;
   --olive: #9B8F2E;
   --rule: #E2DED5;
+  --ink: #0B0E14;
+  --cream: #F4F1EA;
 }
 
 @theme inline {
@@ -22,6 +24,8 @@
   --color-burgundy-dark: var(--burgundy-dark);
   --color-olive: var(--olive);
   --color-rule: var(--rule);
+  --color-ink: var(--ink);
+  --color-cream: var(--cream);
   --font-serif: var(--font-source-serif);
   --font-sans: var(--font-inter);
 }
@@ -73,4 +77,49 @@ body {
 ::selection {
   background: var(--burgundy);
   color: white;
+}
+
+/* Escala display monumental (Legora / Exo Ape) ----------------------------- */
+.display-xl,
+.display-lg,
+.display-md {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-feature-settings: "ss01";
+  letter-spacing: -0.03em;
+  line-height: 0.94;
+  text-wrap: balance;
+}
+
+.display-xl {
+  font-size: clamp(44px, 9vw, 132px);
+  line-height: 0.92;
+}
+
+.display-lg {
+  font-size: clamp(36px, 6vw, 88px);
+}
+
+.display-md {
+  font-size: clamp(30px, 4vw, 60px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Scrim de legibilidad para texto sobre fotografía en bandas dark ---------- */
+.scrim-dark {
+  background: linear-gradient(
+    180deg,
+    rgba(11, 14, 20, 0.35) 0%,
+    rgba(11, 14, 20, 0.55) 45%,
+    rgba(11, 14, 20, 0.82) 100%
+  );
+}
+
+.scrim-dark-left {
+  background: linear-gradient(
+    100deg,
+    rgba(11, 14, 20, 0.88) 0%,
+    rgba(11, 14, 20, 0.6) 45%,
+    rgba(11, 14, 20, 0.15) 100%
+  );
 }

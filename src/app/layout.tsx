@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Source_Serif_4, Inter } from "next/font/google";
 import "./globals.css";
 import { legalServiceJsonLd, siteConfig, siteUrl } from "@/lib/seo";
+import { SmoothScrollProvider } from "@/components/motion/SmoothScrollProvider";
 
 const sourceSerif = Source_Serif_4({
   variable: "--font-source-serif",
@@ -96,7 +97,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">
+        <SmoothScrollProvider>{children}</SmoothScrollProvider>
+      </body>
     </html>
   );
 }

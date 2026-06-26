@@ -12,6 +12,8 @@
     "img:flow": "node scripts/gen-images.mjs && node scripts/build-contact-sheet.mjs"
   },
   "dependencies": {
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.25",
     "lucide-react": "^1.11.0",
     "motion": "^12.38.0",
     "next": "16.2.4",
@@ -27,6 +29,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "playwright": "^1.61.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
