@@ -44,7 +44,7 @@ export function HeroImmersive() {
     <section
       ref={sectionRef}
       aria-label="Apertura"
-      className="relative bg-ink text-cream overflow-hidden min-h-[92svh] flex flex-col"
+      className="relative bg-ink text-cream overflow-hidden min-h-[74svh] flex flex-col"
     >
       {/* Capa fotográfica con parallax */}
       <div
@@ -64,7 +64,7 @@ export function HeroImmersive() {
 
       {/* Contenido */}
       <div className="relative z-10 flex-1 flex flex-col">
-        <div className="max-w-[1280px] w-full mx-auto px-6 md:px-10 lg:px-12 pt-32 md:pt-40 flex-1 flex flex-col justify-end pb-14 md:pb-20">
+        <div className="max-w-[1280px] w-full mx-auto px-6 md:px-10 lg:px-12 pt-28 md:pt-32 flex-1 flex flex-col justify-end pb-20 md:pb-28">
           <div className="grid grid-cols-12 gap-x-10 gap-y-12 items-end">
             {/* Columna izquierda — apertura tipográfica */}
             <div className="col-span-12 lg:col-span-7">
