@@ -65,71 +65,79 @@ export function HeroImmersive() {
       {/* Contenido */}
       <div className="relative z-10 flex-1 flex flex-col">
         <div className="max-w-[1280px] w-full mx-auto px-6 md:px-10 lg:px-12 pt-32 md:pt-40 flex-1 flex flex-col justify-end pb-14 md:pb-20">
-          <div className="flex items-baseline gap-4 mb-8 md:mb-10">
-            <span aria-hidden="true" className="font-serif italic text-[14px] text-[#C9B85A]">
-              I
-            </span>
-            <span className="w-[80px] h-px bg-cream/30" />
-            <span className="text-[10px] uppercase tracking-[0.24em] font-medium text-cream/70">
-              Despacho jurídico · Tijuana · 25 años
-            </span>
-          </div>
+          <div className="grid grid-cols-12 gap-x-10 gap-y-12 items-end">
+            {/* Columna izquierda — apertura tipográfica */}
+            <div className="col-span-12 lg:col-span-7">
+              <div className="flex items-baseline gap-4 mb-8 md:mb-10">
+                <span aria-hidden="true" className="font-serif italic text-[14px] text-[#C9B85A]">
+                  I
+                </span>
+                <span className="w-[80px] h-px bg-cream/30" />
+                <span className="text-[10px] uppercase tracking-[0.24em] font-medium text-cream/70">
+                  Despacho jurídico · Tijuana · 25 años
+                </span>
+              </div>
 
-          <h1 className="display-xl font-normal text-cream max-w-[20ch]">
-            {lines.map((line, i) => (
-              <span key={line} className="block overflow-hidden">
-                <motion.span
-                  className="block"
-                  initial={reduce ? false : { y: "110%" }}
-                  animate={reduce ? undefined : { y: "0%" }}
-                  transition={{ duration: 0.9, ease, delay: 0.15 + i * 0.12 }}
-                >
-                  {line}
-                </motion.span>
-              </span>
-            ))}
-          </h1>
-
-          <motion.div
-            initial={reduce ? false : { opacity: 0, y: 16 }}
-            animate={reduce ? undefined : { opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease, delay: 0.7 }}
-            className="mt-8 md:mt-10 flex flex-col gap-9"
-          >
-            <p className="text-[17px] md:text-[19px] leading-[1.6] text-cream/85 max-w-[560px]">
-              Representamos a empresarios, importadores y transportistas ante el
-              SAT, la ANAM, el IMSS, COFEPRIS, SICT y los tribunales federales.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-5">
-              <a
-                href={CALENDLY_URL || "/contacto"}
-                target={CALENDLY_URL ? "_blank" : undefined}
-                rel={CALENDLY_URL ? "noopener noreferrer" : undefined}
-                className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-              >
-                Agenda tu valoración
-              </a>
-              <a
-                href="https://wa.me/526642521509"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-transparent text-cream text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-cream/40 hover:bg-cream hover:text-ink transition-colors duration-200"
-              >
-                Hablar por WhatsApp
-              </a>
-              <Link
-                href="/servicios"
-                className="inline-flex items-center gap-1.5 text-[13px] font-medium tracking-[0.06em] uppercase text-cream/90 hover:text-[#C9B85A] transition-colors duration-200 group"
-              >
-                Conocer servicios
-                <ArrowRight
-                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
-                  strokeWidth={1.5}
-                />
-              </Link>
+              <h1 className="display-lg font-normal text-cream">
+                {lines.map((line, i) => (
+                  <span key={line} className="block overflow-hidden">
+                    <motion.span
+                      className="block"
+                      initial={reduce ? false : { y: "110%" }}
+                      animate={reduce ? undefined : { y: "0%" }}
+                      transition={{ duration: 0.9, ease, delay: 0.15 + i * 0.12 }}
+                    >
+                      {line}
+                    </motion.span>
+                  </span>
+                ))}
+              </h1>
             </div>
-          </motion.div>
+
+            {/* Columna derecha — riel de entrada (lede + acciones) */}
+            <motion.div
+              initial={reduce ? false : { opacity: 0, y: 16 }}
+              animate={reduce ? undefined : { opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease, delay: 0.7 }}
+              className="col-span-12 lg:col-span-4 lg:col-start-9 flex flex-col gap-7 lg:pb-1"
+            >
+              <span className="hidden lg:block h-px w-16 bg-cream/25" />
+              <p className="text-[16px] md:text-[17px] leading-[1.65] text-cream/85 max-w-[520px]">
+                Representamos a empresarios, importadores y transportistas ante
+                el SAT, la ANAM, el IMSS, COFEPRIS, SICT y los tribunales
+                federales.
+              </p>
+
+              <div className="flex flex-col items-stretch gap-3.5 max-w-[360px]">
+                <a
+                  href={CALENDLY_URL || "/contacto"}
+                  target={CALENDLY_URL ? "_blank" : undefined}
+                  rel={CALENDLY_URL ? "noopener noreferrer" : undefined}
+                  className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                >
+                  Agenda tu valoración
+                </a>
+                <a
+                  href="https://wa.me/526642521509"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-transparent text-cream text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-cream/40 hover:bg-cream hover:text-ink transition-colors duration-200"
+                >
+                  Hablar por WhatsApp
+                </a>
+                <Link
+                  href="/servicios"
+                  className="inline-flex items-center justify-center gap-1.5 text-[13px] font-medium tracking-[0.06em] uppercase text-cream/90 hover:text-[#C9B85A] transition-colors duration-200 group mt-1"
+                >
+                  Conocer servicios
+                  <ArrowRight
+                    className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                    strokeWidth={1.5}
+                  />
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
 
         {/* Strip institucional inferior */}
