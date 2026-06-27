@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
-import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Masthead } from "@/components/site/Masthead";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { OfficeStatus } from "@/components/site/OfficeStatus";
-import { PageHero } from "@/components/page/PageHero";
 import { ContactForm } from "@/components/forms/ContactForm";
-import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { Reveal } from "@/components/motion/Reveal";
 import { siteConfig, siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
@@ -18,12 +18,15 @@ const MAPS_QUERY = encodeURIComponent(
 );
 const MAPS_EMBED = `https://maps.google.com/maps?q=${MAPS_QUERY}&z=16&hl=es&output=embed`;
 const MAPS_LINK = "https://maps.app.goo.gl/mYuH7rHaBWbDGXnQ9";
+const WA_LINK =
+  "https://wa.me/526642521509?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto.";
 
-const quickActions = [
-  { icon: Phone, label: "Llamar", value: "664 252 1509", href: "tel:+526642521509" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Chat directo", href: "https://wa.me/526642521509?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." },
-  { icon: Mail, label: "Email", value: "juridicoadaf@gmail.com", href: "mailto:juridicoadaf@gmail.com" },
-  { icon: MapPin, label: "Cómo llegar", value: "Nueva Tijuana, BC", href: MAPS_LINK },
+// Datos de contacto en formato ledger para la cabecera dark
+const heroLedger: { k: string; v: string; href?: string }[] = [
+  { k: "Teléfono", v: "664 252 1509", href: "tel:+526642521509" },
+  { k: "WhatsApp", v: "Chat directo", href: WA_LINK },
+  { k: "Correo", v: "juridicoadaf@gmail.com", href: "mailto:juridicoadaf@gmail.com" },
+  { k: "Atención", v: "Lun a vie · 09:00 a 17:00" },
 ];
 
 export const metadata: Metadata = {
@@ -40,281 +43,289 @@ export const metadata: Metadata = {
   },
 };
 
-const inputClass =
-  "w-full bg-background-warm border-b border-foreground/30 h-12 px-4 text-[15px] text-foreground placeholder:text-muted focus:outline-none focus:border-burgundy transition-colors";
-
 export default function ContactoPage() {
   return (
     <>
       <Masthead />
       <Header />
       <main>
-        <PageHero
-          crumbs={[{ label: "Inicio", href: "/" }, { label: "Contacto" }]}
-          numeral="IV"
-          label="Contacto"
-          h1="Escríbenos los detalles de tu asunto."
-          lede="Te respondemos dentro de las próximas horas con una valoración inicial sin costo. Te decimos qué tipo de procedimiento es, cuántos días hay para actuar y qué información necesitamos para empezar."
-        />
+        {/* ── A · Cabecera dark image-led con contacto en ledger ────────── */}
+        <section
+          aria-label="Contacto"
+          className="relative bg-ink text-cream overflow-hidden flex flex-col justify-end min-h-[72svh] md:min-h-[78svh]"
+        >
+          <div className="absolute inset-0">
+            <Image
+              src="/editorial/hero-frontera-amplia.png"
+              alt="Vista lejana de la franja fronteriza al atardecer, con filas de tráileres y aduanas al fondo"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 scrim-dark" aria-hidden="true" />
 
-        {/* 0 — Acceso rápido */}
-        <section className="bg-background border-b border-rule pt-2 pb-10">
-          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <div className="flex items-baseline gap-4 mb-6">
-              <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
-                0
+          <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-[#C9B85A]/60" />
+          <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-[#C9B85A]/60" />
+          <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-[#C9B85A]/60" />
+          <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-[#C9B85A]/60" />
+
+          <div className="relative z-10 max-w-[1280px] w-full mx-auto px-6 md:px-10 lg:px-12 pt-32 md:pt-40 pb-16 md:pb-20">
+            <nav
+              aria-label="breadcrumb"
+              className="flex items-center gap-2 text-[12px] text-cream/60 mb-9"
+            >
+              <Link href="/" className="hover:text-cream transition-colors">
+                Inicio
+              </Link>
+              <span aria-hidden="true" className="text-cream/40">
+                /
               </span>
-              <span className="w-[60px] h-[1px] bg-rule" />
-              <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
-                Acceso rápido
-              </span>
-              <span className="flex-1 h-[1px] bg-rule hidden md:block" />
-              <OfficeStatus />
+              <span className="text-cream/90">Contacto</span>
+            </nav>
+
+            <div className="grid grid-cols-12 gap-x-10 gap-y-12 items-end">
+              {/* Apertura tipográfica */}
+              <Reveal className="col-span-12 lg:col-span-7">
+                <div className="flex items-baseline gap-4 mb-7">
+                  <span aria-hidden="true" className="font-serif italic text-[14px] text-[#C9B85A]">
+                    IV
+                  </span>
+                  <span className="w-[80px] h-px bg-cream/30" />
+                  <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-cream/70">
+                    Contacto · Valoración inicial sin costo
+                  </span>
+                </div>
+
+                <h1 className="display-xl font-normal text-cream max-w-[15ch]">
+                  Escríbenos los detalles de tu asunto.
+                </h1>
+
+                <p className="text-[16px] md:text-[18px] leading-[1.6] text-cream/85 mt-7 max-w-[560px]">
+                  Te respondemos dentro de las próximas horas. Te decimos qué tipo de
+                  procedimiento es, cuántos días hay para actuar y qué información
+                  necesitamos para empezar.
+                </p>
+
+                <div className="flex flex-wrap items-center gap-4 mt-10">
+                  {CALENDLY_URL ? (
+                    <>
+                      <a
+                        href={CALENDLY_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                      >
+                        Agendar 20 minutos
+                      </a>
+                      <a
+                        href={WA_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center bg-transparent text-cream text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] border border-cream/40 hover:bg-cream hover:text-ink transition-colors duration-200"
+                      >
+                        Hablar por WhatsApp
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        href={WA_LINK}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-7 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
+                      >
+                        Hablar por WhatsApp
+                      </a>
+                      <a
+                        href="#formulario"
+                        className="inline-flex items-center justify-center gap-1.5 text-[13px] font-medium tracking-[0.06em] uppercase text-cream/90 hover:text-[#C9B85A] transition-colors duration-200 group"
+                      >
+                        Ir al formulario
+                        <ArrowRight
+                          className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                          strokeWidth={1.5}
+                        />
+                      </a>
+                    </>
+                  )}
+                </div>
+              </Reveal>
+
+              {/* Ledger de contacto directo sobre la foto */}
+              <Reveal
+                delay={0.15}
+                className="col-span-12 lg:col-span-4 lg:col-start-9"
+              >
+                <span className="block text-[10px] uppercase tracking-[0.22em] font-medium text-[#C9B85A]/90 mb-5">
+                  Contacto directo
+                </span>
+                <dl className="divide-y divide-cream/15 border-y border-cream/15">
+                  {heroLedger.map((row) => (
+                    <div
+                      key={row.k}
+                      className="grid grid-cols-3 gap-4 py-4 items-baseline"
+                    >
+                      <dt className="col-span-1 text-[10px] uppercase tracking-[0.2em] font-medium text-cream/55">
+                        {row.k}
+                      </dt>
+                      <dd className="col-span-2 text-[14px] leading-[1.45] text-cream">
+                        {row.href ? (
+                          <a
+                            href={row.href}
+                            target={row.href.startsWith("http") ? "_blank" : undefined}
+                            rel={row.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                            className="hover:text-[#C9B85A] transition-colors duration-200 break-words"
+                          >
+                            {row.v}
+                          </a>
+                        ) : (
+                          row.v
+                        )}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </Reveal>
             </div>
-            <Stagger className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
-              {quickActions.map(({ icon: Icon, label, value, href }) => (
-                <StaggerItem key={label}>
-                  <a
-                    href={href}
-                    target={href.startsWith("http") ? "_blank" : undefined}
-                    rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="group flex items-center gap-3 md:gap-4 border border-rule bg-background hover:bg-background-warm hover:border-burgundy/40 px-4 md:px-5 h-[68px] transition-colors duration-200"
-                  >
-                    <span className="shrink-0 w-9 h-9 inline-flex items-center justify-center border border-rule bg-background-warm group-hover:border-burgundy/30 group-hover:bg-background transition-colors">
-                      <Icon className="w-4 h-4 text-navy group-hover:text-burgundy transition-colors" strokeWidth={1.5} />
-                    </span>
-                    <span className="flex flex-col min-w-0">
-                      <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
-                        {label}
-                      </span>
-                      <span className="text-[13.5px] text-navy font-medium truncate group-hover:text-burgundy transition-colors">
-                        {value}
-                      </span>
-                    </span>
-                  </a>
-                </StaggerItem>
-              ))}
-            </Stagger>
           </div>
         </section>
 
-        {/* I — Bloques de contacto */}
-        <section className="bg-background pt-20 pb-20">
+        {/* ── B · Split asimétrico: formulario claro + panel de oficina ──── */}
+        <section id="formulario" className="bg-background pt-20 pb-20 scroll-mt-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <ChapterMark numeral="I" label="Vías de contacto" />
-            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-12">
-              {/* Bloque 1: Formulario */}
+            <ChapterMark numeral="I" label="Formulario y atención" />
+            <div className="grid grid-cols-12 gap-y-14 gap-x-6 md:gap-12 mt-12 items-start">
+              {/* Formulario, columna amplia */}
               <div className="col-span-12 lg:col-span-7">
-                <div className="flex items-baseline gap-4 mb-6">
-                  <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
-                    I
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                    Formulario
-                  </span>
-                </div>
-                <h2 className="font-serif text-[28px] leading-[1.15] font-semibold text-navy tracking-[-0.008em] mb-3">
+                <h2 className="font-serif text-[28px] md:text-[32px] leading-[1.12] font-semibold text-navy tracking-[-0.01em] mb-3">
                   Escríbenos los datos de tu caso.
                 </h2>
-                <p className="text-[14.5px] leading-[1.6] text-muted mb-8 max-w-[420px]">
+                <p className="text-[14.5px] leading-[1.6] text-muted mb-9 max-w-[440px]">
                   Recibimos el mensaje dentro de las próximas horas y respondemos por la
-                  vía que prefieras.
+                  vía que prefieras. Entre más detalle de la notificación, más precisa
+                  es la valoración.
                 </p>
 
                 <ContactForm />
               </div>
 
-              {/* Bloque 2: WhatsApp */}
-              <div
-                id="agendar"
-                className="col-span-12 lg:col-span-5 lg:border-l lg:border-rule lg:pl-8"
-              >
-                <div className="flex items-baseline gap-4 mb-6">
-                  <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
-                    II
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                    {CALENDLY_URL ? "Agenda o WhatsApp" : "WhatsApp"}
-                  </span>
-                </div>
-                <h2 className="font-serif text-[28px] leading-[1.15] font-semibold text-navy tracking-[-0.008em] mb-3">
-                  {CALENDLY_URL ? "Agenda 20 minutos o escribe directo." : "Mensaje directo."}
-                </h2>
-                <p className="text-[14.5px] leading-[1.6] text-muted mb-7 max-w-[300px]">
-                  {CALENDLY_URL
-                    ? "Bloquea un horario para una valoración inicial, o usa WhatsApp si el plazo legal está corriendo y necesitas orientación inmediata."
-                    : "Vía rápida para casos en los que el plazo legal está corriendo y necesitas orientación inmediata."}
-                </p>
-
-                <div className="flex flex-col items-start gap-3 mb-8">
-                  {CALENDLY_URL && (
-                    <a
-                      href={CALENDLY_URL}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center bg-burgundy text-white text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] hover:bg-burgundy-dark transition-colors duration-200"
-                    >
-                      Agendar 20 minutos
-                    </a>
-                  )}
-                  <a href="https://wa.me/526642521509?text=Hola%2C%20vi%20su%20sitio%20web%20y%20necesito%20informaci%C3%B3n%20sobre%20mi%20asunto." target="_blank" rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center bg-transparent text-navy text-[13px] font-medium tracking-[0.06em] uppercase px-6 h-12 rounded-[2px] border border-navy/80 hover:bg-navy hover:text-background transition-colors duration-200"
-                  >
-                    Abrir WhatsApp
-                  </a>
-                </div>
-
-                <dl className="space-y-4 border-t border-rule pt-6">
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-1">
-                      Teléfono
-                    </dt>
-                    <dd>
-                      <a href="tel:+526642521509" target="_blank" rel="noopener noreferrer"
-                        className="font-serif text-[18px] text-navy hover:text-burgundy transition-colors"
-                      >
-                        664 252 1509
-                      </a>
-                    </dd>
+              {/* Panel de contexto: la oficina + estado en vivo */}
+              <aside className="col-span-12 lg:col-span-4 lg:col-start-9 lg:border-l lg:border-rule lg:pl-10">
+                <Reveal y={20}>
+                  <div className="flex items-baseline gap-4 mb-6">
+                    <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
+                      II
+                    </span>
+                    <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
+                      La oficina
+                    </span>
                   </div>
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-1">
-                      Email
-                    </dt>
-                    <dd>
-                      <a href="mailto:juridicoadaf@gmail.com" target="_blank" rel="noopener noreferrer"
-                        className="text-[14.5px] text-foreground hover:text-burgundy transition-colors break-all"
-                      >
-                        juridicoadaf@gmail.com
-                      </a>
-                    </dd>
-                  </div>
-                </dl>
-              </div>
+                  <h3 className="font-serif text-[24px] leading-[1.18] font-semibold text-navy tracking-[-0.008em] mb-7">
+                    Nueva Tijuana, Baja California.
+                  </h3>
 
-            </div>
-          </div>
-        </section>
+                  <dl className="divide-y divide-rule border-y border-rule">
+                    <div className="grid grid-cols-3 gap-4 py-4 items-baseline">
+                      <dt className="col-span-1 text-[10px] uppercase tracking-[0.2em] font-medium text-muted">
+                        Dirección
+                      </dt>
+                      <dd className="col-span-2 text-[14px] leading-[1.5] text-foreground/85">
+                        Blvd. de las Bellas Artes 19213, Local 15, Nueva Tijuana, 22435
+                        Tijuana, BC.
+                      </dd>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4 py-4 items-baseline">
+                      <dt className="col-span-1 text-[10px] uppercase tracking-[0.2em] font-medium text-muted">
+                        Horario
+                      </dt>
+                      <dd className="col-span-2 text-[14px] leading-[1.5] text-foreground/85">
+                        Lunes a viernes · 09:00 a 17:00
+                      </dd>
+                    </div>
+                    <div className="grid grid-cols-3 gap-4 py-4 items-baseline">
+                      <dt className="col-span-1 text-[10px] uppercase tracking-[0.2em] font-medium text-muted">
+                        Estado
+                      </dt>
+                      <dd className="col-span-2">
+                        <OfficeStatus />
+                      </dd>
+                    </div>
+                  </dl>
 
-        {/* II — Aviso de confidencialidad */}
-        <section className="bg-background pb-20">
-          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <Reveal>
-              <aside className="bg-background-warm border-l-[3px] border-olive px-8 py-7 max-w-[1080px]">
-                <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium mb-3">
-                  Aviso de confidencialidad
-                </p>
-                <p className="text-[15.5px] leading-[1.7] text-foreground/85 max-w-[820px]">
-                  La información que compartes con nosotros se maneja bajo el
-                  secreto profesional que exige la práctica jurídica. No la
-                  usaremos para ningún fin distinto a la valoración y eventual
-                  representación de tu asunto.
-                </p>
-              </aside>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* III — Oficina */}
-        <section className="bg-background-warm pt-20 pb-20">
-          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <ChapterMark numeral="II" label="Oficina" />
-            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
-              <Reveal className="col-span-12 lg:col-span-5">
-                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] mb-8">
-                  Nueva Tijuana, Baja California.
-                </h2>
-                <dl className="space-y-7 border-t border-foreground/15 pt-7">
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
-                      Dirección
-                    </dt>
-                    <dd className="text-[16px] leading-[1.55] text-foreground/85 max-w-[360px]">
-                      Blvd. de las Bellas Artes 19213, Local 15, Nueva
-                      Tijuana, 22435 Tijuana, BC.
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
-                      Teléfono
-                    </dt>
-                    <dd>
-                      <a href="tel:+526642521509" target="_blank" rel="noopener noreferrer"
-                        className="font-serif text-[20px] text-navy hover:text-burgundy transition-colors"
-                      >
-                        664 252 1509
-                      </a>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
-                      Email
-                    </dt>
-                    <dd>
-                      <a href="mailto:juridicoadaf@gmail.com" target="_blank" rel="noopener noreferrer"
-                        className="text-[16px] text-foreground hover:text-burgundy transition-colors"
-                      >
-                        juridicoadaf@gmail.com
-                      </a>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium mb-2">
-                      Horario
-                    </dt>
-                    <dd className="text-[16px] leading-[1.55] text-foreground/85 mb-3">
-                      Lunes a viernes · 09:00 a 17:00
-                    </dd>
-                    <dd>
-                      <OfficeStatus />
-                    </dd>
-                  </div>
-                </dl>
-              </Reveal>
-
-              <Reveal className="col-span-12 lg:col-span-7" delay={0.1} y={20}>
-                <div className="flex items-baseline gap-4 mb-5">
-                  <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
-                    II·b
-                  </span>
-                  <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
-                    Ubicación
-                  </span>
-                  <span className="flex-1 h-[1px] bg-rule" />
-                </div>
-                <h3 className="font-serif text-[20px] md:text-[22px] leading-[1.2] font-semibold text-navy tracking-[-0.008em] mb-6">
-                  Cómo encontrarnos.
-                </h3>
-                <figure className="relative border border-rule bg-background-warm overflow-hidden">
-                  <span className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />
-                  <span className="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-olive z-10 pointer-events-none" />
-                  <span className="absolute bottom-3 left-3 w-2.5 h-2.5 border-b border-l border-olive z-10 pointer-events-none" />
-                  <span className="absolute bottom-3 right-3 w-2.5 h-2.5 border-b border-r border-olive z-10 pointer-events-none" />
-                  <iframe
-                    title="Ubicación de la oficina ADAF en Nueva Tijuana"
-                    src={MAPS_EMBED}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    allowFullScreen
-                    className="block w-full aspect-[4/3] md:aspect-[3/2] border-0 grayscale-[0.15] contrast-[0.95]"
-                  />
-                </figure>
-                <div className="flex items-baseline justify-between gap-6 mt-4 px-1">
-                  <p className="text-[12px] uppercase tracking-[0.18em] text-muted font-medium">
-                    Blvd. de las Bellas Artes 19213, Local 15
-                  </p>
                   <a
                     href={MAPS_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[12px] uppercase tracking-[0.16em] font-medium text-burgundy hover:gap-3 transition-all duration-200 shrink-0"
+                    className="inline-flex items-center gap-1.5 mt-6 text-[12px] uppercase tracking-[0.16em] font-medium text-burgundy hover:gap-3 transition-all duration-200"
                   >
-                    Abrir en Google Maps
-                    <span aria-hidden="true">→</span>
+                    Cómo llegar
+                    <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
                   </a>
-                </div>
-              </Reveal>
+
+                  <div className="mt-9 bg-background-warm border-l-[3px] border-olive px-6 py-5">
+                    <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium mb-2.5">
+                      Aviso de confidencialidad
+                    </p>
+                    <p className="text-[14px] leading-[1.65] text-foreground/85">
+                      Lo que compartes con nosotros se maneja bajo el secreto
+                      profesional que exige la práctica jurídica. No lo usaremos para
+                      ningún fin distinto a la valoración y eventual representación de tu
+                      asunto.
+                    </p>
+                  </div>
+                </Reveal>
+              </aside>
             </div>
+          </div>
+        </section>
+
+        {/* ── C · Mapa enmarcado, media editorial a lo ancho ────────────── */}
+        <section className="bg-background-warm pt-20 pb-24">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+              <div>
+                <ChapterMark numeral="III" label="Ubicación" />
+                <h2 className="font-serif text-[26px] md:text-[34px] leading-[1.12] font-semibold text-navy tracking-[-0.012em] mt-6">
+                  Cómo encontrarnos.
+                </h2>
+              </div>
+              <a
+                href={MAPS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-[12px] uppercase tracking-[0.16em] font-medium text-burgundy hover:gap-3 transition-all duration-200 shrink-0"
+              >
+                Abrir en Google Maps
+                <ArrowRight className="w-3.5 h-3.5" strokeWidth={1.5} />
+              </a>
+            </div>
+
+            <Reveal y={20}>
+              <figure className="relative border border-rule bg-background overflow-hidden">
+                <span className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />
+                <span className="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-olive z-10 pointer-events-none" />
+                <span className="absolute bottom-3 left-3 w-2.5 h-2.5 border-b border-l border-olive z-10 pointer-events-none" />
+                <span className="absolute bottom-3 right-3 w-2.5 h-2.5 border-b border-r border-olive z-10 pointer-events-none" />
+                <iframe
+                  title="Ubicación de la oficina ADAF en Nueva Tijuana"
+                  src={MAPS_EMBED}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                  className="block w-full aspect-[4/3] md:aspect-[21/9] border-0 grayscale-[0.15] contrast-[0.95]"
+                />
+              </figure>
+              <div className="flex items-baseline gap-4 mt-5 px-1">
+                <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
+                  III·a
+                </span>
+                <span className="text-[12px] uppercase tracking-[0.18em] text-muted font-medium">
+                  Blvd. de las Bellas Artes 19213, Local 15 · Nueva Tijuana, 22435
+                </span>
+              </div>
+            </Reveal>
           </div>
         </section>
       </main>
