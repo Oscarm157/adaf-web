@@ -5,6 +5,8 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
+import { ChapterMark } from "@/components/site/ChapterMark";
+import { EditorialBand } from "@/components/visual/EditorialBand";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { posts } from "@/lib/posts";
 import { siteUrl } from "@/lib/seo";
@@ -24,10 +26,40 @@ export const metadata: Metadata = {
   },
 };
 
+type Tone = "navy" | "burgundy" | "olive";
+
+// Portadas editoriales por artículo (reúsan imágenes de public/editorial/,
+// las mismas que la sección de blog del home). Los posts viven en @/lib/posts
+// y no llevan imagen; aquí se asocia la cover sin tocar la fuente de datos.
+const covers: Record<string, { tone: Tone; title: string; src: string; alt: string }> = {
+  "reforma-cff-2026": {
+    tone: "navy",
+    title: "Libro abierto",
+    src: "/editorial/editorial-v-cff-libro.png",
+    alt: "Libro abierto de código legal sobre escritorio",
+  },
+  "visita-domiciliaria-sat": {
+    tone: "burgundy",
+    title: "Puerta",
+    src: "/editorial/editorial-vi-visita-puerta.png",
+    alt: "Puerta institucional entreabierta con luz cálida adentro",
+  },
+  "embargo-aduana-pama": {
+    tone: "olive",
+    title: "Contenedor",
+    src: "/editorial/editorial-vii-embargo-contenedor.png",
+    alt: "Contenedor olive en patio aduanal vacío",
+  },
+};
+
+const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+
 export default function BlogIndexPage() {
   const ordered = [...posts].sort((a, b) =>
     a.fechaIso < b.fechaIso ? 1 : -1,
   );
+  const [featured, ...archive] = ordered;
+  const featuredCover = covers[featured.slug];
 
   return (
     <>
@@ -45,49 +77,120 @@ export default function BlogIndexPage() {
           ]}
         />
 
-        <section className="bg-background pt-20 pb-24">
+        {/* II — Comentario destacado · familia image-led monumental */}
+        <section className="bg-background-warm pt-16 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <Stagger className="grid grid-cols-1 md:grid-cols-3 border-t border-foreground/15">
-              {ordered.map((n, i) => (
-                <StaggerItem key={n.slug}>
-                <Link
-                  href={`/blog/${n.slug}`}
-                  className={`group block h-full px-1 md:px-7 py-10 transition-colors duration-300 hover:bg-background-warm ${
-                    i < ordered.length - 1 ? "md:border-r border-rule" : ""
-                  } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
-                >
-                  <div className="flex items-baseline justify-between mb-6">
-                    <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium">
-                      {n.cat}
-                    </p>
-                    <p className="font-serif italic text-[12px] text-olive">
-                      {n.folio}
-                    </p>
-                  </div>
+            <ChapterMark numeral="II" label="Comentario destacado" />
 
-                  <p className="text-[12px] uppercase tracking-[0.14em] text-muted">
-                    {n.fecha}
-                  </p>
-
-                  <h2 className="font-serif text-[20px] md:text-[24px] leading-[1.25] md:leading-[1.2] font-medium text-navy tracking-[-0.008em] mt-4 group-hover:text-burgundy transition-colors duration-300">
-                    {n.titulo}
-                  </h2>
-
-                  <p className="text-[14.5px] leading-[1.6] text-muted mt-4">
-                    {n.resumen}
-                  </p>
-
-                  <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] font-medium text-navy mt-7 group-hover:gap-3 group-hover:text-burgundy transition-all duration-300">
-                    Leer el artículo
-                    <span>→</span>
+            <Reveal className="mt-10">
+              <Link href={`/blog/${featured.slug}`} className="group block">
+                <div className="flex items-baseline gap-4 mb-6">
+                  <span className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium">
+                    {featured.cat}
                   </span>
-                </Link>
+                  <span className="w-[40px] h-[1px] bg-foreground/20" />
+                  <span className="text-[11px] uppercase tracking-[0.16em] text-muted">
+                    {featured.fecha}
+                  </span>
+                  <span className="font-serif italic text-[13px] text-olive ml-auto">
+                    {featured.folio}
+                  </span>
+                </div>
+
+                {featuredCover && (
+                  <EditorialBand
+                    numeral="II·1"
+                    title={featuredCover.title}
+                    tone={featuredCover.tone}
+                    aspect="21/9"
+                    fullBleed={false}
+                    src={featuredCover.src}
+                    alt={featuredCover.alt}
+                  />
+                )}
+
+                <div className="grid grid-cols-12 gap-y-6 gap-x-6 md:gap-12 mt-10 items-start">
+                  <h2 className="col-span-12 lg:col-span-8 display-lg font-semibold text-navy group-hover:text-burgundy transition-colors duration-300">
+                    {featured.titulo}
+                  </h2>
+                  <div className="col-span-12 lg:col-span-4 lg:pt-2">
+                    <p className="text-[16px] leading-[1.7] text-foreground/85 max-w-[440px]">
+                      {featured.resumen}
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] font-medium text-navy mt-7 group-hover:gap-3 group-hover:text-burgundy transition-all duration-300">
+                      Leer el comentario
+                      <span aria-hidden="true">→</span>
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </Reveal>
+          </div>
+        </section>
+
+        {/* III — Archivo · familia índice tipográfico con numerales y hairlines */}
+        <section className="bg-background pt-20 pb-24 border-t border-rule">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
+            <div className="grid grid-cols-12 gap-y-6 gap-x-6 md:gap-12 items-end mb-12">
+              <div className="col-span-12 lg:col-span-9">
+                <ChapterMark numeral="III" label="Archivo" />
+                <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[38px] leading-[1.12] font-semibold text-navy tracking-[-0.014em] mt-6">
+                  Comentarios anteriores.
+                </h2>
+              </div>
+              <div className="col-span-12 lg:col-span-3 lg:text-right lg:pb-2">
+                <p className="font-serif italic text-[14px] text-olive">
+                  {String(archive.length).padStart(2, "0")} artículos
+                </p>
+              </div>
+            </div>
+
+            <Stagger className="border-t border-foreground/15">
+              {archive.map((n, i) => (
+                <StaggerItem key={n.slug}>
+                  <Link
+                    href={`/blog/${n.slug}`}
+                    className="group grid grid-cols-12 gap-y-4 gap-x-6 md:gap-12 items-baseline border-b border-rule py-10 md:py-12 px-1 -mx-1 md:px-7 md:-mx-7 transition-colors duration-300 hover:bg-background-warm"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="col-span-12 md:col-span-2 lg:col-span-1 font-serif italic text-[34px] md:text-[40px] leading-none text-olive"
+                    >
+                      {ROMAN[i]}
+                    </span>
+
+                    <div className="col-span-12 md:col-span-7 lg:col-span-7">
+                      <h3 className="font-serif text-[24px] md:text-[30px] lg:text-[34px] leading-[1.14] font-medium text-navy tracking-[-0.012em] group-hover:text-burgundy transition-colors duration-300">
+                        {n.titulo}
+                      </h3>
+                      <p className="text-[15px] leading-[1.65] text-muted mt-4 max-w-[620px]">
+                        {n.resumen}
+                      </p>
+                    </div>
+
+                    <div className="col-span-12 md:col-span-3 lg:col-span-4 md:text-right">
+                      <p className="text-[10px] uppercase tracking-[0.22em] text-burgundy font-medium">
+                        {n.cat}
+                      </p>
+                      <p className="text-[11px] uppercase tracking-[0.14em] text-muted mt-2">
+                        {n.fecha}
+                      </p>
+                      <p className="font-serif italic text-[12px] text-olive mt-2">
+                        {n.folio}
+                      </p>
+                      <span className="inline-flex items-center gap-1.5 text-[11px] uppercase tracking-[0.16em] font-medium text-navy mt-5 group-hover:gap-3 group-hover:text-burgundy transition-all duration-300">
+                        Leer
+                        <span aria-hidden="true">→</span>
+                      </span>
+                    </div>
+                  </Link>
                 </StaggerItem>
               ))}
             </Stagger>
           </div>
         </section>
 
+        {/* IV — Boletín · acento dark */}
         <section className="bg-navy text-background relative overflow-hidden">
           <span className="absolute top-8 left-8 w-3 h-3 border-t border-l border-olive/60" />
           <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
@@ -97,7 +200,7 @@ export default function BlogIndexPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-24">
             <div className="flex items-baseline gap-4 mb-10 justify-center">
               <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
-                II
+                IV
               </span>
               <span className="w-[80px] h-[1px] bg-background/30" />
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-background/60">
