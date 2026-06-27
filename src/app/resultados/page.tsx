@@ -8,7 +8,7 @@ import { ChapterMark } from "@/components/site/ChapterMark";
 import { ImmersiveHero } from "@/components/page/ImmersiveHero";
 import { CountUp } from "@/components/motion/CountUp";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import Image from "next/image";
+import { CoverageMap } from "@/components/visual/CoverageMap";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
@@ -192,53 +192,24 @@ export default function ResultadosPage() {
               </div>
             </Reveal>
 
-            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start border-t border-foreground/15 pt-12">
-              <div className="col-span-12 lg:col-span-7 lg:pr-6">
-                <Reveal className="max-w-[560px] mx-auto lg:mx-0">
-                  <div className="flex items-baseline gap-3 mb-4">
-                    <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
-                      II·b
-                    </span>
-                    <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
-                      Mapa de cobertura
-                    </span>
-                    <span className="flex-1 h-[1px] bg-rule" />
-                  </div>
-
-                  <figure className="relative aspect-[3/4] overflow-hidden border border-foreground/15 bg-background shadow-[0_2px_18px_-12px_rgba(15,42,71,0.25)]">
-                    <span aria-hidden="true" className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />
-                    <span aria-hidden="true" className="absolute top-3 right-3 w-2.5 h-2.5 border-t border-r border-olive z-10 pointer-events-none" />
-                    <span aria-hidden="true" className="absolute bottom-3 left-3 w-2.5 h-2.5 border-b border-l border-olive z-10 pointer-events-none" />
-                    <span aria-hidden="true" className="absolute bottom-3 right-3 w-2.5 h-2.5 border-b border-r border-olive z-10 pointer-events-none" />
-
-                    <span aria-hidden="true" className="absolute top-5 left-7 z-10 text-[9px] uppercase tracking-[0.22em] text-muted/80 font-medium pointer-events-none">
-                      Frontera · México – Estados Unidos
-                    </span>
-                    <span aria-hidden="true" className="absolute bottom-5 right-7 z-10 font-serif italic text-[11px] text-olive pointer-events-none">
-                      Baja California
-                    </span>
-
-                    <Image
-                      src="/editorial/editorial-bc-mapa-frontera.png"
-                      alt="Mapa minimalista de la frontera norte de Baja California, con las plazas de Tijuana, Tecate, Rosarito y Mexicali"
-                      fill
-                      sizes="(min-width: 1024px) 560px, (min-width: 768px) 60vw, 100vw"
-                      className="object-contain p-8 md:p-10"
-                    />
-                  </figure>
-
-                  <figcaption className="text-[11px] uppercase tracking-[0.18em] text-muted font-medium mt-4 text-center lg:text-left">
-                    Tijuana · Tecate · Rosarito · Mexicali
-                  </figcaption>
-
-                </Reveal>
+            <div className="border-t border-foreground/15 pt-12">
+              <div className="flex items-baseline gap-3 mb-7">
+                <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
+                  II·b
+                </span>
+                <span className="text-[10px] uppercase tracking-[0.22em] text-muted font-medium">
+                  Mapa de cobertura
+                </span>
+                <span className="flex-1 h-[1px] bg-rule" />
               </div>
-              <Stagger className="col-span-12 lg:col-span-5 space-y-8">
+
+              <Reveal className="border border-foreground/15 bg-background px-5 py-8 md:px-10 md:py-10 shadow-[0_2px_18px_-12px_rgba(15,42,71,0.25)]">
+                <CoverageMap variant="light" />
+              </Reveal>
+
+              <Stagger className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8 mt-12">
                 {cobertura.map((c) => (
-                  <StaggerItem
-                    key={c.titulo}
-                    className="border-b border-rule pb-7 last:border-0"
-                  >
+                  <StaggerItem key={c.titulo} className="border-t border-foreground/15 pt-6">
                     <div className="flex items-baseline gap-4 mb-3">
                       <span
                         aria-hidden="true"
@@ -253,7 +224,7 @@ export default function ResultadosPage() {
                     <h3 className="font-serif text-[22px] leading-[1.2] font-medium text-navy tracking-[-0.005em]">
                       {c.titulo}
                     </h3>
-                    <p className="text-[14.5px] leading-[1.65] text-foreground/85 mt-3 max-w-[420px]">
+                    <p className="text-[14.5px] leading-[1.65] text-foreground/85 mt-3">
                       {c.cuerpo}
                     </p>
                   </StaggerItem>
