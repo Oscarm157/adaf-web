@@ -5,8 +5,9 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
-import { PageHero } from "@/components/page/PageHero";
+import { ImmersiveHero } from "@/components/page/ImmersiveHero";
 import { CountUp } from "@/components/motion/CountUp";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import Image from "next/image";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
@@ -123,7 +124,9 @@ export default function ResultadosPage() {
       <Masthead />
       <Header />
       <main>
-        <PageHero
+        <ImmersiveHero
+          image="/editorial/hero-frontera-amplia.png"
+          alt="Frontera norte de Baja California al atardecer"
           crumbs={[{ label: "Inicio", href: "/" }, { label: "Resultados" }]}
           numeral="II"
           label="Práctica profesional"
@@ -135,7 +138,7 @@ export default function ResultadosPage() {
         <section className="bg-background pt-20 pb-20">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="I" label="Cifras de la práctica" />
-            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
+            <Reveal className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
               <div className="col-span-12 lg:col-span-8">
                 <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Veinticinco años en cuatro materias.
@@ -148,11 +151,11 @@ export default function ResultadosPage() {
                   requiere.
                 </p>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 border-y border-foreground/15">
+            <Stagger className="grid grid-cols-1 md:grid-cols-4 border-y border-foreground/15">
               {stats.map((s, i) => (
-                <div
+                <StaggerItem
                   key={s.label}
                   className={`px-6 py-9 ${
                     i < stats.length - 1 ? "md:border-r border-rule" : ""
@@ -171,9 +174,9 @@ export default function ResultadosPage() {
                   <p className="font-serif italic text-[12px] text-olive mt-2">
                     {s.note}
                   </p>
-                </div>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </section>
 
@@ -181,17 +184,17 @@ export default function ResultadosPage() {
         <section className="bg-background-warm pt-20 pb-20">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="II" label="Cobertura geográfica" />
-            <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
+            <Reveal className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
               <div className="col-span-12 lg:col-span-7">
                 <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Frontera norte como base, alcance estatal y federal.
                 </h2>
               </div>
-            </div>
+            </Reveal>
 
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start border-t border-foreground/15 pt-12">
               <div className="col-span-12 lg:col-span-7 lg:pr-6">
-                <div className="max-w-[560px] mx-auto lg:mx-0">
+                <Reveal className="max-w-[560px] mx-auto lg:mx-0">
                   <div className="flex items-baseline gap-3 mb-4">
                     <span aria-hidden="true" className="font-serif italic text-[13px] text-olive">
                       II·b
@@ -228,11 +231,11 @@ export default function ResultadosPage() {
                     Tijuana · Tecate · Rosarito · Mexicali
                   </figcaption>
 
-                </div>
+                </Reveal>
               </div>
-              <div className="col-span-12 lg:col-span-5 space-y-8">
+              <Stagger className="col-span-12 lg:col-span-5 space-y-8">
                 {cobertura.map((c) => (
-                  <article
+                  <StaggerItem
                     key={c.titulo}
                     className="border-b border-rule pb-7 last:border-0"
                   >
@@ -253,9 +256,9 @@ export default function ResultadosPage() {
                     <p className="text-[14.5px] leading-[1.65] text-foreground/85 mt-3 max-w-[420px]">
                       {c.cuerpo}
                     </p>
-                  </article>
+                  </StaggerItem>
                 ))}
-              </div>
+              </Stagger>
             </div>
           </div>
         </section>
@@ -265,16 +268,16 @@ export default function ResultadosPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="III" label="Perfil de los clientes" />
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
-              <div className="col-span-12 lg:col-span-4">
-                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] sticky top-32">
+              <Reveal className="col-span-12 lg:col-span-4 lg:sticky lg:top-32 self-start">
+                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em]">
                   Tipos de cliente atendidos.
                 </h2>
                 <p className="text-[14px] leading-[1.65] text-muted mt-5 max-w-[340px]">
                   Trabajamos con personas físicas con actividad empresarial y
                   con personas morales de operación regional y fronteriza.
                 </p>
-              </div>
-              <div className="col-span-12 lg:col-span-7 lg:col-start-6">
+              </Reveal>
+              <Reveal delay={0.1} className="col-span-12 lg:col-span-7 lg:col-start-6">
                 <ul className="border-t border-foreground/15">
                   {tiposCliente.map((t, i) => (
                     <li
@@ -290,7 +293,7 @@ export default function ResultadosPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -300,8 +303,8 @@ export default function ResultadosPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="IV" label="Autoridades y tribunales" />
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
-              <div className="col-span-12 lg:col-span-4">
-                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] sticky top-32">
+              <Reveal className="col-span-12 lg:col-span-4 lg:sticky lg:top-32 self-start">
+                <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em]">
                   Donde representamos a nuestros clientes.
                 </h2>
                 <p className="text-[14px] leading-[1.65] text-muted mt-5 max-w-[340px]">
@@ -309,8 +312,8 @@ export default function ResultadosPage() {
                   sanitarias, y ante tribunales administrativos y federales
                   en materia de amparo.
                 </p>
-              </div>
-              <div className="col-span-12 lg:col-span-8">
+              </Reveal>
+              <Reveal delay={0.1} className="col-span-12 lg:col-span-8">
                 <ul className="grid grid-cols-1 sm:grid-cols-2 border-t border-rule">
                   {autoridades.map((a, i) => (
                     <li
@@ -326,7 +329,7 @@ export default function ResultadosPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -350,7 +353,7 @@ export default function ResultadosPage() {
                 Atención
               </span>
             </div>
-            <div className="max-w-[760px] mx-auto text-center">
+            <Reveal className="max-w-[760px] mx-auto text-center">
               <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
                 Escríbenos los detalles de tu asunto.
               </h2>
@@ -390,7 +393,7 @@ export default function ResultadosPage() {
                   </Link>
                 )}
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

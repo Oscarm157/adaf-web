@@ -5,6 +5,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { posts } from "@/lib/posts";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
@@ -46,12 +47,12 @@ export default function BlogIndexPage() {
 
         <section className="bg-background pt-20 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 border-t border-foreground/15">
+            <Stagger className="grid grid-cols-1 md:grid-cols-3 border-t border-foreground/15">
               {ordered.map((n, i) => (
+                <StaggerItem key={n.slug}>
                 <Link
-                  key={n.slug}
                   href={`/blog/${n.slug}`}
-                  className={`group block px-1 md:px-7 py-10 transition-colors duration-300 hover:bg-background-warm ${
+                  className={`group block h-full px-1 md:px-7 py-10 transition-colors duration-300 hover:bg-background-warm ${
                     i < ordered.length - 1 ? "md:border-r border-rule" : ""
                   } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
                 >
@@ -81,8 +82,9 @@ export default function BlogIndexPage() {
                     <span>→</span>
                   </span>
                 </Link>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </section>
 
@@ -103,7 +105,7 @@ export default function BlogIndexPage() {
               </span>
             </div>
 
-            <div className="max-w-[680px] mx-auto text-center">
+            <Reveal className="max-w-[680px] mx-auto text-center">
               <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
                 ¿Su caso se parece a alguno de estos artículos?
               </h2>
@@ -145,7 +147,7 @@ export default function BlogIndexPage() {
                   </Link>
                 )}
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

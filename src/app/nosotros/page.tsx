@@ -6,6 +6,8 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
+import { CinematicBand } from "@/components/site/CinematicBand";
+import { Reveal } from "@/components/motion/Reveal";
 import { PageHero } from "@/components/page/PageHero";
 import Image from "next/image";
 import { allServices } from "@/components/service/data";
@@ -89,7 +91,7 @@ export default function NosotrosPage() {
                   </figcaption>
                 </figure>
               </div>
-              <div className="col-span-12 lg:col-span-7 lg:col-start-6">
+              <Reveal className="col-span-12 lg:col-span-7 lg:col-start-6">
                 <h2 className="font-serif text-[24px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.1] font-semibold text-navy tracking-[-0.012em]">
                   Un despacho construido caso por caso.
                 </h2>
@@ -117,10 +119,22 @@ export default function NosotrosPage() {
                     realista.
                   </p>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
+
+        {/* Banda dark claroscuro · acento único de la página.
+            Statement lifteado de la lede del PageHero (línea ~69) y de la
+            metadata. Body lifteado del primer párrafo de "La firma". */}
+        <CinematicBand
+          image="/editorial/nosotros-banner-despacho-dark.png"
+          alt="Despacho jurídico en penumbra, una lámpara de escritorio iluminando expedientes"
+          eyebrow="La firma"
+          lines={["Veinticinco años", "de práctica continua."]}
+          body="Lo que no cambia es lo que el contribuyente necesita: claridad sobre lo que está pasando, una estrategia honesta y representación rigurosa en cada etapa del procedimiento."
+          ariaLabel="Trayectoria del despacho"
+        />
 
         <AuthoritiesBand />
 
@@ -129,11 +143,11 @@ export default function NosotrosPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="II" label="Principios" />
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12">
-              <div className="col-span-12 lg:col-span-8">
+              <Reveal className="col-span-12 lg:col-span-8">
                 <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Cómo entendemos nuestra labor.
                 </h2>
-              </div>
+              </Reveal>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 border-t border-foreground/15">
               {principios.map((p, i) => (
@@ -173,7 +187,7 @@ export default function NosotrosPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="III" label="Áreas de práctica" />
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 mb-12 items-end">
-              <div className="col-span-12 lg:col-span-8">
+              <Reveal className="col-span-12 lg:col-span-8">
                 <h2 className="font-serif text-[26px] md:text-[32px] lg:text-[40px] leading-[1.15] md:leading-[1.08] font-semibold text-navy tracking-[-0.014em]">
                   Diez áreas de defensa especializada.
                 </h2>
@@ -183,7 +197,7 @@ export default function NosotrosPage() {
                   específicas. Un mismo expediente puede requerir trabajo
                   simultáneo en varias materias.
                 </p>
-              </div>
+              </Reveal>
               <div className="col-span-12 lg:col-span-4 lg:pb-2">
                 <Link
                   href="/servicios"
@@ -233,7 +247,7 @@ export default function NosotrosPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="IV" label="Oficina" />
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10 items-start">
-              <div className="col-span-12 lg:col-span-5">
+              <Reveal className="col-span-12 lg:col-span-5">
                 <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em]">
                   Nueva Tijuana, Baja California.
                 </h2>
@@ -293,7 +307,7 @@ export default function NosotrosPage() {
                     <ArrowRight className="w-3 h-3" strokeWidth={1.5} />
                   </a>
                 </div>
-              </div>
+              </Reveal>
               <div className="col-span-12 lg:col-span-7">
                 <figure className="relative border border-rule bg-background overflow-hidden">
                   <span className="absolute top-3 left-3 w-2.5 h-2.5 border-t border-l border-olive z-10 pointer-events-none" />

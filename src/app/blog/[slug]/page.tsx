@@ -25,6 +25,8 @@ import {
 } from "@/lib/posts";
 import { siteUrl, siteConfig } from "@/lib/seo";
 import { TableOfContents } from "@/components/blog/TableOfContents";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { EditorialBand } from "@/components/visual/EditorialBand";
 
 export const dynamicParams = false;
 
@@ -156,7 +158,7 @@ export default async function BlogPostPage({
               </span>
             </nav>
 
-            <div className="max-w-[820px]">
+            <Reveal className="max-w-[820px]">
               <div className="flex items-baseline gap-5 mb-8">
                 <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-olive">
                   {post.cat}
@@ -184,24 +186,38 @@ export default async function BlogPostPage({
               </div>
 
               <div className="w-full h-[1px] bg-rule mt-10" />
-            </div>
+            </Reveal>
           </div>
         </section>
+
+        {/* Foto editorial */}
+        <Reveal>
+          <EditorialBand
+            numeral={post.folio}
+            title={post.titulo}
+            tone="navy"
+            aspect="21/9"
+            src="/editorial/editorial-ii-expedientes.png"
+            alt="Expedientes del despacho ADAF"
+          />
+        </Reveal>
 
         {/* Cuerpo */}
         <section className="bg-background pt-16 pb-20">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <Prose>
-              <TableOfContents body={post.body} />
-              {post.body.map((b, i) => renderBlock(b, i))}
-            </Prose>
+            <Reveal>
+              <Prose>
+                <TableOfContents body={post.body} />
+                {post.body.map((b, i) => renderBlock(b, i))}
+              </Prose>
+            </Reveal>
           </div>
         </section>
 
         {/* Pie del artículo */}
         <section className="bg-background-warm border-y border-rule">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-16">
-            <div className="max-w-[820px]">
+            <Reveal className="max-w-[820px]">
               <p className="font-serif italic text-[18px] leading-[1.55] text-foreground/85 border-l-2 border-olive pl-5">
                 Este texto es comentario técnico, no asesoría sobre un caso
                 específico. Si tu situación se parece a lo descrito,
@@ -240,14 +256,14 @@ export default async function BlogPostPage({
                   </Link>
                 )}
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Más artículos */}
         <section className="bg-background pt-20 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <div className="flex items-baseline gap-4 mb-10">
+            <Reveal className="flex items-baseline gap-4 mb-10">
               <span aria-hidden="true" className="font-serif italic text-[14px] text-olive">
                 IX
               </span>
@@ -255,14 +271,14 @@ export default async function BlogPostPage({
               <span className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted">
                 Más artículos
               </span>
-            </div>
+            </Reveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 border-t border-foreground/15">
+            <Stagger className="grid grid-cols-1 md:grid-cols-2 border-t border-foreground/15">
               {otras.map((n, i) => (
+                <StaggerItem key={n.slug}>
                 <Link
-                  key={n.slug}
                   href={`/blog/${n.slug}`}
-                  className={`group block px-1 md:px-7 py-10 transition-colors duration-300 hover:bg-background-warm ${
+                  className={`group block h-full px-1 md:px-7 py-10 transition-colors duration-300 hover:bg-background-warm ${
                     i === 0 ? "md:border-r border-rule" : ""
                   } ${i > 0 ? "border-t md:border-t-0 border-rule" : ""}`}
                 >
@@ -288,8 +304,9 @@ export default async function BlogPostPage({
                     <span>→</span>
                   </span>
                 </Link>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </section>
       </main>

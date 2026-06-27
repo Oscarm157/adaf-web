@@ -6,6 +6,7 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { PageHero } from "@/components/page/PageHero";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
@@ -166,39 +167,42 @@ function FaqGroup({
         <ChapterMark numeral={numeral} label={label} />
         <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 mt-10">
           <div className="col-span-12 lg:col-span-4">
-            <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em] sticky top-32">
-              {titulo}
-            </h2>
+            <Reveal className="sticky top-32">
+              <h2 className="font-serif text-[24px] md:text-[28px] lg:text-[34px] leading-[1.18] md:leading-[1.12] font-semibold text-navy tracking-[-0.012em]">
+                {titulo}
+              </h2>
+            </Reveal>
           </div>
           <div className="col-span-12 lg:col-span-8">
-            <div className="border-t border-foreground/15">
+            <Stagger className="border-t border-foreground/15">
               {preguntas.map((faq, i) => (
-                <details
-                  key={faq.q}
-                  className="group border-b border-rule py-6 px-1 [&[open]]:bg-background-warm/40 transition-colors"
-                >
-                  <summary className="flex items-baseline gap-4 cursor-pointer list-none">
-                    <span aria-hidden="true" className="font-serif italic text-[14px] text-olive shrink-0 w-7">
-                      {romanize(startIndex + i + 1)}
-                    </span>
-                    <span className="font-serif text-[20px] leading-[1.3] font-medium text-navy tracking-[-0.005em] flex-1 group-hover:text-burgundy transition-colors">
-                      {faq.q}
-                    </span>
-                    <span
-                      aria-hidden="true"
-                      className="font-serif italic text-[20px] text-olive group-open:rotate-45 transition-transform duration-200 select-none"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <div className="ml-11 mt-4 max-w-[640px]">
-                    <p className="text-[15.5px] leading-[1.7] text-foreground/85">
-                      {faq.a}
-                    </p>
-                  </div>
-                </details>
+                <StaggerItem key={faq.q}>
+                  <details
+                    className="group border-b border-rule py-6 px-1 [&[open]]:bg-background-warm/40 transition-colors"
+                  >
+                    <summary className="flex items-baseline gap-4 cursor-pointer list-none">
+                      <span aria-hidden="true" className="font-serif italic text-[14px] text-olive shrink-0 w-7">
+                        {romanize(startIndex + i + 1)}
+                      </span>
+                      <span className="font-serif text-[20px] leading-[1.3] font-medium text-navy tracking-[-0.005em] flex-1 group-hover:text-burgundy transition-colors">
+                        {faq.q}
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className="font-serif italic text-[20px] text-olive group-open:rotate-45 transition-transform duration-200 select-none"
+                      >
+                        +
+                      </span>
+                    </summary>
+                    <div className="ml-11 mt-4 max-w-[640px]">
+                      <p className="text-[15.5px] leading-[1.7] text-foreground/85">
+                        {faq.a}
+                      </p>
+                    </div>
+                  </details>
+                </StaggerItem>
               ))}
-            </div>
+            </Stagger>
           </div>
         </div>
       </div>

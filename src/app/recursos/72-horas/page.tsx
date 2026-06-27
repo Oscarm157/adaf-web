@@ -7,6 +7,7 @@ import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
 import { Prose, P, H2, UL, LI, Note } from "@/components/page/Prose";
 import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
+import { Reveal } from "@/components/motion/Reveal";
 import Image from "next/image";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
@@ -56,7 +57,7 @@ export default function Recurso72HorasPage() {
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <div className="grid grid-cols-12 gap-y-10 gap-x-6 md:gap-12 items-start">
               {/* Cover image */}
-              <div className="col-span-12 lg:col-span-5">
+              <Reveal className="col-span-12 lg:col-span-5">
                 <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
                   <Image
                     src="/portada-72-horas.jpg"
@@ -67,10 +68,11 @@ export default function Recurso72HorasPage() {
                     priority
                   />
                 </div>
-              </div>
+              </Reveal>
 
               {/* Cuerpo + form */}
               <div className="col-span-12 lg:col-span-7 lg:pl-4">
+                <Reveal delay={0.08}>
                 <Prose>
                   <H2>Por qué redactamos esta guía</H2>
                   <P>
@@ -105,6 +107,7 @@ export default function Recurso72HorasPage() {
                     iniciales antes de que el procedimiento avance.
                   </P>
                 </Prose>
+                </Reveal>
 
                 <div className="mt-12 max-w-[560px] border-t border-rule pt-10">
                   <p className="text-[10px] uppercase tracking-[0.22em] font-medium text-muted mb-2">
@@ -120,7 +123,7 @@ export default function Recurso72HorasPage() {
         {/* Aviso del documento */}
         <section className="bg-background-warm border-y border-rule">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-16">
-            <div className="max-w-[820px]">
+            <Reveal className="max-w-[820px]">
               <Prose>
                 <Note title="Aviso del documento">
                   Este material es orientación general. No sustituye la
@@ -128,7 +131,7 @@ export default function Recurso72HorasPage() {
                   situación está en proceso, contáctanos antes de actuar.
                 </Note>
               </Prose>
-            </div>
+            </Reveal>
           </div>
         </section>
 
@@ -150,7 +153,7 @@ export default function Recurso72HorasPage() {
               </span>
             </div>
 
-            <div className="max-w-[820px] mx-auto text-center">
+            <Reveal className="max-w-[820px] mx-auto text-center">
               <h2 className="font-serif text-[28px] md:text-[34px] lg:text-[40px] leading-[1.2] md:leading-[1.12] font-semibold tracking-[-0.012em]">
                 Si lo que enfrentas no admite espera, escríbenos.
               </h2>
@@ -192,7 +195,7 @@ export default function Recurso72HorasPage() {
                   </Link>
                 )}
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
       </main>

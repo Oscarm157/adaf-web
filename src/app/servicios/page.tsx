@@ -6,6 +6,8 @@ import { Footer } from "@/components/site/Footer";
 import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
 import { PageHero } from "@/components/page/PageHero";
 import { ServiciosList } from "@/components/service/ServiciosList";
+import { CinematicBand } from "@/components/site/CinematicBand";
+import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
@@ -36,9 +38,21 @@ export default function ServiciosHub() {
           lede="Organizamos la práctica por tipo de procedimiento y autoridad competente. Cada materia incluye plazos legales, documentación necesaria y la estrategia de defensa que aplicamos."
         />
 
+        <CinematicBand
+          image="/editorial/servicios-banner-consecuencia-dark.png"
+          alt="Patio aduanal de noche bajo reflector"
+          align="right"
+          minH="min-h-[58svh]"
+          eyebrow="Por autoridad y procedimiento"
+          lines={["Diez materias.", "Una vía para", "cada autoridad."]}
+          body="Aduana, SAT, IMSS, COFEPRIS, SICT y los tribunales: cada autoridad con su propio procedimiento y sus propios plazos legales."
+        />
+
         <section className="bg-background pt-14 md:pt-20 pb-20 md:pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
-            <ServiciosList />
+            <Reveal>
+              <ServiciosList />
+            </Reveal>
           </div>
         </section>
 
@@ -47,15 +61,19 @@ export default function ServiciosHub() {
           <span className="absolute top-8 right-8 w-3 h-3 border-t border-r border-olive/60" />
           <span className="absolute bottom-8 left-8 w-3 h-3 border-b border-l border-olive/60" />
           <span className="absolute bottom-8 right-8 w-3 h-3 border-b border-r border-olive/60" />
-          <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-20 text-center">
-            <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
-              ¿No estás seguro de qué materia aplica a tu caso?
-            </h2>
-            <p className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
-              Cuéntanos la notificación o resolución que recibiste.
-              Identificamos la vía procedente y los plazos que están corriendo.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 mt-9">
+          <Stagger className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12 py-20 text-center">
+            <StaggerItem>
+              <h2 className="font-serif text-[26px] md:text-[30px] lg:text-[36px] leading-[1.18] md:leading-[1.12] font-semibold tracking-[-0.012em]">
+                ¿No estás seguro de qué materia aplica a tu caso?
+              </h2>
+            </StaggerItem>
+            <StaggerItem className="text-[16px] text-background/80 mt-5 leading-[1.55] max-w-[600px] mx-auto">
+              <p>
+                Cuéntanos la notificación o resolución que recibiste.
+                Identificamos la vía procedente y los plazos que están corriendo.
+              </p>
+            </StaggerItem>
+            <StaggerItem className="flex flex-wrap items-center justify-center gap-4 mt-9">
               {CALENDLY_URL && (
                 <a
                   href={CALENDLY_URL}
@@ -86,8 +104,8 @@ export default function ServiciosHub() {
                   Enviar mensaje
                 </Link>
               )}
-            </div>
-          </div>
+            </StaggerItem>
+          </Stagger>
         </section>
       </main>
       <Footer />
