@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import { gsap, ScrollTrigger, registerGsap } from "@/lib/gsap";
 
@@ -8,8 +9,17 @@ import { gsap, ScrollTrigger, registerGsap } from "@/lib/gsap";
 // Respeta prefers-reduced-motion: si está activo, no instancia Lenis (scroll nativo)
 // y solo registra ScrollTrigger para que los componentes con matchMedia decidan.
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
+  const lenisRef = useRef<Lenis | null>(null);
+  const pathname = usePathname();
+
   useEffect(() => {
     registerGsap();
+
+    // Lenis controla el scroll, así que el scroll-to-top automático de Next no
+    // aplica: lo manejamos manualmente en el efecto de pathname.
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
 
     const prefersReduced = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -26,6 +36,7 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
+    lenisRef.current = lenis;
 
     lenis.on("scroll", ScrollTrigger.update);
 
@@ -44,9 +55,20 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       gsap.ticker.remove(onTick);
       window.removeEventListener("load", refresh);
       lenis.destroy();
+      lenisRef.current = null;
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
   }, []);
+
+  // En cada cambio de ruta arranca arriba (Lenis no respeta el scroll-to-top de Next).
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+    ScrollTrigger.refresh();
+  }, [pathname]);
 
   return <>{children}</>;
 }
