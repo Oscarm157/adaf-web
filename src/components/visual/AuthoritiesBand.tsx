@@ -46,7 +46,7 @@ export function AuthoritiesBand() {
           initial={reduce ? false : { opacity: 0, y: 14 }}
           animate={animate ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="font-serif text-[22px] md:text-[28px] lg:text-[30px] leading-[1.45] text-navy tracking-[-0.005em] mt-6"
+          className="font-serif text-[22px] md:text-[28px] lg:text-[30px] leading-[1.45] text-navy tracking-[-0.005em] mt-6 flex flex-wrap items-baseline justify-center"
         >
           {authorities.map((a, i) => (
             <span key={a}>

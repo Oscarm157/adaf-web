@@ -65,10 +65,10 @@ export function HeroImmersive() {
       {/* Contenido */}
       <div className="relative z-10 flex-1 flex flex-col">
         <div className="max-w-[1280px] w-full mx-auto px-6 md:px-10 lg:px-12 pt-28 md:pt-32 flex-1 flex flex-col justify-end pb-20 md:pb-28">
-          <div className="grid grid-cols-12 gap-x-10 gap-y-12 items-end">
+          <div className="flex flex-col lg:flex-row lg:items-end gap-12 lg:gap-10">
             {/* Columna izquierda — apertura tipográfica */}
-            <div className="col-span-12 lg:col-span-7">
-              <div className="flex items-baseline gap-4 mb-8 md:mb-10">
+            <div className="w-full lg:w-[57%]">
+              <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-8 md:mb-10">
                 <span aria-hidden="true" className="font-serif italic text-[14px] text-[#C9B85A]">
                   I
                 </span>
@@ -99,7 +99,7 @@ export function HeroImmersive() {
               initial={reduce ? false : { opacity: 0, y: 16 }}
               animate={reduce ? undefined : { opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease, delay: 0.7 }}
-              className="col-span-12 lg:col-span-4 lg:col-start-9 flex flex-col gap-7 lg:pb-1"
+              className="w-full lg:w-[36%] lg:ml-auto flex flex-col gap-7 lg:pb-1"
             >
               <span className="hidden lg:block h-px w-16 bg-cream/25" />
               <p className="text-[16px] md:text-[17px] leading-[1.65] text-cream/85 max-w-[520px]">

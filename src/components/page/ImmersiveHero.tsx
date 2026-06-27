@@ -99,7 +99,7 @@ export function ImmersiveHero({
         )}
 
         {(numeral || label) && (
-          <div className="flex items-baseline gap-4 mb-7">
+          <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-7">
             {numeral && (
               <span aria-hidden="true" className="font-serif italic text-[14px] text-[#C9B85A]">
                 {numeral}

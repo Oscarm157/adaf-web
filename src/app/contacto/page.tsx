@@ -85,10 +85,10 @@ export default function ContactoPage() {
               <span className="text-cream/90">Contacto</span>
             </nav>
 
-            <div className="grid grid-cols-12 gap-x-10 gap-y-12 items-end">
+            <div className="flex flex-col lg:flex-row lg:items-end gap-12 lg:gap-10">
               {/* Apertura tipográfica */}
-              <Reveal className="col-span-12 lg:col-span-7">
-                <div className="flex items-baseline gap-4 mb-7">
+              <Reveal className="w-full lg:w-[57%] min-w-0">
+                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2 mb-7">
                   <span aria-hidden="true" className="font-serif italic text-[14px] text-[#C9B85A]">
                     IV
                   </span>
@@ -156,7 +156,7 @@ export default function ContactoPage() {
               {/* Ledger de contacto directo sobre la foto */}
               <Reveal
                 delay={0.15}
-                className="col-span-12 lg:col-span-4 lg:col-start-9"
+                className="w-full lg:w-[36%] lg:ml-auto min-w-0"
               >
                 <span className="block text-[10px] uppercase tracking-[0.22em] font-medium text-[#C9B85A]/90 mb-5">
                   Contacto directo
