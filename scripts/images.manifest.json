@@ -370,6 +370,22 @@
       "prompt": "Wide cinematic horizontal photograph, 21:9 ultra-wide, of a single shipping container standing alone in a customs inspection yard at blue hour, just after sunset. The sky still holds soft residual indigo-and-slate light with a faint warm band low on the horizon, NOT pitch black. A tall floodlight adds a warm sodium key on the closed container doors while ambient dusk light fills the scene so the wet concrete, ground markings and the distant low Tijuana hills with scattered city lights are all clearly visible with rich mid-tones. Just one container, NOT a stack, NOT a pyramid. The container surface is completely blank, no codes, no numbers, no company names, no flags, no logos, no graffiti, no markings. Moody but well-exposed cinematic grade, balanced exposure with detail in the shadows, cool navy and slate tones with one warm highlight, slight industrial haze, fine film grain. Keep the upper sky band cleaner and a touch darker for text overlay. Sober, restrained, monolithic single-subject composition. Premium documentary editorial photography, 35mm, Mexican border industrial mood at dusk. No people, no vehicles, no readable signage, no text, no lettering anywhere.",
       "lastGeneratedAt": "2026-06-26T23:36:40.803Z",
       "lastPredictionId": "nn3hv5yfg1rmt0cz0s5avnpmp4"
+    },
+    {
+      "id": "portada-72-horas-dark",
+      "title": "Portada guía 72h — primera luz sobre la frontera (dark, vertical)",
+      "subject": "Tijuana frontera a primera luz, vertical para portada",
+      "tone": "navy",
+      "aspect": "3:4",
+      "filename": "portada-72-horas-dark.png",
+      "status": "done",
+      "input": {
+        "aspect_ratio": "3:4",
+        "output_format": "png"
+      },
+      "prompt": "Vertical 3:4 cinematic editorial photograph of the Tijuana border city at first light before dawn. A calm predawn sky in deep indigo and slate transitions to a thin warm amber band low on the horizon; the sprawling city and distant border infrastructure spread out below with scattered cool lights still on and soft mist in the valleys. Elevated wide vantage, quiet and monumental, a sense of the early hours beginning. Well-exposed with rich mid-tones and clearly visible detail, NOT underexposed, cool navy and slate palette with a single warm horizon glow, fine film grain, premium documentary photography. Keep the lower third calmer and darker for a text overlay. No people, no text, no numbers, no logos, no lettering, no large foreground objects.",
+      "lastGeneratedAt": "2026-06-27T00:26:06.766Z",
+      "lastPredictionId": "b5k3xy0jc1rmt0cz0swb6tdadw"
     }
   ]
 }

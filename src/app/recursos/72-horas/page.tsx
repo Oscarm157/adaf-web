@@ -8,7 +8,7 @@ import { PageHero } from "@/components/page/PageHero";
 import { Prose, P, H2, UL, LI, Note } from "@/components/page/Prose";
 import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
 import { Reveal } from "@/components/motion/Reveal";
-import Image from "next/image";
+import { GuiaCover } from "@/components/site/GuiaCover";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
 
@@ -59,14 +59,7 @@ export default function Recurso72HorasPage() {
               {/* Cover image */}
               <Reveal className="col-span-12 lg:col-span-5">
                 <div className="relative aspect-[3/4] overflow-hidden shadow-[0_24px_60px_-30px_rgba(15,42,71,0.35)]">
-                  <Image
-                    src="/portada-72-horas.jpg"
-                    alt="Portada, Las primeras 72 horas, guía del contribuyente ADAF"
-                    fill
-                    sizes="(min-width: 1024px) 40vw, 100vw"
-                    className="object-cover"
-                    priority
-                  />
+                  <GuiaCover />
                 </div>
               </Reveal>
 

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { ChapterMark } from "./ChapterMark";
+import { GuiaCover } from "./GuiaCover";
 import { LeadMagnetForm } from "@/components/forms/LeadMagnetForm";
 
 export function LeadMagnet() {
@@ -12,14 +12,7 @@ export function LeadMagnet() {
           {/* Portada sangrada, más grande */}
           <div className="col-span-12 lg:col-span-5 relative">
             <div className="relative aspect-[3/4] w-full lg:w-[118%] lg:-ml-[9%] overflow-hidden shadow-[0_40px_90px_-40px_rgba(11,14,20,0.55)]">
-              <Image
-                src="/portada-72-horas.jpg"
-                alt="Portada, Las primeras 72 horas, guía del contribuyente ADAF"
-                fill
-                sizes="(min-width: 1024px) 48vw, 100vw"
-                className="object-cover"
-                priority
-              />
+              <GuiaCover />
             </div>
           </div>
 
