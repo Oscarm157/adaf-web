@@ -46,3 +46,7 @@ public/editorial/test-*.png
 
 # Capturas de referencia, no assets
 public/FireShot*
+
+# capturas/artefactos temporales
+Captura de pantalla*
+FireShot Capture*
