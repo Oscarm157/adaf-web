@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { Resend } from "resend";
-import { siteConfig } from "@/lib/seo";
+import { and, eq, gte } from "drizzle-orm";
+import { db } from "@/lib/db";
+import { leads, leadComments, leadEvents } from "@/lib/schema";
+import { siteConfig, siteUrl } from "@/lib/seo";
 
 const schema = z.object({
   nombre: z.string().min(2).max(120),
@@ -42,16 +45,50 @@ export async function POST(request: Request) {
       );
     }
 
+    const { nombre, telefono, email, tipo, mensaje } = parsed.data;
+
+    // Persistir el lead en el CRM. Es el registro durable: si Resend falla o
+    // nadie revisa el correo, el lead no se pierde. Un fallo de DB no debe
+    // tumbar el envío del correo ni la respuesta al usuario.
+    try {
+      const tenMinAgo = new Date(Date.now() - 10 * 60 * 1000);
+      const dup = await db
+        .select({ id: leads.id })
+        .from(leads)
+        .where(and(eq(leads.email, email), gte(leads.createdAt, tenMinAgo)))
+        .limit(1);
+      if (dup.length === 0) {
+        const [lead] = await db
+          .insert(leads)
+          .values({
+            name: nombre,
+            email,
+            phone: telefono,
+            source: "form",
+            sourceUrl: `${siteUrl}/contacto`,
+            qualification: { service: tipoLabel[tipo] },
+          })
+          .returning({ id: leads.id });
+        await db.insert(leadEvents).values({
+          leadId: lead.id,
+          kind: "created",
+          detail: "Lead creado desde el formulario de contacto",
+        });
+        await db.insert(leadComments).values({ leadId: lead.id, body: mensaje });
+      }
+    } catch (err) {
+      console.error("[contacto] no se pudo guardar el lead", err);
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     const fromEmail = process.env.RESEND_FROM ?? "ADAF <onboarding@resend.dev>";
-    const toEmail = process.env.RESEND_TO ?? siteConfig.email;
+    const toEmail = process.env.LEAD_RECIPIENT || process.env.RESEND_TO || siteConfig.email;
 
     if (!apiKey) {
       console.warn("[contacto] RESEND_API_KEY no configurado");
       return NextResponse.json({ ok: true, dev: true });
     }
 
-    const { nombre, telefono, email, tipo, mensaje } = parsed.data;
     const subject = `Nuevo contacto desde el sitio · ${tipoLabel[tipo]} · ${nombre}`;
 
     const html = `

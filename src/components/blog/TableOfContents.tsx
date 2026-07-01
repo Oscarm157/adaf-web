@@ -1,5 +1,5 @@
-import type { BodyBlock } from "@/lib/posts";
-import { slugify } from "@/lib/posts";
+import type { BodyBlock } from "@/lib/blog-markdown";
+import { slugify } from "@/lib/blog-markdown";
 
 const romans = [
   "I",

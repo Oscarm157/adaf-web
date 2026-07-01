@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { Resend } from "resend";
-import { siteConfig } from "@/lib/seo";
+import { and, eq, gte } from "drizzle-orm";
+import { db } from "@/lib/db";
+import { leads, leadEvents } from "@/lib/schema";
+import { siteConfig, siteUrl } from "@/lib/seo";
 
 const schema = z.object({
   nombre: z.string().min(2).max(120),
@@ -19,16 +22,46 @@ export async function POST(request: Request) {
       );
     }
 
+    const { nombre, email } = parsed.data;
+
+    // Persistir el lead en el CRM. Registro durable, independiente del correo.
+    // Un fallo de DB no debe tumbar el envío ni la respuesta al usuario.
+    try {
+      const tenMinAgo = new Date(Date.now() - 10 * 60 * 1000);
+      const dup = await db
+        .select({ id: leads.id })
+        .from(leads)
+        .where(and(eq(leads.email, email), gte(leads.createdAt, tenMinAgo)))
+        .limit(1);
+      if (dup.length === 0) {
+        const [lead] = await db
+          .insert(leads)
+          .values({
+            name: nombre,
+            email,
+            source: "form",
+            sourceUrl: `${siteUrl}/`,
+          })
+          .returning({ id: leads.id });
+        await db.insert(leadEvents).values({
+          leadId: lead.id,
+          kind: "created",
+          detail: "Lead creado desde el lead magnet (guía 72 horas)",
+        });
+      }
+    } catch (err) {
+      console.error("[lead-magnet] no se pudo guardar el lead", err);
+    }
+
     const apiKey = process.env.RESEND_API_KEY;
     const fromEmail = process.env.RESEND_FROM ?? "ADAF <onboarding@resend.dev>";
-    const toEmail = process.env.RESEND_TO ?? siteConfig.email;
+    const toEmail = process.env.LEAD_RECIPIENT || process.env.RESEND_TO || siteConfig.email;
 
     if (!apiKey) {
       console.warn("[lead-magnet] RESEND_API_KEY no configurado");
       return NextResponse.json({ ok: true, dev: true });
     }
 
-    const { nombre, email } = parsed.data;
     const subject = `Lead · Guía 72 horas · ${nombre}`;
 
     const html = `
@@ -47,7 +80,7 @@ export async function POST(request: Request) {
               <tr><td style="color:#5A5853;text-transform:uppercase;font-size:10px;letter-spacing:.18em;padding:6px 0">Correo</td><td>${escape(email)}</td></tr>
             </table>
             <p style="font-size:13px;color:#5A5853;margin-top:24px;line-height:1.6">
-              Envíale el PDF de la guía y, si aplica, propónle una valoración inicial de su caso.
+              Envíale el PDF de la guía y, si aplica, proponle una valoración inicial de su caso.
             </p>
           </div>
         </body>

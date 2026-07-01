@@ -8,9 +8,14 @@ import { PageHero } from "@/components/page/PageHero";
 import { ChapterMark } from "@/components/site/ChapterMark";
 import { EditorialBand } from "@/components/visual/EditorialBand";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
-import { posts } from "@/lib/posts";
+import { getPublishedArticles } from "@/lib/blog/data";
+import { toPublicPost } from "@/lib/blog/public";
 import { siteUrl } from "@/lib/seo";
 import { CALENDLY_URL } from "@/lib/calendly";
+
+// Dinámica: el contenido vive en la tabla `articles`. force-dynamic evita que el
+// build necesite DATABASE_URL real (sitio de bajo tráfico, sin coste de prerender).
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -29,8 +34,8 @@ export const metadata: Metadata = {
 type Tone = "navy" | "burgundy" | "olive";
 
 // Portadas editoriales por artículo (reúsan imágenes de public/editorial/,
-// las mismas que la sección de blog del home). Los posts viven en @/lib/posts
-// y no llevan imagen; aquí se asocia la cover sin tocar la fuente de datos.
+// las mismas que la sección de blog del home). Los artículos viven en la tabla
+// `articles` y no llevan cover editorial; aquí se asocia por slug.
 const covers: Record<string, { tone: Tone; title: string; src: string; alt: string }> = {
   "reforma-cff-2026": {
     tone: "navy",
@@ -54,12 +59,11 @@ const covers: Record<string, { tone: Tone; title: string; src: string; alt: stri
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 
-export default function BlogIndexPage() {
-  const ordered = [...posts].sort((a, b) =>
-    a.fechaIso < b.fechaIso ? 1 : -1,
-  );
+export default async function BlogIndexPage() {
+  const articles = await getPublishedArticles();
+  const ordered = articles.map(toPublicPost);
   const [featured, ...archive] = ordered;
-  const featuredCover = covers[featured.slug];
+  const featuredCover = featured ? covers[featured.slug] : undefined;
 
   return (
     <>
@@ -78,6 +82,7 @@ export default function BlogIndexPage() {
         />
 
         {/* II — Comentario destacado · familia image-led monumental */}
+        {featured && (
         <section className="bg-background-warm pt-16 pb-24">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 lg:px-12">
             <ChapterMark numeral="II" label="Comentario destacado" />
@@ -127,6 +132,7 @@ export default function BlogIndexPage() {
             </Reveal>
           </div>
         </section>
+        )}
 
         {/* III — Archivo · familia índice tipográfico con numerales y hairlines */}
         <section className="bg-background pt-20 pb-24 border-t border-rule">

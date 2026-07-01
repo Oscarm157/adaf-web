@@ -16,23 +16,17 @@ import {
   Blockquote,
   Note,
 } from "@/components/page/Prose";
-import {
-  posts,
-  getPostBySlug,
-  getAllPostSlugs,
-  slugify,
-  type BodyBlock,
-} from "@/lib/posts";
+import { slugify, type BodyBlock } from "@/lib/blog-markdown";
+import { getPublishedArticleBySlug, getPublishedArticles } from "@/lib/blog/data";
+import { toPublicPost } from "@/lib/blog/public";
 import { siteUrl, siteConfig } from "@/lib/seo";
 import { TableOfContents } from "@/components/blog/TableOfContents";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { EditorialBand } from "@/components/visual/EditorialBand";
 
-export const dynamicParams = false;
-
-export function generateStaticParams() {
-  return getAllPostSlugs().map((slug) => ({ slug }));
-}
+// Dinámica: el contenido vive en la tabla `articles`. force-dynamic evita que el
+// build necesite DATABASE_URL real (sitio de bajo tráfico, sin coste de prerender).
+export const dynamic = "force-dynamic";
 
 export async function generateMetadata({
   params,
@@ -40,8 +34,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
-  if (!post) return {};
+  const article = await getPublishedArticleBySlug(slug);
+  if (!article) return {};
+  const post = toPublicPost(article);
   return {
     title: post.metaTitle,
     description: post.metaDescription,
@@ -98,10 +93,14 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
-  if (!post) notFound();
+  const article = await getPublishedArticleBySlug(slug);
+  if (!article) notFound();
+  const post = toPublicPost(article);
 
-  const otras = posts.filter((p) => p.slug !== slug).slice(0, 2);
+  const otras = (await getPublishedArticles())
+    .filter((a) => a.slug !== slug)
+    .slice(0, 2)
+    .map(toPublicPost);
 
   const articleJsonLd = {
     "@context": "https://schema.org",

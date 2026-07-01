@@ -1,9 +1,12 @@
 import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/seo";
 import { getAllServiceSlugs } from "@/components/service/data";
-import { posts } from "@/lib/posts";
+import { getPublishedArticles } from "@/lib/blog/data";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+// Dinámico: consulta `articles`. Evita que el build necesite DATABASE_URL real.
+export const dynamic = "force-dynamic";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const lastModified = new Date();
 
   const root: MetadataRoute.Sitemap = [
@@ -26,9 +29,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const blogPosts: MetadataRoute.Sitemap = posts.map((p) => ({
-    url: `${siteUrl}/blog/${p.slug}`,
-    lastModified: new Date(p.fechaIso),
+  const articles = await getPublishedArticles();
+  const blogPosts: MetadataRoute.Sitemap = articles.map((a) => ({
+    url: `${siteUrl}/blog/${a.slug}`,
+    lastModified: a.publishedAt ? new Date(a.publishedAt) : lastModified,
     changeFrequency: "yearly",
     priority: 0.6,
   }));

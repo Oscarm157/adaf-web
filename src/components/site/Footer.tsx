@@ -128,6 +128,9 @@ export function Footer() {
             <Link href="/terminos-y-condiciones" className="hover:text-burgundy transition-colors">
               Términos y condiciones
             </Link>
+            <Link href="/politica-de-cookies" className="hover:text-burgundy transition-colors">
+              Política de cookies
+            </Link>
             <span className="font-serif italic normal-case tracking-normal text-[12px]">
               Tijuana · frontera norte
             </span>

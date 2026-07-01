@@ -3,6 +3,8 @@ import { Source_Serif_4, Inter } from "next/font/google";
 import "./globals.css";
 import { legalServiceJsonLd, siteConfig, siteUrl } from "@/lib/seo";
 import { SmoothScrollProvider } from "@/components/motion/SmoothScrollProvider";
+import { FeedbackWidget } from "@/components/site/FeedbackWidget";
+import { CookieBanner } from "@/components/site/CookieBanner";
 
 const sourceSerif = Source_Serif_4({
   variable: "--font-source-serif",
@@ -99,6 +101,8 @@ export default function RootLayout({
       </head>
       <body className="min-h-full">
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
+        <FeedbackWidget />
+        <CookieBanner />
       </body>
     </html>
   );
