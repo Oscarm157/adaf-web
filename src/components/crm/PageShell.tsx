@@ -23,9 +23,18 @@ export function PageHeader({
   children?: ReactNode;
 }) {
   return (
-    <div className="mb-6 flex flex-col gap-3 sm:mb-7 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+    <div className="mb-6 flex flex-col gap-3 border-b border-[var(--crm-line)] pb-5 sm:mb-7 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
       <div className="min-w-0">
-        {eyebrow && <p className="crm-eyebrow mb-2">{eyebrow}</p>}
+        {eyebrow && (
+          <p className="crm-eyebrow mb-2 flex items-center gap-2">
+            <span className="crm-tricolor-dots" aria-hidden>
+              <span style={{ background: "var(--crm-brand-navy)" }} />
+              <span style={{ background: "var(--crm-wine)" }} />
+              <span style={{ background: "var(--crm-olive)" }} />
+            </span>
+            {eyebrow}
+          </p>
+        )}
         <h1 className="crm-h1 truncate">{title}</h1>
         {description && (
           <p className="mt-1.5 max-w-prose text-[13.5px] leading-relaxed text-[var(--crm-ink-mute)]">

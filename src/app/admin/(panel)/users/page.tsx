@@ -64,7 +64,7 @@ export default async function UsersPage() {
         />
       </div>
 
-      <div className="overflow-hidden rounded-[var(--crm-r-lg)] border border-[var(--crm-line)]">
+      <div className="overflow-hidden rounded-[var(--crm-r-lg)] border border-[var(--crm-line)] shadow-[var(--crm-e1)]">
         <div className="overflow-x-auto">
           <table className="crm-table min-w-[720px]">
             <thead className="crm-thead">

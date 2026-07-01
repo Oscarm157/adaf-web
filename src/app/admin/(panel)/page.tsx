@@ -227,7 +227,7 @@ export default async function LeadsList({
           </ul>
 
           {/* Desktop: table */}
-          <div className="mt-4 hidden overflow-hidden rounded-[var(--crm-r-lg)] border border-[var(--crm-line)] sm:block">
+          <div className="mt-4 hidden overflow-hidden rounded-[var(--crm-r-lg)] border border-[var(--crm-line)] shadow-[var(--crm-e1)] sm:block">
             <div className="overflow-x-auto">
               <table className="crm-table min-w-[900px]">
                 <thead className="crm-thead">

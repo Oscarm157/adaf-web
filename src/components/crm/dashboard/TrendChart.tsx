@@ -56,7 +56,7 @@ export function TrendChart({ trend }: { trend: DashboardMetrics["trend"] }) {
   const lastIdx = trend.length - 1;
 
   return (
-    <div className="crm-card flex h-full flex-col p-6">
+    <div className="crm-card-raised flex h-full flex-col p-6">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h2 className="crm-h2">Tendencia de leads</h2>

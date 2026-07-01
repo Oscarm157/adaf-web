@@ -12,7 +12,7 @@ export function AgentTable({ byAgent }: { byAgent: DashboardMetrics["byAgent"] }
   const maxLeads = Math.max(1, ...rows.map((r) => r.leads));
 
   return (
-    <div className="crm-card overflow-hidden p-0">
+    <div className="crm-card-raised overflow-hidden p-0">
       <div className="p-5 pb-4">
         <h2 className="crm-h2">Por agente</h2>
         <p className="mt-1 text-[12px]" style={{ color: "var(--crm-ink-mute)" }}>

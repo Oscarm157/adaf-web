@@ -178,7 +178,7 @@ export function BlogIndex({ articles }: { articles: BlogRow[] }) {
         </div>
       </div>
 
-      <div className="crm-card overflow-hidden">
+      <div className="crm-card-raised overflow-hidden">
         <div className="flex items-center justify-between border-b border-[var(--crm-line)] px-4 py-2.5">
           <span className="text-[12.5px] text-[var(--crm-ink-mute)]">
             <span className="crm-num font-medium text-[var(--crm-ink-soft)]">{rows.length}</span>{" "}

@@ -34,7 +34,7 @@ export default async function ProfilePage() {
       </div>
 
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
-        <section className="crm-card p-6">
+        <section className="crm-card-raised p-6">
           <div className="flex items-center gap-4">
             <span
               className={`grid size-14 shrink-0 place-items-center rounded-full text-[18px] font-semibold shadow-[0_0_0_1.5px_var(--crm-surface)] ${avatarClass(me.id)}`}
@@ -51,7 +51,7 @@ export default async function ProfilePage() {
         </section>
 
         <aside className="space-y-4">
-          <div className="crm-card p-5">
+          <div className="crm-card-raised p-5">
             <p className="crm-eyebrow">Rol</p>
             <p className="mt-2 inline-flex items-center gap-2 text-[16px] font-semibold tracking-tight text-[var(--crm-ink)]">
               <span className="size-1.5 rounded-full bg-[var(--crm-accent)] shadow-[0_0_0_2px_var(--crm-surface-2)]" />
@@ -60,7 +60,7 @@ export default async function ProfilePage() {
             <p className="mt-2 text-[12.5px] leading-relaxed text-[var(--crm-ink-soft)]">{ROLE_NOTE[me.role]}</p>
           </div>
 
-          <div className="crm-card p-5">
+          <div className="crm-card-raised p-5">
             <div className="flex items-start gap-3">
               <span className="grid size-9 shrink-0 place-items-center rounded-lg border border-[var(--crm-line)] bg-[var(--crm-surface-3)] text-[var(--crm-ink-soft)]">
                 <KeyRound className="size-4" strokeWidth={1.8} />

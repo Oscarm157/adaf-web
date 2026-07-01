@@ -23,7 +23,7 @@ export function Funnel({ funnel }: { funnel: DashboardMetrics["funnel"] }) {
   const totalIn = openTotal + won.count + lost.count;
 
   return (
-    <div className="crm-card flex h-full flex-col p-5">
+    <div className="crm-card-raised flex h-full flex-col p-5">
       <div>
         <h2 className="crm-h2">Embudo por etapa</h2>
         <p className="mt-1 text-[12px]" style={{ color: "var(--crm-ink-mute)" }}>

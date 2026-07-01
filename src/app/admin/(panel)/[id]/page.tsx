@@ -65,7 +65,7 @@ export default async function LeadDetail({ params }: { params: Promise<{ id: str
       <Breadcrumb items={[{ label: "Leads", href: "/admin" }, { label: lead.name ?? "Lead" }]} />
 
       {/* Record header */}
-      <header className="crm-card crm-fade mt-4 p-5 sm:p-6" style={{ animationDelay: "0ms" }}>
+      <header className="crm-card-raised crm-fade mt-4 p-5 sm:p-6" style={{ animationDelay: "0ms" }}>
         <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
           <div className="flex min-w-0 gap-4">
             <span
@@ -137,7 +137,7 @@ export default async function LeadDetail({ params }: { params: Promise<{ id: str
 
       <div className="mt-5 grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)]">
         {/* Feed spine: actividad / notas / archivos en un solo workspace tabulado */}
-        <div className="crm-card crm-fade overflow-hidden" style={{ animationDelay: "60ms" }}>
+        <div className="crm-card-raised crm-fade overflow-hidden" style={{ animationDelay: "60ms" }}>
           {lead.summary && (
             <div className="flex gap-3 border-b border-[var(--crm-line)] bg-[var(--crm-accent-tint)] px-5 py-4">
               <Sparkles className="mt-0.5 size-4 shrink-0 text-[var(--crm-accent-strong)]" strokeWidth={2} />
@@ -163,7 +163,7 @@ export default async function LeadDetail({ params }: { params: Promise<{ id: str
 
         {/* Property rail: calificación key/value editable + procedencia */}
         <div className="lg:sticky lg:top-[76px] lg:self-start">
-          <div className="crm-card crm-fade p-5" style={{ animationDelay: "120ms" }}>
+          <div className="crm-card-raised crm-fade p-5" style={{ animationDelay: "120ms" }}>
             <LeadDetailsForm
               action={saveDetails}
               editable={editable}

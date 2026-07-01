@@ -132,7 +132,7 @@ export function ArticleEditor({
     <form action={action} className="flex flex-col gap-5">
       <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_300px]">
         {/* Contenido */}
-        <section className="crm-card p-6">
+        <section className="crm-card-raised p-6">
           <div className="flex flex-col gap-4">
             <div>
               <label className={labelCls} htmlFor="titleEs">Título</label>
@@ -155,7 +155,7 @@ export function ArticleEditor({
 
         {/* Metadatos */}
         <aside className="lg:sticky lg:top-6 lg:self-start">
-          <section className="crm-card p-5">
+          <section className="crm-card-raised p-5">
             <p className="crm-eyebrow mb-4">Metadatos</p>
             <div className="flex flex-col gap-4">
               <div>

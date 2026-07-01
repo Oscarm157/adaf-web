@@ -27,7 +27,7 @@ export default async function NewArticle() {
         description="Nombra la nota y se abre el editor en blanco. Se guarda como borrador hasta que la publiques."
       />
 
-      <form action={createArticle} className="crm-card mt-2 flex flex-col gap-4 p-6">
+      <form action={createArticle} className="crm-card-raised mt-2 flex flex-col gap-4 p-6">
         <div>
           <label className="mb-1.5 block text-[12.5px] font-medium text-[var(--crm-ink-soft)]" htmlFor="titleEs">
             Título
